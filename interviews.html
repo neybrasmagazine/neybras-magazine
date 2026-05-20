@@ -145,6 +145,8 @@ ul{list-style:none;}
 .expert-list{display:flex;flex-direction:column;gap:14px;}
 .exp-item{display:flex;align-items:center;gap:11px;}
 .exp-av{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:top;border:1.5px solid var(--or-bd);flex-shrink:0;}
+.av-i{border-radius:50%;border:2px solid rgba(184,146,46,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-weight:700;color:#fff;letter-spacing:.04em;}
+.av-i-rect{border-radius:0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--cg);font-weight:600;color:#fff;font-size:2rem;letter-spacing:.06em;width:100px;height:130px;}
 .exp-name{font-family:var(--pd);font-size:13px;font-weight:700;color:var(--bn);line-height:1.2;}
 .exp-role{font-family:var(--it);font-size:10px;color:var(--gris4);margin-top:2px;}
 .nl-w-aside{background:var(--blanc);border:1px solid var(--brd);border-top:2px solid var(--or);padding:22px;}
@@ -268,7 +270,7 @@ ul{list-style:none;}
   <div class="container">
     <div class="itw-feat-inner">
       <div class="itw-feat-img">
-        <img loading="lazy" srcset="images/avocat-hassan-rachidi-casablanca-sm.webp 480w, images/avocat-hassan-rachidi-casablanca-md.webp 800w, images/avocat-hassan-rachidi-casablanca.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/avocat-hassan-rachidi-casablanca.webp" alt="Me Hassan Rachidi avocat affaires Casablanca"/>
+        <span class="av-i-rect" style="background:#0f1e36;font-size:3.5rem">HR</span>
         <div class="itw-feat-badge"><i class="fas fa-microphone"></i> Interview</div>
       </div>
       <div class="itw-feat-body">
@@ -276,7 +278,7 @@ ul{list-style:none;}
         <h2 class="itw-feat-q">« Le Maroc dispose d'un arsenal juridique solide pour attirer les investissements, mais des réformes procédurales restent urgentes »</h2>
         <p class="itw-feat-intro">Me Hassan Rachidi, avocat d'affaires au Barreau de Casablanca et membre du conseil de l'Ordre, analyse la compétitivité juridique du Maroc face aux marchés africains émergents. Entre atouts indéniables et lacunes persistantes, un état des lieux sans complaisance.</p>
         <div class="itw-feat-author">
-          <img loading="lazy" src="images/avocat-hassan-rachidi-casablanca-sm.webp" alt="Me Hassan Rachidi" class="itw-feat-author-av"/>
+          <span class="av-i" style="width:52px;height:52px;background:#0f1e36;font-size:14px">HR</span>
           <div>
             <div class="ifa-name">Me Hassan Rachidi</div>
             <div class="ifa-role">Avocat d'affaires · Barreau de Casablanca · Ancien membre du Conseil de l'Ordre</div>
@@ -297,7 +299,7 @@ ul{list-style:none;}
       <div class="icard">
         <div class="icard-top">
           <div class="icard-img">
-            <img loading="lazy" src="images/arbitrage-arbitre-professionnel-sm.webp" alt="Me Amine Lahlou"/>
+            <span class="av-i-rect" style="background:#0f1e36">AL</span>
             <div class="icard-badge badge-itw"><i class="fas fa-microphone"></i> Interview</div>
           </div>
           <div class="icard-head">
@@ -318,13 +320,13 @@ ul{list-style:none;}
       <div class="icard">
         <div class="icard-top">
           <div class="icard-img">
-            <img loading="lazy" src="images/expert-samir-belhaj-droit-sm.webp" alt="Dr. Samir Belhaj"/>
+            <span class="av-i-rect" style="background:#1a5c3a">SB</span>
             <div class="icard-badge badge-itw"><i class="fas fa-microphone"></i> Interview</div>
           </div>
           <div class="icard-head">
             <div>
               <span class="icard-cat">Afrique & OHADA</span>
-              <div class="icard-name">Dr. Samir Belhaj</div>
+              <div class="icard-name">Samir Belhaj</div>
               <div class="icard-role">Associé Belhaj & Associés · Droit des sociétés & OHADA</div>
             </div>
           </div>
@@ -339,7 +341,7 @@ ul{list-style:none;}
       <div class="icard">
         <div class="icard-top">
           <div class="icard-img">
-            <img loading="lazy" src="images/avocate-zineb-maati-droit-sport-sm.webp" alt="Me Zineb Maâti"/>
+            <span class="av-i-rect" style="background:#7a3a1a">ZM</span>
             <div class="icard-badge badge-trib"><i class="fas fa-pen-nib"></i> Tribune</div>
           </div>
           <div class="icard-head">
@@ -360,7 +362,7 @@ ul{list-style:none;}
       <div class="icard">
         <div class="icard-top">
           <div class="icard-img">
-            <img loading="lazy" src="images/avocat-ismael-kourouma-arbitrage-sm.webp" alt="Me Ismaël Kourouma"/>
+            <span class="av-i-rect" style="background:#1e4a7a">IK</span>
             <div class="icard-badge badge-itw"><i class="fas fa-microphone"></i> Interview</div>
           </div>
           <div class="icard-head">
@@ -383,16 +385,16 @@ ul{list-style:none;}
     <div class="blk-title">Tribunes d'experts</div>
     <div class="trib-list">
       <div class="trib-item">
-        <img loading="lazy" src="images/experte-salwa-benali-finance-sm.webp" alt="Dr. Salwa Benali" class="trib-av"/>
+        <span class="av-i" style="width:72px;height:72px;background:#4a1a5c;font-size:18px">SB</span>
         <div>
           <div class="trib-badge">Tribune · Fiscalité numérique</div>
           <div class="trib-title"><a href="finance.html">« La TVA sur les services numériques étrangers au Maroc : une réforme nécessaire mais encore mal calibrée »</a></div>
           <p class="trib-intro">La loi de finances 2024 a introduit la TVA sur les plateformes numériques non-résidentes. Un an après, le mécanisme de collecte montre ses limites et appelle une révision profonde du dispositif.</p>
-          <div class="trib-meta"><strong>Dr. Salwa Benali</strong> · Maître de conférences en droit fiscal, Université Hassan II · 17 mai 2026 · 8 min</div>
+          <div class="trib-meta"><strong>Salwa Benali</strong> · Maître de conférences en droit fiscal, Université Hassan II · 17 mai 2026 · 8 min</div>
         </div>
       </div>
       <div class="trib-item">
-        <img loading="lazy" src="images/avocat-hassan-rachidi-casablanca-sm.webp" alt="Me Hassan Rachidi" class="trib-av"/>
+        <span class="av-i" style="width:72px;height:72px;background:#0f1e36;font-size:18px">HR</span>
         <div>
           <div class="trib-badge">Tribune · Réforme judiciaire</div>
           <div class="trib-title"><a href="droit.html">« La digitalisation de la justice marocaine avance, mais le fossé entre textes et pratique reste préoccupant »</a></div>
@@ -401,16 +403,16 @@ ul{list-style:none;}
         </div>
       </div>
       <div class="trib-item">
-        <img loading="lazy" src="images/expert-samir-belhaj-droit-sm.webp" alt="Dr. Samir Belhaj" class="trib-av"/>
+        <span class="av-i" style="width:72px;height:72px;background:#1a5c3a;font-size:18px">SB</span>
         <div>
           <div class="trib-badge">Tribune · Finance islamique</div>
           <div class="trib-title"><a href="finance.html">« Cinq ans de finance participative : le Maroc a raté l'occasion de devenir le hub islamique africain »</a></div>
           <p class="trib-intro">Le potentiel était là. Les textes aussi. Ce qui a manqué, c'est la volonté de lever les obstacles fiscaux qui font fuir les opérateurs vers Dubaï et Kuala Lumpur.</p>
-          <div class="trib-meta"><strong>Dr. Samir Belhaj</strong> · Associé, Belhaj & Associés · 12 mai 2026 · 10 min</div>
+          <div class="trib-meta"><strong>Samir Belhaj</strong> · Associé, Belhaj & Associés · 12 mai 2026 · 10 min</div>
         </div>
       </div>
       <div class="trib-item">
-        <img loading="lazy" src="images/avocat-ismael-kourouma-arbitrage-sm.webp" alt="Me Ismaël Kourouma" class="trib-av"/>
+        <span class="av-i" style="width:72px;height:72px;background:#1e4a7a;font-size:18px">IK</span>
         <div>
           <div class="trib-badge">Tribune · OHADA</div>
           <div class="trib-title"><a href="afrique.html">« L'adhésion du Maroc à l'OHADA : une question de quand, pas de si »</a></div>
@@ -437,19 +439,19 @@ ul{list-style:none;}
       <div class="wt">Nos experts</div>
       <div class="expert-list">
         <div class="exp-item">
-          <img loading="lazy" srcset="images/arbitrage-arbitre-professionnel-sm.webp 480w, images/arbitrage-arbitre-professionnel-md.webp 800w, images/arbitrage-arbitre-professionnel.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/arbitrage-arbitre-professionnel.webp" alt="Me Amine Lahlou" class="exp-av"/>
+          <span class="av-i" style="width:46px;height:46px;background:#0f1e36;font-size:12px">AL</span>
           <div><div class="exp-name">Me Amine Lahlou</div><div class="exp-role">Droit du sport & Arbitrage</div></div>
         </div>
         <div class="exp-item">
-          <img loading="lazy" srcset="images/expert-samir-belhaj-droit-sm.webp 480w, images/expert-samir-belhaj-droit-md.webp 800w, images/expert-samir-belhaj-droit.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/expert-samir-belhaj-droit.webp" alt="Dr. Samir Belhaj" class="exp-av"/>
-          <div><div class="exp-name">Dr. Samir Belhaj</div><div class="exp-role">Droit des affaires & OHADA</div></div>
+          <span class="av-i" style="width:46px;height:46px;background:#1a5c3a;font-size:12px">SB</span>
+          <div><div class="exp-name">Samir Belhaj</div><div class="exp-role">Droit des affaires & OHADA</div></div>
         </div>
         <div class="exp-item">
-          <img loading="lazy" srcset="images/experte-salwa-benali-finance-sm.webp 480w, images/experte-salwa-benali-finance-md.webp 800w, images/experte-salwa-benali-finance.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/experte-salwa-benali-finance.webp" alt="Dr. Salwa Benali" class="exp-av"/>
-          <div><div class="exp-name">Dr. Salwa Benali</div><div class="exp-role">Fiscalité & Droit numérique</div></div>
+          <span class="av-i" style="width:46px;height:46px;background:#4a1a5c;font-size:12px">SB</span>
+          <div><div class="exp-name">Salwa Benali</div><div class="exp-role">Fiscalité & Droit numérique</div></div>
         </div>
         <div class="exp-item">
-          <img loading="lazy" srcset="images/avocate-zineb-maati-droit-sport-sm.webp 480w, images/avocate-zineb-maati-droit-sport-md.webp 800w, images/avocate-zineb-maati-droit-sport.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/avocate-zineb-maati-droit-sport.webp" alt="Me Zineb Maâti" class="exp-av"/>
+          <span class="av-i" style="width:46px;height:46px;background:#7a3a1a;font-size:12px">ZM</span>
           <div><div class="exp-name">Me Zineb Maâti</div><div class="exp-role">Droit du sport & Compliance</div></div>
         </div>
       </div>
@@ -515,5 +517,30 @@ stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 document.querySelectorAll('.filter-tab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.filter-tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');});});
 document.querySelectorAll('.btn-nl').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();const form=btn.closest('.nl-w-aside');const inp=form&&form.querySelector('input[type="email"]');if(inp&&inp.value.includes('@')){const orig=btn.textContent;btn.textContent='✓ Confirmé';btn.style.background='#27ae60';inp.value='';setTimeout(()=>{btn.textContent=orig;btn.style.background='';},3000);}});});
 </script>
-</body>
+<!-- POPUP NEWSLETTER -->
+<div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,21,40,.82);z-index:9998;align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
+    <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
+    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#b8922e;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="display:inline-block;width:20px;height:1px;background:#b8922e;"></span>Newsletter Neybras
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0f1e36;line-height:1.2;margin-bottom:10px;">Les meilleures analyses juridiques et financières</h2>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
+    <form id="nl-popup-form" onsubmit="nlSubmit(event)" style="display:flex;gap:0;">
+      <input id="nl-popup-email" type="email" placeholder="Votre email professionnel" required style="flex:1;padding:11px 14px;border:1px solid #e4e4e4;border-right:none;font-size:13px;font-family:'Inter',sans-serif;outline:none;"/>
+      <button type="submit" style="padding:11px 20px;background:#0f1e36;color:#fff;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">S'abonner</button>
+    </form>
+    <p style="font-family:'Inter',sans-serif;font-size:9.5px;color:#aaa;margin-top:10px;text-align:center;">12 000+ abonnés · Gratuit · Désinscription en 1 clic</p>
+  </div>
+</div>
+<script>
+(function(){
+  function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
+  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}}
+  window.nlClose=nlClose;window.nlSubmit=nlSubmit;
+  if(!localStorage.getItem('nl_closed')){
+    setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
+  }
+})();
+</script></body>
 </html>

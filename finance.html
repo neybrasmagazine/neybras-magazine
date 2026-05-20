@@ -329,14 +329,14 @@ ul{list-style:none;}
 
     <div class="sec-featured">
       <div class="sf-img">
-        <img src="https://images.unsplash.com/photo-1565514191-a4975c9c6e94?w=900&q=85" alt="Finance participative islamique Maroc" loading="eager"/>
+        <img src="images/fallback-finance.webp" alt="Finance participative islamique Maroc" loading="eager"/>
       </div>
       <div class="sf-body">
         <div class="sf-cat">Analyse exclusive</div>
         <h2 class="sf-h"><a href="article-finance-participative.html">Finance participative au Maroc : bilan à mi-parcours, obstacles réglementaires et perspectives d'expansion en Afrique subsaharienne</a></h2>
         <p class="sf-deck">Cinq ans après le lancement officiel des banques participatives, le secteur atteint 8 milliards de dirhams d'actifs. Une success story incomplète qui appelle des réformes fiscales et contractuelles profondes.</p>
         <div class="sf-meta">
-          <span class="by">Dr. Salwa Benali</span>
+          <span class="by">Salwa Benali</span>
           <span>·</span>
           <span>20 mai 2026</span>
           <span>·</span>
@@ -394,7 +394,7 @@ ul{list-style:none;}
               <p>Comparaison réglementaire, fiscale et opérationnelle des trois grandes places financières en compétition pour attirer les capitaux mondiaux vers l'Afrique.</p>
             </div>
             <div class="acard-foot">
-              <span class="by">Dr. Samir Belhaj</span><span>·</span><span>17 mai 2026</span><span>·</span><span>11 min</span>
+              <span class="by">Samir Belhaj</span><span>·</span><span>17 mai 2026</span><span>·</span><span>11 min</span>
             </div>
           </article>
 
@@ -434,7 +434,7 @@ ul{list-style:none;}
             <div>
               <span class="ali-cat">Marchés de capitaux</span>
               <div class="ali-title"><a href="#">Bourse de Casablanca 2026 : analyse des performances du MASI et perspectives sectorielles du second semestre</a></div>
-              <div class="ali-meta">Dr. Salwa Benali · 13 mai 2026 · 7 min</div>
+              <div class="ali-meta">Salwa Benali · 13 mai 2026 · 7 min</div>
             </div>
           </div>
           <div class="alist-item">
@@ -450,7 +450,7 @@ ul{list-style:none;}
             <div>
               <span class="ali-cat">Politique monétaire</span>
               <div class="ali-title"><a href="#">Bank Al-Maghrib : stratégie de politique monétaire face à l'inflation importée et ses impacts sur le crédit aux PME</a></div>
-              <div class="ali-meta">Dr. Samir Belhaj · 11 mai 2026 · 8 min</div>
+              <div class="ali-meta">Samir Belhaj · 11 mai 2026 · 8 min</div>
             </div>
           </div>
           <div class="alist-item">
@@ -658,5 +658,30 @@ window.addEventListener('scroll',()=>stt.classList.toggle('v',scrollY>400));
 stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 document.querySelectorAll('.btn-nl').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();const form=btn.closest('.nl-w-aside');const inp=form&&form.querySelector('input[type="email"]');if(inp&&inp.value.includes('@')){const orig=btn.textContent;btn.textContent='✓ Confirmé';btn.style.background='#27ae60';inp.value='';setTimeout(()=>{btn.textContent=orig;btn.style.background='';},3000);}});});
 </script>
-</body>
+<!-- POPUP NEWSLETTER -->
+<div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,21,40,.82);z-index:9998;align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
+    <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
+    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#b8922e;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="display:inline-block;width:20px;height:1px;background:#b8922e;"></span>Newsletter Neybras
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0f1e36;line-height:1.2;margin-bottom:10px;">Les meilleures analyses juridiques et financières</h2>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
+    <form id="nl-popup-form" onsubmit="nlSubmit(event)" style="display:flex;gap:0;">
+      <input id="nl-popup-email" type="email" placeholder="Votre email professionnel" required style="flex:1;padding:11px 14px;border:1px solid #e4e4e4;border-right:none;font-size:13px;font-family:'Inter',sans-serif;outline:none;"/>
+      <button type="submit" style="padding:11px 20px;background:#0f1e36;color:#fff;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">S'abonner</button>
+    </form>
+    <p style="font-family:'Inter',sans-serif;font-size:9.5px;color:#aaa;margin-top:10px;text-align:center;">12 000+ abonnés · Gratuit · Désinscription en 1 clic</p>
+  </div>
+</div>
+<script>
+(function(){
+  function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
+  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}}
+  window.nlClose=nlClose;window.nlSubmit=nlSubmit;
+  if(!localStorage.getItem('nl_closed')){
+    setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
+  }
+})();
+</script></body>
 </html>

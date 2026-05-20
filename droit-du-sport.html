@@ -314,10 +314,10 @@ ul{list-style:none;}
           <h3><a href="#">Sponsoring sportif au Maroc : contrats de naming, activation de marque et enjeux fiscaux pour les sponsors officiels du FRMF</a></h3>
           <p>Le marché marocain du sponsoring sportif dépasse 800 millions de dirhams. Décryptage des mécanismes contractuels et fiscaux applicables.</p>
         </div>
-        <div class="acard-foot"><span class="by">Dr. Salwa Benali</span><span>·</span><span>15 mai 2026</span><span>·</span><span>8 min</span></div>
+        <div class="acard-foot"><span class="by">Salwa Benali</span><span>·</span><span>15 mai 2026</span><span>·</span><span>8 min</span></div>
       </article>
       <article class="acard">
-        <div class="acard-iw"><img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80" alt="Clubs football droit" loading="lazy"/></div>
+        <div class="acard-iw"><img src="images/fallback-sport.webp" alt="Clubs football droit" loading="lazy"/></div>
         <div class="acard-body">
           <span class="acard-cat">Clubs & SASP</span>
           <h3><a href="#">Transformation des clubs en SASP au Maroc : statuts, gouvernance, entrée d'investisseurs et enjeux fiscaux de la professionnalisation</a></h3>
@@ -359,7 +359,7 @@ ul{list-style:none;}
         <div>
           <span class="ali-cat">Nouvelles disciplines</span>
           <div class="ali-title"><a href="#">E-sport au Maroc : vide juridique, premiers contrats et perspectives de régulation pour une industrie en plein essor</a></div>
-          <div class="ali-meta">Dr. Salwa Benali · 9 mai 2026 · 7 min</div>
+          <div class="ali-meta">Salwa Benali · 9 mai 2026 · 7 min</div>
         </div>
       </div>
       <div class="alist-item">
@@ -492,5 +492,30 @@ function updateCdm(){
 updateCdm();
 setInterval(updateCdm,1000);
 </script>
-</body>
+<!-- POPUP NEWSLETTER -->
+<div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,21,40,.82);z-index:9998;align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
+    <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
+    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#b8922e;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="display:inline-block;width:20px;height:1px;background:#b8922e;"></span>Newsletter Neybras
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0f1e36;line-height:1.2;margin-bottom:10px;">Les meilleures analyses juridiques et financières</h2>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
+    <form id="nl-popup-form" onsubmit="nlSubmit(event)" style="display:flex;gap:0;">
+      <input id="nl-popup-email" type="email" placeholder="Votre email professionnel" required style="flex:1;padding:11px 14px;border:1px solid #e4e4e4;border-right:none;font-size:13px;font-family:'Inter',sans-serif;outline:none;"/>
+      <button type="submit" style="padding:11px 20px;background:#0f1e36;color:#fff;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">S'abonner</button>
+    </form>
+    <p style="font-family:'Inter',sans-serif;font-size:9.5px;color:#aaa;margin-top:10px;text-align:center;">12 000+ abonnés · Gratuit · Désinscription en 1 clic</p>
+  </div>
+</div>
+<script>
+(function(){
+  function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
+  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}}
+  window.nlClose=nlClose;window.nlSubmit=nlSubmit;
+  if(!localStorage.getItem('nl_closed')){
+    setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
+  }
+})();
+</script></body>
 </html>

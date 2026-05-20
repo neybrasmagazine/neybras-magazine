@@ -525,7 +525,7 @@ ul { list-style: none; }
               <p>La loi 09-08 confrontée aux réalités des LLM, du traitement de masse et des droits à l'effacement : analyse et recommandations.</p>
             </div>
             <div class="acard-foot">
-              <span class="by">Dr. Salwa Benali</span><span>·</span><span>17 mai 2026</span><span>·</span><span>9 min</span>
+              <span class="by">Salwa Benali</span><span>·</span><span>17 mai 2026</span><span>·</span><span>9 min</span>
             </div>
           </article>
 
@@ -588,7 +588,7 @@ ul { list-style: none; }
             <div>
               <span class="ali-cat">Jurisprudence</span>
               <div class="ali-title"><a href="#">Jurisprudence de la Cour de cassation marocaine : bilan du premier trimestre 2026 en droit commercial</a></div>
-              <div class="ali-meta">Dr. Samir Belhaj · 12 mai 2026 · 12 min</div>
+              <div class="ali-meta">Samir Belhaj · 12 mai 2026 · 12 min</div>
             </div>
           </div>
           <div class="alist-item">
@@ -612,7 +612,7 @@ ul { list-style: none; }
             <div>
               <span class="ali-cat">Conformité</span>
               <div class="ali-title"><a href="#">Compliance & LCB-FT au Maroc : nouvelles obligations FATF 2026 pour les professions juridiques réglementées</a></div>
-              <div class="ali-meta">Dr. Salwa Benali · 9 mai 2026 · 9 min</div>
+              <div class="ali-meta">Salwa Benali · 9 mai 2026 · 9 min</div>
             </div>
           </div>
         </div>
@@ -688,9 +688,9 @@ ul { list-style: none; }
               </div>
             </div>
             <div class="exp-item">
-              <img srcset="images/expert-samir-belhaj-droit-sm.webp 480w, images/expert-samir-belhaj-droit-md.webp 800w, images/expert-samir-belhaj-droit.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/expert-samir-belhaj-droit.webp" alt="Dr. Samir Belhaj" class="exp-av" loading="lazy"/>
+              <img srcset="images/expert-samir-belhaj-droit-sm.webp 480w, images/expert-samir-belhaj-droit-md.webp 800w, images/expert-samir-belhaj-droit.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/expert-samir-belhaj-droit.webp" alt="Samir Belhaj" class="exp-av" loading="lazy"/>
               <div>
-                <div class="exp-name">Dr. Samir Belhaj</div>
+                <div class="exp-name">Samir Belhaj</div>
                 <div class="exp-role">Droit des affaires & OHADA</div>
               </div>
             </div>
@@ -841,5 +841,30 @@ document.querySelectorAll('.btn-nl').forEach(btn => {
   });
 });
 </script>
-</body>
+<!-- POPUP NEWSLETTER -->
+<div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,21,40,.82);z-index:9998;align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
+    <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
+    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#b8922e;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="display:inline-block;width:20px;height:1px;background:#b8922e;"></span>Newsletter Neybras
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0f1e36;line-height:1.2;margin-bottom:10px;">Les meilleures analyses juridiques et financières</h2>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
+    <form id="nl-popup-form" onsubmit="nlSubmit(event)" style="display:flex;gap:0;">
+      <input id="nl-popup-email" type="email" placeholder="Votre email professionnel" required style="flex:1;padding:11px 14px;border:1px solid #e4e4e4;border-right:none;font-size:13px;font-family:'Inter',sans-serif;outline:none;"/>
+      <button type="submit" style="padding:11px 20px;background:#0f1e36;color:#fff;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">S'abonner</button>
+    </form>
+    <p style="font-family:'Inter',sans-serif;font-size:9.5px;color:#aaa;margin-top:10px;text-align:center;">12 000+ abonnés · Gratuit · Désinscription en 1 clic</p>
+  </div>
+</div>
+<script>
+(function(){
+  function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
+  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}}
+  window.nlClose=nlClose;window.nlSubmit=nlSubmit;
+  if(!localStorage.getItem('nl_closed')){
+    setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
+  }
+})();
+</script></body>
 </html>
