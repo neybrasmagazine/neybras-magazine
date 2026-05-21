@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Analyses & Décryptages — Neybras Magazine</title>
+<meta name="description" content="L'ensemble des analyses Neybras classées par piliers de gouvernance : Sport Business, Droit des affaires, Finance & Marchés, Afrique & OHADA."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://www.neybras.ma/analyses"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--bn:#0f1e36;--bn2:#0a1528;--bn3:#1a3355;--or:#b8922e;--or-lt:#d4a94a;--or-bg:rgba(184,146,46,.08);--or-bd:rgba(184,146,46,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;transition:var(--tr);}
+img{max-width:100%;height:auto;display:block;}
+ul{list-style:none;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+.top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
+.tb-in{display:flex;justify-content:space-between;align-items:center;}
+.tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.05em;}
+.tb-date{color:rgba(184,146,46,.8);font-weight:500;}
+.tb-r{display:flex;align-items:center;gap:16px;}
+.tb-soc{display:flex;gap:12px;}
+.tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
+.tb-soc a:hover{color:var(--or-lt);}
+.tb-lnk{display:flex;gap:16px;}
+.tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
+.tb-lnk a:hover{color:rgba(255,255,255,.65);}
+.site-header{background:var(--bn);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.07);}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo-txt{display:flex;flex-direction:column;}
+.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,146,46,.75);letter-spacing:.05em;margin-top:2px;}
+.hd-act{display:flex;align-items:center;gap:14px;}
+.btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;}
+.btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
+.btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,146,46,.3);}
+.nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
+.nav-a:hover{color:rgba(255,255,255,.82);}
+.nav-a.on{color:#fff;border-bottom-color:var(--or);}
+.nav-a.star{color:rgba(184,146,46,.8);}
+/* hero */
+.an-hero{background:var(--bn);padding:64px 0 52px;border-bottom:3px solid var(--or);text-align:center;}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:18px;}
+.sec-eyebrow::before,.sec-eyebrow::after{content:'';display:block;width:28px;height:1px;background:var(--or);opacity:.5;}
+.an-hero h1{font-family:var(--pd);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;margin-bottom:14px;}
+.an-hero p{font-size:14px;color:rgba(255,255,255,.5);max-width:520px;margin:0 auto;line-height:1.7;}
+/* thematic sections */
+.theme-section{padding:60px 0;border-bottom:1px solid var(--brd);}
+.theme-section:last-child{border-bottom:none;}
+.theme-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px;padding-bottom:18px;border-bottom:2px solid var(--bn);}
+.theme-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:6px;}
+.theme-title{font-family:var(--pd);font-size:1.6rem;font-weight:700;color:var(--bn);}
+.theme-link{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gris4);border:1px solid var(--brd);padding:7px 14px;white-space:nowrap;transition:var(--tr);}
+.theme-link:hover{border-color:var(--or);color:var(--or);}
+/* cards grid */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.art-card{background:var(--blanc);border:1px solid var(--brd);display:flex;flex-direction:column;transition:var(--tr);position:relative;overflow:hidden;}
+.art-card:hover{border-color:rgba(184,146,46,.35);box-shadow:0 6px 24px rgba(0,0,0,.09);}
+.art-card:hover .card-title{color:var(--or);}
+.card-img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.card-body{padding:22px 20px 18px;flex:1;display:flex;flex-direction:column;}
+.card-rubrique{font-size:8.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:10px;}
+.card-title{font-family:var(--pd);font-size:1rem;font-weight:700;color:var(--gris1);line-height:1.35;margin-bottom:10px;transition:var(--tr);}
+.card-desc{font-family:var(--cg);font-size:14px;color:var(--gris4);line-height:1.6;flex:1;margin-bottom:16px;}
+.card-link{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-top:auto;}
+.card-link i{font-size:9px;transition:var(--tr);}
+.art-card:hover .card-link i{transform:translateX(3px);}
+/* footer */
+footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48px 0 28px;}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
+.ft-brand .logo-tag{font-size:10px;margin-bottom:14px;}
+.ft-desc{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px;}
+.ft-soc{display:flex;gap:12px;}
+.ft-soc a{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:11px;transition:var(--tr);}
+.ft-soc a:hover{border-color:var(--or);color:var(--or);}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,46,.7);margin-bottom:16px;}
+.ft-links{display:flex;flex-direction:column;gap:9px;}
+.ft-links a{font-size:11.5px;color:rgba(255,255,255,.35);transition:var(--tr);}
+.ft-links a:hover{color:rgba(255,255,255,.72);}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-size:10px;color:rgba(255,255,255,.22);}
+.ft-legal{display:flex;gap:20px;}
+.ft-legal a{font-size:10px;color:rgba(255,255,255,.22);}
+.ft-legal a:hover{color:rgba(255,255,255,.5);}
+.scroll-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:var(--tr);}
+.scroll-top:hover{background:var(--or-lt);}
+.scroll-top.vis{display:flex;}
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr);}.ft-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr;}.theme-header{flex-direction:column;gap:12px;}.ft-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="top-bar"><div class="container"><div class="tb-in">
+  <div class="tb-l"><span class="tb-date">Mercredi 20 Mai 2026</span><span>·</span><span>Casablanca</span><span>·</span><span>Droit · Finance · Arbitrage · Afrique</span></div>
+  <div class="tb-r"><div class="tb-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div><div class="tb-lnk"><a href="contact.html">Contact</a><a href="interviews.html">Interviews</a><a href="tribunes.html">Tribunes</a></div></div>
+</div></div></div>
+
+<header class="site-header"><div class="container"><div class="hd-in">
+  <a href="index.html" class="logo-wrap"><div class="logo-txt"><span class="logo-name">Neybras</span><span class="logo-tag">Le droit en lumière</span></div></a>
+  <div class="hd-act"><button class="btn-srch"><i class="fas fa-search"></i></button><a href="contact.html" class="btn-abo">S'abonner</a></div>
+</div></div>
+<nav class="main-nav"><div class="container"><div class="nav-in">
+  <a href="index.html" class="nav-a">Accueil</a>
+  <a href="droit.html" class="nav-a">Droit des affaires</a>
+  <a href="finance.html" class="nav-a">Finance & Marchés</a>
+  <a href="arbitrage.html" class="nav-a">Arbitrage & ADR</a>
+  <a href="afrique.html" class="nav-a">Afrique & OHADA</a>
+  <a href="droit-du-sport.html" class="nav-a star">Sport Business</a>
+  <a href="interviews.html" class="nav-a">Interviews</a>
+  <a href="tribunes.html" class="nav-a">Tribunes</a>
+</div></div></nav></header>
+
+<!-- Hero -->
+<section class="an-hero">
+  <div class="container">
+    <div class="sec-eyebrow"><span>Décryptages</span></div>
+    <h1>Analyses & Décryptages</h1>
+    <p>L'ensemble de nos analyses classées par piliers de gouvernance</p>
+  </div>
+</section>
+
+<!-- Section 1 : Sport Business -->
+<div class="container">
+  <div class="theme-section">
+    <div class="theme-header">
+      <div>
+        <div class="theme-tag">Pilier 1</div>
+        <div class="theme-title">Sport Business & Droit</div>
+      </div>
+      <a href="droit-du-sport.html" class="theme-link">Voir tout <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cards-grid">
+      <a href="article.html" class="art-card">
+        <img src="images/sport-coupe-du-monde-maroc-stade.webp" alt="CdM 2030 Maroc" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Sport Business · Fiscal</div>
+          <div class="card-title">CdM 2030 : exonérations fiscales FIFA, clauses de responsabilité et ce que le Maroc a vraiment signé</div>
+          <div class="card-desc">Les accords d'organisation du Mondial 2030 contiennent des clauses fiscales et de responsabilité que peu de commentateurs ont analysées dans leur intégralité.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-agents-fifa-maroc.html" class="art-card">
+        <img src="images/sport-fifa-agents-football.webp" alt="Agents FIFA" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Sport Business · Réglementation</div>
+          <div class="card-title">Agents FIFA au Maroc : plafonnement des commissions, conflits d'intérêts et risques disciplinaires</div>
+          <div class="card-desc">Le FFAR redessine profondément le cadre des agents sportifs. Analyse des nouvelles règles applicables aux agents opérant au Maroc.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-valorisation-sportif-marque.html" class="art-card">
+        <img src="images/sport-droits-image-athlete.webp" alt="Droits image sportifs" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Sport Business · Droits à l'image</div>
+          <div class="card-title">Hakimi, En-Nesyri, Ounahi : la valorisation juridique du sportif-marque en droit marocain</div>
+          <div class="card-desc">Comment le droit marocain appréhende-t-il les droits à l'image, les sociétés de droits et la fiscalité des revenus publicitaires internationaux des sportifs ?</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 2 : Droit -->
+  <div class="theme-section">
+    <div class="theme-header">
+      <div>
+        <div class="theme-tag">Pilier 2</div>
+        <div class="theme-title">Actualités Juridiques</div>
+      </div>
+      <a href="droit.html" class="theme-link">Voir tout <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cards-grid">
+      <a href="article-procedures-collectives.html" class="art-card">
+        <img src="images/droit-procedures-collectives-themis.webp" alt="Procédures collectives" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Droit des affaires · Restructuring</div>
+          <div class="card-title">Procédures collectives 2026 : ce que la réforme change pour les créanciers et les dirigeants</div>
+          <div class="card-desc">La loi 73-17 a profondément réformé le traitement des difficultés des entreprises. Bilan pratique deux ans après son entrée en vigueur.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-ia-cndp.html" class="art-card">
+        <img src="images/numerique-ia-cndp-intelligence-artificielle.webp" alt="IA et CNDP" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Droit des affaires · Numérique</div>
+          <div class="card-title">IA générative et loi 09-08 : la CNDP peut-elle sanctionner ChatGPT et ses intégrateurs marocains ?</div>
+          <div class="card-desc">L'IA générative soulève des questions inédites au regard de la loi marocaine sur la protection des données personnelles.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-code-travail.html" class="art-card">
+        <img src="images/droit-travail-signature-contrat.webp" alt="Code du travail" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Droit social · Réforme</div>
+          <div class="card-title">Télétravail, CDD en chaîne, rupture conventionnelle : le Code du Travail réformé ligne par ligne</div>
+          <div class="card-desc">Décryptage complet des dispositions du projet de réforme du Code du travail marocain et de leurs implications pratiques.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 3 : Finance -->
+  <div class="theme-section">
+    <div class="theme-header">
+      <div>
+        <div class="theme-tag">Pilier 3</div>
+        <div class="theme-title">Finance & Investissement</div>
+      </div>
+      <a href="finance.html" class="theme-link">Voir tout <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cards-grid">
+      <a href="article-finance-participative.html" class="art-card">
+        <img src="images/finance-participative-conformite.webp" alt="Finance participative" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Finance & Marchés · Participatif</div>
+          <div class="card-title">Cinq ans de finance participative au Maroc : un bilan contrasté et les trois freins que le régulateur refuse de voir</div>
+          <div class="card-desc">Malgré une croissance réelle, la finance participative marocaine peine à atteindre son potentiel. Analyse des blocages structurels.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-cfc-nairobi.html" class="art-card">
+        <img src="images/finance-cfc-nairobi-gratte-ciels.webp" alt="CFC vs Nairobi" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Finance & Marchés · Comparatif</div>
+          <div class="card-title">CFC vs Nairobi vs Johannesburg : le comparatif juridique et fiscal que les investisseurs attendent</div>
+          <div class="card-desc">Quel centre financier africain offre le meilleur cadre aux investisseurs institutionnels ? Analyse comparative des trois places.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-green-bonds.html" class="art-card">
+        <img src="images/finance-green-bonds-eoliennes-durables.webp" alt="Green bonds" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Finance & Marchés · ESG</div>
+          <div class="card-title">Green bonds : le marché marocain dépasse 8 Md MAD mais le cadre AMMC peine à rassurer les institutionnels</div>
+          <div class="card-desc">Le marché obligataire vert marocain croît rapidement, mais des lacunes réglementaires freinent l'appétit des grands investisseurs.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 4 : Afrique -->
+  <div class="theme-section">
+    <div class="theme-header">
+      <div>
+        <div class="theme-tag">Pilier 4</div>
+        <div class="theme-title">Dossiers Afrique</div>
+      </div>
+      <a href="afrique.html" class="theme-link">Voir tout <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cards-grid">
+      <a href="article-ohada-suretes.html" class="art-card">
+        <img src="images/afrique-ohada-droit-affaires.webp" alt="OHADA sûretés" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Afrique & OHADA · Sûretés</div>
+          <div class="card-title">OHADA : l'Acte uniforme révisé sur les sûretés ouvre une fenêtre stratégique pour les prêteurs marocains</div>
+          <div class="card-desc">La révision de l'Acte uniforme OHADA sur les sûretés représente une opportunité majeure pour les banques marocaines actives en Afrique de l'Ouest.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-ppp-afrique.html" class="art-card">
+        <img src="images/afrique-ppp-infrastructure.webp" alt="PPP Afrique" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Afrique & OHADA · PPP</div>
+          <div class="card-title">PPP en Afrique : pourquoi 60 % des projets échouent avant le premier décaissement</div>
+          <div class="card-desc">Garanties souveraines insuffisantes, clauses force majeure mal négociées, allocation des risques asymétrique : anatomie des échecs de PPP africains.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="article-cryptoactifs.html" class="art-card">
+        <img src="images/finance-cryptoactifs-regulation-maroc.webp" alt="Cryptoactifs" class="card-img" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-rubrique">Finance & Marchés · Crypto</div>
+          <div class="card-title">Cryptoactifs au Maroc : Bank Al-Maghrib prépare un cadre — ce que les opérateurs doivent anticiper</div>
+          <div class="card-desc">Le futur cadre réglementaire marocain des cryptoactifs se dessine. Ce que les plateformes d'échange et les investisseurs doivent anticiper dès maintenant.</div>
+          <span class="card-link">Lire l'analyse <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo-name">Neybras</div>
+        <div class="logo-tag">Le droit en lumière</div>
+        <p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage et droit africain.</p>
+        <div class="ft-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+      </div>
+      <div><div class="ft-col-title">Rubriques</div><div class="ft-links">
+        <a href="droit.html">Droit des affaires</a><a href="finance.html">Finance & Marchés</a>
+        <a href="arbitrage.html">Arbitrage & ADR</a><a href="afrique.html">Afrique & OHADA</a>
+        <a href="droit-du-sport.html">Sport Business</a>
+      </div></div>
+      <div><div class="ft-col-title">Magazine</div><div class="ft-links">
+        <a href="interviews.html">Interviews</a><a href="tribunes.html">Tribunes</a>
+        <a href="analyses.html">Analyses</a><a href="a-propos.html">À propos</a>
+      </div></div>
+      <div><div class="ft-col-title">Légal</div><div class="ft-links">
+        <a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+        <a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
+      </div></div>
+    </div>
+    <div class="ft-bottom">
+      <span class="ft-copy">© 2026 Neybras Magazine · Boulevard Zerktouni, Casablanca, Maroc 20000</span>
+      <div class="ft-legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+<script>
+const st=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
+st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

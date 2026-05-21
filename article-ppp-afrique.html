@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>PPP en Afrique : pourquoi 60 % des projets échouent — Neybras Magazine</title>
+<meta name="description" content="Analyse des causes d'échec des PPP en Afrique subsaharienne : garanties souveraines insuffisantes, force majeure mal rédigée, allocation des risques déséquilibrée. Par Ismaël Kourouma."/>
+<meta name="author" content="Ismaël Kourouma"/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--bn:#0f1e36;--bn2:#0a1528;--or:#b8922e;--or-lt:#d4a94a;--or-bg:rgba(184,146,46,.08);--or-bd:rgba(184,146,46,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;--sh:0 1px 12px rgba(0,0,0,.07);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;transition:var(--tr);}
+img{max-width:100%;height:auto;display:block;}
+ul{list-style:none;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--or);width:0%;z-index:9999;transition:width .08s linear;}
+.top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
+.tb-in{display:flex;justify-content:space-between;align-items:center;}
+.tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);}
+.tb-date{color:rgba(184,146,46,.8);font-weight:500;}
+.tb-r{display:flex;align-items:center;gap:16px;}
+.tb-soc{display:flex;gap:12px;}
+.tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
+.tb-soc a:hover{color:var(--or-lt);}
+.tb-lnk{display:flex;gap:16px;}
+.tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
+.tb-lnk a:hover{color:rgba(255,255,255,.65);}
+.site-header{background:var(--bn);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.07);}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo-txt{display:flex;flex-direction:column;}
+.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,146,46,.75);margin-top:2px;}
+.hd-act{display:flex;align-items:center;gap:14px;}
+.btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;}
+.btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
+.btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,146,46,.3);}
+.nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
+.nav-a:hover{color:rgba(255,255,255,.82);}
+.nav-a.on{color:#fff;border-bottom-color:var(--or);}
+.nav-a.star{color:rgba(184,146,46,.75);}
+.art-hero{background:var(--blanc);border-bottom:1px solid var(--brd);padding:52px 0 0;}
+.art-hero-inner{max-width:900px;margin:0 auto;padding:0 32px;}
+.breadcrumb{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--gris4);margin-bottom:28px;}
+.breadcrumb a{color:var(--gris4);}
+.breadcrumb a:hover{color:var(--gris2);}
+.breadcrumb .bsep{color:var(--gris5);}
+.art-category{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+.art-cat-line{display:inline-block;width:28px;height:1px;background:var(--or);}
+.art-cat-label{font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);}
+.art-h1{font-family:var(--cg);font-size:clamp(28px,4vw,50px);font-weight:600;color:var(--bn);line-height:1.18;margin-bottom:18px;max-width:800px;}
+.art-deck{font-family:var(--cg);font-size:clamp(15px,2vw,19px);font-style:italic;color:var(--gris3);line-height:1.55;margin-bottom:26px;max-width:740px;}
+.art-meta{display:flex;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--gris4);padding:18px 0;border-top:1px solid var(--brd2);border-bottom:1px solid var(--brd2);margin-bottom:38px;}
+.am-author-wrap{display:flex;align-items:center;gap:9px;}
+.am-av{width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid var(--or-bd);}
+.am-name{font-weight:600;color:var(--gris2);font-size:12px;}
+.am-dot{color:var(--gris5);margin:0 10px;}
+.am-share-wrap{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.am-sh{width:28px;height:28px;border-radius:50%;border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;color:var(--gris4);font-size:11px;transition:var(--tr);}
+.am-sh:hover{border-color:var(--or);color:var(--or);}
+.art-image-wrap{margin:0 -32px 0;}
+.art-image-wrap img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.art-image-caption{font-size:10.5px;color:var(--gris4);padding:10px 32px;border-bottom:1px solid var(--brd);background:var(--blanc);}
+.art-wrap{padding:52px 0 72px;}
+.art-layout{display:grid;grid-template-columns:1fr 292px;gap:60px;align-items:start;}
+.art-col{min-width:0;}
+.art-text{font-family:var(--cg);font-size:20px;line-height:1.82;color:var(--gris3);}
+.art-text p{margin-bottom:28px;}
+.art-text .chapeau{font-size:21px;font-weight:500;color:var(--gris2);line-height:1.68;border-left:2px solid var(--or);padding-left:20px;margin-bottom:36px;}
+.art-text h2{font-family:var(--pd);font-size:23px;font-weight:700;color:var(--bn);line-height:1.28;margin:52px 0 20px;padding-top:6px;}
+.art-text h2 span.h2-marker{display:block;width:22px;height:1px;background:var(--or);margin-bottom:14px;}
+.art-text h3{font-family:var(--pd);font-size:18px;font-weight:700;color:var(--gris2);margin:36px 0 14px;}
+.art-text strong{font-weight:600;color:var(--gris2);}
+.art-text ul{padding-left:0;margin-bottom:28px;border-top:1px solid var(--brd2);}
+.art-text ul li{font-size:19px;padding:10px 0 10px 18px;border-bottom:1px solid var(--brd2);position:relative;color:var(--gris3);}
+.art-text ul li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:5px;background:var(--or);border-radius:50%;}
+.pull-quote{margin:48px 0;padding:32px 36px 32px 40px;background:#f9f6ef;border-left:3px solid var(--or);}
+.pull-quote blockquote{font-family:var(--cg);font-size:22px;font-style:italic;color:var(--bn);line-height:1.55;margin-bottom:14px;}
+.pull-quote cite{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--or);font-style:normal;}
+.highlight-box{margin:36px 0;padding:24px 28px;background:var(--blanc);border:1px solid var(--brd);border-top:2px solid var(--or);}
+.hb-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.highlight-box ul{border-top:none;}
+.highlight-box ul li{font-size:17px;color:var(--gris3);padding:8px 0 8px 18px;border-bottom:1px solid var(--brd2);}
+.highlight-box ul li:last-child{border-bottom:none;}
+.art-table{width:100%;border-collapse:collapse;margin:36px 0;}
+.art-table thead tr{border-bottom:2px solid var(--bn);}
+.art-table th{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bn);padding:10px 14px;text-align:left;background:#f5f5f5;}
+.art-table td{padding:12px 14px;border-bottom:1px solid var(--brd2);font-family:var(--cg);font-size:17px;color:var(--gris3);vertical-align:top;}
+.art-table td:first-child{font-weight:600;color:var(--gris2);}
+.art-note{font-size:11.5px;color:var(--gris4);line-height:1.75;padding-top:24px;border-top:1px solid var(--brd);margin-top:44px;}
+.share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--brd);}
+.share-lbl{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris4);margin-right:4px;}
+.sh-a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10.5px;font-weight:600;transition:var(--tr);}
+.sh-li{background:#0a66c2;color:#fff;}
+.sh-tw{background:#0f1419;color:#fff;}
+.sh-wa{background:#25d366;color:#fff;}
+.sh-cp{background:transparent;color:var(--gris3);border:1px solid var(--brd);cursor:pointer;}
+.sh-cp:hover{border-color:var(--or);color:var(--or);}
+.author-box{margin:40px 0;padding:28px 32px;background:var(--blanc);border:1px solid var(--brd);border-top:2px solid var(--bn);display:grid;grid-template-columns:68px 1fr;gap:22px;align-items:start;}
+.av-i{border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-weight:700;color:#fff;flex-shrink:0;}
+.auth-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris4);margin-bottom:5px;}
+.auth-name{font-family:var(--pd);font-size:18px;font-weight:700;color:var(--bn);margin-bottom:3px;}
+.auth-role{font-size:11.5px;color:var(--gris4);margin-bottom:12px;}
+.auth-bio{font-family:var(--cg);font-size:16.5px;color:var(--gris3);line-height:1.7;}
+.auth-links{display:flex;gap:8px;margin-top:14px;}
+.auth-lnk{width:30px;height:30px;border:1px solid var(--brd);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gris4);font-size:11px;transition:var(--tr);}
+.auth-lnk:hover{border-color:var(--or);color:var(--or);}
+.art-aside{display:flex;flex-direction:column;gap:28px;position:sticky;top:82px;}
+.wg{background:var(--blanc);border:1px solid var(--brd);padding:22px;}
+.wt{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris2);padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--brd);}
+.toc{display:flex;flex-direction:column;}
+.toc-item{display:flex;align-items:start;gap:12px;padding:10px 0;border-bottom:1px solid var(--brd2);cursor:pointer;transition:var(--tr);}
+.toc-item:last-child{border-bottom:none;padding-bottom:0;}
+.toc-n{font-family:var(--cg);font-size:20px;font-weight:600;color:var(--gris5);line-height:1;flex-shrink:0;width:22px;transition:var(--tr);}
+.toc-t{font-size:11.5px;color:var(--gris3);line-height:1.45;transition:var(--tr);}
+.toc-item:hover .toc-n,.toc-item.act .toc-n{color:var(--or);}
+.toc-item:hover .toc-t,.toc-item.act .toc-t{color:var(--gris1);}
+.toc-item.act{border-left:2px solid var(--or);padding-left:10px;margin-left:-10px;}
+.rel-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--brd2);align-items:flex-start;}
+.rel-item:last-child{border-bottom:none;padding-bottom:0;}
+.rel-thumb{width:62px;height:48px;object-fit:cover;flex-shrink:0;}
+.rel-info h4{font-family:var(--pd);font-size:.82rem;font-weight:700;color:var(--gris1);line-height:1.3;margin-bottom:3px;}
+.rel-info h4 a:hover{color:var(--or);}
+.rel-info span{font-size:10px;color:var(--gris5);}
+.nl-desc{font-size:12px;color:var(--gris3);line-height:1.6;margin-bottom:14px;}
+.nl-input{width:100%;padding:10px 14px;border:1px solid var(--brd);font-size:12px;background:var(--page);outline:none;transition:var(--tr);margin-bottom:8px;}
+.nl-input:focus{border-color:var(--or);}
+.nl-btn{width:100%;background:var(--or);color:var(--bn);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:11px;border:none;cursor:pointer;transition:var(--tr);}
+.nl-btn:hover{background:var(--or-lt);}
+footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48px 0 28px;}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
+.ft-brand .logo-tag{font-size:10px;margin-bottom:14px;}
+.ft-desc{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px;}
+.ft-soc{display:flex;gap:12px;}
+.ft-soc a{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:11px;transition:var(--tr);}
+.ft-soc a:hover{border-color:var(--or);color:var(--or);}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,46,.7);margin-bottom:16px;}
+.ft-links{display:flex;flex-direction:column;gap:9px;}
+.ft-links a{font-size:11.5px;color:rgba(255,255,255,.35);transition:var(--tr);}
+.ft-links a:hover{color:rgba(255,255,255,.72);}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-size:10px;color:rgba(255,255,255,.22);}
+.ft-legal{display:flex;gap:20px;}
+.ft-legal a{font-size:10px;color:rgba(255,255,255,.22);}
+.scroll-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:var(--tr);}
+.scroll-top:hover{background:var(--or-lt);}
+.scroll-top.vis{display:flex;}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="top-bar"><div class="container"><div class="tb-in">
+  <div class="tb-l"><span class="tb-date">Mercredi 21 Mai 2026</span><span>·</span><span>Casablanca</span><span>·</span><span>Droit · Finance · Arbitrage · Afrique</span></div>
+  <div class="tb-r"><div class="tb-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a></div><div class="tb-lnk"><a href="contact.html">Contact</a><a href="interviews.html">Interviews</a><a href="tribunes.html">Tribunes</a></div></div>
+</div></div></div>
+
+<header class="site-header"><div class="container"><div class="hd-in">
+  <a href="index.html" class="logo-wrap"><div class="logo-txt"><span class="logo-name">Neybras</span><span class="logo-tag">Le droit en lumière</span></div></a>
+  <div class="hd-act"><button class="btn-srch"><i class="fas fa-search"></i></button><a href="contact.html" class="btn-abo">S'abonner</a></div>
+</div></div>
+<nav class="main-nav"><div class="container"><div class="nav-in">
+  <a href="index.html" class="nav-a">Accueil</a>
+  <a href="droit.html" class="nav-a">Droit des affaires</a>
+  <a href="finance.html" class="nav-a">Finance &amp; Marchés</a>
+  <a href="arbitrage.html" class="nav-a">Arbitrage &amp; ADR</a>
+  <a href="afrique.html" class="nav-a on">Afrique &amp; OHADA</a>
+  <a href="droit-du-sport.html" class="nav-a star">Sport Business</a>
+  <a href="interviews.html" class="nav-a">Interviews</a>
+  <a href="tribunes.html" class="nav-a">Tribunes</a>
+</div></div></nav></header>
+
+<section class="art-hero"><div class="art-hero-inner">
+  <nav class="breadcrumb"><a href="index.html">Accueil</a><span class="bsep">›</span><a href="afrique.html">Afrique &amp; OHADA</a><span class="bsep">›</span><span>PPP en Afrique</span></nav>
+  <div class="art-category"><span class="art-cat-line"></span><span class="art-cat-label">Afrique &amp; OHADA · Analyse</span></div>
+  <h1 class="art-h1">PPP en Afrique : pourquoi 60 % des projets échouent avant le premier décaissement — et comment les structurer autrement</h1>
+  <p class="art-deck">Les partenariats public-privé africains souffrent d'un mal structurel : garanties souveraines fragiles, clauses de force majeure inadaptées, allocation asymétrique des risques entre États et investisseurs. Une refonte de la méthode de structuration est nécessaire pour débloquer les milliards promis à l'infrastructure du continent.</p>
+  <div class="art-meta">
+    <div class="am-author-wrap"><span class="av-i" style="width:30px;height:30px;background:#1e4a7a;font-size:10px">IK</span><span class="am-name">Ismaël Kourouma</span></div>
+    <span class="am-dot">·</span><span>Avocat, Kourouma Legal · Arbitrage &amp; Droit africain</span>
+    <span class="am-dot">·</span><span>15 Mai 2026</span>
+    <span class="am-dot">·</span><span><i class="far fa-clock" style="margin-right:4px"></i>13 min de lecture</span>
+    <div class="am-share-wrap"><a href="#" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="#" class="am-sh"><i class="fab fa-x-twitter"></i></a></div>
+  </div>
+  <div class="art-image-wrap">
+    <img src="images/balance-justice-doree-maroc.png" alt="Infrastructure PPP Afrique — structuration juridique" loading="eager"/>
+    <div class="art-image-caption">La structuration juridique des PPP en Afrique conditionne leur succès ou leur échec bien avant la première pierre posée. © Neybras Magazine</div>
+  </div>
+</div></section>
+
+<div class="container"><div class="art-wrap"><div class="art-layout">
+  <article class="art-col">
+    <div class="art-text">
+
+      <p class="chapeau">Une étude de l'Infrastructure Consortium for Africa publiée en 2024 révèle que sur les 1 200 projets d'infrastructure PPP lancés en Afrique subsaharienne entre 2010 et 2023, moins de 40 % ont atteint le stade du premier décaissement dans les délais initialement prévus. Le continent compte 600 milliards de dollars de besoins annuels en infrastructure, mais les financements privés peinent à se matérialiser. Pourquoi ? La réponse se trouve rarement dans les projets eux-mêmes, mais dans la qualité de leur structuration juridique et financière.</p>
+
+      <p>Les raisons de ces échecs sont systémiques et récurrentes. Les gouvernements africains peinent à offrir des garanties souveraines crédibles. Les conseils juridiques locaux, souvent débordés, produisent des clauses de force majeure copiées de modèles inadaptés au contexte local. Les investisseurs privés, surprotégés sur le papier, se retrouvent piégés dans des mécanismes de règlement des différends labyrinthiques. Le résultat est prévisible : les projets meurent en salle de négociation, non sur les chantiers.</p>
+
+      <h2 id="sec1"><span class="h2-marker"></span>I. L'anatomie de l'échec : trois causes structurelles identifiées</h2>
+
+      <h3>1.1 Les garanties souveraines insuffisantes ou mal calibrées</h3>
+
+      <p>La garantie souveraine est le pilier fondamental de tout PPP africain impliquant un partenaire privé international. Elle engage la signature de l'État sur le remboursement d'une dette ou la couverture d'un manque à gagner commercial. En théorie, elle rend le projet bancable. En pratique, elle est trop souvent sous-capitalisée, assorties de conditions suspensives irréalistes, ou libellée dans une monnaie locale dont la convertibilité n'est pas garantie.</p>
+
+      <p>Le cas type : un projet d'autoroute concédée en Côte d'Ivoire ou au Sénégal où l'État garantit un trafic minimum (<em>traffic guarantee</em>) calculé sur des prévisions optimistes à 25 ans. Lorsque la fréquentation réelle atteint 60 % des prévisions — ce qui est statistiquement probable — l'État doit combler l'écart. Mais les ressources budgétaires disponibles sont engagées ailleurs, et le mécanisme d'appel de la garantie prend 18 à 36 mois. Le projet entre en défaut technique sans que personne soit juridiquement responsable.</p>
+
+      <div class="highlight-box">
+        <div class="hb-title"><i class="fas fa-exclamation-circle"></i> Pathologies des garanties souveraines en Afrique</div>
+        <ul>
+          <li><strong>Garanties partielles non adossées</strong> — Couverture de 70-80 % du risque sans mécanisme de complément</li>
+          <li><strong>Convertibilité non garantie</strong> — Libellé en monnaie locale sans clause d'indexation ou de hedging</li>
+          <li><strong>Conditionnalités excessives</strong> — Conditions suspensives bloquant l'appel de garantie pendant des années</li>
+          <li><strong>Absence de compte séquestre</strong> — Fonds de garantie non provisionnés, purement comptables</li>
+          <li><strong>Volatilité politique</strong> — Garanties remises en cause après changement de gouvernement</li>
+        </ul>
+      </div>
+
+      <h3>1.2 Les clauses de force majeure inadaptées au contexte africain</h3>
+
+      <p>La clause de force majeure dans un contrat de PPP africain est souvent copiée d'un modèle européen ou nord-américain sans adaptation. Or, le contexte africain présente des risques spécifiques que les modèles classiques ne couvrent pas : coups d'État ou transitions politiques non violentes, instabilité des régimes de change, modifications législatives unilatérales affectant la rentabilité du projet (<em>change in law</em>), incidents sécuritaires locaux non qualifiables de guerre civile au sens du droit international.</p>
+
+      <p>Un exemple récurrent : dans plusieurs projets d'énergie renouvelable au Mali et au Burkina Faso, les clauses de force majeure ne couvraient pas les "événements politiques internes" non qualifiés de guerre. Lorsque les transitions militaires de 2021-2022 ont abouti à la renégociation forcée des tarifs d'achat d'électricité, les investisseurs se sont retrouvés sans filet contractuel, contraints à des négociations bilatérales avec les nouvelles autorités ou à l'arbitrage international — processus coûteux et incertain.</p>
+
+      <div class="pull-quote">
+        <blockquote>« Une clause de force majeure copiée d'un contrat parisien dans un PPP ouest-africain, c'est comme installer un extincteur à eau dans une centrale électrique : ça ressemble à de la sécurité, mais ça aggrave le problème. »</blockquote>
+        <cite>— Ismaël Kourouma, Avocat, Kourouma Legal</cite>
+      </div>
+
+      <h3>1.3 L'allocation asymétrique des risques entre État et investisseur</h3>
+
+      <p>Le principe fondamental d'un PPP bien structuré est que chaque risque doit être supporté par la partie la mieux à même de le gérer et de le prévenir. Les États africains supportent mieux le risque politique, réglementaire et de marché local ; les investisseurs privés supportent mieux le risque de construction, d'exploitation et de financement. En pratique, les négociations aboutissent souvent à des allocations inverses.</p>
+
+      <p>La pression des bailleurs de fonds multilatéraux (Banque mondiale, BAD) et des export credit agencies encourage les États à accepter des garanties de recettes qui les exposent à des engagements hors-bilan considérables. Les investisseurs, de leur côté, limitent leur exposition en construction via des EPC à prix fixe (<em>lump sum turn-key</em>) qui transfèrent le risque de dépassement au contractant local, souvent mal capitalisé. Résultat : le risque se concentre aux deux extrémités de la chaîne — l'État et le sous-traitant local — là où la capacité à l'absorber est la plus faible.</p>
+
+      <h2 id="sec2"><span class="h2-marker"></span>II. Les mécanismes qui fonctionnent : leçons des réussites africaines</h2>
+
+      <p>Tout n'est pas sombre. Plusieurs PPP africains exemplaires ont démontré qu'une structuration rigoureuse permet de lever les obstacles. Les succès partagent des caractéristiques communes que les praticiens doivent s'approprier.</p>
+
+      <h3>2.1 Les garanties partielles de risque de la Banque mondiale (PRG)</h3>
+
+      <p>La Partial Risk Guarantee (PRG) de la Banque mondiale est probablement l'instrument le plus efficace pour sécuriser les PPP africains. Contrairement à la garantie souveraine classique, la PRG couvre spécifiquement le risque politique — y compris le risque de non-paiement par l'État — et bénéficie de la signature de la Banque mondiale, qui dispose d'un statut de créancier privilégié. Le projet d'autoroute à péage Dakar-Diamniadio au Sénégal a utilisé avec succès ce mécanisme.</p>
+
+      <p>La MIGA (Multilateral Investment Guarantee Agency), filiale du Groupe Banque mondiale, offre également une assurance contre le risque politique qui peut se combiner avec la PRG pour une couverture complète. Le coût de ces instruments — entre 0,5 % et 2 % du montant garanti par an — est largement amorti par la réduction du coût de financement qu'ils permettent.</p>
+
+      <h3>2.2 Les mécanismes de stabilisation du change</h3>
+
+      <p>L'un des risques les plus sous-estimés dans les PPP africains est le risque de change. Un projet dont les revenus sont en monnaie locale et la dette en dollars ou en euros est structurellement exposé à la dépréciation. Les solutions existent : clauses d'indexation des tarifs sur le taux de change, compte en devises (<em>offshore escrow account</em>) recevant une fraction des revenus, ou instruments de hedging proposés par la SDTCA (Société pour le Développement du Commerce entre la Tunisie et les Caraïbes) ou par des institutions spécialisées comme TCX (The Currency Exchange Fund).</p>
+
+      <table class="art-table">
+        <thead><tr><th>Mécanisme</th><th>Risque couvert</th><th>Coût approximatif</th><th>Adapté à</th></tr></thead>
+        <tbody>
+          <tr><td>PRG Banque mondiale</td><td>Risque politique, non-paiement État</td><td>0,5–2 %/an sur le montant garanti</td><td>Projets infrastructure ≥ 100 M USD</td></tr>
+          <tr><td>MIGA Insurance</td><td>Expropriation, guerre, inconvertibilité</td><td>0,5–1,75 %/an</td><td>Investissements directs étrangers</td></tr>
+          <tr><td>TCX Hedging</td><td>Risque de change monnaies africaines</td><td>3–8 %/an selon maturité</td><td>Projets avec revenus en monnaie locale</td></tr>
+          <tr><td>Escrow offshore</td><td>Risque de transfert et de convertibilité</td><td>0,1–0,3 %/an (frais bancaires)</td><td>Projets d'exportation ou à revenus mixtes</td></tr>
+          <tr><td>Compte de réserve DSRA</td><td>Insuffisance de trésorerie court terme</td><td>Coût d'opportunité du capital</td><td>Tous types de PPP</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="sec3"><span class="h2-marker"></span>III. Comment structurer autrement : une méthode en cinq étapes</h2>
+
+      <p>Après dix ans de pratique sur des projets PPP en Afrique de l'Ouest, en Afrique centrale et au Maghreb, la méthode de structuration qui maximise les chances de succès peut être résumée en cinq étapes séquentielles.</p>
+
+      <h3>3.1 Phase 1 : l'audit de capacité institutionnelle de l'État partenaire</h3>
+
+      <p>Avant toute négociation contractuelle, il est indispensable d'évaluer la capacité réelle de l'État partenaire à honorer ses engagements. Cela inclut l'analyse de la soutenabilité de la dette publique (ratio dette/PIB, service de la dette/recettes fiscales), la revue des engagements hors-bilan existants (autres PPP, garanties souveraines antérieures), et l'évaluation de la stabilité institutionnelle du ministère de tutelle. Cette phase prend deux à quatre semaines et conditionne toutes les décisions suivantes.</p>
+
+      <h3>3.2 Phase 2 : la cartographie des risques spécifiques au projet</h3>
+
+      <p>Chaque projet en Afrique présente une combinaison unique de risques. Une cartographie rigoureuse doit identifier, pour chaque risque majeur : la probabilité d'occurrence, l'impact financier potentiel, la partie la mieux positionnée pour le gérer, et le mécanisme de mitigation adapté. Cette cartographie doit intégrer les risques "africains spécifiques" : instabilité réglementaire, risque foncier (opposition des communautés locales), risques climatiques extrêmes, et risques sécuritaires.</p>
+
+      <h3>3.3 Phase 3 : la sélection des instruments de garantie et d'assurance</h3>
+
+      <p>Sur la base de la cartographie des risques, le structureur sélectionne la combinaison optimale d'instruments : garanties souveraines, PRG, MIGA, TCX, escrow offshore, DSRA. L'objectif est de couvrir les risques résiduels non assumés par les parties tout en minimisant le coût total de ces instruments. Un ratio de couverture excessive est aussi dangereux qu'une sous-couverture : il renchérit le projet au point de le rendre économiquement non viable.</p>
+
+      <div class="highlight-box">
+        <div class="hb-title"><i class="fas fa-check-circle"></i> Checklist d'une structuration PPP africaine robuste</div>
+        <ul>
+          <li>Audit de capacité institutionnelle de l'État (soutenabilité de la dette, stabilité ministérielle)</li>
+          <li>Cartographie des risques spécifiques incluant les risques "africains" non couverts par modèles standard</li>
+          <li>Clause de force majeure rédigée ex nihilo pour le contexte local, non copiée d'un modèle étranger</li>
+          <li>Mécanisme de règlement des différends adapté : arbitrage CIRDI ou CCJA avec clause d'urgence</li>
+          <li>Escrow offshore pour au moins 6 mois de service de la dette</li>
+          <li>Clause de stabilisation législative (<em>change in law</em>) avec mécanisme de compensation automatique</li>
+          <li>Revue indépendante par un conseil juridique local ET un conseil international</li>
+        </ul>
+      </div>
+
+      <h3>3.4 Phase 4 : la rédaction des clauses critiques</h3>
+
+      <p>Trois clauses méritent une attention particulière : la clause de force majeure (liste fermée des événements couverts, procédure de notification, mécanismes de mitigation), la clause de <em>change in law</em> (obligation de l'État de compenser l'impact financier d'une modification législative affectant l'équilibre économique du contrat), et la clause de résiliation pour cause publique (<em>termination for convenience</em>) avec formule de compensation prévisible.</p>
+
+      <h3>3.5 Phase 5 : le mécanisme de règlement des différends</h3>
+
+      <p>Le choix du mécanisme de règlement des différends est critique. Pour les PPP africains, les options principales sont l'arbitrage CIRDI (Centre International pour le Règlement des Différends relatifs aux Investissements), l'arbitrage CCJA-OHADA (pour les projets dans les États membres de l'OHADA), et l'arbitrage CCI avec siège à Paris ou Abidjan. Chaque mécanisme a ses avantages : le CIRDI offre une exécution facilitée contre les États grâce à la Convention de Washington ; la CCJA est plus rapide et moins coûteuse pour les litiges intra-africains.</p>
+
+      <h2 id="sec4"><span class="h2-marker"></span>Conclusion</h2>
+
+      <p>Les PPP africains ne sont pas condamnés à l'échec. Ils sont victimes d'une sous-structuration chronique que les praticiens du droit, les banquiers d'affaires et les gouvernements ont collectivement les moyens de corriger. La solution n'est pas d'importer des modèles standardisés depuis Londres ou Paris, mais de développer une expertise africaine authentique, ancrée dans la réalité institutionnelle et les risques spécifiques du continent.</p>
+
+      <p>Le Maroc occupe une position stratégique dans cette transformation. Acteur majeur de l'investissement en Afrique subsaharienne via ses groupes bancaires (Attijariwafa, BCP, CIH) et ses entreprises de BTP (Société Générale des Travaux du Maroc, CIH), le Royaume dispose de l'expertise juridique, financière et relationnelle pour devenir le hub de structuration des PPP africains. C'est un positionnement stratégique à saisir dès maintenant, avant que les firmes anglo-saxonnes n'occupent définitivement ce terrain.</p>
+
+    </div>
+
+    <div class="share-bar">
+      <span class="share-lbl">Partager</span>
+      <a href="#" class="sh-a sh-li"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <a href="#" class="sh-a sh-tw"><i class="fab fa-x-twitter"></i> Twitter</a>
+      <a href="#" class="sh-a sh-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <button class="sh-a sh-cp" id="copyLink2"><i class="fas fa-link"></i> Copier le lien</button>
+    </div>
+
+    <div class="author-box">
+      <span class="av-i" style="width:68px;height:68px;background:#1e4a7a;font-size:22px">IK</span>
+      <div>
+        <div class="auth-label">À propos de l'auteur</div>
+        <div class="auth-name">Ismaël Kourouma</div>
+        <div class="auth-role">Avocat — Kourouma Legal · Arbitrage international &amp; Droit africain des investissements</div>
+        <div class="auth-bio">Ismaël Kourouma est avocat spécialisé en arbitrage international et en droit africain des investissements. Inscrit au barreau de Casablanca, il a conseillé des États, des institutions financières multilatérales et des investisseurs privés dans plus de vingt projets de PPP en Afrique de l'Ouest et en Afrique centrale. Ancien conseiller juridique à la CCJA (Cour Commune de Justice et d'Arbitrage), il est expert reconnu du droit OHADA.</div>
+        <div class="auth-links"><a href="#" class="auth-lnk"><i class="fab fa-linkedin-in"></i></a><a href="contact.html" class="auth-lnk"><i class="fas fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="art-note">
+      <p><strong>Sources :</strong> Infrastructure Consortium for Africa, Annual Report 2024 · Banque mondiale, Directives PPP pour l'Afrique subsaharienne (2023) · BAD, African Economic Outlook 2025 · OCDE, Guide sur la gouvernance des PPP (2022) · CIRDI, Caseload Statistics 2024 · CCJA, Rapport d'activité 2024 · TCX Fund, Annual Report 2024.</p>
+    </div>
+  </article>
+
+  <aside class="art-aside">
+    <div class="wg">
+      <div class="wt">Table des matières</div>
+      <div class="toc">
+        <div class="toc-item act" onclick="document.getElementById('sec1').scrollIntoView({behavior:'smooth'})"><span class="toc-n">I</span><span class="toc-t">L'anatomie de l'échec : trois causes structurelles</span></div>
+        <div class="toc-item" onclick="document.getElementById('sec2').scrollIntoView({behavior:'smooth'})"><span class="toc-n">II</span><span class="toc-t">Les mécanismes qui fonctionnent</span></div>
+        <div class="toc-item" onclick="document.getElementById('sec3').scrollIntoView({behavior:'smooth'})"><span class="toc-n">III</span><span class="toc-t">Comment structurer autrement : cinq étapes</span></div>
+        <div class="toc-item" onclick="document.getElementById('sec4').scrollIntoView({behavior:'smooth'})"><span class="toc-n">IV</span><span class="toc-t">Conclusion</span></div>
+      </div>
+    </div>
+    <div class="wg">
+      <div class="wt">Articles liés</div>
+      <div class="rel-item">
+        <img src="images/balance-justice-doree-maroc.png" class="rel-thumb" alt="CIRDI Maroc"/>
+        <div class="rel-info"><h4><a href="article-cirdi-maroc.html">CIRDI et investissements post-ZLECAf : nouveaux défis pour le Maroc</a></h4><span>Afrique · 10 min</span></div>
+      </div>
+      <div class="rel-item">
+        <img src="images/balance-justice-doree-maroc.png" class="rel-thumb" alt="ZLECAf"/>
+        <div class="rel-info"><h4><a href="article-zlecaf.html">ZLECAf : quelles opportunités pour les entreprises marocaines ?</a></h4><span>Afrique · 9 min</span></div>
+      </div>
+    </div>
+    <div class="wg">
+      <div class="wt">Newsletter</div>
+      <p class="nl-desc">Analyses Afrique &amp; OHADA chaque semaine.</p>
+      <input class="nl-input" type="email" placeholder="votre@email.com"/>
+      <button class="nl-btn">S'inscrire</button>
+    </div>
+  </aside>
+</div></div></div>
+
+<footer><div class="container">
+  <div class="ft-grid">
+    <div class="ft-brand"><div class="logo-name">Neybras</div><div class="logo-tag">Le droit en lumière</div><p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage international et droit africain.</p><div class="ft-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a></div></div>
+    <div><div class="ft-col-title">Rubriques</div><div class="ft-links"><a href="droit.html">Droit des affaires</a><a href="finance.html">Finance &amp; Marchés</a><a href="arbitrage.html">Arbitrage &amp; ADR</a><a href="afrique.html">Afrique &amp; OHADA</a><a href="droit-du-sport.html">Sport Business</a></div></div>
+    <div><div class="ft-col-title">Magazine</div><div class="ft-links"><a href="interviews.html">Interviews</a><a href="tribunes.html">Tribunes</a><a href="analyses.html">Analyses</a></div></div>
+    <div><div class="ft-col-title">À propos</div><div class="ft-links"><a href="contact.html">Contact</a><a href="a-propos.html">À propos</a><a href="mentions-legales.html">Mentions légales</a></div></div>
+  </div>
+  <div class="ft-bottom"><span class="ft-copy">© 2026 Neybras Magazine · Boulevard Zerktouni, Casablanca, Maroc 20000</span><div class="ft-legal"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></div></div>
+</div></footer>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+<script>
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{const art=document.querySelector('.art-text');if(!art)return;prog.style.width=Math.min(100,(Math.max(0,-art.getBoundingClientRect().top)/art.offsetHeight)*100)+'%';});
+document.getElementById('copyLink2').addEventListener('click',()=>{navigator.clipboard.writeText(window.location.href).then(()=>{const btn=document.getElementById('copyLink2');const o=btn.innerHTML;btn.innerHTML='<i class="fas fa-check"></i> Copié !';setTimeout(()=>btn.innerHTML=o,2000);});});
+const st=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
+st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
