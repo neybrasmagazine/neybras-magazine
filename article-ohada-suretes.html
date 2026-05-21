@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
@@ -373,6 +373,9 @@ document.getElementById('copyLink2').addEventListener('click',()=>{navigator.cli
 const st=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+<script>
+(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
 </script>
 </body>
 </html>

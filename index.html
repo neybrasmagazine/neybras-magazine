@@ -568,7 +568,7 @@ ul{list-style:none}
         <span style="color:rgba(255,255,255,.1)">|</span>
         <div class="tb-lnk">
           <a href="a-propos.html">À propos</a>
-          <a href="publicite.html">Publicité</a>
+          <a href="contact.html">Publicité</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
@@ -689,7 +689,7 @@ ul{list-style:none}
       <div class="hero-ctas reveal delay-3">
         <a href="newsletter.html" class="cta-primary"><i class="fas fa-envelope"></i> Recevoir la newsletter</a>
         <a href="analyses.html" class="cta-secondary">Lire les analyses</a>
-        <a href="publicite.html" class="cta-ghost">Télécharger le Média Kit <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
+        <a href="contact.html" class="cta-ghost">Télécharger le Média Kit <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
       </div>
     </div>
   </div>
@@ -726,20 +726,20 @@ ul{list-style:none}
   <div class="container" style="padding:0">
     <div class="stats-in">
       <div class="stat-item reveal">
-        <span class="stat-n" data-target="2500">0</span>
-        <div class="stat-l">Lecteurs mensuels</div>
+        <span class="stat-n" data-target="8000">0</span>
+        <div class="stat-l">Lecteurs professionnels</div>
       </div>
       <div class="stat-item reveal delay-1">
-        <span class="stat-n" data-target="6">0</span>
+        <span class="stat-n" data-target="12">0</span>
         <div class="stat-l">Pays couverts</div>
       </div>
       <div class="stat-item reveal delay-2">
-        <span class="stat-n" data-target="85">0</span>
-        <div class="stat-l">Experts contributeurs</div>
+        <span class="stat-n" data-target="200">+</span>
+        <div class="stat-l">Analyses publiées</div>
       </div>
       <div class="stat-item reveal delay-3">
-        <span class="stat-n" data-target="45">0</span>
-        <div class="stat-l">Analyses publiées</div>
+        <span class="stat-n" data-target="5">0</span>
+        <div class="stat-l">Rubriques spécialisées</div>
       </div>
     </div>
     <div class="stats-baseline">Publication trimestrielle&nbsp;·&nbsp;Distribution ciblée décideurs&nbsp;·&nbsp;Analyses exclusives par des experts de terrain</div>
@@ -946,7 +946,7 @@ ul{list-style:none}
           <div class="pub-w-l">Espace partenaire premium</div>
           <h4>Votre marque auprès des décideurs</h4>
           <p>50 000+ juristes, financiers et dirigeants chaque mois. Formats exclusifs disponibles.</p>
-          <a href="publicite.html">Télécharger le Média Kit</a>
+          <a href="contact.html">Télécharger le Média Kit</a>
         </div>
 
         <!-- Popular -->
@@ -1278,7 +1278,7 @@ ul{list-style:none}
         <h2>Associez votre marque<br/>à <em>l'excellence</em> éditoriale.</h2>
         <p>Neybras Magazine vous donne accès à une audience unique de décideurs qualifiés : avocats, financiers, dirigeants d'entreprises, institutionnels. Un environnement premium pour vos messages haut de gamme.</p>
         <div class="pub-ctas">
-          <a href="publicite.html" class="pub-cta-p"><i class="fas fa-download"></i> Télécharger le Média Kit</a>
+          <a href="contact.html" class="pub-cta-p"><i class="fas fa-download"></i> Télécharger le Média Kit</a>
           <a href="contact.html" class="pub-cta-s">Nous contacter</a>
         </div>
         <div class="pub-audience">
@@ -1369,7 +1369,36 @@ ul{list-style:none}
         </div>
         <div class="pl-url"><i class="fas fa-external-link-alt"></i> neybras.com</div>
       </a>
+      <a href="contact.html" class="pl" style="border:1px solid rgba(184,146,46,.22);">
+        <div class="pl-logo" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+          <div style="font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:700;letter-spacing:.06em;color:#0f1e36;line-height:1;">Chenonceau</div>
+          <div style="width:32px;height:1px;background:#b8922e;"></div>
+        </div>
+        <div class="pl-url"><i class="fas fa-external-link-alt"></i> Partenaire média</div>
+      </a>
     </div>
+
+    <!-- Bannière vidéo Chenonceau -->
+    <div id="chenonceau-video-banner" style="margin-top:28px;background:#0f1e36;border:1px solid rgba(184,146,46,.22);overflow:hidden;position:relative;aspect-ratio:16/5;display:flex;align-items:center;justify-content:center;max-width:100%;">
+      <!-- Slot vidéo — remplacer le src par l'URL de la vidéo Chenonceau -->
+      <video id="chenonceau-video" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:none;" src="">
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+      <!-- Placeholder affiché si aucune vidéo n'est définie -->
+      <div id="chenonceau-placeholder" style="text-align:center;padding:24px 32px;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,46,.6);margin-bottom:10px;">Espace publicitaire · Partenaire Chenonceau</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-style:italic;color:rgba(255,255,255,.55);">Diffusion vidéo disponible — contactez la régie publicitaire</div>
+        <a href="contact.html" style="display:inline-block;margin-top:14px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b8922e;border:1px solid rgba(184,146,46,.4);padding:8px 20px;">Réserver cet espace</a>
+      </div>
+    </div>
+    <script>
+    (function(){
+      var vid=document.getElementById('chenonceau-video');
+      var ph=document.getElementById('chenonceau-placeholder');
+      if(vid && vid.src && vid.src!==window.location.href){vid.style.display='block';if(ph)ph.style.display='none';}
+    })();
+    </script>
+
   </div>
 </section>
 
@@ -1432,7 +1461,7 @@ ul{list-style:none}
           <li><a href="tribunes.html">Tribunes</a></li>
           <li><a href="evenements.html">Événements</a></li>
           <li><a href="newsletter.html">Newsletter</a></li>
-          <li><a href="publicite.html">Publicité & Partenariats</a></li>
+          <li><a href="contact.html">Publicité & Partenariats</a></li>
         </ul>
       </div>
       <div class="ft-col">
@@ -1441,7 +1470,7 @@ ul{list-style:none}
           <li><a href="contact.html">Nous contacter</a></li>
           <li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li>
           <li><a href="mailto:pub@neybras.ma">pub@neybras.ma</a></li>
-          <li><a href="publicite.html">Média Kit PDF</a></li>
+          <li><a href="contact.html">Média Kit PDF</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
           <li><a href="politique-confidentialite.html">Confidentialité</a></li>
         </ul>
@@ -1544,6 +1573,9 @@ document.querySelectorAll('.btn-nl,.nl-form button').forEach(btn=>{
     setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
   }
 })();
-</script></body>
+</script><script>
+(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
+</script>
+</body>
 </html>
 

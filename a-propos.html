@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
@@ -169,9 +169,9 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
       </div>
       <div class="border-left">
         <div class="section-title">Notre vision</div>
-        <h2 class="section-h2">Faire du droit un levier</h2>
+        <h2 class="section-h2">Faire du Droit et de la Finance notre levier</h2>
         <div class="section-body">
-          <p>Faire du droit et de la finance des leviers de gouvernance et de performance. À l'heure où les réformes — ZLECAf, réglementations FIFA, fiscalité numérique, intelligence artificielle — redessinent les contours du business en Afrique, Neybras éclaire les choix des leaders d'aujourd'hui et de demain.</p>
+          <p>Faire du Droit et de la Finance notre levier de gouvernance et de performance. À l'heure où les réformes — ZLECAf, réglementations FIFA, fiscalité numérique, intelligence artificielle — redessinent les contours du business en Afrique, Neybras éclaire les choix des leaders d'aujourd'hui et de demain.</p>
           <p>Notre ligne éditoriale est fondée sur la rigueur académique, l'indépendance de jugement et l'utilité pratique pour nos lecteurs professionnels.</p>
         </div>
       </div>
@@ -200,7 +200,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
         <div class="stat-label">Lecteurs professionnels</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">4</div>
+        <div class="stat-num">5</div>
         <div class="stat-label">Rubriques spécialisées</div>
       </div>
     </div>
@@ -244,28 +244,6 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
   </div>
 </div>
 
-<!-- Direction éditoriale -->
-<section class="dir-section">
-  <div class="container">
-    <div class="section-title">Direction</div>
-    <h2 class="section-h2" style="margin-bottom:40px;">Direction éditoriale</h2>
-    <div class="dir-layout">
-      <div>
-        <img src="images/dalal-fahmi-directrice-publication.png" alt="Dalal Fahmi — Directrice de publication" class="dir-photo"/>
-      </div>
-      <div>
-        <div class="dir-label">Directrice de publication</div>
-        <div class="dir-name">Dalal Fahmi</div>
-        <div class="dir-role">Fondatrice &amp; Directrice de publication · Neybras Magazine</div>
-        <div class="dir-bio">
-          <p>Dalal Fahmi est juriste de formation, titulaire d'un Master en droit des affaires internationales de l'Université Hassan II de Casablanca et d'un LL.M. en droit comparé de l'Université Paris I Panthéon-Sorbonne. Après une première carrière au sein de cabinets d'avocats d'affaires à Casablanca et à Paris, elle fonde Neybras Magazine avec la conviction que l'analyse juridique et financière de qualité doit être accessible aux décideurs africains.</p>
-          <p>Sous sa direction, Neybras s'est imposé comme une référence pour les directions juridiques, les fonds d'investissement et les institutions publiques à travers l'Afrique francophone. Elle supervise la ligne éditoriale, sélectionne les contributeurs et veille à l'indépendance intellectuelle de la publication.</p>
-        </div>
-        <a href="mailto:dalal.fahmi@neybras.com" class="dir-email"><i class="fas fa-envelope"></i> dalal.fahmi@neybras.com</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CTA contact -->
 <div class="cta-section">
@@ -316,6 +294,9 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 const st=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+<script>
+(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
 </script>
 </body>
 </html>

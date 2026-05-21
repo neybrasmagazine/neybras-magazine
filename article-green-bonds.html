@@ -581,5 +581,8 @@ document.getElementById('btnSrch').addEventListener('click',()=>{srchOv.classLis
 document.getElementById('srchClose').addEventListener('click',()=>srchOv.classList.remove('open'));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')srchOv.classList.remove('open');});
 </script>
+<script>
+(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
+</script>
 </body>
 </html>
