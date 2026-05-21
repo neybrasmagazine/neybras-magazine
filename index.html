@@ -151,7 +151,7 @@ ul{list-style:none}
 ═══════════════════════════════════════════ */
 .hero{position:relative;background:var(--bn2);min-height:92vh;display:flex;flex-direction:column;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,#061d2a 0%,#0E3D52 40%,#134460 65%,#061d2a 100%)}
-.hero-bg img{display:none}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:grayscale(15%) brightness(.85);mix-blend-mode:luminosity}
 .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 68% 55%,rgba(184,150,90,.09) 0%,transparent 68%),radial-gradient(ellipse 55% 70% at 18% 25%,rgba(10,48,68,.55) 0%,transparent 65%)}
 .hero-bg::after{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(135deg,transparent,transparent 60px,rgba(184,150,90,.018) 60px,rgba(184,150,90,.018) 61px),
@@ -545,6 +545,106 @@ ul{list-style:none}
   .why-pillars{grid-template-columns:1fr}
   .pub-formats{grid-template-columns:1fr}
 }
+
+/* ═══════════════════════════════════════════
+   RUBRIQUES SHOWCASE
+═══════════════════════════════════════════ */
+.rubr-sec{background:var(--bn2);padding:0;border-bottom:1px solid rgba(201,168,76,.08);overflow:hidden}
+.rubr-scroll{display:flex;border-top:1px solid rgba(201,168,76,.08)}
+.rubr-item{flex:1;min-width:140px;padding:22px 20px;text-align:center;transition:var(--tr);cursor:pointer;border-right:1px solid rgba(201,168,76,.07);text-decoration:none}
+.rubr-item:last-child{border-right:none}
+.rubr-item:hover{background:rgba(201,168,76,.06)}
+.rubr-item.active{background:rgba(201,168,76,.09);border-bottom:2px solid var(--or)}
+.rubr-icon{font-size:18px;color:var(--or);margin-bottom:8px;display:block}
+.rubr-name{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block}
+.rubr-count{font-size:9px;color:rgba(201,168,76,.5);margin-top:3px;display:block}
+@media(max-width:900px){.rubr-scroll{overflow-x:auto;scrollbar-width:none}.rubr-item{min-width:120px}}
+
+/* ═══════════════════════════════════════════
+   DOSSIERS THEMATIQUES PREMIUM
+═══════════════════════════════════════════ */
+.doss-sec{padding:68px 0;background:var(--off);border-top:1px solid var(--brd)}
+.doss-mosaic{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:auto auto;gap:3px;margin-top:32px}
+.doss-feature{grid-row:1/3;position:relative;overflow:hidden;cursor:pointer;min-height:480px}
+.doss-feature img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .7s ease}
+.doss-feature:hover img{transform:scale(1.04)}
+.doss-feature::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,16,36,.95) 0%,rgba(8,16,36,.4) 55%,transparent 100%)}
+.doss-feature-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:36px}
+.doss-sm{position:relative;overflow:hidden;cursor:pointer;min-height:235px}
+.doss-sm img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .5s ease;filter:brightness(.7)}
+.doss-sm:hover img{transform:scale(1.06);filter:brightness(.85)}
+.doss-sm::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(8,16,36,.88))}
+.doss-sm-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:22px 26px}
+.doss-row{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px}
+.doss-mini{position:relative;overflow:hidden;cursor:pointer;min-height:200px}
+.doss-mini img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .5s ease;filter:brightness(.65)}
+.doss-mini:hover img{transform:scale(1.08);filter:brightness(.82)}
+.doss-mini::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(8,16,36,.9))}
+.doss-mini-body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:18px 20px}
+.doss-badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;background:var(--or);color:var(--bn);margin-bottom:9px}
+.doss-h1{font-family:var(--pd);font-size:1.6rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:10px}
+.doss-h2{font-family:var(--pd);font-size:1.05rem;font-weight:700;color:#fff;line-height:1.25;margin-bottom:6px}
+.doss-h3{font-family:var(--pd);font-size:.9rem;font-weight:700;color:#fff;line-height:1.3}
+.doss-excerpt{font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:14px}
+.doss-meta{font-size:10px;color:rgba(255,255,255,.45);display:flex;gap:8px;align-items:center;margin-top:6px}
+.doss-lire{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);display:inline-flex;align-items:center;gap:6px;margin-top:12px;transition:var(--tr)}
+.doss-lire i{font-size:9px;transition:transform .2s}
+.doss-lire:hover{color:var(--or2)}
+.doss-lire:hover i{transform:translateX(4px)}
+@media(max-width:900px){.doss-mosaic{grid-template-columns:1fr;grid-template-rows:auto}.doss-feature{grid-row:auto;min-height:320px}.doss-row{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.doss-row{grid-template-columns:1fr}}
+
+/* ═══════════════════════════════════════════
+   JURISPRUDENCE DU MOIS
+═══════════════════════════════════════════ */
+.juris-sec{background:var(--beige);padding:60px 0;border-top:1px solid var(--beige2)}
+.juris-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.jcard{background:var(--blanc);padding:26px;border-left:4px solid var(--or);box-shadow:var(--sh2);transition:var(--tr);position:relative;overflow:hidden}
+.jcard::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle at top right,rgba(201,168,76,.06),transparent 70%)}
+.jcard:hover{transform:translateY(-4px);box-shadow:var(--sh);border-left-color:var(--or2)}
+.jcard-inst{font-size:8.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.jcard-inst::before{content:'';display:inline-block;width:16px;height:1px;background:var(--or)}
+.jcard-ref{font-size:10px;color:var(--gris);margin-bottom:12px}
+.jcard h4{font-family:var(--pd);font-size:1rem;font-weight:700;color:var(--bn);line-height:1.38;margin-bottom:10px}
+.jcard p{font-size:12px;color:var(--gris);line-height:1.72;margin-bottom:14px}
+.jcard-tag{display:inline-block;font-size:8.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--brd);color:var(--gris);margin-bottom:14px}
+.jcard-foot{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--brd)}
+.jcard-date{font-size:10px;color:#bbb}
+.jcard-lien{font-size:10px;font-weight:700;color:var(--or);letter-spacing:.06em;display:flex;align-items:center;gap:5px}
+.jcard-lien i{font-size:9px}
+@media(max-width:900px){.juris-grid{grid-template-columns:1fr}}
+
+/* ═══════════════════════════════════════════
+   VEILLE REGLEMENTAIRE WIDGET
+═══════════════════════════════════════════ */
+.vr-item{display:flex;gap:13px;padding:11px 0;border-bottom:1px solid #f0f0f0;align-items:flex-start}
+.vr-item:last-child{border-bottom:none;padding-bottom:0}
+.vr-dot{width:7px;height:7px;border-radius:50%;background:var(--or);flex-shrink:0;margin-top:5px}
+.vr-body h6{font-size:12px;font-weight:600;color:var(--bn);line-height:1.4;margin-bottom:3px}
+.vr-body span{font-size:10px;color:var(--gris)}
+
+/* ═══════════════════════════════════════════
+   AGENDA WIDGET
+═══════════════════════════════════════════ */
+.ag-item{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #f0f0f0;align-items:flex-start}
+.ag-item:last-child{border-bottom:none}
+.ag-date{background:var(--bn);color:#fff;padding:8px 10px;text-align:center;flex-shrink:0;min-width:44px}
+.ag-day{font-family:var(--pd);font-size:18px;font-weight:900;color:var(--or);line-height:1}
+.ag-month{font-size:7.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:2px}
+.ag-info h6{font-size:12px;font-weight:600;color:var(--bn);line-height:1.35;margin-bottom:3px}
+.ag-info span{font-size:10px;color:var(--gris)}
+
+/* ═══════════════════════════════════════════
+   BANDEAU INFLUENCE (NOUVEAU)
+═══════════════════════════════════════════ */
+.influence-bar{background:linear-gradient(135deg,var(--bn2) 0%,#0c2a3d 50%,var(--bn2) 100%);padding:48px 0;border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12)}
+.influence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,.08)}
+.inf-item{background:var(--bn2);padding:28px 24px;text-align:center;transition:var(--tr)}
+.inf-item:hover{background:rgba(201,168,76,.05)}
+.inf-num{font-family:var(--cg);font-size:2.4rem;font-weight:700;color:var(--or);line-height:1;display:block;margin-bottom:6px}
+.inf-label{font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.inf-sub{font-size:11px;color:rgba(255,255,255,.25);margin-top:5px;font-style:italic;font-family:var(--cg)}
+@media(max-width:680px){.influence-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -680,12 +780,12 @@ ul{list-style:none}
         <span>Média de référence · Maroc & Afrique</span>
       </div>
       <h1 class="hero-headline reveal delay-1">
-        Le média des décideurs<br/>
-        <strong>africains du droit,</strong>
-        <em>de la finance</em><br/>
-        et de la gouvernance.
+        L'intelligence juridique<br/>
+        <strong>et financière</strong>
+        <em>au service</em><br/>
+        des décideurs africains.
       </h1>
-      <p class="hero-sub reveal delay-2">Analyses stratégiques · Décryptages exclusifs · 85+ contributeurs experts</p>
+      <p class="hero-sub reveal delay-2">Le seul média panafricain qui transforme le droit et la finance en avantage compétitif pour les décideurs, les institutions et les investisseurs.</p>
       <div class="hero-ctas reveal delay-3">
         <a href="newsletter.html" class="cta-primary"><i class="fas fa-envelope"></i> Recevoir la newsletter</a>
         <a href="analyses.html" class="cta-secondary">Lire les analyses</a>
@@ -730,7 +830,7 @@ ul{list-style:none}
         <div class="stat-l">Lecteurs professionnels</div>
       </div>
       <div class="stat-item reveal delay-1">
-        <span class="stat-n" data-target="12">0</span>
+        <span class="stat-n" data-target="5">0</span>
         <div class="stat-l">Pays couverts</div>
       </div>
       <div class="stat-item reveal delay-2">
@@ -745,6 +845,54 @@ ul{list-style:none}
     <div class="stats-baseline">Publication trimestrielle&nbsp;·&nbsp;Distribution ciblée décideurs&nbsp;·&nbsp;Analyses exclusives par des experts de terrain</div>
   </div>
 </div>
+
+<!-- ══════════════════════════════════════════════
+     RUBRIQUES SIGNATURE
+══════════════════════════════════════════════ -->
+<nav class="rubr-sec" aria-label="Rubriques du magazine">
+  <div class="rubr-scroll">
+    <a href="arbitrage.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-gavel"></i></span>
+      <span class="rubr-name">Arbitrage</span>
+      <span class="rubr-count">38 analyses</span>
+    </a>
+    <a href="droit.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-balance-scale"></i></span>
+      <span class="rubr-name">Droit</span>
+      <span class="rubr-count">84 analyses</span>
+    </a>
+    <a href="finance.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-chart-line"></i></span>
+      <span class="rubr-name">Finance</span>
+      <span class="rubr-count">67 analyses</span>
+    </a>
+    <a href="afrique.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-globe-africa"></i></span>
+      <span class="rubr-name">Afrique & OHADA</span>
+      <span class="rubr-count">61 analyses</span>
+    </a>
+    <a href="droit-du-sport.html" class="rubr-item active">
+      <span class="rubr-icon"><i class="fas fa-futbol"></i></span>
+      <span class="rubr-name">Sport Business</span>
+      <span class="rubr-count">42 analyses</span>
+    </a>
+    <a href="interviews.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-microphone"></i></span>
+      <span class="rubr-name">Interviews</span>
+      <span class="rubr-count">24 portraits</span>
+    </a>
+    <a href="tribunes.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-pen-nib"></i></span>
+      <span class="rubr-name">Tribunes</span>
+      <span class="rubr-count">31 tribunes</span>
+    </a>
+    <a href="evenements.html" class="rubr-item">
+      <span class="rubr-icon"><i class="fas fa-calendar-alt"></i></span>
+      <span class="rubr-name">Événements</span>
+      <span class="rubr-count">Agenda 2026</span>
+    </a>
+  </div>
+</nav>
 
 <!-- ══════════════════════════════════════════════
      SECTION 3 — CITATION DU JOUR
@@ -991,12 +1139,63 @@ ul{list-style:none}
           <div class="wt">Nos experts</div>
           <div class="exp-list">
             <div class="ei"><span class="av-i" style="background:#0f1e36">AL</span><div class="ei-info"><h5>Me Amine Lahlou</h5><span>Droit du Sport · Arbitrage</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#1a5c3a">SB</span><div class="ei-info"><h5>Samir Belhaj</h5><span>Droit des sociétés</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#4a1a5c">KB</span><div class="ei-info"><h5>K. Benouhoud</h5><span>Arbitrage · TAS · CIRDI</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#7a3a1a">RT</span><div class="ei-info"><h5>Rim Tahiri</h5><span>Finance · Marchés</span></div></div>
+            <div class="ei"><span class="av-i" style="background:#1e4a7a">IK</span><div class="ei-info"><h5>Me Ismaël Kourouma</h5><span>Arbitrage OHADA · CIRDI</span></div></div>
+            <div class="ei"><span class="av-i" style="background:#1a5c3a">SB</span><div class="ei-info"><h5>Samir Belhaj</h5><span>Droit international des affaires</span></div></div>
+            <div class="ei"><span class="av-i" style="background:#4a1a5c">SB</span><div class="ei-info"><h5>Salwa Benali</h5><span>Finance · Économie islamique</span></div></div>
+            <div class="ei"><span class="av-i" style="background:#7a1a1a">HR</span><div class="ei-info"><h5>Me Hassan Rachidi</h5><span>Droit des affaires · Maroc</span></div></div>
           </div>
         </div>
 
+        <!-- Veille réglementaire -->
+        <div class="wg reveal">
+          <div class="wt">Veille réglementaire</div>
+          <div>
+            <div class="vr-item">
+              <div class="vr-dot"></div>
+              <div class="vr-body"><h6>BAM : taux directeur maintenu à 2,75 %</h6><span>21 Mai 2026 · Monétaire</span></div>
+            </div>
+            <div class="vr-item">
+              <div class="vr-dot"></div>
+              <div class="vr-body"><h6>AMMC : nouvelles règles de transparence pour les green bonds</h6><span>18 Mai 2026 · Finance verte</span></div>
+            </div>
+            <div class="vr-item">
+              <div class="vr-dot"></div>
+              <div class="vr-body"><h6>CNDP : mise en demeure adressée aux intégrateurs d'IA générative</h6><span>15 Mai 2026 · IA & Données</span></div>
+            </div>
+            <div class="vr-item">
+              <div class="vr-dot"></div>
+              <div class="vr-body"><h6>ZLECAf : protocole Maroc-Sénégal sur les services juridiques</h6><span>12 Mai 2026 · Commerce</span></div>
+            </div>
+            <div class="vr-item">
+              <div class="vr-dot"></div>
+              <div class="vr-body"><h6>Loi de Finances 2026 : IS progressif — circulaire DGI publiée</h6><span>10 Mai 2026 · Fiscalité</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agenda -->
+        <div class="wg reveal">
+          <div class="wt">Prochains événements</div>
+          <div>
+            <div class="ag-item">
+              <div class="ag-date"><div class="ag-day">10</div><div class="ag-month">Juin</div></div>
+              <div class="ag-info"><h6>Paris Arbitration Week 2026</h6><span>Paris · Arbitrage international</span></div>
+            </div>
+            <div class="ag-item">
+              <div class="ag-date"><div class="ag-day">19</div><div class="ag-month">Juin</div></div>
+              <div class="ag-info"><h6>Forum Neybras 2026</h6><span>Casablanca · Droit & Finance</span></div>
+            </div>
+            <div class="ag-item">
+              <div class="ag-date"><div class="ag-day">15</div><div class="ag-month">Sep.</div></div>
+              <div class="ag-info"><h6>Africa Investment Forum — Marrakech</h6><span>Investissement Afrique</span></div>
+            </div>
+            <div class="ag-item">
+              <div class="ag-date"><div class="ag-day">22</div><div class="ag-month">Oct.</div></div>
+              <div class="ag-info"><h6>Congrès OHADA — Abidjan</h6><span>Sûretés · Procédures collectives</span></div>
+            </div>
+          </div>
+          <a href="evenements.html" style="display:block;text-align:center;margin-top:14px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);padding:10px;border:1px solid rgba(201,168,46,.3);">Voir tout l'agenda <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
+        </div>
 
       </aside>
     </div>
@@ -1028,7 +1227,7 @@ ul{list-style:none}
         <div class="pillar">
           <div class="pillar-icon"><i class="fas fa-globe-africa"></i></div>
           <h4>Vision africaine</h4>
-          <p>Le Maroc comme hub. L'Afrique comme horizon. Nos analyses couvrent 12 pays avec une perspective continentale.</p>
+          <p>Le Maroc comme hub. L'Afrique comme horizon. Nos analyses couvrent plusieurs marchés clés avec une perspective continentale et internationale.</p>
         </div>
         <div class="pillar">
           <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
@@ -1094,6 +1293,116 @@ ul{list-style:none}
 </section>
 
 <!-- ══════════════════════════════════════════════
+     BANDEAU INFLUENCE — CHIFFRES DÉCIDEURS
+══════════════════════════════════════════════ -->
+<section class="influence-bar" aria-label="Chiffres d'influence">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:28px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.55);margin-bottom:10px">L'audience qui décide</div>
+      <p style="font-family:var(--cg);font-size:1.15rem;color:rgba(255,255,255,.55);font-style:italic">Une communauté de professionnels du droit, de la finance et de la gouvernance</p>
+    </div>
+    <div class="influence-grid reveal">
+      <div class="inf-item">
+        <span class="inf-num">78%</span>
+        <div class="inf-label">Décideurs & dirigeants</div>
+        <div class="inf-sub">dans notre audience</div>
+      </div>
+      <div class="inf-item">
+        <span class="inf-num">8 000+</span>
+        <div class="inf-label">Lecteurs professionnels</div>
+        <div class="inf-sub">par mois</div>
+      </div>
+      <div class="inf-item">
+        <span class="inf-num">+200</span>
+        <div class="inf-label">Analyses publiées</div>
+        <div class="inf-sub">par des experts terrain</div>
+      </div>
+      <div class="inf-item">
+        <span class="inf-num">5</span>
+        <div class="inf-label">Pays couverts</div>
+        <div class="inf-sub">Maroc · Afrique · Europe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     DOSSIERS THEMATIQUES PREMIUM
+══════════════════════════════════════════════ -->
+<section class="doss-sec" aria-label="Dossiers thématiques">
+  <div class="container">
+    <div class="sh reveal">
+      <h2 class="sh-title">Dossiers thématiques</h2>
+      <div class="sh-line"></div>
+      <a href="analyses.html" class="sh-all">Tous les dossiers</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="doss-mosaic reveal">
+      <!-- Dossier principal -->
+      <a href="article-ppp-afrique.html" class="doss-feature">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="PPP Afrique investissement infrastructure" loading="lazy"/>
+        <div class="doss-feature-body">
+          <div class="doss-badge">Dossier phare · Investissement Afrique</div>
+          <h2 class="doss-h1">PPP en Afrique : pourquoi les projets échouent et comment les structurer autrement</h2>
+          <p class="doss-excerpt">Garanties souveraines, clauses de force majeure, tribunaux compétents : les erreurs juridiques qui coûtent des milliards aux financeurs du continent — et les solutions qui fonctionnent.</p>
+          <div class="doss-meta">
+            <span>Ismaël Kourouma</span><span>·</span><span>13 min de lecture</span><span>·</span><span>Mai 2026</span>
+          </div>
+          <span class="doss-lire">Lire le dossier complet <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <!-- Dossier secondaire -->
+      <div>
+        <a href="article-ohada-suretes.html" class="doss-sm" style="display:block;margin-bottom:3px">
+          <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800" alt="OHADA sûretés droit africain" loading="lazy"/>
+          <div class="doss-sm-body">
+            <div class="doss-badge">OHADA · Sûretés</div>
+            <h3 class="doss-h2">L'Acte uniforme révisé sur les sûretés : opportunité stratégique pour les prêteurs marocains</h3>
+            <div class="doss-meta"><span>Ismaël Kourouma</span><span>·</span><span>12 min</span></div>
+          </div>
+        </a>
+        <a href="article-zlecaf.html" class="doss-sm" style="display:block">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ZLECAf commerce africain" loading="lazy"/>
+          <div class="doss-sm-body">
+            <div class="doss-badge">ZLECAf · Commerce</div>
+            <h3 class="doss-h2">ZLECAf : ce que le Maroc négocie vraiment — souveraineté réglementaire et arbitrage</h3>
+            <div class="doss-meta"><span>Samir Belhaj</span><span>·</span><span>12 min</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- 3 dossiers du bas -->
+    <div class="doss-row reveal">
+      <a href="article-cirdi-maroc.html" class="doss-mini">
+        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Arbitrage CIRDI Maroc" loading="lazy"/>
+        <div class="doss-mini-body">
+          <div class="doss-badge">Arbitrage · CIRDI</div>
+          <h4 class="doss-h3">CIRDI : le Maroc consolide sa jurisprudence sur la protection des investissements</h4>
+          <div class="doss-meta" style="margin-top:4px"><span>K. Benouhoud</span><span>·</span><span>10 min</span></div>
+        </div>
+      </a>
+      <a href="article-cfc-nairobi.html" class="doss-mini">
+        <img src="https://images.pexels.com/photos/374912/pexels-photo-374912.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Finance Casablanca hub Afrique" loading="lazy"/>
+        <div class="doss-mini-body">
+          <div class="doss-badge">Finance · Hubs africains</div>
+          <h4 class="doss-h3">CFC vs Nairobi vs Johannesburg : le comparatif juridique et fiscal</h4>
+          <div class="doss-meta" style="margin-top:4px"><span>Rim Tahiri</span><span>·</span><span>9 min</span></div>
+        </div>
+      </a>
+      <a href="article-ia-cndp.html" class="doss-mini">
+        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Intelligence artificielle régulation Maroc" loading="lazy"/>
+        <div class="doss-mini-body">
+          <div class="doss-badge">IA · Données</div>
+          <h4 class="doss-h3">IA générative et loi 09-08 : la CNDP peut-elle sanctionner les opérateurs marocains ?</h4>
+          <div class="doss-meta" style="margin-top:4px"><span>Hassan Rachidi</span><span>·</span><span>11 min</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      SECTION 7 — DOSSIERS AFRIQUE (SOMBRE)
 ══════════════════════════════════════════════ -->
 <section class="dark-sec" aria-label="Dossiers Afrique">
@@ -1147,6 +1456,54 @@ ul{list-style:none}
     </div>
   </div>
 </div>
+
+<!-- ══════════════════════════════════════════════
+     JURISPRUDENCE DU MOIS
+══════════════════════════════════════════════ -->
+<section class="juris-sec" aria-label="Jurisprudence du mois">
+  <div class="container">
+    <div class="sh reveal">
+      <h2 class="sh-title">Jurisprudence du mois</h2>
+      <div class="sh-line"></div>
+      <a href="analyses.html" class="sh-all">Toutes les décisions</a>
+    </div>
+    <div class="juris-grid">
+      <div class="jcard reveal">
+        <div class="jcard-inst"><i class="fas fa-gavel"></i> Tribunal Arbitral du Sport</div>
+        <div class="jcard-ref">TAS 2026/A/0872 · FC Wydad / CAF · Mai 2026</div>
+        <h4>Wydad v. CAF : l'indemnité de solidarité FIFA s'applique aux transferts intra-africains</h4>
+        <p>Le TAS confirme que le mécanisme de solidarité prévu à l'article 21 du RSTP est applicable aux mouvements entre clubs affiliés à la CAF, même en l'absence de traité bilatéral.</p>
+        <span class="jcard-tag">Droit du sport · Transferts</span>
+        <div class="jcard-foot">
+          <span class="jcard-date">7 Mai 2026</span>
+          <span class="jcard-lien">Décryptage <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="jcard reveal delay-1">
+        <div class="jcard-inst"><i class="fas fa-landmark"></i> Cour Suprême du Maroc</div>
+        <div class="jcard-ref">Arrêt n° 412/2026 · Chambre commerciale · Avril 2026</div>
+        <h4>Exécution des sentences CIRDI : la Cour Suprême pose de nouvelles exigences d'exequatur</h4>
+        <p>Dans un arrêt de principe, la Cour Suprême subordonne l'exequatur des sentences CIRDI au contrôle minimal de leur conformité à l'ordre public marocain. Implications majeures pour les investisseurs étrangers.</p>
+        <span class="jcard-tag">Arbitrage · Exequatur</span>
+        <div class="jcard-foot">
+          <span class="jcard-date">22 Avril 2026</span>
+          <span class="jcard-lien">Décryptage <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="jcard reveal delay-2">
+        <div class="jcard-inst"><i class="fas fa-globe-africa"></i> CCJA — Cour Commune de Justice</div>
+        <div class="jcard-ref">Arrêt CCJA n° 089/2026 · Chambre plénière</div>
+        <h4>CCJA : le gage sans dépossession constitue une sûreté opposable en cas de procédure collective</h4>
+        <p>La CCJA tranche en faveur de la sûreté réelle : le créancier gagiste sans dépossession dispose d'un droit de préférence opposable à la masse, y compris lors d'une liquidation des biens.</p>
+        <span class="jcard-tag">OHADA · Sûretés · Sociétés</span>
+        <div class="jcard-foot">
+          <span class="jcard-date">15 Avril 2026</span>
+          <span class="jcard-lien">Décryptage <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════════
      SECTION 9 — TENDANCES 4 COL
