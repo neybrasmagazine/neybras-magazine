@@ -14,7 +14,32 @@
 <meta property="og:url" content="https://www.neybras-magazine.com/"/>
 <meta property="og:locale" content="fr_MA"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"Neybras Magazine","url":"https://www.neybras-magazine.com","description":"Le média qui connecte les idées aux décideurs — Droit du sport, arbitrage, finance au Maroc et en Afrique."}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "Neybras Magazine",
+  "url": "https://www.neybras-magazine.com",
+  "logo": "https://www.neybras-magazine.com/images/logo-neybras.png",
+  "description": "Analyses juridiques et financières pour les décideurs marocains et africains. Droit du sport, arbitrage, finance participative, OHADA.",
+  "foundingDate": "2025",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Capital A, Bureau n°9, Bouskoura",
+    "addressLocality": "Casablanca",
+    "addressCountry": "MA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "marketing@neybras-magazine.com",
+    "contactType": "editorial"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/neybras-magazine",
+    "https://twitter.com/neybras_mag"
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -149,14 +174,14 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    HERO — COVER MAGAZINE CINÉMATOGRAPHIQUE
 ═══════════════════════════════════════════ */
-.hero{position:relative;background:var(--bn2);min-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.hero{position:relative;background:var(--bn2);min-height:76vh;display:flex;flex-direction:column;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,#061d2a 0%,#0E3D52 40%,#134460 65%,#061d2a 100%)}
 .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:grayscale(15%) brightness(.85);mix-blend-mode:luminosity}
 .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 68% 55%,rgba(184,150,90,.09) 0%,transparent 68%),radial-gradient(ellipse 55% 70% at 18% 25%,rgba(10,48,68,.55) 0%,transparent 65%)}
 .hero-bg::after{content:'';position:absolute;inset:0;background:
   repeating-linear-gradient(135deg,transparent,transparent 60px,rgba(184,150,90,.018) 60px,rgba(184,150,90,.018) 61px),
   repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(184,150,90,.012) 80px,rgba(184,150,90,.012) 81px)}
-.hero-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 0 60px}
+.hero-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:52px 0 40px}
 
 /* Brand statement */
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px}
@@ -189,7 +214,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    STATS BAR — CHIFFRES CLÉS
 ═══════════════════════════════════════════ */
-.stats-bar{background:var(--bn);border-bottom:1px solid rgba(201,168,76,.12);padding:28px 0 0}
+.stats-bar{background:var(--bn);border-bottom:1px solid rgba(201,168,76,.12);padding:18px 0 0}
 .stats-accroche{text-align:center;font-family:var(--cg);font-size:15px;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:.03em;margin-bottom:24px}
 .stats-accroche strong{color:var(--or);font-weight:600}
 .stats-in{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(201,168,76,.08)}
@@ -211,7 +236,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    MAIN LAYOUT
 ═══════════════════════════════════════════ */
-.main-wrap{padding:52px 0 60px}
+.main-wrap{padding:36px 0 44px}
 .main-grid{display:grid;grid-template-columns:1fr 308px;gap:44px;align-items:start}
 
 /* ═══ ARTICLE CARDS ═══ */
@@ -262,7 +287,7 @@ ul{list-style:none}
 .ali .meta{font-size:10.5px;color:var(--gris)}
 
 .mb4{margin-bottom:40px}
-.mb5{margin-bottom:52px}
+.mb5{margin-bottom:38px}
 .divider{height:1px;background:linear-gradient(90deg,var(--or),transparent);margin:36px 0;opacity:.4}
 
 /* ═══════════════════════════════════════════
@@ -295,7 +320,7 @@ ul{list-style:none}
 .tl-desc{font-size:11px;color:var(--gris);line-height:1.5}
 
 /* Quote grande éditoriale */
-.editorial-quote{background:var(--bn);padding:60px 0;text-align:center;border-top:1px solid rgba(201,168,76,.1)}
+.editorial-quote{background:var(--bn);padding:40px 0;text-align:center;border-top:1px solid rgba(201,168,76,.1)}
 .eq-inner{max-width:780px;margin:0 auto}
 .eq-mark{font-family:var(--cg);font-size:80px;color:var(--or);opacity:.25;line-height:.6;margin-bottom:20px;display:block}
 .eq-text{font-family:var(--cg);font-size:clamp(22px,3vw,34px);font-weight:300;color:var(--blanc);line-height:1.45;font-style:italic;margin-bottom:20px}
@@ -304,7 +329,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    SECTION SOMBRE — AFRIQUE DOSSIERS
 ═══════════════════════════════════════════ */
-.dark-sec{background:var(--bn2);padding:60px 0}
+.dark-sec{background:var(--bn2);padding:40px 0}
 .dark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.1)}
 .dc{background:var(--bn);padding:30px;transition:var(--tr);display:flex;flex-direction:column;cursor:pointer}
 .dc:hover{background:var(--bn3)}
@@ -321,7 +346,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    TENDANCES 4 COL
 ═══════════════════════════════════════════ */
-.tend-sec{padding:52px 0 60px}
+.tend-sec{padding:36px 0 44px}
 .t4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .tc{background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);transition:var(--tr);border-bottom:3px solid transparent}
 .tc:hover{transform:translateY(-4px);box-shadow:var(--sh);border-bottom-color:var(--or)}
@@ -337,7 +362,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    INTERVIEWS & TRIBUNES
 ═══════════════════════════════════════════ */
-.itw-sec{padding:52px 0;background:var(--beige);border-top:1px solid var(--beige2)}
+.itw-sec{padding:36px 0;background:var(--beige);border-top:1px solid var(--beige2)}
 .itw-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .itw{display:grid;grid-template-columns:130px 1fr;background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);transition:var(--tr);border-left:3px solid transparent}
 .itw:hover{border-left-color:var(--or);transform:translateY(-3px);box-shadow:var(--sh)}
@@ -397,7 +422,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    SIDEBAR
 ═══════════════════════════════════════════ */
-.sidebar{display:flex;flex-direction:column;gap:26px}
+.sidebar{display:flex;flex-direction:column;gap:22px;position:sticky;top:80px;align-self:start;max-height:calc(100vh - 90px);overflow-y:auto;scrollbar-width:none}
 .wg{background:var(--blanc);padding:22px;border-radius:var(--r);box-shadow:var(--sh2)}
 .wt{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--bn);border-bottom:2px solid var(--or);padding-bottom:9px;margin-bottom:16px}
 
@@ -510,7 +535,7 @@ ul{list-style:none}
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:1100px){
   .main-grid{grid-template-columns:1fr}
-  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:20px;position:static;max-height:none;overflow-y:visible}
   .trust-logos{grid-template-columns:repeat(2,1fr)}
   .trust-logo:nth-child(n+5){display:flex}
 }
@@ -526,12 +551,12 @@ ul{list-style:none}
   .t4{grid-template-columns:1fr 1fr}
 }
 @media(max-width:680px){
-  .hero-content{padding:60px 0 40px}
+  .hero-content{padding:40px 0 28px}
   .a3{grid-template-columns:1fr}
   .a2{grid-template-columns:1fr}
   .afeat{grid-template-columns:1fr}
   .afeat img{min-height:210px}
-  .sidebar{grid-template-columns:1fr}
+  .sidebar{grid-template-columns:1fr;position:static;max-height:none;overflow-y:visible}
   .nl-form{flex-direction:column}
   .nl-form input{border-right:1px solid rgba(255,255,255,.12);border-radius:var(--r);margin-bottom:8px}
   .nl-form button{border-radius:var(--r)}
@@ -597,7 +622,7 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    JURISPRUDENCE DU MOIS
 ═══════════════════════════════════════════ */
-.juris-sec{background:var(--beige);padding:60px 0;border-top:1px solid var(--beige2)}
+.juris-sec{background:var(--beige);padding:40px 0;border-top:1px solid var(--beige2)}
 .juris-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
 .jcard{background:var(--blanc);padding:26px;border-left:4px solid var(--or);box-shadow:var(--sh2);transition:var(--tr);position:relative;overflow:hidden}
 .jcard::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle at top right,rgba(201,168,76,.06),transparent 70%)}
@@ -633,6 +658,28 @@ ul{list-style:none}
 .ag-month{font-size:7.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:2px}
 .ag-info h6{font-size:12px;font-weight:600;color:var(--bn);line-height:1.35;margin-bottom:3px}
 .ag-info span{font-size:10px;color:var(--gris)}
+/* Agenda strip pleine largeur */
+.agenda-strip{background:var(--bn2);border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12);padding:32px 0}
+.agenda-hd{display:flex;align-items:center;gap:20px;margin-bottom:22px}
+.agenda-eyebrow{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);background:rgba(184,150,90,.1);border:1px solid rgba(201,168,76,.2);padding:4px 10px}
+.agenda-title{font-family:var(--cg);font-size:1.25rem;font-weight:600;color:#fff;flex:1}
+.agenda-all{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);white-space:nowrap;transition:var(--tr)}
+.agenda-all:hover{color:var(--or2)}
+.agenda-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ag2-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.1);padding:16px 18px;transition:var(--tr);cursor:pointer}
+.ag2-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.3)}
+.ag2-featured{border-color:rgba(201,168,76,.28);background:rgba(201,168,76,.07)}
+.ag2-date{text-align:center;flex-shrink:0;min-width:40px}
+.ag2-day{font-family:var(--pd);font-size:22px;font-weight:900;color:var(--or);line-height:1;display:block}
+.ag2-mon{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-top:2px}
+.ag2-body{flex:1}
+.ag2-tag{font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,168,76,.65);margin-bottom:4px}
+.ag2-body h4{font-size:12.5px;font-weight:600;color:#fff;line-height:1.35;margin-bottom:3px}
+.ag2-body p{font-size:10px;color:rgba(255,255,255,.4);margin:0}
+.ag2-arr{color:rgba(201,168,76,.35);font-size:10px;flex-shrink:0;transition:var(--tr)}
+.ag2-card:hover .ag2-arr{color:var(--or);transform:translateX(3px)}
+@media(max-width:900px){.agenda-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.agenda-grid{grid-template-columns:1fr}}
 
 /* ═══════════════════════════════════════════
    BANDEAU INFLUENCE (NOUVEAU)
@@ -646,7 +693,9 @@ ul{list-style:none}
 .inf-sub{font-size:11px;color:rgba(255,255,255,.25);margin-top:5px;font-style:italic;font-family:var(--cg)}
 @media(max-width:680px){.influence-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
-</head>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script></head>
 <body>
 
 <!-- ═══ TOP BAR ═══ -->
@@ -770,7 +819,7 @@ ul{list-style:none}
 ══════════════════════════════════════════════ -->
 <section class="hero" aria-label="À la une">
   <div class="hero-bg">
-    <img srcset="images/droit-procedures-collectives-themis-sm.webp 480w, images/droit-procedures-collectives-themis-md.webp 800w, images/droit-procedures-collectives-themis.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/droit-procedures-collectives-themis.webp" alt="Neybras Magazine — Droit, Finance et Décideurs" loading="eager"/>
+    <img src="images/salle-reunion-casablanca-hassan-ii.png" alt="Salle de réunion Casablanca — Neybras Magazine" loading="eager" style="object-position:center center"/>
   </div>
 
   <div class="hero-content">
@@ -816,35 +865,6 @@ ul{list-style:none}
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     SECTION 2 — CHIFFRES CLÉS
-══════════════════════════════════════════════ -->
-<div class="stats-bar" aria-label="Chiffres clés">
-  <div class="container">
-    <div class="stats-accroche reveal">Neybras Magazine s'adresse aux professionnels du <strong>droit, de la finance et de la gouvernance</strong> au Maroc et en Afrique francophone</div>
-  </div>
-  <div class="container" style="padding:0">
-    <div class="stats-in">
-      <div class="stat-item reveal">
-        <span class="stat-n" data-target="2400">0</span>
-        <div class="stat-l">Lecteurs mensuels</div>
-      </div>
-      <div class="stat-item reveal delay-1">
-        <span class="stat-n" data-target="5">+</span>
-        <div class="stat-l">Pays couverts</div>
-      </div>
-      <div class="stat-item reveal delay-2">
-        <span class="stat-n" data-target="12">0</span>
-        <div class="stat-l">Analyses publiées</div>
-      </div>
-      <div class="stat-item reveal delay-3">
-        <span class="stat-n" data-target="18">0</span>
-        <div class="stat-l">Experts contributeurs</div>
-      </div>
-    </div>
-    <div class="stats-baseline">Maroc · Afrique francophone · International</div>
-  </div>
-</div>
 
 <!-- ══════════════════════════════════════════════
      RUBRIQUES SIGNATURE
@@ -1059,27 +1079,6 @@ ul{list-style:none}
       <!-- SIDEBAR -->
       <aside class="sidebar">
 
-        <!-- Sport & Justice -->
-        <div class="sport-w reveal">
-          <div class="wt">Droit du Sport</div>
-          <div class="sport-w-icon">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(201,168,76,.15)" stroke-width="1.5"/>
-              <circle cx="50" cy="38" r="18" fill="none" stroke="#c9a84c" stroke-width="1.8"/>
-              <polygon points="50,24 57,31 54,39 46,39 43,31" fill="none" stroke="#c9a84c" stroke-width="1.3"/>
-              <circle cx="50" cy="38" r="4" fill="#c9a84c" opacity=".4"/>
-              <line x1="50" y1="58" x2="50" y2="80" stroke="#c9a84c" stroke-width="2"/>
-              <line x1="33" y1="63" x2="67" y2="63" stroke="#c9a84c" stroke-width="2"/>
-              <path d="M33 63 Q25 72 33 76 Q41 80 33 76 Q25 72 33 63Z" fill="rgba(201,168,76,.1)" stroke="#c9a84c" stroke-width="1.5"/>
-              <path d="M67 63 Q59 72 67 76 Q75 80 67 76 Q59 72 67 63Z" fill="rgba(201,168,76,.1)" stroke="#c9a84c" stroke-width="1.5"/>
-              <line x1="41" y1="84" x2="59" y2="84" stroke="#c9a84c" stroke-width="2"/>
-            </svg>
-          </div>
-          <h4>Droit du Sport<br/>& Arbitrage Sportif</h4>
-          <p>Notre rubrique signature. Analyses TAS, réglementation FIFA, enjeux CdM 2030 et droits des sportifs.</p>
-          <a href="droit-du-sport.html">Accéder à la rubrique <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
-        </div>
-
         <!-- Newsletter -->
         <div class="nl-w reveal delay-1">
           <div class="wt">Newsletter hebdo</div>
@@ -1093,7 +1092,7 @@ ul{list-style:none}
         <div class="pub-w reveal delay-2">
           <div class="pub-w-l">Espace partenaire premium</div>
           <h4>Votre marque auprès des décideurs</h4>
-          <p>50 000+ juristes, financiers et dirigeants chaque mois. Formats exclusifs disponibles.</p>
+          <p>2 400 professionnels du droit et de la finance — une audience ciblée et engagée.</p>
           <a href="contact.html">Télécharger le Média Kit</a>
         </div>
 
@@ -1117,32 +1116,6 @@ ul{list-style:none}
               <img src="images/foot-stade.jpg" alt="" loading="lazy"/>
               <div><span class="tag t-sport">Sport</span><h5><a href="droit-du-sport.html">TAS : stratégie contentieuse pour les clubs marocains</a></h5><div class="dt">3 mai · 12 min</div></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Catégories -->
-        <div class="wg reveal">
-          <div class="wt">Rubriques</div>
-          <div class="cl">
-            <div class="ci"><a href="droit-du-sport.html" class="ci-l"><i class="fas fa-futbol"></i> Droit du Sport</a></div>
-            <div class="ci"><a href="arbitrage.html" class="ci-l"><i class="fas fa-gavel"></i> Arbitrage</a></div>
-            <div class="ci"><a href="droit.html" class="ci-l"><i class="fas fa-balance-scale"></i> Droit</a></div>
-            <div class="ci"><a href="finance.html" class="ci-l"><i class="fas fa-chart-line"></i> Finance</a></div>
-            <div class="ci"><a href="fiscalite.html" class="ci-l"><i class="fas fa-file-invoice-dollar"></i> Fiscalité</a></div>
-            <div class="ci"><a href="afrique.html" class="ci-l"><i class="fas fa-globe-africa"></i> Afrique</a></div>
-            <div class="ci"><a href="gouvernance.html" class="ci-l"><i class="fas fa-landmark"></i> Gouvernance</a></div>
-          </div>
-        </div>
-
-        <!-- Experts -->
-        <div class="wg reveal">
-          <div class="wt">Nos experts</div>
-          <div class="exp-list">
-            <div class="ei"><span class="av-i" style="background:#0f1e36">AL</span><div class="ei-info"><h5>Me Amine Lahlou</h5><span>Droit du Sport · Arbitrage</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#1e4a7a">IK</span><div class="ei-info"><h5>Me Ismaël Kourouma</h5><span>Arbitrage OHADA · CIRDI</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#1a5c3a">SB</span><div class="ei-info"><h5>Samir Belhaj</h5><span>Droit international des affaires</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#4a1a5c">SB</span><div class="ei-info"><h5>Salwa Benali</h5><span>Finance · Économie islamique</span></div></div>
-            <div class="ei"><span class="av-i" style="background:#7a1a1a">HR</span><div class="ei-info"><h5>Me Hassan Rachidi</h5><span>Droit des affaires · Maroc</span></div></div>
           </div>
         </div>
 
@@ -1173,34 +1146,61 @@ ul{list-style:none}
           </div>
         </div>
 
-        <!-- Agenda -->
-        <div class="wg reveal">
-          <div class="wt">Prochains événements</div>
-          <div>
-            <div class="ag-item">
-              <div class="ag-date"><div class="ag-day">10</div><div class="ag-month">Juin</div></div>
-              <div class="ag-info"><h6>Paris Arbitration Week 2026</h6><span>Paris · Arbitrage international</span></div>
-            </div>
-            <div class="ag-item">
-              <div class="ag-date"><div class="ag-day">19</div><div class="ag-month">Juin</div></div>
-              <div class="ag-info"><h6>Forum Neybras 2026</h6><span>Casablanca · Droit & Finance</span></div>
-            </div>
-            <div class="ag-item">
-              <div class="ag-date"><div class="ag-day">15</div><div class="ag-month">Sep.</div></div>
-              <div class="ag-info"><h6>Africa Investment Forum — Marrakech</h6><span>Investissement Afrique</span></div>
-            </div>
-            <div class="ag-item">
-              <div class="ag-date"><div class="ag-day">22</div><div class="ag-month">Oct.</div></div>
-              <div class="ag-info"><h6>Congrès OHADA — Abidjan</h6><span>Sûretés · Procédures collectives</span></div>
-            </div>
-          </div>
-          <a href="evenements.html" style="display:block;text-align:center;margin-top:14px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);padding:10px;border:1px solid rgba(201,168,46,.3);">Voir tout l'agenda <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
-        </div>
-
       </aside>
     </div>
   </div>
 </div>
+
+<!-- ══════════════════════════════════════════════
+     AGENDA — PROCHAINS ÉVÉNEMENTS (PLEINE LARGEUR)
+══════════════════════════════════════════════ -->
+<section class="agenda-strip" aria-label="Prochains événements">
+  <div class="container">
+    <div class="agenda-hd">
+      <span class="agenda-eyebrow">Agenda</span>
+      <h2 class="agenda-title">Prochains événements</h2>
+      <a href="evenements.html" class="agenda-all">Voir tout l'agenda <i class="fas fa-arrow-right" style="font-size:9px"></i></a>
+    </div>
+    <div class="agenda-grid reveal">
+      <a href="evenements.html" class="ag2-card">
+        <div class="ag2-date"><span class="ag2-day">10</span><span class="ag2-mon">Juin</span></div>
+        <div class="ag2-body">
+          <div class="ag2-tag">Arbitrage international</div>
+          <h4>Paris Arbitration Week 2026</h4>
+          <p>Paris · Palais des Congrès</p>
+        </div>
+        <i class="fas fa-arrow-right ag2-arr"></i>
+      </a>
+      <a href="evenements.html" class="ag2-card ag2-featured">
+        <div class="ag2-date"><span class="ag2-day">19</span><span class="ag2-mon">Juin</span></div>
+        <div class="ag2-body">
+          <div class="ag2-tag">Neybras</div>
+          <h4>Forum Neybras 2026</h4>
+          <p>Casablanca · Droit &amp; Finance</p>
+        </div>
+        <i class="fas fa-arrow-right ag2-arr"></i>
+      </a>
+      <a href="evenements.html" class="ag2-card">
+        <div class="ag2-date"><span class="ag2-day">15</span><span class="ag2-mon">Sep.</span></div>
+        <div class="ag2-body">
+          <div class="ag2-tag">Investissement Afrique</div>
+          <h4>Africa Investment Forum — Marrakech</h4>
+          <p>Marrakech · Palais des Congrès</p>
+        </div>
+        <i class="fas fa-arrow-right ag2-arr"></i>
+      </a>
+      <a href="evenements.html" class="ag2-card">
+        <div class="ag2-date"><span class="ag2-day">22</span><span class="ag2-mon">Oct.</span></div>
+        <div class="ag2-body">
+          <div class="ag2-tag">OHADA</div>
+          <h4>Congrès OHADA — Abidjan</h4>
+          <p>Abidjan · Sûretés &amp; Procédures collectives</p>
+        </div>
+        <i class="fas fa-arrow-right ag2-arr"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════════
      SECTION 5 — POURQUOI NEYBRAS (INFLUENCE)
@@ -1533,7 +1533,7 @@ ul{list-style:none}
         </div>
       </article>
       <article class="tc reveal delay-2">
-        <div class="tc-iw"><img src="images/balance-justice-doree-maroc.png" alt="Balance de justice dorée, droit marocain" loading="lazy"/></div>
+        <div class="tc-iw"><img srcset="images/arbitrage-cirdi-bibliotheque-juridique-sm.webp 480w, images/arbitrage-cirdi-bibliotheque-juridique.webp 800w" sizes="(max-width:600px) 480px, 800px" src="images/arbitrage-cirdi-bibliotheque-juridique.webp" alt="Bibliothèque juridique arbitrage sportif" loading="lazy"/></div>
         <div class="tc-body">
           <span class="tag t-arb">Arbitrage sportif</span>
           <h4><a href="arbitrage.html">TAS — Tribunal Arbitral du Sport : jurisprudence récente et stratégie pour les clubs marocains</a></h4>
@@ -1702,12 +1702,6 @@ ul{list-style:none}
         </div>
         <div class="pl-url"><i class="fas fa-external-link-alt"></i> huje-avocats.fr</div>
       </a>
-      <a href="https://www.essaouira-lodge.com/fr/" target="_blank" rel="noopener" class="pl">
-        <div class="pl-logo">
-          <img src="images/logo-essaouira-lodge.png" alt="Essaouira Lodge" loading="lazy"/>
-        </div>
-        <div class="pl-url"><i class="fas fa-external-link-alt"></i> essaouira-lodge.com</div>
-      </a>
       <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl">
         <div class="pl-logo">
           <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="Neybras Family Magazine" loading="lazy"/>
@@ -1722,12 +1716,6 @@ ul{list-style:none}
           </div>
         </div>
         <div class="pl-url"><i class="fas fa-external-link-alt"></i> neybras.com</div>
-      </a>
-      <a href="https://www.chenonceau.com/" target="_blank" rel="noopener" class="pl">
-        <div class="pl-logo" style="background:#0f1e36;padding:8px 12px;border-radius:2px;">
-          <img src="images/logo-chenonceau.png" alt="Château de Chenonceau" loading="lazy" style="max-height:48px;max-width:130px;filter:none;"/>
-        </div>
-        <div class="pl-url"><i class="fas fa-external-link-alt"></i> chenonceau.com</div>
       </a>
     </div>
 
@@ -1764,7 +1752,7 @@ ul{list-style:none}
             <div class="logo-tag" style="font-size:9.5px">Le média qui connecte les idées aux décideurs</div>
           </div>
         </div>
-        <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+        <p>Analyses juridiques et financières pour les décideurs du Maroc et d'Afrique francophone.</p>
         <div class="ft-social">
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
@@ -1845,13 +1833,15 @@ document.querySelectorAll('.reveal,.reveal-l').forEach(el=>ro.observe(el));
 /* Counter animation */
 function animateCount(el,target,duration){
   const start=performance.now();
+  const suffix=target>=1000?'+':'+';
+  const fmt=v=>target>=1000?v.toLocaleString('fr-FR')+suffix:v+suffix;
   const update=now=>{
     const p=Math.min((now-start)/duration,1);
     const ease=p<.5?2*p*p:(4-2*p)*p-1;
     const val=Math.round(ease*target);
-    el.textContent=target>=1000?val.toLocaleString('fr-FR'):val;
+    el.textContent=fmt(val);
     if(p<1)requestAnimationFrame(update);
-    else el.textContent=target>=1000?target.toLocaleString('fr-FR'):target+(target>100?'+':'+');
+    else el.textContent=fmt(target);
   };
   requestAnimationFrame(update);
 }
@@ -1859,11 +1849,11 @@ const co=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
       const t=parseInt(e.target.dataset.target);
-      animateCount(e.target,t,1800);
+      animateCount(e.target,t,1600);
       co.unobserve(e.target);
     }
   });
-},{threshold:.3});
+},{threshold:.15});
 document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
 
 /* Newsletter */
@@ -1912,6 +1902,8 @@ document.querySelectorAll('.btn-nl,.nl-form button').forEach(btn=>{
 </script>
 </body>
 </html>
+
+
 
 
 
