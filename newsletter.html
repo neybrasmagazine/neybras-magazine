@@ -119,7 +119,10 @@ h1 em{font-style:italic;color:var(--or)}
     <p class="sub">Chaque semaine, nos experts sélectionnent les analyses juridiques et financières qui comptent pour les décideurs du Maroc et d'Afrique.</p>
     <p class="ava"><i class="fas fa-users"></i> Rejoignez nos abonnés · Gratuit · Désinscription immédiate</p>
 
-    <form class="nl-form" id="nl-form" action="https://formspree.io/dalal.fahmi@gmail.com" method="POST" novalidate>
+    <form class="nl-form" id="nl-form" action="https://formsubmit.co/dalal.fahmi@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_captcha"  value="false"/>
+      <input type="hidden" name="_subject"  value="Nouvelle inscription — Newsletter Neybras Magazine"/>
+      <input type="hidden" name="_template" value="table"/>
       <input type="email" name="email" id="nl-email" placeholder="Votre email professionnel" required aria-label="Email"/>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
@@ -154,23 +157,26 @@ document.getElementById('nl-form').addEventListener('submit', async function(e) 
   btn.disabled     = true;
 
   try {
-    const res = await fetch(this.action, {
+    const res  = await fetch('https://formsubmit.co/ajax/dalal.fahmi@gmail.com', {
       method:  'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ email, _subject: 'Nouvelle inscription — Newsletter Neybras Magazine' })
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body:    JSON.stringify({
+        email,
+        _captcha:  'false',
+        _subject:  'Nouvelle inscription — Newsletter Neybras Magazine',
+        _template: 'table'
+      })
     });
+    const data = await res.json().catch(() => ({}));
 
-    if (res.ok) {
+    if (res.ok && (data.success === 'true' || data.success === true)) {
       document.querySelector('.card').innerHTML =
         '<div class="pre">Confirmation</div>' +
         '<h1>Merci pour<br/><em>votre inscription !</em></h1>' +
         '<p class="sub" style="margin-bottom:36px">Vous recevrez prochainement votre première newsletter.<br/>Vérifiez vos spams si vous ne recevez rien sous 24h.</p>' +
         '<a href="index.html" style="display:inline-block;border:1px solid var(--or);color:var(--or);font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 28px;border-radius:1px;transition:all .2s">← Retour à l\'accueil</a>';
     } else {
-      const data = await res.json().catch(() => ({}));
-      note.innerHTML = '<span style="color:#c0392b">' +
-        (data.errors ? data.errors.map(e => e.message).join(', ') : 'Une erreur est survenue. Réessayez.') +
-        '</span>';
+      note.innerHTML  = '<span style="color:#c0392b">Une erreur est survenue. Réessayez dans quelques instants.</span>';
       btn.textContent = 'S\'abonner';
       btn.disabled    = false;
     }
