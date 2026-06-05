@@ -3,85 +3,85 @@
 
   <!-- Pages principales -->
   <url>
-    <loc>https://neybras-magazine.com/</loc>
+    <loc>https://www.neybras-magazine.com/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/analyses.html</loc>
+    <loc>https://www.neybras-magazine.com/analyses.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/droit.html</loc>
+    <loc>https://www.neybras-magazine.com/droit.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/finance.html</loc>
+    <loc>https://www.neybras-magazine.com/finance.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/afrique.html</loc>
+    <loc>https://www.neybras-magazine.com/afrique.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/arbitrage.html</loc>
+    <loc>https://www.neybras-magazine.com/arbitrage.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/droit-du-sport.html</loc>
+    <loc>https://www.neybras-magazine.com/droit-du-sport.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/tribunes.html</loc>
+    <loc>https://www.neybras-magazine.com/tribunes.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/interviews.html</loc>
+    <loc>https://www.neybras-magazine.com/interviews.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/evenements.html</loc>
+    <loc>https://www.neybras-magazine.com/evenements.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/premium.html</loc>
+    <loc>https://www.neybras-magazine.com/premium.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/a-propos.html</loc>
+    <loc>https://www.neybras-magazine.com/a-propos.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/contact.html</loc>
+    <loc>https://www.neybras-magazine.com/contact.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/mentions-legales.html</loc>
+    <loc>https://www.neybras-magazine.com/mentions-legales.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -89,25 +89,25 @@
 
   <!-- Articles — Droit du Sport & CdM 2030 -->
   <url>
-    <loc>https://neybras-magazine.com/article-cdm2030.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://www.neybras-magazine.com/article-cdm2030-juridique.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-agents-fifa-maroc.html</loc>
+    <loc>https://www.neybras-magazine.com/article-agents-fifa-maroc.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-tas-maroc.html</loc>
+    <loc>https://www.neybras-magazine.com/article-tas-maroc.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-valorisation-sportif-marque.html</loc>
+    <loc>https://www.neybras-magazine.com/article-valorisation-sportif-marque.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -115,31 +115,31 @@
 
   <!-- Articles — Arbitrage -->
   <url>
-    <loc>https://neybras-magazine.com/article-cirdi.html</loc>
+    <loc>https://www.neybras-magazine.com/article-cirdi.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-cirdi-maroc.html</loc>
+    <loc>https://www.neybras-magazine.com/article-cirdi-maroc.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-ohada-arbitrage.html</loc>
+    <loc>https://www.neybras-magazine.com/article-ohada-arbitrage.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-exequatur.html</loc>
+    <loc>https://www.neybras-magazine.com/article-exequatur.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-mediation.html</loc>
+    <loc>https://www.neybras-magazine.com/article-mediation.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -147,43 +147,43 @@
 
   <!-- Articles — Droit & Jurisprudence -->
   <url>
-    <loc>https://neybras-magazine.com/article-procedures-collectives.html</loc>
+    <loc>https://www.neybras-magazine.com/article-procedures-collectives.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-procedure-civile.html</loc>
+    <loc>https://www.neybras-magazine.com/article-procedure-civile.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-code-travail.html</loc>
+    <loc>https://www.neybras-magazine.com/article-code-travail.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-ia-cndp.html</loc>
+    <loc>https://www.neybras-magazine.com/article-ia-cndp.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-droit-immobilier.html</loc>
+    <loc>https://www.neybras-magazine.com/article-droit-immobilier.html</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-ohada-suretes.html</loc>
+    <loc>https://www.neybras-magazine.com/article-ohada-suretes.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-ohada-reforme.html</loc>
+    <loc>https://www.neybras-magazine.com/article-ohada-reforme.html</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -191,43 +191,43 @@
 
   <!-- Articles — Finance -->
   <url>
-    <loc>https://neybras-magazine.com/article-lf2026.html</loc>
+    <loc>https://www.neybras-magazine.com/article-lf2026.html</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-private-equity.html</loc>
+    <loc>https://www.neybras-magazine.com/article-private-equity.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-finance-participative.html</loc>
+    <loc>https://www.neybras-magazine.com/article-finance-participative.html</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-green-bonds.html</loc>
+    <loc>https://www.neybras-magazine.com/article-green-bonds.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-cryptoactifs.html</loc>
+    <loc>https://www.neybras-magazine.com/article-cryptoactifs.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-cfc-nairobi.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://www.neybras-magazine.com/article-cfc-nairobi.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-fintech-afrique.html</loc>
+    <loc>https://www.neybras-magazine.com/article-fintech-afrique.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -235,19 +235,19 @@
 
   <!-- Articles — Afrique & International -->
   <url>
-    <loc>https://neybras-magazine.com/article-zlecaf.html</loc>
+    <loc>https://www.neybras-magazine.com/article-zlecaf.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-ppp-afrique.html</loc>
+    <loc>https://www.neybras-magazine.com/article-ppp-afrique.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-gouvernance-afrique.html</loc>
+    <loc>https://www.neybras-magazine.com/article-gouvernance-afrique.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -255,25 +255,25 @@
 
   <!-- Tribunes -->
   <url>
-    <loc>https://neybras-magazine.com/article-tribune-cirdi-exequatur.html</loc>
+    <loc>https://www.neybras-magazine.com/article-tribune-cirdi-exequatur.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-tribune-code-travail.html</loc>
+    <loc>https://www.neybras-magazine.com/article-tribune-code-travail.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-tribune-sukuk-maroc.html</loc>
+    <loc>https://www.neybras-magazine.com/article-tribune-sukuk-maroc.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://neybras-magazine.com/article-tribune-zlecaf-harmonisation.html</loc>
+    <loc>https://www.neybras-magazine.com/article-tribune-zlecaf-harmonisation.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

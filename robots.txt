@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://neybras-magazine.com/sitemap.xml
+Sitemap: https://www.neybras-magazine.com/sitemap.xml
 
 # Exclure les fichiers techniques
 Disallow: /palette-preview.html
