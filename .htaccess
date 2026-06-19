@@ -5,43 +5,27 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ── 2. Supprimer www (cohérence avec les balises canoniques) ───────────
+# ── 2. Supprimer www ───────────────────────────────────────────────────
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-# ── 3. CdM 2030 : article-cdm2030.html → article-cdm2030-juridique.html
-RewriteRule ^article-cdm2030\.html$ /article-cdm2030-juridique.html [L,R=301]
+# ── 3. CdM 2030 legacy slug ────────────────────────────────────────────
+RewriteRule ^article-cdm2030(\.html)?$ /article-cdm2030-juridique [L,R=301]
 
-# ── 4. Anciens slugs canoniques (sans .html) → fichiers réels ──────────
-RewriteRule ^article-cdm2030-juridique/?$           /article-cdm2030-juridique.html [L,R=301]
-RewriteRule ^article-finance-participative-maroc/?$ /article-finance-participative.html [L,R=301]
-RewriteRule ^article-zlecaf-maroc/?$                /article-zlecaf.html [L,R=301]
-RewriteRule ^article-cirdi-maroc/?$                 /article-cirdi-maroc.html [L,R=301]
-RewriteRule ^article-droit-immobilier/?$            /article-droit-immobilier.html [L,R=301]
-RewriteRule ^article-exequatur/?$                   /article-exequatur.html [L,R=301]
-RewriteRule ^article-fintech-afrique/?$             /article-fintech-afrique.html [L,R=301]
-RewriteRule ^article-gouvernance-afrique/?$         /article-gouvernance-afrique.html [L,R=301]
-RewriteRule ^article-lf2026/?$                      /article-lf2026.html [L,R=301]
-RewriteRule ^article-tas-maroc/?$                   /article-tas-maroc.html [L,R=301]
-RewriteRule ^article-private-equity/?$              /article-private-equity.html [L,R=301]
-RewriteRule ^article-ohada-reforme/?$               /article-ohada-reforme.html [L,R=301]
-RewriteRule ^article-procedure-civile/?$            /article-procedure-civile.html [L,R=301]
-RewriteRule ^article-ohada-arbitrage/?$             /article-ohada-arbitrage.html [L,R=301]
-RewriteRule ^article-mediation/?$                   /article-mediation.html [L,R=301]
-RewriteRule ^article-cirdi/?$                       /article-cirdi.html [L,R=301]
-RewriteRule ^analyses/?$                            /analyses.html [L,R=301]
-RewriteRule ^arbitrage/?$                           /arbitrage.html [L,R=301]
-RewriteRule ^afrique/?$                             /afrique.html [L,R=301]
-RewriteRule ^a-propos/?$                            /a-propos.html [L,R=301]
-RewriteRule ^contact/?$                             /contact.html [L,R=301]
-RewriteRule ^droit/?$                               /droit.html [L,R=301]
-RewriteRule ^droit-du-sport/?$                      /droit-du-sport.html [L,R=301]
-RewriteRule ^finance/?$                             /finance.html [L,R=301]
-RewriteRule ^interviews/?$                          /interviews.html [L,R=301]
-RewriteRule ^mentions-legales/?$                    /mentions-legales.html [L,R=301]
-RewriteRule ^tribunes/?$                            /tribunes.html [L,R=301]
+# ── 4. Anciens slugs alternatifs ───────────────────────────────────────
+RewriteRule ^article-finance-participative-maroc/?$ /article-finance-participative [L,R=301]
+RewriteRule ^article-zlecaf-maroc/?$                /article-zlecaf [L,R=301]
 
-# ── 5. Sécurité : cacher les fichiers sensibles ────────────────────────
+# ── 5. Supprimer l'extension .html (URLs propres) ─────────────────────
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# ── 6. Servir le fichier .html pour les URLs sans extension ────────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── 7. Sécurité : cacher les fichiers sensibles ────────────────────────
 <FilesMatch "\.(git|env|htpasswd)$">
   Order allow,deny
   Deny from all

@@ -6,7 +6,7 @@
 <title>Newsletter — Neybras Magazine</title>
 <meta name="description" content="Abonnez-vous à la newsletter de Neybras Magazine — analyses juridiques, décryptages financiers et jurisprudence chaque semaine."/>
 <meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://neybras-magazine.com/newsletter.html"/>
+<link rel="canonical" href="https://neybras-magazine.com/newsletter"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Newsletter — Neybras Magazine"/>
 <meta property="og:description" content="Analyses juridiques, décryptages financiers et jurisprudence livrés chaque lundi dans votre boîte mail."/>
@@ -89,7 +89,7 @@ h1 em{font-style:italic;color:var(--or)}
 
 <header class="site-header">
   <div class="hd-in">
-    <a href="index.html" class="logo-wrap" aria-label="Neybras Magazine — Accueil">
+    <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil">
       <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
           <clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath>
@@ -109,7 +109,7 @@ h1 em{font-style:italic;color:var(--or)}
         <div class="logo-tag">Le média qui connecte les idées aux décideurs</div>
       </div>
     </a>
-    <a href="index.html" class="btn-home">← Accueil</a>
+    <a href="/" class="btn-home">← Accueil</a>
   </div>
 </header>
 
@@ -123,7 +123,7 @@ h1 em{font-style:italic;color:var(--or)}
     <form class="nl-form" id="nl-form" action="https://70a45acc.sibforms.com/serve/MUIFALw9HGqo5ByfJY2K8OT0vojkvG1sAJ56A-7J7oS5lU5l61NIgHxjH3j6-yRPDe9lmp7zoqkCAN3AUggLPUxi8ku8fvwGG472N4tc6QCNK5NBkwZUuNOeYkE4KWAWSEancNN46vNpqtNPYS7uEcezDQWxzfSZD1LuPtw8DYYp4Vru4wD94x4tAF-cQ2FVmFyxLfqY1a1SqV8weA==" method="POST" data-type="subscription" novalidate><input type="email" name="EMAIL" id="nl-email" placeholder="Votre email professionnel" required aria-label="Email"/><input type="text" name="email_address_check" value="" style="display:none"><input type="hidden" name="locale" value="fr">
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
-    <p class="note" id="nl-note">En vous abonnant, vous acceptez de recevoir notre newsletter. Aucun spam. <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+    <p class="note" id="nl-note">En vous abonnant, vous acceptez de recevoir notre newsletter. Aucun spam. <a href="politique-confidentialite">Politique de confidentialité</a>.</p>
 
     <div class="benefits">
       <div class="bitem"><i class="fas fa-scale-balanced"></i> Analyses juridiques exclusives (droit des affaires, arbitrage, OHADA)</div>
@@ -135,7 +135,7 @@ h1 em{font-style:italic;color:var(--or)}
 
 <footer class="site-footer">
   © 2026 Neybras Magazine · Casablanca, Maroc ·
-  <a href="mentions-legales.html" style="color:rgba(255,255,255,.3);margin-left:8px">Mentions légales</a>
+  <a href="mentions-legales" style="color:rgba(255,255,255,.3);margin-left:8px">Mentions légales</a>
 </footer>
 
 <script>
@@ -170,7 +170,7 @@ document.getElementById('nl-form').addEventListener('submit', async function(e) 
         '<div class="pre">Confirmation</div>' +
         '<h1>Merci pour<br/><em>votre inscription !</em></h1>' +
         '<p class="sub" style="margin-bottom:36px">Vous recevrez prochainement votre première newsletter.<br/>Vérifiez vos spams si vous ne recevez rien sous 24h.</p>' +
-        '<a href="index.html" style="display:inline-block;border:1px solid var(--or);color:var(--or);font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 28px;border-radius:1px;transition:all .2s">← Retour à l\'accueil</a>';
+        '<a href="/" style="display:inline-block;border:1px solid var(--or);color:var(--or);font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 28px;border-radius:1px;transition:all .2s">← Retour à l\'accueil</a>';
     } else {
       note.innerHTML  = '<span style="color:#c0392b">Une erreur est survenue. Réessayez dans quelques instants.</span>';
       btn.textContent = 'S\'abonner';
