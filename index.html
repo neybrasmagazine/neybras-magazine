@@ -1616,9 +1616,7 @@ ul{list-style:none}
     <div class="nl-pre reveal">Newsletter Neybras</div>
     <h2 class="nl-h reveal delay-1">Analyses juridiques et financières<br/><em>chaque lundi matin.</em></h2>
     <p class="nl-sub reveal delay-2">Chaque lundi matin, recevez une synthèse des analyses juridiques et financières rédigées par nos experts praticiens.</p>
-    <form class="nl-form reveal delay-3" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-      <input type="email" name="email" placeholder="Votre email professionnel" required/>
+    <form class="nl-form reveal delay-3" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
       <button type="submit">S'abonner</button>
     </form>
     <p class="nl-note reveal">520 abonnés · Gratuit · Désinscription immédiate</p>
@@ -1855,18 +1853,17 @@ const co=new IntersectionObserver((entries)=>{
 },{threshold:.15});
 document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
 
-/* Newsletter */
+/* Newsletter sidebar */
 document.querySelectorAll('.btn-nl').forEach(btn=>{
-  btn.addEventListener('click',e=>{
+  btn.addEventListener('click',async e=>{
     e.preventDefault();
     const f=btn.closest('form,.nl-w');
     const inp=f&&f.querySelector('input[type="email"]');
     if(inp&&inp.value.includes('@')){
-      const orig=btn.textContent;
-      btn.textContent='✓ Abonnement confirmé !';
-      btn.style.background='#27ae60';
-      inp.value='';
-      setTimeout(()=>{btn.textContent=orig;btn.style.background=''},3000);
+      const email=inp.value,orig=btn.textContent;
+      btn.textContent='...';btn.disabled=true;
+      try{await brevoAdd(email);btn.textContent='✓ Abonnement confirmé !';btn.style.background='#27ae60';inp.value='';setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.disabled=false;},3000);}
+      catch(err){btn.textContent=orig;btn.disabled=false;}
     }
   });
 });
@@ -1890,7 +1887,7 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
 <script>
 (function(){
   function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
-  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}}
+  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){var btn=document.querySelector('#nl-popup-form button');if(btn){btn.textContent='...';btn.disabled=true;}brevoAdd(em).then(function(){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}).catch(function(){if(btn){btn.textContent="S\'abonner";btn.disabled=false;}});}}
   window.nlClose=nlClose;window.nlSubmit=nlSubmit;
   if(!localStorage.getItem('nl_closed')){
     setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);

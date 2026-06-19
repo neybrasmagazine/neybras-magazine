@@ -490,9 +490,7 @@ ul{list-style:none;}
   <div class="nl-pre">Newsletter hebdomadaire</div>
   <h2 class="nl-h">Les meilleures voix<br/><em>réunies chaque semaine.</em></h2>
   <p class="nl-sub">Interviews exclusives et tribunes des meilleurs experts juridiques et financiers du Maroc et d'Afrique — directement dans votre boîte mail.</p>
-  <form class="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-    <input type="email" name="email" placeholder="Votre email professionnel" required/>
+  <form class="nl-form" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
     <button type="submit">S'abonner</button>
   </form>
   <p class="nl-note">520 abonnés · Gratuit · Désinscription immédiate</p>

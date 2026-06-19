@@ -119,9 +119,7 @@ h1 em{font-style:italic;color:var(--or)}
     <p class="sub">Chaque semaine, nos experts sélectionnent les analyses juridiques et financières qui comptent pour les décideurs du Maroc et d'Afrique.</p>
     <p class="ava"><i class="fas fa-users"></i> 520 abonnés · Gratuit · Désinscription immédiate</p>
 
-    <form class="nl-form" id="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-      <input type="email" name="email" id="nl-email" placeholder="Votre email professionnel" required aria-label="Email"/>
+    <form class="nl-form" id="nl-form" onsubmit="return brevoSubmit(event)" novalidate><input type="email" name="email" id="nl-email" placeholder="Votre email professionnel" required aria-label="Email"/>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
     <p class="note" id="nl-note">En vous abonnant, vous acceptez de recevoir notre newsletter. Aucun spam. <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>

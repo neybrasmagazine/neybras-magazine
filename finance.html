@@ -581,9 +581,7 @@ ul{list-style:none;}
   <div class="nl-pre">Newsletter hebdomadaire</div>
   <h2 class="nl-h">Marchés, régulation,<br/><em>décryptés chaque semaine.</em></h2>
   <p class="nl-sub">Analyses financières, jurisprudence des marchés et tendances du capital africain — pour les décideurs du Maroc et d'Afrique.</p>
-  <form class="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-    <input type="email" name="email" placeholder="Votre email professionnel" required/>
+  <form class="nl-form" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
     <button type="submit">S'abonner</button>
   </form>
   <p class="nl-note">520 abonnés · Gratuit · Désinscription immédiate</p>

@@ -423,9 +423,7 @@ ul{list-style:none;}
   <div class="nl-pre">Newsletter hebdomadaire</div>
   <h2 class="nl-h">L'Afrique des affaires,<br/><em>chaque semaine.</em></h2>
   <p class="nl-sub">ZLECAf, OHADA, investissements et droit des affaires en Afrique — pour les décideurs qui regardent le continent avec sérieux.</p>
-  <form class="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-    <input type="email" name="email" placeholder="Votre email professionnel" required/>
+  <form class="nl-form" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
     <button type="submit">S'abonner</button>
   </form>
   <p class="nl-note">520 abonnés · Gratuit · Désinscription immédiate</p>

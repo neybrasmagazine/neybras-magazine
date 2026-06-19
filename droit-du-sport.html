@@ -445,9 +445,7 @@ ul{list-style:none;}
   <div class="nl-pre">Newsletter Sport Business</div>
   <h2 class="nl-h">Le droit du sport marocain,<br/><em>décrypté chaque semaine.</em></h2>
   <p class="nl-sub">CdM 2030, agents, droits TV, TAS — l'actualité juridique et économique du sport au Maroc et en Afrique pour les professionnels du secteur.</p>
-  <form class="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-    <input type="email" name="email" placeholder="Votre email professionnel" required/>
+  <form class="nl-form" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
     <button type="submit">S'abonner</button>
   </form>
   <p class="nl-note">520 abonnés · Gratuit · Désinscription immédiate</p>

@@ -1267,10 +1267,7 @@ ul { list-style: none; }
         </div>
 
         <!-- Newsletter — version claire -->
-        <form class="nl-w-aside" action="https://formspree.io/f/mgoppdpg" method="POST">
-          <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-          <input type="hidden" name="_language" value="fr"/>
-          <input type="hidden" name="_next" value="https://neybras-magazine.com/newsletter.html?merci=1"/>
+        <form class="nl-w-aside" onsubmit="return brevoSubmit(event)"><input type="hidden" name="_next" value="https://neybras-magazine.com/newsletter.html?merci=1"/>
           <div class="wt">Newsletter hebdomadaire</div>
           <p>Analyses juridiques, décryptages financiers et jurisprudence, chaque lundi.</p>
           <input type="email" name="email" placeholder="Email professionnel" required/>
@@ -1377,9 +1374,7 @@ ul { list-style: none; }
   <div class="nl-pre">Newsletter hebdomadaire</div>
   <h2 class="nl-h">Ne manquez aucune<br/><em>analyse stratégique.</em></h2>
   <p class="nl-sub">Chaque semaine, nos experts sélectionnent les analyses juridiques et financières qui comptent pour les décideurs du Maroc et d'Afrique.</p>
-  <form class="nl-form" action="https://formspree.io/f/mgoppdpg" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle inscription — Newsletter Neybras Magazine"/>
-    <input type="email" name="email" placeholder="Votre email professionnel" required/>
+  <form class="nl-form" onsubmit="return brevoSubmit(event)"><input type="email" name="email" placeholder="Votre email professionnel" required/>
     <button type="submit">S'abonner</button>
   </form>
   <p class="nl-note">520 abonnés · Gratuit · Désinscription immédiate</p>
