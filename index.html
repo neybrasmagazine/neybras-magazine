@@ -930,19 +930,6 @@ ul{list-style:none}
 ══════════════════════════════════════════════ -->
 <style>
 .une-sec{padding:42px 0 10px;background:var(--off)}
-.une-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.une-card{background:var(--blanc);border-radius:var(--r);box-shadow:var(--sh2);transition:var(--tr);border-top:3px solid var(--or);display:flex;flex-direction:column;padding:22px 22px 18px}
-.une-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
-.une-badge{display:inline-block;align-self:flex-start;background:var(--or-dim);color:var(--or);border:1px solid var(--or-b);font-family:var(--it);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;margin-bottom:14px}
-.une-card .tag{align-self:flex-start;margin-bottom:10px}
-.une-card h3{font-family:var(--pd);font-size:17px;font-weight:700;color:var(--bn);line-height:1.32;margin-bottom:16px}
-.une-card h3 a:hover{color:var(--or)}
-.une-meta-author{margin-top:auto;padding-top:14px;border-top:1px solid var(--brd)}
-.une-name{font-family:var(--it);font-size:12.5px;font-weight:700;color:var(--bn);line-height:1.2}
-.une-role{font-family:var(--it);font-size:10.5px;color:var(--gris);margin-top:3px;line-height:1.4}
-.une-foot{display:flex;align-items:center;gap:8px;margin-top:10px;font-family:var(--it);font-size:10px;color:var(--gris)}
-.une-foot i{color:var(--or)}
-@media(max-width:880px){.une-grid{grid-template-columns:1fr;gap:16px}}
 </style>
 <section class="une-sec" aria-label="À la une — articles vedettes">
   <div class="container">
@@ -951,39 +938,36 @@ ul{list-style:none}
       <div class="sh-line"></div>
       <a href="analyses" class="sh-all">Voir tout</a>
     </div>
-    <div class="une-grid">
+    <div class="a3">
 
-      <article class="une-card reveal">
-        <span class="une-badge">Interview</span>
-        <span class="tag t-arb">Arbitrage · Mondial 2030</span>
-        <h3><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030</a></h3>
-        <div class="une-meta-author">
-          <div class="une-name">Me Driss El Harti</div>
-          <div class="une-role">Avocat · Barreau de Tanger · Arbitrage international</div>
-          <div class="une-foot"><span>20 juin 2026</span><span>·</span><span><i class="far fa-clock"></i> 16 min de lecture</span></div>
+      <article class="acard reveal">
+        <div class="acard-iw"><img src="images/driss-el-harti-avocat-tanger.png" alt="Me Driss El Harti, avocat au Barreau de Tanger" loading="lazy" style="object-position:center"/></div>
+        <div class="acard-body">
+          <span class="tag t-arb">Interview · Arbitrage</span>
+          <h3><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030</a></h3>
+          <p>Me Driss El Harti, avocat au Barreau de Tanger, décrypte les enjeux de l'arbitrage international face aux grands chantiers et investissements du Mondial 2030.</p>
         </div>
+        <div class="acard-foot"><span class="by">Me Driss El Harti</span><span>·</span><span>20 juin 2026</span><span>·</span><span>16 min</span></div>
       </article>
 
-      <article class="une-card reveal delay-1">
-        <span class="une-badge">Analyse</span>
-        <span class="tag t-sport">Droit du Sport · Mondial 2030</span>
-        <h3><a href="article-cdm2030-juridique">Coupe du Monde 2030 : contrats FIFA, fiscalité spéciale et droits TV au Maroc</a></h3>
-        <div class="une-meta-author">
-          <div class="une-name">Me Amine Lahlou</div>
-          <div class="une-role">Avocat · Barreau de Casablanca · Droit du sport</div>
-          <div class="une-foot"><span>18 mai 2026</span><span>·</span><span><i class="far fa-clock"></i> 14 min de lecture</span></div>
+      <article class="acard reveal delay-1">
+        <div class="acard-iw"><img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca" loading="lazy" style="object-position:center top"/></div>
+        <div class="acard-body">
+          <span class="tag t-sport">Analyse · Droit du sport</span>
+          <h3><a href="article-cdm2030-juridique">Coupe du Monde 2030 : contrats FIFA, fiscalité spéciale et droits TV au Maroc</a></h3>
+          <p>Host City Agreements, accords de siège FIFA et fiscalité dérogatoire : ce que le Maroc a réellement signé pour la Coupe du Monde 2030.</p>
         </div>
+        <div class="acard-foot"><span class="by">Me Amine Lahlou</span><span>·</span><span>18 mai 2026</span><span>·</span><span>14 min</span></div>
       </article>
 
-      <article class="une-card reveal delay-2">
-        <span class="une-badge">Tribune</span>
-        <span class="tag t-droit">Marchés publics · Droit public</span>
-        <h3><a href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</a></h3>
-        <div class="une-meta-author">
-          <div class="une-name">Pr Khalid Cherkaoui Semmouni</div>
-          <div class="une-role">Professeur de droit public · Marchés publics</div>
-          <div class="une-foot"><span>24 juin 2026</span><span>·</span><span><i class="far fa-clock"></i> 6 min de lecture</span></div>
+      <article class="acard reveal delay-2">
+        <div class="acard-iw"><img src="images/portrait-khalid-cherkaoui-semmouni.png" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public" loading="lazy" style="object-position:center top"/></div>
+        <div class="acard-body">
+          <span class="tag t-droit">Tribune · Marchés publics</span>
+          <h3><a href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</a></h3>
+          <p>Décret 2-22-431 : dans quels cas l'administration peut résilier un marché public, et quels recours pour le titulaire. Jurisprudence et indemnisation.</p>
         </div>
+        <div class="acard-foot"><span class="by">Pr Khalid Cherkaoui Semmouni</span><span>·</span><span>24 juin 2026</span><span>·</span><span>6 min</span></div>
       </article>
 
     </div>
@@ -1671,8 +1655,8 @@ ul{list-style:none}
         <div class="itw-body">
           <span class="tag t-sport">Tribune</span>
           <h3><a href="interviews">« La réforme FIFA sur les agents sportifs va bouleverser le marché des transferts en Afrique francophone »</a></h3>
-          <p>Me Zineb Maâti, juriste spécialisée en droit du sport au Barreau de Rabat, décrypte les implications concrètes pour les clubs et agents marocains.</p>
-          <div class="itw-by"><i class="fas fa-pen-nib"></i> Tribune exclusive · Me Zineb Maâti</div>
+          <p>Zineb Maâti, juriste spécialisée en droit social au Barreau de Rabat, décrypte les implications concrètes pour les clubs et agents marocains.</p>
+          <div class="itw-by"><i class="fas fa-pen-nib"></i> Tribune exclusive · Zineb Maâti</div>
         </div>
       </article>
     </div>
