@@ -922,6 +922,95 @@ ul{list-style:none}
 </nav>
 
 <!-- ══════════════════════════════════════════════
+     À LA UNE — ARTICLES VEDETTES
+══════════════════════════════════════════════ -->
+<style>
+.une-sec{padding:42px 0 10px;background:var(--off)}
+.une-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.une-card{background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);transition:var(--tr);border-bottom:3px solid transparent;display:flex;flex-direction:column}
+.une-card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-bottom-color:var(--or)}
+.une-imgw{position:relative;display:block;overflow:hidden}
+.une-imgw img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;transition:transform .5s;display:block}
+.une-card:hover .une-imgw img{transform:scale(1.05)}
+.une-badge{position:absolute;top:12px;left:12px;background:var(--or);color:#fff;font-family:var(--it);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px}
+.une-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.une-body .tag{margin-bottom:10px;align-self:flex-start}
+.une-body h3{font-family:var(--pd);font-size:16px;font-weight:700;color:var(--bn);line-height:1.3;margin-bottom:14px}
+.une-body h3 a:hover{color:var(--or)}
+.une-author{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--brd)}
+.une-author img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:center top;border:1.5px solid var(--or-b);flex-shrink:0}
+.une-name{font-family:var(--it);font-size:12px;font-weight:700;color:var(--bn);line-height:1.2}
+.une-role{font-family:var(--it);font-size:10px;color:var(--gris);margin-top:2px}
+@media(max-width:880px){.une-grid{grid-template-columns:1fr;gap:18px}.une-imgw img{aspect-ratio:16/10;object-position:center 22%}}
+</style>
+<section class="une-sec" aria-label="À la une — articles vedettes">
+  <div class="container">
+    <div class="sh reveal">
+      <h2 class="sh-title">À la Une</h2>
+      <div class="sh-line"></div>
+      <a href="analyses" class="sh-all">Voir tout</a>
+    </div>
+    <div class="une-grid">
+
+      <article class="une-card reveal">
+        <a href="article-arbitrage-mondial2030-entretien" class="une-imgw">
+          <img src="images/driss-el-harti-avocat-tanger.png" alt="Me Driss El Harti, avocat au Barreau de Tanger" loading="lazy" style="object-position:center"/>
+          <span class="une-badge">Interview</span>
+        </a>
+        <div class="une-body">
+          <span class="tag t-arb">Arbitrage · Mondial 2030</span>
+          <h3><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030</a></h3>
+          <div class="une-author">
+            <img src="images/driss-el-harti-avocat-tanger.png" alt="Me Driss El Harti" style="object-position:center"/>
+            <div>
+              <div class="une-name">Me Driss El Harti</div>
+              <div class="une-role">Avocat · Barreau de Tanger · 20 juin 2026</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="une-card reveal delay-1">
+        <a href="article-cdm2030-juridique" class="une-imgw">
+          <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca" loading="lazy" style="object-position:center top"/>
+          <span class="une-badge">Analyse</span>
+        </a>
+        <div class="une-body">
+          <span class="tag t-sport">Droit du Sport · Mondial 2030</span>
+          <h3><a href="article-cdm2030-juridique">Coupe du Monde 2030 : contrats FIFA, fiscalité spéciale et droits TV au Maroc</a></h3>
+          <div class="une-author">
+            <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" style="object-position:center top"/>
+            <div>
+              <div class="une-name">Me Amine Lahlou</div>
+              <div class="une-role">Avocat · Barreau de Casablanca · 18 mai 2026</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="une-card reveal delay-2">
+        <a href="article-tribune-marches-publics-resiliation" class="une-imgw">
+          <img src="images/portrait-khalid-cherkaoui-semmouni.png" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public" loading="lazy" style="object-position:center top"/>
+          <span class="une-badge">Tribune</span>
+        </a>
+        <div class="une-body">
+          <span class="tag t-droit">Marchés publics · Droit public</span>
+          <h3><a href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</a></h3>
+          <div class="une-author">
+            <img src="images/portrait-khalid-cherkaoui-semmouni.png" alt="Pr Khalid Cherkaoui Semmouni" style="object-position:center top"/>
+            <div>
+              <div class="une-name">Pr Khalid Cherkaoui Semmouni</div>
+              <div class="une-role">Professeur de droit public · 24 juin 2026</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      SECTION 3 — CITATION DU JOUR
 ══════════════════════════════════════════════ -->
 <div class="quote-bar reveal">
