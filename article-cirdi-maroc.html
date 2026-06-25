@@ -190,6 +190,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="stylesheet" href="assets/lead-nl.css"/>
 </head>
 <body>
 <div id="prog"></div>
@@ -378,6 +379,26 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
   </aside>
 </div></div></div>
 
+<!-- ══ NEWSLETTER LEAD-MAGNET ══ -->
+<section class="lnl" aria-label="Newsletter Neybras Magazine">
+  <div class="lnl-in">
+    <div class="lnl-ico"><i class="fas fa-envelope-open-text"></i></div>
+    <div class="lnl-kick">Newsletter Neybras · Gratuit</div>
+    <h2 class="lnl-h">Recevez l'essentiel de l'arbitrage et du droit des affaires au Maroc</h2>
+    <div class="lnl-gift">
+      <i class="fas fa-file-pdf lnl-gift-ico" aria-hidden="true"></i>
+      <div>
+        <div class="lnl-gift-label">Guide pratique offert</div>
+        <div class="lnl-gift-title">Mondial 2030 : 5 points à sécuriser dans vos contrats</div>
+      </div>
+    </div>
+    <form class="lnl-form" data-pdf="documents/neybras-arbitrage-2030-checklist.pdf">
+      <input type="email" placeholder="Votre email professionnel" required aria-label="Email professionnel"/>
+      <button type="submit">Recevoir le guide</button>
+    </form>
+    <p class="lnl-rea"><i class="fas fa-lock"></i> Gratuit · 1 email par semaine · Désinscription en 1 clic</p>
+  </div>
+</section>
 <footer><div class="container">
   <div class="ft-grid">
     <div class="ft-brand"><div class="logo-name">Neybras</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div><p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage international et droit africain.</p><div class="ft-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
@@ -428,6 +449,7 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
 })();
 </script>
+<script src="assets/lead-nl.js" defer></script>
 </body>
 </html>
 

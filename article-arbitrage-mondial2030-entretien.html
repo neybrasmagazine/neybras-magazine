@@ -205,6 +205,7 @@ ul{list-style:none;}
 @media(max-width:768px){.art-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}}
 @media(max-width:520px){.container{padding:0 18px;}.art-hero-inner{padding:0 18px;}}
 </style>
+<link rel="stylesheet" href="assets/lead-nl.css"/>
 </head>
 <body>
 <div id="prog"></div>
@@ -491,43 +492,27 @@ ul{list-style:none;}
   </aside>
 </div></div></div>
 
-<!-- ══════════════════════════════════════════════
-     NEWSLETTER LEAD-MAGNET — FIN D'ARTICLE
-══════════════════════════════════════════════ -->
-<style>
-.lead-nl{background:var(--bn);color:#fff}
-.lead-nl-inner{max-width:680px;margin:0 auto;padding:50px 24px 54px;text-align:center}
-.lead-nl-icon{width:56px;height:56px;border-radius:50%;background:var(--or-bg);border:1px solid var(--or-bd);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--or-lt);font-size:22px}
-.lead-nl-kicker{font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or-lt);margin-bottom:14px}
-.lead-nl-h{font-family:var(--cg);font-size:clamp(26px,5vw,36px);font-weight:600;line-height:1.18;margin-bottom:18px;color:#fff}
-.lead-nl-lead{font-family:var(--it);font-size:13px;color:rgba(255,255,255,.6);margin-bottom:10px}
-.lead-nl-magnet{font-family:var(--cg);font-style:italic;font-size:clamp(17px,3vw,21px);color:var(--or-lt);line-height:1.4;margin:0 auto 26px;max-width:540px;padding:14px 22px;border:1px dashed var(--or-bd);border-radius:3px}
-.lead-nl-form{display:flex;gap:10px;max-width:480px;margin:0 auto 16px}
-.lead-nl-form input{flex:1;padding:15px 18px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:var(--it);font-size:14px;border-radius:3px;outline:none;transition:var(--tr)}
-.lead-nl-form input::placeholder{color:rgba(255,255,255,.45)}
-.lead-nl-form input:focus{border-color:var(--or);background:rgba(255,255,255,.1)}
-.lead-nl-form button{padding:15px 26px;background:var(--or);color:var(--bn);font-family:var(--it);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;white-space:nowrap;transition:var(--tr)}
-.lead-nl-form button:hover{background:var(--or-lt)}
-.lead-nl-rea{font-family:var(--it);font-size:11px;color:rgba(255,255,255,.45)}
-.lead-nl-rea i{margin-right:5px;color:var(--or-lt)}
-@media(max-width:560px){.lead-nl-form{flex-direction:column}.lead-nl-form button{width:100%;padding:16px}.lead-nl-inner{padding:42px 18px 46px}}
-</style>
-<section class="lead-nl" aria-label="Newsletter Neybras Magazine">
-  <div class="lead-nl-inner">
-    <div class="lead-nl-icon"><i class="fas fa-file-arrow-down"></i></div>
-    <div class="lead-nl-kicker">Newsletter Neybras · Gratuit</div>
-    <h2 class="lead-nl-h">Recevez l'essentiel de l'arbitrage et du droit des affaires au Maroc</h2>
-    <p class="lead-nl-lead">En cadeau de bienvenue, téléchargez notre check-list :</p>
-    <p class="lead-nl-magnet">« Les 7 clauses d'arbitrage à sécuriser dans vos contrats d'investissement au Maroc »</p>
-    <form class="nl-form lead-nl-form">
+<!-- FOOTER -->
+<!-- ══ NEWSLETTER LEAD-MAGNET ══ -->
+<section class="lnl" aria-label="Newsletter Neybras Magazine">
+  <div class="lnl-in">
+    <div class="lnl-ico"><i class="fas fa-envelope-open-text"></i></div>
+    <div class="lnl-kick">Newsletter Neybras · Gratuit</div>
+    <h2 class="lnl-h">Recevez l'essentiel de l'arbitrage et du droit des affaires au Maroc</h2>
+    <div class="lnl-gift">
+      <i class="fas fa-file-pdf lnl-gift-ico" aria-hidden="true"></i>
+      <div>
+        <div class="lnl-gift-label">Guide pratique offert</div>
+        <div class="lnl-gift-title">Mondial 2030 : 5 points à sécuriser dans vos contrats</div>
+      </div>
+    </div>
+    <form class="lnl-form" data-pdf="documents/neybras-arbitrage-2030-checklist.pdf">
       <input type="email" placeholder="Votre email professionnel" required aria-label="Email professionnel"/>
-      <button type="submit">Recevoir la check-list</button>
+      <button type="submit">Recevoir le guide</button>
     </form>
-    <p class="lead-nl-rea"><i class="fas fa-lock"></i> Gratuit · 1 email par semaine · Désinscription en 1 clic</p>
+    <p class="lnl-rea"><i class="fas fa-lock"></i> Gratuit · 1 email par semaine · Désinscription en 1 clic</p>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer class="site-footer"><div class="container">
   <div class="ft-main">
     <div class="ft-brand">
@@ -590,5 +575,6 @@ stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
   document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
 })();
 </script>
+<script src="assets/lead-nl.js" defer></script>
 </body>
 </html>
