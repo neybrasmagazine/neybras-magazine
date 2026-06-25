@@ -929,66 +929,123 @@ ul{list-style:none}
      À LA UNE — ARTICLES VEDETTES
 ══════════════════════════════════════════════ -->
 <style>
-.une-sec{padding:42px 0 10px;background:var(--off)}
-.une-sec .acard-iw img{height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center}
+/* ---- Bloc À la Une (refonte premium) ------------------------- */
+.nbr-une{
+  --navy:#0C264B; --or:#C9A84C; --creme:#F2EDE3; --creme-fonce:#EBE4D6;
+  --texte-gris:#5a5f6a; --meta-gris:#8a8f99;
+  background:var(--creme); padding:36px 0; font-family:Georgia,'Times New Roman',serif;
+}
+.nbr-une *{box-sizing:border-box;}
+.nbr-une__head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.nbr-une__bar{width:4px;height:26px;background:var(--or);flex-shrink:0;}
+.nbr-une__title{font-size:22px;font-weight:bold;color:var(--navy);letter-spacing:.3px;}
+.nbr-une__rule{flex:1;height:1px;background:linear-gradient(to right,var(--or),rgba(201,168,76,.12));}
+.nbr-une__all{font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1.5px;color:var(--navy);text-decoration:none;border:1px solid var(--or);padding:8px 16px;border-radius:2px;transition:background .2s ease,color .2s ease;white-space:nowrap;}
+.nbr-une__all:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.nbr-une__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch;}
+.nbr-une__side{display:flex;flex-direction:column;gap:20px;}
+.nbr-card{background:#fff;border-radius:4px;overflow:hidden;text-decoration:none;box-shadow:0 1px 3px rgba(12,38,75,.06);transition:transform .2s ease,box-shadow .2s ease;display:flex;}
+.nbr-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(12,38,75,.12);}
+.nbr-photo{position:relative;overflow:hidden;background:var(--navy);}
+.nbr-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.22) brightness(.94) contrast(1.02);}
+.nbr-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,38,75,.12) 0%,rgba(12,38,75,.04) 38%,rgba(12,38,75,.5) 100%);}
+.nbr-badge{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-weight:bold;letter-spacing:1.4px;border-radius:2px;line-height:1;}
+.nbr-badge--phare{background:var(--or);color:var(--navy);font-size:10px;padding:6px 12px;}
+.nbr-badge--navy{background:rgba(12,38,75,.88);color:#fff;font-size:10px;padding:6px 12px;}
+.nbr-badge--sat{font-size:9px;padding:4px 9px;align-self:flex-start;margin-bottom:9px;}
+.nbr-badge--sat-navy{background:#eef0f4;color:var(--navy);}
+.nbr-badge--sat-or{background:#f3ead2;color:#8a6d1f;}
+.nbr-meta{font-family:Arial,Helvetica,sans-serif;color:var(--meta-gris);}
+.nbr-meta b{color:var(--navy);font-weight:bold;}
+.nbr-feat{flex-direction:column;}
+.nbr-feat .nbr-photo{height:300px;}
+.nbr-feat .nbr-photo__badges{position:absolute;top:18px;left:18px;display:flex;gap:8px;z-index:2;}
+.nbr-feat__body{padding:24px 26px 26px;flex:1;display:flex;flex-direction:column;}
+.nbr-feat__body h3{margin:0 0 12px;font-size:24px;line-height:1.28;color:var(--navy);font-weight:bold;}
+.nbr-feat__body p{margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:var(--texte-gris);flex:1;}
+.nbr-feat__meta{border-top:1px solid #ece6d8;padding-top:14px;font-size:12.5px;}
+.nbr-sat{flex:1;}
+.nbr-sat .nbr-photo{width:132px;flex-shrink:0;}
+.nbr-sat__body{padding:16px 18px;display:flex;flex-direction:column;flex:1;}
+.nbr-sat__body h4{margin:0 0 10px;font-size:16px;line-height:1.32;color:var(--navy);font-weight:bold;}
+.nbr-sat__meta{margin-top:auto;font-size:11.5px;}
+.nbr-cite{display:flex;align-items:center;gap:18px;margin-top:22px;padding:20px 24px;background:var(--creme-fonce);border-radius:4px;}
+.nbr-cite__bar{width:3px;align-self:stretch;min-height:42px;background:var(--or);flex-shrink:0;}
+.nbr-cite__label{font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;color:var(--or);}
+.nbr-cite__text{margin:6px 0 5px;font-style:italic;font-size:15px;line-height:1.45;color:var(--navy);}
+.nbr-cite__author{font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:.8px;color:#6a6f7a;}
+@media(max-width:860px){.nbr-une__grid{grid-template-columns:1fr;}.nbr-feat .nbr-photo{height:240px;}}
+@media(max-width:520px){.nbr-une{padding:26px 0;}.nbr-sat{flex-direction:column;}.nbr-sat .nbr-photo{width:100%;height:160px;}.nbr-feat__body h3{font-size:21px;}}
 </style>
-<section class="une-sec" aria-label="À la une — articles vedettes">
+<section class="nbr-une" aria-label="À la Une">
   <div class="container">
-    <div class="sh reveal">
-      <h2 class="sh-title">À la Une</h2>
-      <div class="sh-line"></div>
-      <a href="analyses" class="sh-all">Voir tout</a>
+
+  <div class="nbr-une__head">
+    <span class="nbr-une__bar"></span>
+    <span class="nbr-une__title">À la Une</span>
+    <span class="nbr-une__rule"></span>
+    <a class="nbr-une__all" href="analyses">VOIR TOUT</a>
+  </div>
+
+  <div class="nbr-une__grid">
+
+    <!-- VEDETTE : Charte de l'Investissement -->
+    <a class="nbr-card nbr-feat" href="article-charte-investissement-2026">
+      <div class="nbr-photo">
+        <img src="images/une-charte-investissement.jpg" alt="Charte de l'Investissement 2026 — loi-cadre 03-22, Maroc">
+        <div class="nbr-photo__badges">
+          <span class="nbr-badge nbr-badge--phare">DOSSIER PHARE</span>
+          <span class="nbr-badge nbr-badge--navy">INVESTISSEMENT</span>
+        </div>
+      </div>
+      <div class="nbr-feat__body">
+        <h3>Charte de l'Investissement 2026 : primes, conditions et dossier CRI, le guide complet</h3>
+        <p>Loi-cadre 03-22 : des primes directes pouvant atteindre 30&nbsp;% du montant investi, des seuils précis et une procédure CRI à connaître. Le dispositif décrypté point par point pour les dirigeants et leurs conseils.</p>
+        <div class="nbr-meta nbr-feat__meta">
+          <b>La Rédaction Neybras</b> &nbsp;·&nbsp; 25 juin 2026 &nbsp;·&nbsp; 12 min
+        </div>
+      </div>
+    </a>
+
+    <!-- SATELLITES -->
+    <div class="nbr-une__side">
+
+      <a class="nbr-card nbr-sat" href="article-tribune-marches-publics-resiliation">
+        <div class="nbr-photo">
+          <img src="images/une-charkaoui.jpg" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public">
+        </div>
+        <div class="nbr-sat__body">
+          <span class="nbr-badge nbr-badge--sat nbr-badge--sat-navy">TRIBUNE · MARCHÉS PUBLICS</span>
+          <h4>Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</h4>
+          <div class="nbr-meta nbr-sat__meta"><b>Pr Khalid Cherkaoui Semmouni</b> · 24 juin · 6 min</div>
+        </div>
+      </a>
+
+      <a class="nbr-card nbr-sat" href="article-arbitrage-mondial2030-entretien">
+        <div class="nbr-photo">
+          <img src="images/une-el-harti.jpg" alt="Me Driss El Harti, avocat au Barreau de Tanger">
+        </div>
+        <div class="nbr-sat__body">
+          <span class="nbr-badge nbr-badge--sat nbr-badge--sat-or">INTERVIEW · ARBITRAGE</span>
+          <h4>L'arbitrage international au Maroc à l'épreuve du Mondial 2030</h4>
+          <div class="nbr-meta nbr-sat__meta"><b>Me Driss El Harti</b> · 20 juin · 16 min</div>
+        </div>
+      </a>
+
     </div>
-    <div class="a3">
+  </div>
 
-      <article class="acard reveal">
-        <div class="acard-iw"><img src="images/une-el-harti.jpg" alt="Me Driss El Harti, avocat au Barreau de Tanger" loading="lazy"/></div>
-        <div class="acard-body">
-          <span class="tag t-arb">Interview · Arbitrage</span>
-          <h3><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030</a></h3>
-          <p>Me Driss El Harti, avocat au Barreau de Tanger, décrypte les enjeux de l'arbitrage international face aux grands chantiers et investissements du Mondial 2030.</p>
-        </div>
-        <div class="acard-foot"><span class="by">Me Driss El Harti</span><span>·</span><span>20 juin 2026</span><span>·</span><span>16 min</span></div>
-      </article>
-
-      <article class="acard reveal delay-1">
-        <div class="acard-iw"><img src="images/une-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca" loading="lazy"/></div>
-        <div class="acard-body">
-          <span class="tag t-sport">Analyse · Droit du sport</span>
-          <h3><a href="article-cdm2030-juridique">Coupe du Monde 2030 : contrats FIFA, fiscalité spéciale et droits TV au Maroc</a></h3>
-          <p>Host City Agreements, accords de siège FIFA et fiscalité dérogatoire : ce que le Maroc a réellement signé pour la Coupe du Monde 2030.</p>
-        </div>
-        <div class="acard-foot"><span class="by">Me Amine Lahlou</span><span>·</span><span>18 mai 2026</span><span>·</span><span>14 min</span></div>
-      </article>
-
-      <article class="acard reveal delay-2">
-        <div class="acard-iw"><img src="images/une-charkaoui.jpg" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public" loading="lazy"/></div>
-        <div class="acard-body">
-          <span class="tag t-droit">Tribune · Marchés publics</span>
-          <h3><a href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</a></h3>
-          <p>Décret 2-22-431 : dans quels cas l'administration peut résilier un marché public, et quels recours pour le titulaire. Jurisprudence et indemnisation.</p>
-        </div>
-        <div class="acard-foot"><span class="by">Pr Khalid Cherkaoui Semmouni</span><span>·</span><span>24 juin 2026</span><span>·</span><span>6 min</span></div>
-      </article>
-
+  <div class="nbr-cite">
+    <span class="nbr-cite__bar"></span>
+    <div>
+      <span class="nbr-cite__label">CITATION DU JOUR</span>
+      <p class="nbr-cite__text">« La règle de droit doit précéder l'investissement, non le suivre. Un État qui bâtit sa crédibilité juridique bâtit d'abord sa prospérité. »</p>
+      <span class="nbr-cite__author">ME HASSAN RACHIDI — AVOCAT D'AFFAIRES, CASABLANCA</span>
     </div>
+  </div>
+
   </div>
 </section>
-
-<!-- ══════════════════════════════════════════════
-     SECTION 3 — CITATION DU JOUR
-══════════════════════════════════════════════ -->
-<div class="quote-bar reveal">
-  <div class="container">
-    <div class="quote-in">
-      <div class="quote-label">Citation du jour</div>
-      <div>
-        <div class="quote-text">« La règle de droit doit précéder l'investissement, non le suivre. Un État qui bâtit sa crédibilité juridique bâtit d'abord sa prospérité. »</div>
-        <div class="quote-author">Me Hassan Rachidi — Avocat d'affaires, Casablanca</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ══════════════════════════════════════════════
      SECTION 4 — CONTENU + SIDEBAR
