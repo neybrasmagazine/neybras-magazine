@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
@@ -58,7 +58,7 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-we
   </div>
 </main>
 <footer class="ft">© 2026 Neybras Magazine · Casablanca, Maroc</footer>
-<script>(function(){var K="[120,107,101,121,115,105,98,45,57,49,51,100,101,48,100,51,56,98,99,52,98,48,48,52,53,55,53,98,56,97,102,53,99,55,50,99,53,51,98,56,48,102,99,51,52,97,50,98,51,49,51,55,98,102,55,56,48,97,48,57,97,97,54,52,57,98,53,98,51,101,53,100,45,115,85,108,81,83,102,72,75,81,82,70,105,106,65,67,98].map(function(c){return String.fromCharCode(c);}).join("")",L=6;function add(e){return fetch("https://api.brevo.com/v3/contacts",{method:"POST",headers:{"Content-Type":"application/json","api-key":K},body:JSON.stringify({email:e,listIds:[L],updateEnabled:true})})}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
+<script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
 <script>
 (function(){
   var FS='https://formspree.io/f/mgoppdpg';
