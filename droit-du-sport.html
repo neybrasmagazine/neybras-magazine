@@ -95,6 +95,17 @@ ul{list-style:none;}
 .sf-meta .by{color:rgba(255,255,255,.7);font-weight:600;}
 .sf-read{display:inline-flex;align-items:center;gap:7px;font-family:var(--it);font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);border-bottom:1px solid rgba(184,146,46,.4);padding-bottom:1px;transition:var(--tr);}
 .sf-read:hover{color:var(--or-lt);}
+/* Featured 2 colonnes (photo auteur + texte) — modèle Arbitrage */
+.sec-featured{display:grid;grid-template-columns:1fr 420px;gap:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.sec-featured .sf-img{overflow:hidden;}
+.sec-featured .sf-img img{width:100%;height:380px;object-fit:cover;object-position:center 12%;transition:transform .6s ease;}
+.sec-featured .sf-img:hover img{transform:scale(1.03);}
+.sec-featured .sf-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:flex-end;}
+.sec-featured .sf-h{font-size:clamp(22px,2.6vw,30px);max-width:none;margin-bottom:14px;}
+.sec-featured .sf-meta{margin-bottom:0;}
+.sec-featured .sf-read{margin-top:22px;}
+.sf-deck{font-family:var(--cg);font-size:15.5px;font-style:italic;color:rgba(255,255,255,.52);line-height:1.65;margin-bottom:20px;}
+@media(max-width:1100px){.sec-featured{grid-template-columns:1fr;}.sec-featured .sf-img img{height:300px;}}
 
 /* Grille 3 vignettes sous le featured */
 .sub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.08);}
@@ -266,13 +277,15 @@ ul{list-style:none;}
       </div>
     </div>
 
-    <!-- Featured pleine largeur -->
-    <div class="sec-featured-full">
-      <img src="images/sport-stade-cdm2030.jpg" alt="Stade Coupe du Monde 2030 Maroc" loading="eager"/>
-      <div class="sf-overlay"></div>
-      <div class="sf-content">
+    <!-- Featured — photo auteur + texte (mise en page identique à Arbitrage) -->
+    <div class="sec-featured">
+      <div class="sf-img">
+        <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca" loading="eager"/>
+      </div>
+      <div class="sf-body">
         <div class="sf-cat">Analyse exclusive · Droit du sport</div>
         <h2 class="sf-h"><a href="article-cdm2030-juridique">Coupe du Monde 2030 au Maroc : contrats, fiscalité, droits de diffusion et responsabilité juridique des parties prenantes</a></h2>
+        <p class="sf-deck">Me Amine Lahlou, avocat au Barreau de Casablanca, décrypte le cadre juridique du Mondial 2030 : Host City Agreements, accords de siège FIFA, exonérations fiscales dérogatoires, droits de diffusion et répartition des responsabilités entre parties prenantes.</p>
         <div class="sf-meta">
           <span class="by">Me Amine Lahlou</span>
           <span>·</span>
