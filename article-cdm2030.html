@@ -31,7 +31,7 @@
         var res=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Nouvelle inscription — Newsletter Neybras Magazine'})});
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
-          form.innerHTML='<p style="color:#b8922e;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
         }else{
           if(btn){btn.textContent="S'abonner";btn.disabled=false;}
         }

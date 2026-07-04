@@ -26,9 +26,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#b8922e;--or-lt:#d4a94a;--or-bg:rgba(184,146,46,.08);--or-bd:rgba(184,146,46,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
+:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;transition:var(--tr);}
 img{max-width:100%;height:auto;display:block;}
@@ -37,7 +37,7 @@ ul{list-style:none;}
 .top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
 .tb-in{display:flex;justify-content:space-between;align-items:center;}
 .tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.05em;}
-.tb-date{color:rgba(184,146,46,.8);font-weight:500;}
+.tb-date{color:rgba(184,150,90,.8);font-weight:500;}
 .tb-r{display:flex;align-items:center;gap:16px;}
 .tb-soc{display:flex;gap:12px;}
 .tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
@@ -50,18 +50,18 @@ ul{list-style:none;}
 .logo-wrap{display:flex;align-items:center;gap:12px;}
 .logo-txt{display:flex;flex-direction:column;}
 .logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
-.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,146,46,.75);letter-spacing:.05em;margin-top:2px;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
 .hd-act{display:flex;align-items:center;gap:14px;}
 .btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;}
 .btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
 .btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
-.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,146,46,.3);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,150,90,.3);}
 .nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
 .nav-in::-webkit-scrollbar{display:none;}
 .nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
 .nav-a:hover{color:rgba(255,255,255,.82);}
 .nav-a.on{color:#fff;border-bottom-color:var(--or);}
-.nav-a.star{color:rgba(184,146,46,.8);}
+.nav-a.star{color:rgba(184,150,90,.8);}
 /* hero */
 .an-hero{background:var(--bn);padding:64px 0 52px;border-bottom:3px solid var(--or);text-align:center;}
 .sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:18px;}
@@ -79,7 +79,7 @@ ul{list-style:none;}
 /* cards grid */
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .art-card{background:var(--blanc);border:1px solid var(--brd);display:flex;flex-direction:column;transition:var(--tr);position:relative;overflow:hidden;}
-.art-card:hover{border-color:rgba(184,146,46,.35);box-shadow:0 6px 24px rgba(0,0,0,.09);}
+.art-card:hover{border-color:rgba(184,150,90,.35);box-shadow:0 6px 24px rgba(0,0,0,.09);}
 .art-card:hover .card-title{color:var(--or);}
 .card-img{width:100%;aspect-ratio:16/9;object-fit:cover;}
 .card-body{padding:22px 20px 18px;flex:1;display:flex;flex-direction:column;}
@@ -90,7 +90,7 @@ ul{list-style:none;}
 .card-link i{font-size:9px;transition:var(--tr);}
 .art-card:hover .card-link i{transform:translateX(3px);}
 /* footer */
-footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48px 0 28px;}
+footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
 .ft-brand .logo-tag{font-size:10px;margin-bottom:14px;}
@@ -98,7 +98,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 .ft-soc{display:flex;gap:12px;}
 .ft-soc a{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:11px;transition:var(--tr);}
 .ft-soc a:hover{border-color:var(--or);color:var(--or);}
-.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,46,.7);margin-bottom:16px;}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,150,90,.7);margin-bottom:16px;}
 .ft-links{display:flex;flex-direction:column;gap:9px;}
 .ft-links a{font-size:11.5px;color:rgba(255,255,255,.35);transition:var(--tr);}
 .ft-links a:hover{color:rgba(255,255,255,.72);}
@@ -124,7 +124,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 
 <div class="top-bar"><div class="container"><div class="tb-in">
   <div class="tb-l"><span class="tb-date">Mercredi 20 Mai 2026</span><span>·</span><span>Casablanca</span><span>·</span><span>Droit · Finance · Arbitrage · Afrique</span></div>
-  <div class="tb-r"><div class="tb-soc"></div><div class="tb-lnk"><a href="contact">Contact</a><a href="interviews">Interviews</a><a href="tribunes">Tribunes</a></div></div>
+  <div class="tb-r"><div class="tb-soc"><a href="https://www.linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn Neybras"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram Neybras"><i class="fab fa-instagram"></i></a><a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook Neybras"><i class="fab fa-facebook-f"></i></a></div><div class="tb-lnk"><a href="contact">Contact</a><a href="interviews">Interviews</a><a href="tribunes">Tribunes</a></div></div>
 </div></div></div>
 
 <header class="site-header"><div class="container"><div class="hd-in">
@@ -320,7 +320,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
         <div class="logo-name">Neybras</div>
         <div class="logo-tag">Le média qui connecte les idées aux décideurs</div>
         <p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage et droit africain.</p>
-        <div class="ft-soc"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+        <div class="ft-soc"><a href="https://www.linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn Neybras"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram Neybras"><i class="fab fa-instagram"></i></a><a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook Neybras"><i class="fab fa-facebook-f"></i></a></div>
       </div>
       <div><div class="ft-col-title">Rubriques</div><div class="ft-links">
         <a href="droit">Droit des affaires</a><a href="finance">Finance & Marchés</a>
@@ -369,7 +369,7 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
         var res=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Nouvelle inscription — Newsletter Neybras Magazine'})});
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
-          form.innerHTML='<p style="color:#b8922e;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
         }else{
           if(btn){btn.textContent="S'abonner";btn.disabled=false;}
         }

@@ -23,9 +23,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#b8922e;--or-lt:#d4a94a;--or-bg:rgba(184,146,46,.08);--or-bd:rgba(184,146,46,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
+:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;}
+html{scroll-behavior:smooth;overflow-x:hidden;font-size:16px;}
 body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;transition:var(--tr);}
 img{max-width:100%;height:auto;display:block;}
@@ -35,7 +35,7 @@ ul{list-style:none;}
 .top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
 .tb-in{display:flex;justify-content:space-between;align-items:center;}
 .tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.05em;}
-.tb-date{color:rgba(184,146,46,.8);font-weight:500;}
+.tb-date{color:rgba(184,150,90,.8);font-weight:500;}
 .tb-r{display:flex;align-items:center;gap:16px;}
 .tb-soc{display:flex;gap:12px;}
 .tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
@@ -49,20 +49,20 @@ ul{list-style:none;}
 .logo-wrap{display:flex;align-items:center;gap:12px;}
 .logo-txt{display:flex;flex-direction:column;}
 .logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
-.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,146,46,.75);letter-spacing:.05em;margin-top:2px;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
 .hd-act{display:flex;align-items:center;gap:14px;}
 .btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;transition:var(--tr);}
 .btn-srch:hover{color:rgba(255,255,255,.85);}
 .btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
 .btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
 /* nav */
-.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,146,46,.3);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,150,90,.3);}
 .nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
 .nav-in::-webkit-scrollbar{display:none;}
 .nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
 .nav-a:hover{color:rgba(255,255,255,.82);}
 .nav-a.on{color:#fff;border-bottom-color:var(--or);}
-.nav-a.star{color:rgba(184,146,46,.8);}
+.nav-a.star{color:rgba(184,150,90,.8);}
 .nav-a.star.on{color:var(--or-lt);border-bottom-color:var(--or-lt);}
 /* hero */
 .sec-hero{background:var(--bn);padding:52px 0 44px;border-bottom:3px solid var(--or);}
@@ -124,7 +124,7 @@ ul{list-style:none;}
 .tcard:hover .tcard-read i{transform:translateX(3px);}
 /* quote highlight */
 .quote-pullout{background:var(--bn);padding:36px 40px;margin:32px 0;position:relative;overflow:hidden;}
-.quote-pullout::before{content:'\201C';position:absolute;top:-10px;left:20px;font-size:120px;font-family:var(--pd);color:rgba(184,146,46,.12);line-height:1;}
+.quote-pullout::before{content:'\201C';position:absolute;top:-10px;left:20px;font-size:120px;font-family:var(--pd);color:rgba(184,150,90,.12);line-height:1;}
 .quote-pullout blockquote{font-family:var(--cg);font-size:1.35rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.5;position:relative;z-index:1;}
 .quote-pullout cite{display:block;margin-top:14px;font-size:11px;font-style:normal;color:var(--or);letter-spacing:.08em;}
 /* tribute list */
@@ -134,7 +134,7 @@ ul{list-style:none;}
 .trib-list-header .line{flex:1;height:1px;background:var(--brd);}
 .tlist-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--brd2);align-items:flex-start;}
 .tlist-item:first-child{border-top:1px solid var(--brd2);}
-.tlist-num{font-family:var(--pd);font-size:2rem;font-weight:900;color:rgba(184,146,46,.18);line-height:1;flex-shrink:0;width:36px;text-align:right;}
+.tlist-num{font-family:var(--pd);font-size:2rem;font-weight:900;color:rgba(184,150,90,.18);line-height:1;flex-shrink:0;width:36px;text-align:right;}
 .tlist-body{flex:1;}
 .tlist-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
 .tlist-author-img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid var(--brd);}
@@ -155,7 +155,7 @@ aside{display:flex;flex-direction:column;gap:28px;}
 /* most read */
 .mr-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--brd2);align-items:flex-start;}
 .mr-item:last-child{border-bottom:none;padding-bottom:0;}
-.mr-num{font-family:var(--pd);font-size:1.5rem;font-weight:900;color:rgba(184,146,46,.22);line-height:1;flex-shrink:0;width:24px;}
+.mr-num{font-family:var(--pd);font-size:1.5rem;font-weight:900;color:rgba(184,150,90,.22);line-height:1;flex-shrink:0;width:24px;}
 .mr-info{flex:1;}
 .mr-info h4{font-family:var(--pd);font-size:.88rem;font-weight:700;color:var(--gris1);line-height:1.3;margin-bottom:3px;}
 .mr-info h4 a:hover{color:var(--or);}
@@ -164,7 +164,7 @@ aside{display:flex;flex-direction:column;gap:28px;}
 .exp-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--brd2);}
 .exp-item:last-child{border-bottom:none;padding-bottom:0;}
 .exp-av{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--or-bd);flex-shrink:0;}
-.av-i{border-radius:50%;border:2px solid rgba(184,146,46,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-weight:700;color:#fff;letter-spacing:.04em;}
+.av-i{border-radius:50%;border:2px solid rgba(184,150,90,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-weight:700;color:#fff;letter-spacing:.04em;}
 .exp-info{flex:1;}
 .exp-name{font-size:12px;font-weight:600;color:var(--gris1);}
 .exp-role{font-size:10px;color:var(--gris4);margin-top:1px;}
@@ -180,14 +180,14 @@ aside{display:flex;flex-direction:column;gap:28px;}
 .prop-box{background:var(--bn);padding:24px;}
 .prop-box-title{font-family:var(--pd);font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px;}
 .prop-box-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:18px;}
-.prop-btn{display:block;text-align:center;background:transparent;border:1px solid rgba(184,146,46,.45);color:var(--or);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px;transition:var(--tr);}
+.prop-btn{display:block;text-align:center;background:transparent;border:1px solid rgba(184,150,90,.45);color:var(--or);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px;transition:var(--tr);}
 .prop-btn:hover{background:var(--or);color:var(--bn);}
 /* tags */
 .tags{display:flex;flex-wrap:wrap;gap:8px;}
 .tag{font-size:10px;font-weight:500;color:var(--gris3);padding:5px 11px;border:1px solid var(--brd);background:var(--blanc);cursor:pointer;transition:var(--tr);}
 .tag:hover{border-color:var(--or);color:var(--or);}
 /* footer */
-footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48px 0 28px;}
+footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
 .ft-brand .logo-tag{font-size:10px;margin-bottom:14px;}
@@ -195,7 +195,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 .ft-soc{display:flex;gap:12px;}
 .ft-soc a{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:11px;transition:var(--tr);}
 .ft-soc a:hover{border-color:var(--or);color:var(--or);}
-.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,146,46,.7);margin-bottom:16px;}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,150,90,.7);margin-bottom:16px;}
 .ft-links{display:flex;flex-direction:column;gap:9px;}
 .ft-links a{font-size:11.5px;color:rgba(255,255,255,.35);transition:var(--tr);}
 .ft-links a:hover{color:rgba(255,255,255,.72);}
@@ -230,7 +230,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
         <span>Droit · Finance · Arbitrage · Afrique</span>
       </div>
       <div class="tb-r">
-        <div class="tb-soc"></div>
+        <div class="tb-soc"><a href="https://www.linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn Neybras"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram Neybras"><i class="fab fa-instagram"></i></a><a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook Neybras"><i class="fab fa-facebook-f"></i></a></div>
         <div class="tb-lnk">
           <a href="contact">Contact</a>
           <a href="interviews">Interviews</a>
@@ -398,7 +398,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
           </div>
           <div class="tcard-body">
             <div class="tcard-author">
-              <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" style="width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(184,146,46,.25);flex-shrink:0;"/>
+              <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" style="width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(184,150,90,.25);flex-shrink:0;"/>
               <div class="tcard-author-info">
                 <span class="tcard-author-name">Me Amine Lahlou</span>
                 <span class="tcard-author-role">Avocat, Barreau de Rabat</span>
@@ -498,7 +498,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
           <div class="tlist-num">05</div>
           <div class="tlist-body">
             <div class="tlist-meta">
-              <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(184,146,46,.25);flex-shrink:0;"/>
+              <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(184,150,90,.25);flex-shrink:0;"/>
               <span class="tlist-author">Me Amine Lahlou</span>
               <span class="tlist-dot">•</span>
               <span class="tlist-cat">Sport Business</span>
@@ -707,8 +707,8 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 <div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,48,68,.82);z-index:9998;align-items:center;justify-content:center;">
   <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
     <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
-    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#b8922e;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
-      <span style="display:inline-block;width:20px;height:1px;background:#b8922e;"></span>Newsletter Neybras
+    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8965A;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="display:inline-block;width:20px;height:1px;background:#B8965A;"></span>Newsletter Neybras
     </div>
     <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0E3D52;line-height:1.2;margin-bottom:10px;">Recevez le décryptage juridique &amp; financier en avant-première</h2>
     <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
@@ -747,7 +747,7 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
         var res=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Nouvelle inscription — Newsletter Neybras Magazine'})});
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
-          form.innerHTML='<p style="color:#b8922e;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
         }else{
           if(btn){btn.textContent="S'abonner";btn.disabled=false;}
         }

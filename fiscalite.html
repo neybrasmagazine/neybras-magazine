@@ -11,14 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#fafafa;color:#1a1a1a;min-height:100vh;display:flex;flex-direction:column}
+body{overflow-x:hidden;font-family:'Inter',sans-serif;background:#fafafa;color:#1a1a1a;min-height:100vh;display:flex;flex-direction:column}
 a{text-decoration:none;color:inherit}
 .hd{background:#0E3D52;padding:14px 32px;display:flex;align-items:center;gap:14px}
 .hd-name{font-size:15px;font-weight:700;letter-spacing:.18em;color:#fff;text-transform:uppercase}
-.hd-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:rgba(184,146,46,.8)}
+.hd-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:rgba(184,150,90,.8)}
 .main{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 32px;text-align:center}
 .card{max-width:520px}
-.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#b8922e;border:1px solid rgba(184,146,46,.35);padding:5px 14px;margin-bottom:28px}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#B8965A;border:1px solid rgba(184,150,90,.35);padding:5px 14px;margin-bottom:28px}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-weight:600;color:#0E3D52;line-height:1.2;margin-bottom:16px}
 .sub{font-size:15px;color:#555;line-height:1.7;margin-bottom:36px}
 .btn{display:inline-block;background:#0E3D52;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 28px;border-radius:1px;transition:background .2s}
@@ -78,7 +78,7 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-we
         var res=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Nouvelle inscription — Newsletter Neybras Magazine'})});
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
-          form.innerHTML='<p style="color:#b8922e;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
         }else{
           if(btn){btn.textContent="S'abonner";btn.disabled=false;}
         }
