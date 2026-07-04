@@ -109,6 +109,11 @@ ul{list-style:none;}
 .sec-layout{display:grid;grid-template-columns:1fr 292px;gap:56px;align-items:start;}
 .blk-title{font-family:var(--pd);font-size:14px;font-weight:700;color:var(--bn);letter-spacing:-.01em;padding-bottom:10px;margin-bottom:22px;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:10px;}
 .blk-title::before{content:'';display:inline-block;width:18px;height:1px;background:var(--or);}
+.rub-intro{margin-bottom:40px;}
+.rub-intro h1{font-family:var(--pd);font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--bn);line-height:1.3;margin-bottom:14px;}
+.rub-intro p{font-family:var(--it);font-size:15px;color:var(--gris3);line-height:1.75;max-width:800px;}
+.rub-intro p a{color:var(--or);font-weight:600;border-bottom:1px solid var(--or-bd);}
+.rub-intro p a:hover{color:var(--or-lt);border-color:var(--or-lt);}
 
 /* Pays focus — bande horizontale */
 .pays-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px;}
@@ -248,7 +253,7 @@ ul{list-style:none;}
     <div class="sec-header">
       <div>
         <div class="sec-label">Rubrique</div>
-        <h1 class="sec-title">Afrique &amp; OHADA</h1>
+        <h2 class="sec-title">Afrique &amp; OHADA</h2>
       </div>
       <div>
         <p class="sec-desc">ZLECAf, OHADA, investissements panafricains, gouvernance et droit des affaires sur le continent africain.</p>
@@ -297,6 +302,11 @@ ul{list-style:none;}
 
 <div class="sec-wrap"><div class="container"><div class="sec-layout">
   <main>
+    <div class="rub-intro">
+      <h1>Afrique francophone : gouvernance, investissement et intégration régionale</h1>
+      <p>Neybras Magazine explore les dynamiques juridiques et économiques de l'Afrique francophone : <a href="article-zlecaf">Zone de libre-échange continentale (ZLECAf)</a>, <a href="article-ppp-afrique">partenariats public-privé</a>, <a href="article-gouvernance-afrique">gouvernance des institutions</a>, <a href="article-ohada-suretes">harmonisation du droit des affaires (OHADA)</a>. Nos contributeurs, praticiens implantés dans la région, apportent un éclairage de terrain sur les opportunités d'investissement et les enjeux de structuration économique du continent.</p>
+    </div>
+
     <!-- Pays en focus -->
     <div class="blk-title">Pays en focus</div>
     <div class="pays-grid">

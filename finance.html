@@ -131,6 +131,11 @@ ul{list-style:none;}
 .sec-layout{display:grid;grid-template-columns:1fr 292px;gap:56px;align-items:start;}
 .blk-title{font-family:var(--pd);font-size:14px;font-weight:700;color:var(--bn);letter-spacing:-.01em;padding-bottom:10px;margin-bottom:22px;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:10px;}
 .blk-title::before{content:'';display:inline-block;width:18px;height:1px;background:var(--or);}
+.rub-intro{margin-bottom:40px;}
+.rub-intro h1{font-family:var(--pd);font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--bn);line-height:1.3;margin-bottom:14px;}
+.rub-intro p{font-family:var(--it);font-size:15px;color:var(--gris3);line-height:1.75;max-width:800px;}
+.rub-intro p a{color:var(--or);font-weight:600;border-bottom:1px solid var(--or-bd);}
+.rub-intro p a:hover{color:var(--or-lt);border-color:var(--or-lt);}
 
 /* Cards */
 .art-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px;}
@@ -308,7 +313,7 @@ ul{list-style:none;}
     <div class="sec-header">
       <div>
         <div class="sec-label">Rubrique</div>
-        <h1 class="sec-title">Finance &amp; Marchés</h1>
+        <h2 class="sec-title">Finance &amp; Marchés</h2>
       </div>
       <div>
         <p class="sec-desc">Marchés de capitaux, finance islamique, fintech, Sukuk, Green bonds et analyse des places financières africaines.</p>
@@ -364,6 +369,11 @@ ul{list-style:none;}
     <div class="sec-layout">
 
       <main>
+        <div class="rub-intro">
+          <h1>Finance &amp; investissement : analyses pour la place financière marocaine</h1>
+          <p>Neybras Magazine couvre les grands enjeux de la finance marocaine et africaine : <a href="article-lf2026">loi de finances</a>, <a href="article-finance-participative">finance participative</a>, <a href="article-private-equity">private equity</a>, <a href="article-green-bonds">green bonds</a>, cryptoactifs, <a href="article-fintech-afrique">fintech</a>. Nos contenus s'adressent aux dirigeants, investisseurs et professions du conseil qui structurent le développement économique de la région, avec un ancrage particulier sur <a href="article-cfc-nairobi">Casablanca Finance City</a> et les dynamiques financières continentales.</p>
+        </div>
+
         <div class="blk-title">Dernières analyses</div>
         <div class="art-grid">
           <article class="acard">
