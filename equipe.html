@@ -73,6 +73,7 @@ ul{list-style:none;}
 /* Direction éditoriale */
 .dir-section{padding:72px 0 60px;}
 .dir-layout{display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start;max-width:860px;margin:0 auto;}
+.dir-layout-nophoto{grid-template-columns:1fr;max-width:640px;text-align:center;}
 .dir-photo{width:200px;height:240px;object-fit:cover;border:1px solid var(--brd);}
 .dir-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:8px;}
 .dir-name{font-family:var(--pd);font-size:1.8rem;font-weight:700;color:var(--bn);margin-bottom:4px;}
@@ -166,8 +167,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,146,46,.3);padding:48
 <!-- Direction éditoriale -->
 <section class="dir-section">
   <div class="container">
-    <div class="dir-layout">
-      <img src="images/dalal-fahmi-directrice-publication.png" alt="Dalal Fahmi, Directrice de la publication" class="dir-photo"/>
+    <div class="dir-layout dir-layout-nophoto">
       <div>
         <div class="dir-label">Direction de la publication</div>
         <div class="dir-name">Dalal Fahmi</div>
