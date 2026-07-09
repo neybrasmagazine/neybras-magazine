@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TRVG9RSKTL');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ChatGPT dans les cabinets d'avocats : le regard d'un RSSI</title>
+<meta name="description" content="Youssef El Amrani, RSSI et expert GRC, décrypte l'usage de l'IA générative en cabinet d'avocats et les risques pour le secret professionnel."/>
+<meta name="author" content="Youssef El Amrani"/>
+<meta name="keywords" content="ChatGPT cabinet avocat, IA générative droit Maroc, RSSI cybersécurité, secret professionnel IA, GRC gouvernance risque conformité, IA cabinets juridiques Maroc"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://neybras-magazine.com/article-chatgpt-cabinets-avocats"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Youssef El Amrani : « L'interdiction de ChatGPT, c'est le pire patch de sécurité que j'aie jamais vu »"/>
+<meta property="og:description" content="Entretien avec Youssef El Amrani, RSSI et expert en gouvernance, risque & conformité, sur l'usage réel de l'IA générative dans les cabinets d'avocats marocains et les risques pour le secret professionnel."/>
+<meta property="og:url" content="https://neybras-magazine.com/article-chatgpt-cabinets-avocats"/>
+<meta property="og:locale" content="fr_MA"/>
+<meta property="og:image" content="https://neybras-magazine.com/images/numerique-cndp-ia-donnees.webp"/>
+<meta property="og:image:alt" content="Intelligence artificielle et cybersécurité des données professionnelles"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;--sh:0 1px 12px rgba(0,0,0,.07);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;transition:var(--tr);}
+img{max-width:100%;height:auto;display:block;}
+ul{list-style:none;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--or);width:0%;z-index:9999;transition:width .08s linear;}
+.top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
+.tb-in{display:flex;justify-content:space-between;align-items:center;}
+.tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.05em;}
+.tb-date{color:rgba(184,150,90,.8);font-weight:500;}
+.tb-r{display:flex;align-items:center;gap:16px;}
+.tb-soc{display:flex;gap:12px;}
+.tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
+.tb-soc a:hover{color:var(--or-lt);}
+.tb-lnk{display:flex;gap:16px;}
+.tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
+.tb-lnk a:hover{color:rgba(255,255,255,.65);}
+.site-header{background:var(--bn);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.07);}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo-txt{display:flex;flex-direction:column;}
+.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
+.hd-act{display:flex;align-items:center;gap:14px;}
+.btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;transition:var(--tr);}
+.btn-srch:hover{color:rgba(255,255,255,.85);}
+.btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
+.btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,150,90,.3);}
+.nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
+.nav-a:hover{color:rgba(255,255,255,.82);}
+.nav-a.on{color:#fff;border-bottom-color:var(--or);}
+.nav-a.star{color:rgba(184,150,90,.75);}
+.s-ov{display:none;position:fixed;inset:0;background:rgba(10,48,68,.96);z-index:9999;align-items:center;justify-content:center;}
+.s-ov.on{display:flex;}
+.s-box{width:100%;max-width:640px;padding:0 28px;}
+.s-box input{width:100%;background:none;border:none;border-bottom:1px solid rgba(184,150,90,.45);color:#fff;font-size:24px;font-family:var(--cg);padding:16px 0;outline:none;}
+.s-box input::placeholder{color:rgba(255,255,255,.22);}
+.s-close{position:absolute;top:28px;right:36px;font-size:28px;color:rgba(255,255,255,.25);cursor:pointer;background:none;border:none;}
+
+/* HERO ARTICLE */
+.art-hero{background:var(--blanc);border-bottom:1px solid var(--brd);padding:52px 0 0;}
+.art-hero-inner{max-width:900px;margin:0 auto;padding:0 32px;}
+.breadcrumb{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--gris4);margin-bottom:28px;}
+.breadcrumb a{color:var(--gris4);}
+.breadcrumb a:hover{color:var(--gris2);}
+.breadcrumb .bsep{color:var(--gris5);}
+.art-category{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap;}
+.art-cat-line{display:inline-block;width:28px;height:1px;background:var(--or);}
+.art-cat-label{font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);}
+.art-badge-itw{display:inline-flex;align-items:center;gap:6px;background:var(--bn);color:#fff;font-family:var(--it);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;margin-left:12px;}
+.art-h1{font-family:var(--cg);font-size:clamp(28px,4vw,50px);font-weight:600;color:var(--bn);line-height:1.18;letter-spacing:-.01em;margin-bottom:18px;max-width:800px;}
+.art-deck{font-family:var(--cg);font-size:clamp(15px,2vw,19px);font-style:italic;color:var(--gris3);line-height:1.55;margin-bottom:26px;max-width:740px;}
+.art-meta{display:flex;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--gris4);padding:18px 0;border-top:1px solid var(--brd2);border-bottom:1px solid var(--brd2);margin-bottom:38px;gap:0;}
+.am-author-wrap{display:flex;align-items:center;gap:9px;}
+.am-av-initials{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;border:1.5px solid var(--or-bd);}
+.am-name{font-weight:600;color:var(--gris2);font-size:12px;}
+.am-dot{color:var(--gris5);margin:0 10px;font-size:14px;}
+.am-item{color:var(--gris4);font-size:11.5px;}
+.am-share-wrap{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.am-sh{width:28px;height:28px;border-radius:50%;border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;color:var(--gris4);font-size:11px;transition:var(--tr);}
+.am-sh:hover{border-color:var(--or);color:var(--or);}
+.art-image-wrap{margin:0 -32px 0;}
+.art-image-wrap img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.art-image-caption{font-size:10.5px;color:var(--gris4);padding:10px 32px;border-bottom:1px solid var(--brd);background:var(--blanc);}
+.art-wrap{padding:52px 0 72px;}
+.art-layout{display:grid;grid-template-columns:1fr 292px;gap:60px;align-items:start;}
+.art-col{min-width:0;}
+.share-float{float:left;margin-left:-60px;position:sticky;top:88px;display:flex;flex-direction:column;align-items:center;gap:10px;width:44px;padding-top:6px;}
+.sf-btn{width:36px;height:36px;border:1px solid var(--brd);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gris4);font-size:12px;background:var(--blanc);box-shadow:var(--sh);}
+
+/* CORPS TEXTE */
+.art-text{font-family:var(--cg);font-size:20px;line-height:1.82;color:var(--gris3);}
+.art-text p{margin-bottom:22px;}
+.art-text .chapeau{font-size:21px;font-weight:500;color:var(--gris2);line-height:1.68;border-left:2px solid var(--or);padding-left:20px;margin-bottom:36px;}
+.art-text strong{font-weight:600;color:var(--gris2);}
+.art-text em{font-style:italic;}
+
+/* FORMAT ENTRETIEN Q&R */
+.itw-qr{margin-bottom:40px;}
+.itw-q{font-family:var(--it);font-size:15px;font-weight:700;color:var(--bn);background:linear-gradient(90deg,rgba(14,61,82,.06) 0%,transparent 100%);border-left:4px solid var(--bn);padding:12px 18px;margin-bottom:16px;line-height:1.5;}
+.itw-r{font-family:var(--cg);font-size:19px;line-height:1.78;color:var(--gris3);}
+.itw-r p{margin-bottom:16px;}
+.itw-r p:last-child{margin-bottom:0;}
+
+/* Listes dans les réponses */
+.itw-liste{list-style:none;padding:0;margin:16px 0 20px;}
+.itw-liste li{position:relative;padding-left:22px;margin-bottom:18px;line-height:1.7;font-family:var(--cg);font-size:18px;color:var(--gris3);}
+.itw-liste li::before{content:'▸';position:absolute;left:0;top:1px;color:var(--or);font-size:13px;}
+.itw-liste li strong{color:var(--bn);display:block;margin-bottom:2px;font-family:var(--pd);}
+
+/* Citation mise en exergue */
+.pull-quote{margin:44px 0;padding:30px 36px 30px 40px;background:#f9f6ef;border-left:3px solid var(--or);}
+.pull-quote blockquote{font-family:var(--cg);font-size:23px;font-style:italic;color:var(--bn);line-height:1.5;margin-bottom:14px;}
+.pull-quote cite{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--or);font-style:normal;}
+
+/* Séparateur */
+.art-sep{border:none;border-top:1px solid var(--brd);margin:36px 0;}
+
+/* Note */
+.art-note{font-family:var(--it);font-size:11.5px;color:var(--gris4);line-height:1.75;padding-top:24px;border-top:1px solid var(--brd);margin-top:44px;}
+
+/* Partage bas */
+.share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--brd);}
+.share-lbl{font-family:var(--it);font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris4);margin-right:4px;}
+.sh-a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:1px;font-family:var(--it);font-size:10.5px;font-weight:600;}
+.sh-li{background:#0a66c2;color:#fff;}
+.sh-tw{background:#0f1419;color:#fff;}
+.sh-wa{background:#25d366;color:#fff;}
+.sh-cp{background:transparent;color:var(--gris3);border:1px solid var(--brd);cursor:pointer;}
+
+/* Auteur */
+.author-box{margin:40px 0;padding:28px 32px;background:var(--blanc);border:1px solid var(--brd);border-top:2px solid var(--bn);display:grid;grid-template-columns:68px 1fr;gap:22px;align-items:start;}
+.author-box-av{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;flex-shrink:0;border:2px solid var(--or-bd);}
+.auth-label{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris4);margin-bottom:5px;}
+.auth-name{font-family:var(--pd);font-size:18px;font-weight:700;color:var(--bn);margin-bottom:3px;}
+.auth-role{font-family:var(--it);font-size:11.5px;color:var(--gris4);margin-bottom:12px;}
+.auth-bio{font-family:var(--cg);font-size:16.5px;color:var(--gris3);line-height:1.7;}
+
+/* SIDEBAR */
+.art-aside{display:flex;flex-direction:column;gap:28px;position:sticky;top:82px;}
+.wg{background:var(--blanc);border:1px solid var(--brd);padding:22px;}
+.wt{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris2);padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--brd);}
+.toc{display:flex;flex-direction:column;}
+.toc-item{display:flex;align-items:start;gap:12px;padding:10px 0;border-bottom:1px solid var(--brd2);cursor:pointer;}
+.toc-item:last-child{border-bottom:none;}
+.toc-n{font-family:var(--cg);font-size:20px;font-weight:600;color:var(--gris5);line-height:1;flex-shrink:0;width:22px;}
+.toc-t{font-family:var(--it);font-size:11.5px;color:var(--gris3);line-height:1.45;}
+.toc-item.act .toc-n{color:var(--or);}
+.toc-item.act .toc-t{color:var(--gris1);}
+.toc-item.act{border-left:2px solid var(--or);padding-left:10px;margin-left:-10px;}
+.rel-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--brd2);align-items:flex-start;}
+.rel-item:last-child{border-bottom:none;}
+.rel-thumb{width:62px;height:48px;object-fit:cover;flex-shrink:0;}
+.rel-info h4{font-family:var(--pd);font-size:.82rem;font-weight:700;color:var(--gris1);line-height:1.3;margin-bottom:3px;}
+.rel-info span{font-size:10px;color:var(--gris5);}
+.nl-desc{font-size:12px;color:var(--gris3);line-height:1.6;margin-bottom:14px;font-family:var(--cg);}
+.nl-input{width:100%;padding:10px 14px;border:1px solid var(--brd);font-size:12px;font-family:var(--it);background:var(--page);color:var(--gris1);outline:none;margin-bottom:8px;}
+.nl-btn{width:100%;background:var(--or);color:var(--bn);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:11px;border:none;cursor:pointer;}
+
+/* FOOTER */
+.site-footer{background:var(--bn);border-top:1px solid rgba(255,255,255,.06);}
+.ft-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding:50px 0 34px;}
+.ft-brand p{font-family:var(--it);font-size:11.5px;color:rgba(255,255,255,.32);line-height:1.8;max-width:255px;margin:14px 0 16px;}
+.ft-social{display:flex;gap:10px;}
+.ft-social a{width:30px;height:30px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.32);font-size:11px;}
+.ft-col h5{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,150,90,.7);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(184,150,90,.14);}
+.ft-col ul{display:flex;flex-direction:column;gap:9px;}
+.ft-col ul li a{font-family:var(--it);font-size:11.5px;color:rgba(255,255,255,.32);}
+.ft-btm{border-top:1px solid rgba(255,255,255,.05);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--it);font-size:10.5px;color:rgba(255,255,255,.2);}
+.ft-btm a{color:rgba(255,255,255,.25);}
+.ft-bl{display:flex;gap:18px;}
+#stt{position:fixed;bottom:28px;right:28px;width:38px;height:38px;border:1px solid var(--brd);border-radius:50%;background:var(--blanc);color:var(--gris3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:997;}
+#stt.v{display:flex;}
+
+@media(max-width:1100px){.art-layout{grid-template-columns:1fr;}.art-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.share-float{display:none;}.ft-main{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.art-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}}
+@media(max-width:520px){.container{padding:0 18px;}.art-hero-inner{padding:0 18px;}}
+</style>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+</head>
+<body>
+<div id="prog"></div>
+<div class="top-bar"><div class="container"><div class="tb-in">
+  <div class="tb-l"><span class="tb-date">Jeudi 9 Juillet 2026</span><span>·</span><span>Maroc · Afrique · Monde</span></div>
+  <div class="tb-r">
+    <div class="tb-soc"><a href="https://www.linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn Neybras"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram Neybras"><i class="fab fa-instagram"></i></a><a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook Neybras"><i class="fab fa-facebook-f"></i></a></div>
+    <span style="color:rgba(255,255,255,.08)">|</span>
+    <div class="tb-lnk"><a href="a-propos">À propos</a><a href="contact">Publicité</a><a href="contact">Contact</a></div>
+  </div>
+</div></div></div>
+
+<header class="site-header"><div class="container"><div class="hd-in">
+  <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div></div></a>
+  <div class="hd-act"><button class="btn-srch" id="openS" aria-label="Rechercher"><i class="fas fa-search"></i></button><a href="newsletter" class="btn-abo">S'abonner</a></div>
+</div></div></header>
+
+<nav class="main-nav" aria-label="Navigation principale"><div class="container"><div class="nav-in">
+  <a href="/" class="nav-a">À la Une</a>
+  <a href="analyses" class="nav-a">Analyses</a>
+  <a href="droit" class="nav-a on">Droit</a>
+  <a href="finance" class="nav-a">Finance</a>
+  <a href="afrique" class="nav-a">Afrique</a>
+  <a href="droit-du-sport" class="nav-a star">Sport Business</a>
+  <a href="arbitrage" class="nav-a">Arbitrage</a>
+  <a href="tribunes" class="nav-a">Opinion</a>
+  <a href="interviews" class="nav-a on">Interviews</a>
+  <a href="evenements" class="nav-a">Événements</a>
+  <a href="premium" class="nav-a">Premium</a>
+</div></div></nav>
+
+<div class="s-ov" id="sOv"><button class="s-close" id="closeS"><i class="fas fa-times"></i></button><div class="s-box"><input type="search" placeholder="Rechercher un article, un auteur…" id="searchInput"/></div></div>
+
+<!-- HERO ARTICLE -->
+<section class="art-hero"><div class="art-hero-inner">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="/">Accueil</a><span class="bsep">›</span><a href="droit">Droit</a><span class="bsep">›</span><a href="interviews">Interviews</a><span class="bsep">›</span><span>Entretien Youssef El Amrani</span>
+  </nav>
+  <div class="art-category">
+    <span class="art-cat-line"></span>
+    <span class="art-cat-label">Données & IA · Cybersécurité</span>
+    <span class="art-badge-itw"><i class="fas fa-microphone"></i> Interview exclusive</span>
+  </div>
+  <h1 class="art-h1">Youssef El Amrani : « L'interdiction de ChatGPT, c'est le pire patch de sécurité que j'aie jamais vu »</h1>
+  <p class="art-deck">Recherche jurisprudentielle en 3 minutes au lieu de 3 heures, premiers jets de conclusions générés en quelques secondes, veille réglementaire automatisée : l'intelligence artificielle générative a discrètement changé le quotidien de nombreux cabinets d'affaires. Mais entre le fantasme du robot-avocat et l'interdiction pure et simple, où se situe la vraie ligne de conduite ? Youssef El Amrani, Responsable de la Sécurité des Systèmes d'Information (RSSI) et expert en gouvernance, risque & conformité (GRC), a une grille de lecture singulière : celle de la cybersécurité appliquée au droit. Entretien.</p>
+  <div class="art-meta">
+    <div class="am-author-wrap"><img src="images/portrait-youssef-el-amrani.jpg" alt="Youssef El Amrani" class="am-av-initials" style="object-fit:cover;"/><span class="am-name">Youssef El Amrani</span></div>
+    <span class="am-dot">·</span><span class="am-item">RSSI (CISO) · Expert GRC & Cybersécurité</span>
+    <span class="am-dot">·</span><span class="am-item">9 juillet 2026</span>
+    <span class="am-dot">·</span><span class="am-item"><i class="far fa-clock" style="margin-right:4px"></i>5 min de lecture</span>
+    <div class="am-share-wrap">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="am-sh" aria-label="Partager sur LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats&text=ChatGPT%20dans%20les%20cabinets%20d%27avocats%20%3A%20le%20regard%20d%27un%20RSSI%2C%20Youssef%20El%20Amrani" class="am-sh" aria-label="Partager sur X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="am-sh" aria-label="Partager sur WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="art-image-wrap">
+    <img loading="eager" srcset="images/numerique-cndp-ia-donnees-sm.webp 480w, images/numerique-cndp-ia-donnees.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/numerique-cndp-ia-donnees.webp" alt="Intelligence artificielle et cybersécurité des données professionnelles"/>
+    <div class="art-image-caption">Illustration : intelligence artificielle générative et sécurité des données professionnelles. © Unsplash</div>
+  </div>
+</div></section>
+
+<!-- CORPS DE L'ARTICLE -->
+<div class="container"><div class="art-wrap"><div class="art-layout">
+  <article class="art-col">
+    <div class="share-float">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="sf-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats&text=ChatGPT%20dans%20les%20cabinets%20d%27avocats%20%3A%20le%20regard%20d%27un%20RSSI%2C%20Youssef%20El%20Amrani" class="sf-btn" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="sf-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      <button class="sf-btn" id="copyLink" aria-label="Copier le lien"><i class="fas fa-link"></i></button>
+    </div>
+
+    <div class="art-text">
+
+      <!-- Q1 -->
+      <div class="itw-qr" id="q1">
+        <div class="itw-q">—On commence par le ping le plus basique : les avocats utilisent-ils déjà l'IA, ou est-ce encore un sujet tabou ?</div>
+        <div class="itw-r">
+          <p>Arrêtons le masquage de paquets. Ils l'utilisent tous. La vraie ligne de partage n'est pas entre utilisateurs et non-utilisateurs, elle est entre ceux qui ont une politique claire — droits d'accès définis, traçabilité des usages — et ceux qui font du shadow IT : pas de règle, pas de contrôle, pas d'audit. Ils collent des données confidentielles dans un outil grand public, sans aucune garantie de sécurité. C'est cette deuxième catégorie qui crée des failles exploitables.</p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="itw-qr" id="q2">
+        <div class="itw-q">—Concrètement, sur quelles tâches l'IA fait-elle gagner du temps dans un cabinet ?</div>
+        <div class="itw-r">
+          <p>Trois usages sont aujourd'hui bien installés, qu'on le formalise ou non.</p>
+          <ul class="itw-liste">
+            <li>
+              <strong>Le premier jet rédactionnel</strong>
+              Une mise en demeure, un projet de clause, un résumé de jurisprudence — l'IA génère une base en quelques secondes. L'avocat relit, corrige, ajuste, et valide avant diffusion. C'est le même principe qu'une revue de code avant mise en production : l'IA produit le brouillon, l'humain valide la version finale.
+            </li>
+            <li>
+              <strong>Le traitement de documents volumineux</strong>
+              Contrats de 80 pages, rapports d'audit, échanges de mails dans un contentieux — l'IA fait le premier passage, repère les incohérences, extrait les points clés. On gagne un temps considérable sur la phase de lecture préparatoire. L'analyse de fond et la décision restent entièrement humaines.
+            </li>
+            <li>
+              <strong>La vulgarisation</strong>
+              Transformer une clause technique en explication compréhensible pour un client non-juriste, pour un post LinkedIn ou une note interne — c'est de la traduction : passer d'un langage complexe à un langage simple, sans en perdre le sens.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="itw-qr" id="q3">
+        <div class="itw-q">—Et ce que l'IA ne doit jamais faire ?</div>
+        <div class="itw-r">
+          <p>Elle ne doit jamais avoir les pleins pouvoirs. L'IA n'a pas de responsabilité professionnelle, pas d'assurance RC pro, pas de serment. Elle peut inventer un arrêt qui n'existe pas avec une confiance absolue — et cette erreur devient critique si personne ne la vérifie avant qu'elle ne parte au client ou au tribunal. On a déjà vu, y compris à l'étranger, des avocats sanctionnés pour avoir déposé des conclusions citant une jurisprudence inventée de toutes pièces par une IA.</p>
+          <p>La règle que j'impose quand je conseille un cabinet est simple : tout ce qui sort de l'outil est un brouillon, jamais un livrable. Zéro citation, zéro chiffre, zéro référence légale n'est transmis au client sans vérification humaine à la source.</p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="itw-qr" id="q4">
+        <div class="itw-q">—Le secret professionnel, justement — comment le protéger avec ces outils ?</div>
+        <div class="itw-r">
+          <p>C'est le point le plus critique, plus urgent encore que la question de la qualité des réponses. Un cabinet qui colle des pièces de dossier dans un chatbot grand public, c'est l'équivalent d'exposer ses dossiers clients sur une porte non verrouillée. Ces données peuvent être réutilisées pour entraîner des modèles, transiter par des serveurs hors du pays, échapper à tout contrôle.</p>
+          <p>La bonne pratique, c'est soit une offre professionnelle avec garanties contractuelles de confidentialité et de non-réutilisation des données, soit — a minima — une anonymisation systématique avant toute saisie : jamais de nom de client, de numéro de dossier, de montant identifiable. On remplace par des données fictives et on reconstitue ensuite en interne.</p>
+        </div>
+      </div>
+
+      <!-- Exergue -->
+      <div class="pull-quote">
+        <blockquote>« Un cabinet qui colle des pièces de dossier dans un chatbot grand public, c'est l'équivalent d'exposer ses dossiers clients sur une porte non verrouillée. »</blockquote>
+        <cite>— Youssef El Amrani, RSSI & expert GRC</cite>
+      </div>
+
+      <!-- Q5 -->
+      <div class="itw-qr" id="q5">
+        <div class="itw-q">—Est-ce que cela va faire baisser les honoraires, puisque le travail va plus vite ?</div>
+        <div class="itw-r">
+          <p>C'est une mauvaise lecture du modèle économique. Les cabinets ne facturent pas le temps de frappe, ils facturent l'analyse, le risque assumé, la stratégie et la responsabilité qui va avec. L'IA compresse la partie mécanique du travail — mais elle libère du temps pour la partie qui a vraiment de la valeur : le conseil. Les cabinets qui vont souffrir sont ceux dont le modèle économique reposait justement sur la facturation du temps mécanique.</p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="itw-qr" id="q6">
+        <div class="itw-q">—Un conseil pour un(e) associé(e) qui hésite encore à franchir le pas ?</div>
+        <div class="itw-r">
+          <p>Avancez progressivement et par étapes : un seul usage pour commencer, une charte interne d'une page — ce qu'on a le droit de saisir, ce qu'on n'a jamais le droit de saisir —, et un contrôle humain systématique. Le risque n'est pas d'utiliser l'IA. Le risque, c'est de l'utiliser sans cadre. Le cabinet qui interdit purement et simplement l'outil à ses collaborateurs ne l'empêche pas de circuler — il le pousse simplement dans l'angle mort, sans surveillance et sans possibilité de faire marche arrière.</p>
+        </div>
+      </div>
+
+      <hr class="art-sep"/>
+
+      <div class="art-note">
+        <strong>Note rédactionnelle :</strong> Cet entretien a été mené et édité par la rédaction de Neybras Magazine. Les propos de Youssef El Amrani reflètent son analyse personnelle en tant qu'expert en cybersécurité et gouvernance des données, et non un avis juridique. Les pratiques de cabinets d'avocats mentionnées sont données à titre illustratif.
+      </div>
+
+      <!-- Partage bas -->
+      <div class="share-bar">
+        <span class="share-lbl">Partager</span>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="sh-a sh-li" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats&text=ChatGPT%20dans%20les%20cabinets%20d%27avocats%20%3A%20le%20regard%20d%27un%20RSSI%2C%20Youssef%20El%20Amrani" class="sh-a sh-tw" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i> Twitter</a>
+        <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fneybras-magazine.com%2Farticle-chatgpt-cabinets-avocats" class="sh-a sh-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="sh-a sh-cp" id="copyLink2"><i class="fas fa-link"></i> Copier le lien</button>
+      </div>
+
+      <!-- Auteur -->
+      <div class="author-box">
+        <img src="images/portrait-youssef-el-amrani.jpg" alt="Youssef El Amrani" class="author-box-av" style="object-fit:cover;"/>
+        <div>
+          <div class="auth-label">À propos de l'interviewé</div>
+          <div class="auth-name">Youssef El Amrani</div>
+          <div class="auth-role">Responsable de la Sécurité des Systèmes d'Information (RSSI/CISO) · Expert Gouvernance, Risque & Conformité (GRC)</div>
+          <div class="auth-bio">Youssef El Amrani est Responsable de la Sécurité des Systèmes d'Information (RSSI/CISO) et expert en gouvernance, risque et conformité (GRC). Il accompagne des organisations, dont des cabinets d'avocats, dans l'évaluation et la maîtrise des risques liés à l'adoption d'outils d'intelligence artificielle générative.</div>
+          <div class="auth-links"><a href="contact" class="auth-lnk" aria-label="Contacter la rédaction"><i class="fas fa-envelope"></i></a></div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="art-aside">
+    <div class="wg">
+      <div class="wt">Sommaire de l'entretien</div>
+      <div class="toc">
+        <div class="toc-item act" onclick="scrollToSec('q1')"><span class="toc-n">1</span><span class="toc-t">Usage tabou ou déjà généralisé ?</span></div>
+        <div class="toc-item" onclick="scrollToSec('q2')"><span class="toc-n">2</span><span class="toc-t">Trois usages aujourd'hui matures</span></div>
+        <div class="toc-item" onclick="scrollToSec('q3')"><span class="toc-n">3</span><span class="toc-t">Ce que l'IA ne doit jamais faire</span></div>
+        <div class="toc-item" onclick="scrollToSec('q4')"><span class="toc-n">4</span><span class="toc-t">Protéger le secret professionnel</span></div>
+        <div class="toc-item" onclick="scrollToSec('q5')"><span class="toc-n">5</span><span class="toc-t">L'impact sur les honoraires</span></div>
+        <div class="toc-item" onclick="scrollToSec('q6')"><span class="toc-n">6</span><span class="toc-t">Conseils pour se lancer</span></div>
+      </div>
+    </div>
+
+    <div class="wg">
+      <div class="wt">Articles liés</div>
+      <div class="rel-item">
+        <img loading="lazy" src="images/numerique-cndp-ia-donnees-sm.webp" class="rel-thumb" alt="IA et CNDP"/>
+        <div class="rel-info"><h4><a href="article-ia-cndp">IA générative et loi 09-08 : la CNDP face à ChatGPT et Gemini</a></h4><span>Droit numérique · 9 min</span></div>
+      </div>
+      <div class="rel-item">
+        <img loading="lazy" src="images/droit-procedure-civile-numerique-sm.webp" class="rel-thumb" alt="Digitalisation procédure civile"/>
+        <div class="rel-info"><h4><a href="article-procedure-civile">Digitalisation de la procédure civile marocaine : e-justice et délais</a></h4><span>Procédure civile · 10 min</span></div>
+      </div>
+      <div class="rel-item">
+        <img loading="lazy" src="images/driss-el-harti-avocat-tanger.png" class="rel-thumb" alt="Entretien Me Driss El Harti"/>
+        <div class="rel-info"><h4><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030</a></h4><span>Interview · 16 min</span></div>
+      </div>
+    </div>
+
+    <div class="wg">
+      <div class="wt">Newsletter Droit</div>
+      <p class="nl-desc">Jurisprudence, réformes et analyses juridiques, chaque lundi matin.</p>
+      <input class="nl-input" type="email" placeholder="votre@email.com" aria-label="Email newsletter"/>
+      <button class="nl-btn">S'inscrire</button>
+    </div>
+  </aside>
+</div></div></div>
+<!-- FOOTER -->
+
+<footer class="site-footer"><div class="container">
+  <div class="ft-main">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:2px">
+        <div><div style="font-family:var(--it);font-size:14px;font-weight:700;letter-spacing:.18em;color:#fff;text-transform:uppercase">Neybras Magazine</div><div style="font-family:var(--cg);font-style:italic;font-size:10px;color:rgba(184,150,90,.7);letter-spacing:.05em;margin-top:1px">Le média qui connecte les idées aux décideurs</div></div>
+      </div>
+      <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+      <div class="ft-social"><a href="https://www.linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn Neybras"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram Neybras"><i class="fab fa-instagram"></i></a><a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook Neybras"><i class="fab fa-facebook-f"></i></a></div>
+    </div>
+    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li><li><a href="gouvernance">Gouvernance</a></li></ul></div>
+    <div class="ft-col"><h5>Le Magazine</h5><ul><li><a href="a-propos">À propos</a></li><li><a href="equipe">Notre équipe</a></li><li><a href="interviews">Interviews</a></li><li><a href="tribunes">Tribunes</a></li><li><a href="newsletter">Newsletter</a></li><li><a href="contact">Publicité</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="contact">Nous contacter</a></li><li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li><li><a href="contact">Média Kit</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="politique-confidentialite">Confidentialité</a></li></ul></div>
+  </div>
+  <div class="ft-btm"><span>© 2026 Neybras Magazine · Tous droits réservés · Casablanca, Maroc</span><div class="ft-bl"><a href="mentions-legales">Mentions légales</a><a href="politique-confidentialite">Confidentialité</a><a href="cookies">Cookies</a></div></div>
+</div></footer>
+
+<button id="stt" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{const art=document.querySelector('.art-text');if(!art)return;const r=art.getBoundingClientRect(),h=art.offsetHeight,s=Math.max(0,-r.top);prog.style.width=Math.min(100,(s/h)*100)+'%';});
+const sections=['q1','q2','q3','q4','q5','q6'],tocItems=document.querySelectorAll('.toc-item');
+window.addEventListener('scroll',()=>{let c='';sections.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<140)c=id;});tocItems.forEach((item,i)=>item.classList.toggle('act',sections[i]===c||(c===''&&i===0)));});
+function scrollToSec(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+[document.getElementById('copyLink'),document.getElementById('copyLink2')].forEach(btn=>{if(!btn)return;btn.addEventListener('click',()=>{navigator.clipboard.writeText(window.location.href).then(()=>{const o=btn.innerHTML;btn.innerHTML='<i class="fas fa-check"></i> Copié !';setTimeout(()=>btn.innerHTML=o,2000);});});});
+const sOv=document.getElementById('sOv');
+document.getElementById('openS').onclick=()=>{sOv.classList.add('on');sOv.querySelector('input').focus();};
+document.getElementById('closeS').onclick=()=>sOv.classList.remove('on');
+sOv.onclick=e=>{if(e.target===sOv)sOv.classList.remove('on');};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')sOv.classList.remove('on');});
+const stt=document.getElementById('stt');
+window.addEventListener('scroll',()=>stt.classList.toggle('v',scrollY>400));
+stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+<script>(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){el.textContent=s;});})();</script>
+<script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
+<script>
+(function(){
+  var FS='https://formspree.io/f/mgoppdpg';
+  function attachNl(form){
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var inp=form.querySelector('input[type="email"]');
+      var btn=form.querySelector('button[type="submit"],input[type="submit"]');
+      var email=inp?inp.value.trim():'';
+      if(!email||!email.includes('@'))return;
+      if(btn){btn.textContent='Envoi…';btn.disabled=true;}
+      try{
+        var res=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Nouvelle inscription — Newsletter Neybras Magazine'})});
+        var data=await res.json().catch(function(){return{};});
+        if(res.ok&&data.ok){
+          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+        }else{
+          if(btn){btn.textContent="S'abonner";btn.disabled=false;}
+        }
+      }catch(err){
+        if(btn){btn.textContent="S'abonner";btn.disabled=false;}
+      }
+    });
+  }
+  document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
+})();
+</script>
+</body>
+</html>
