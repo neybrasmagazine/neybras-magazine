@@ -923,7 +923,7 @@ ul{list-style:none}
 .nbr-une__rule{flex:1;height:1px;background:linear-gradient(to right,var(--or),rgba(201,168,76,.12));}
 .nbr-une__all{font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1.5px;color:var(--navy);text-decoration:none;border:1px solid var(--or);padding:8px 16px;border-radius:2px;transition:background .2s ease,color .2s ease;white-space:nowrap;}
 .nbr-une__all:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
-.nbr-une__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch;}
+.nbr-une__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;}
 .nbr-une__side{display:flex;flex-direction:column;gap:20px;}
 .nbr-card{background:#fff;border-radius:4px;overflow:hidden;text-decoration:none;box-shadow:0 1px 3px rgba(12,38,75,.06);transition:transform .2s ease,box-shadow .2s ease;display:flex;}
 .nbr-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(12,38,75,.12);}
@@ -970,7 +970,25 @@ ul{list-style:none}
 
   <div class="nbr-une__grid">
 
-    <!-- VEDETTE : Charte de l'Investissement -->
+    <!-- VEDETTE 1 : 205 M€ de la BAD pour le rail marocain -->
+    <a class="nbr-card nbr-feat" href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">
+      <div class="nbr-photo">
+        <img src="images/afrique-ppp-infrastructure.webp" alt="Corridor ferroviaire Kénitra-Casablanca-Marrakech — financement BAD">
+        <div class="nbr-photo__badges">
+          <span class="nbr-badge nbr-badge--phare">DOSSIER PHARE</span>
+          <span class="nbr-badge nbr-badge--navy">FINANCE</span>
+        </div>
+      </div>
+      <div class="nbr-feat__body">
+        <h3>205 M€ de la BAD pour le rail marocain : ce que révèle vraiment ce financement</h3>
+        <p>La BAD finance le corridor Kénitra-Marrakech à hauteur de 205 M€, six semaines après avoir sacré le Maroc première économie industrielle d'Afrique. Ce que cette séquence révèle vraiment.</p>
+        <div class="nbr-meta nbr-feat__meta">
+          <b>La Rédaction Neybras</b> &nbsp;·&nbsp; 10 juillet 2026 &nbsp;·&nbsp; 7 min
+        </div>
+      </div>
+    </a>
+
+    <!-- VEDETTE 2 : Charte de l'Investissement -->
     <a class="nbr-card nbr-feat" href="charte-investissement-maroc-2026">
       <div class="nbr-photo">
         <img src="images/une-charte-investissement.jpg" alt="Charte de l'Investissement 2026 — loi-cadre 03-22, Maroc">
@@ -987,33 +1005,6 @@ ul{list-style:none}
         </div>
       </div>
     </a>
-
-    <!-- SATELLITES -->
-    <div class="nbr-une__side">
-
-      <a class="nbr-card nbr-sat" href="article-tribune-marches-publics-resiliation">
-        <div class="nbr-photo">
-          <img src="images/une-charkaoui.jpg" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public">
-        </div>
-        <div class="nbr-sat__body">
-          <span class="nbr-badge nbr-badge--sat nbr-badge--sat-navy">TRIBUNE · MARCHÉS PUBLICS</span>
-          <h4>Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</h4>
-          <div class="nbr-meta nbr-sat__meta"><b>Pr Khalid Cherkaoui Semmouni</b> · 24 juin · 6 min</div>
-        </div>
-      </a>
-
-      <a class="nbr-card nbr-sat" href="article-cdm2030-juridique">
-        <div class="nbr-photo">
-          <img src="images/une-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca">
-        </div>
-        <div class="nbr-sat__body">
-          <span class="nbr-badge nbr-badge--sat nbr-badge--sat-or">ANALYSE · DROIT DU SPORT</span>
-          <h4>Coupe du Monde 2030 au Maroc : contrats, fiscalité et responsabilité juridique</h4>
-          <div class="nbr-meta nbr-sat__meta"><b>Me Amine Lahlou</b> · 18 mai · 14 min</div>
-        </div>
-      </a>
-
-    </div>
   </div>
 
   <div class="nbr-cite">
@@ -1059,17 +1050,28 @@ ul{list-style:none}
           </article>
         </div>
 
-        <!-- Sport Business — PHARE -->
+        <!-- Droit & Décideurs — PHARE -->
         <div class="mb5">
           <div class="sh reveal">
-            <h2 class="sh-title"><i class="fas fa-futbol" style="color:var(--or);font-size:13px"></i> Sport Business & Droit</h2>
+            <h2 class="sh-title"><i class="fas fa-scale-balanced" style="color:var(--or);font-size:13px"></i> Droit & Décideurs</h2>
             <div class="sh-line"></div>
-            <a href="droit-du-sport" class="sh-all">Voir tout</a>
+            <a href="droit" class="sh-all">Voir tout</a>
           </div>
           <div class="a3">
             <article class="acard reveal">
               <div class="acard-iw">
-                <img srcset="images/sport-infrastructures-stades-maroc-sm.webp 480w, images/sport-infrastructures-stades-maroc.webp 1200w" sizes="(max-width:600px) 480px, (max-width:1024px) 800px, 1200px" src="images/sport-infrastructures-stades-maroc.webp" alt="CdM 2030 chantier stade construction Maroc" loading="lazy"/>
+                <img src="images/une-charkaoui.jpg" alt="Pr Khalid Cherkaoui Semmouni, professeur de droit public" loading="lazy"/>
+              </div>
+              <div class="acard-body">
+                <span class="tag t-droit">Droit public</span>
+                <h3><a href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics : décret 2-22-431, jurisprudence et recours</a></h3>
+                <p>Ce que tout cocontractant de l'État doit savoir dès la notification : procédure, indemnisation et voies de recours.</p>
+              </div>
+              <div class="acard-foot"><span class="by">Pr Khalid Cherkaoui Semmouni</span><span>·</span><span>24 juin</span><span>·</span><span>6 min</span></div>
+            </article>
+            <article class="acard reveal delay-1">
+              <div class="acard-iw">
+                <img src="images/une-lahlou.jpg" alt="Me Amine Lahlou, avocat au Barreau de Casablanca" loading="lazy"/>
               </div>
               <div class="acard-body">
                 <span class="tag t-sport">Droit du Sport</span>
@@ -1078,27 +1080,16 @@ ul{list-style:none}
               </div>
               <div class="acard-foot"><span class="by">Me Amine Lahlou</span><span>·</span><span>13 juin</span><span>·</span><span>14 min</span></div>
             </article>
-            <article class="acard reveal delay-1">
-              <div class="acard-iw">
-                <img src="images/foot-fifa.jpg" alt="Contrats agents sportifs FIFA Maroc" loading="lazy"/>
-              </div>
-              <div class="acard-body">
-                <span class="tag t-sport">Transferts & Agents</span>
-                <h3><a href="article-agents-fifa-maroc">Agents FIFA au Maroc : plafonnement des commissions, conflits d'intérêts et risques disciplinaires concrets</a></h3>
-                <p>Depuis l'entrée en vigueur du FFAR, les clubs marocains naviguent à vue. Ce que la réglementation exige — et ce qu'elle sanctionne déjà.</p>
-              </div>
-              <div class="acard-foot"><span class="by">Zineb Maâti</span><span>·</span><span>12 juin</span><span>·</span><span>7 min</span></div>
-            </article>
             <article class="acard reveal delay-2">
               <div class="acard-iw">
-                <img src="images/sport-terrain-football.png" alt="Football — droits image sportifs Maroc" loading="lazy"/>
+                <img src="images/une-el-harti.jpg" alt="Me Driss El Harti, avocat au Barreau de Tanger" loading="lazy"/>
               </div>
               <div class="acard-body">
-                <span class="tag t-sport">Droits à l'image</span>
-                <h3><a href="article-valorisation-sportif-marque">Hakimi, En-Nesyri, Ounahi : la valorisation juridique et fiscale du sportif-marque en droit marocain</a></h3>
-                <p>Entre contrats d'image, sociétés de droits et fiscalité internationale des revenus commerciaux, le droit marocain accuse un retard structurel qu'il faut combler.</p>
+                <span class="tag t-arb">Arbitrage International</span>
+                <h3><a href="article-arbitrage-mondial2030-entretien">L'arbitrage international au Maroc à l'épreuve du Mondial 2030 — Entretien avec Me Driss El Harti</a></h3>
+                <p>Convention de New York, TAS Chambre Ad Hoc, loi 95-17 : Me Driss El Harti décrypte la compétitivité des centres d'arbitrage marocains face à la CCI et au LCIA.</p>
               </div>
-              <div class="acard-foot"><span class="by">Hassan Laaziri</span><span>·</span><span>11 juin</span><span>·</span><span>8 min</span></div>
+              <div class="acard-foot"><span class="by">Me Driss El Harti</span><span>·</span><span>20 juin</span><span>·</span><span>16 min</span></div>
             </article>
           </div>
         </div>
