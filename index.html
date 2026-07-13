@@ -950,6 +950,11 @@ ul{list-style:none}
 .nbr-sat__body{padding:16px 18px;display:flex;flex-direction:column;flex:1;}
 .nbr-sat__body h4{margin:0 0 10px;font-size:16px;line-height:1.32;color:var(--navy);font-weight:bold;}
 .nbr-sat__meta{margin-top:auto;font-size:11.5px;}
+.nbr-video{margin-top:22px;}
+.nbr-video__frame{position:relative;padding-top:42%;background:#000;border-radius:4px;overflow:hidden;}
+.nbr-video__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.nbr-video__cap{margin-top:10px;font-size:11px;color:#6a6f7a;text-align:center;}
+@media(max-width:860px){.nbr-video__frame{padding-top:56.25%;}}
 .nbr-cite{display:flex;align-items:center;gap:18px;margin-top:22px;padding:20px 24px;background:var(--creme-fonce);border-radius:4px;}
 .nbr-cite__bar{width:3px;align-self:stretch;min-height:42px;background:var(--or);flex-shrink:0;}
 .nbr-cite__label{font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;color:var(--or);}
@@ -973,7 +978,7 @@ ul{list-style:none}
     <!-- VEDETTE 1 : 205 M€ de la BAD pour le rail marocain -->
     <a class="nbr-card nbr-feat" href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">
       <div class="nbr-photo">
-        <img src="images/afrique-ppp-infrastructure.webp" alt="Corridor ferroviaire Kénitra-Casablanca-Marrakech — financement BAD">
+        <img src="images/tgv-al-boraq-corridor-kenitra-marrakech.jpg" alt="TGV Al Boraq sur le corridor Kénitra-Rabat-Casablanca-Marrakech — financement BAD">
         <div class="nbr-photo__badges">
           <span class="nbr-badge nbr-badge--phare">DOSSIER PHARE</span>
           <span class="nbr-badge nbr-badge--navy">FINANCE</span>
@@ -1005,6 +1010,13 @@ ul{list-style:none}
         </div>
       </div>
     </a>
+  </div>
+
+  <div class="nbr-video">
+    <div class="nbr-video__frame">
+      <iframe src="https://www.youtube.com/embed/ZMrZ_2fylMs" title="Maroc - Banque africaine de développement : Ensemble, transportons l'avenir" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="nbr-video__cap">« Maroc – Banque africaine de développement : Ensemble, transportons l'avenir » — vidéo officielle du Groupe de la BAD.</div>
   </div>
 
   <div class="nbr-cite">
