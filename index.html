@@ -505,8 +505,12 @@ ul{list-style:none}
 ═══════════════════════════════════════════ */
 .part-sec{padding:44px 0;background:var(--blanc);border-top:1px solid var(--brd)}
 .part-label{text-align:center;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#bbb;margin-bottom:32px}
-.part-logos{display:flex;justify-content:center;align-items:stretch;gap:20px;flex-wrap:wrap}
-.pl{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;padding:24px 32px;border:1px solid var(--brd);border-radius:3px;text-decoration:none;transition:var(--tr);min-width:180px;max-width:220px;text-align:center;background:#fff}
+.part-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.part-logos{display:flex;justify-content:flex-start;align-items:stretch;gap:20px;flex-wrap:nowrap;width:max-content;animation:pl-scroll 26s linear infinite}
+.part-marquee:hover .part-logos{animation-play-state:paused}
+@keyframes pl-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.part-logos{animation:none}}
+.pl{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;padding:24px 32px;border:1px solid var(--brd);border-radius:3px;text-decoration:none;transition:var(--tr);width:220px;flex:0 0 auto;text-align:center;background:#fff}
 .pl:hover{border-color:var(--or);transform:translateY(-3px);box-shadow:0 6px 24px rgba(14,61,82,.1)}
 .pl-logo{height:52px;display:flex;align-items:center;justify-content:center}
 .pl-logo img{max-height:52px;max-width:140px;width:auto;object-fit:contain;filter:grayscale(30%);transition:var(--tr)}
@@ -1781,31 +1785,54 @@ ul{list-style:none}
 <section class="part-sec reveal">
   <div class="container">
     <div class="part-label">Partenaires & Liens</div>
-    <div class="part-logos">
-      <a href="https://huje-avocats.fr/" target="_blank" rel="noopener" class="pl">
-        <div class="pl-logo">
-          <img src="images/logo-huje-avocats.png" alt="Hujé Avocats" loading="lazy"/>
-        </div>
-        <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> huje-avocats.fr</div>
-      </a>
-      <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl">
-        <div class="pl-logo">
-          <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="Neybras Family Magazine" loading="lazy"/>
-        </div>
-        <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras-family.com</div>
-      </a>
-      <a href="https://neybras.com/" target="_blank" rel="noopener" class="pl">
-        <div class="pl-logo">
-          <div class="pl-neybras">
-            <div class="n1">Neybras</div>
-            <div class="n2">by Dalal Fahmi</div>
+    <div class="part-marquee">
+      <div class="part-logos" aria-hidden="false">
+        <!-- set 1 -->
+        <a href="https://huje-avocats.fr/" target="_blank" rel="noopener" class="pl">
+          <div class="pl-logo">
+            <img src="images/logo-huje-avocats.png" alt="Hujé Avocats" loading="lazy"/>
           </div>
-        </div>
-        <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras.com</div>
-      </a>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> huje-avocats.fr</div>
+        </a>
+        <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl">
+          <div class="pl-logo">
+            <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="Neybras Family Magazine" loading="lazy"/>
+          </div>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras-family.com</div>
+        </a>
+        <a href="https://neybras.com/" target="_blank" rel="noopener" class="pl">
+          <div class="pl-logo">
+            <div class="pl-neybras">
+              <div class="n1">Neybras</div>
+              <div class="n2">by Dalal Fahmi</div>
+            </div>
+          </div>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras.com</div>
+        </a>
+        <!-- set 2 (duplicate, for seamless loop) -->
+        <a href="https://huje-avocats.fr/" target="_blank" rel="noopener" class="pl" aria-hidden="true" tabindex="-1">
+          <div class="pl-logo">
+            <img src="images/logo-huje-avocats.png" alt="" loading="lazy"/>
+          </div>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> huje-avocats.fr</div>
+        </a>
+        <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl" aria-hidden="true" tabindex="-1">
+          <div class="pl-logo">
+            <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="" loading="lazy"/>
+          </div>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras-family.com</div>
+        </a>
+        <a href="https://neybras.com/" target="_blank" rel="noopener" class="pl" aria-hidden="true" tabindex="-1">
+          <div class="pl-logo">
+            <div class="pl-neybras">
+              <div class="n1">Neybras</div>
+              <div class="n2">by Dalal Fahmi</div>
+            </div>
+          </div>
+          <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras.com</div>
+        </a>
+      </div>
     </div>
-
-
 
   </div>
 </section>
