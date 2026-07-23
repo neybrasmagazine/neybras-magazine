@@ -7,7 +7,11 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-TRVG9RSKTL');
+  (function(){
+    var p = window.location.pathname.replace(/\.html$/i, '');
+    var loc = window.location.origin + p + window.location.search;
+    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
+  })();
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
