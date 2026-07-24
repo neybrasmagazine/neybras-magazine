@@ -226,6 +226,19 @@ ul{list-style:none;}
 .le-card h4{font-family:var(--pd);font-size:16px;font-weight:700;color:var(--bn);line-height:1.3;margin-bottom:8px;}
 .le-card h4 a:hover{color:var(--or);}
 .le-card p{font-family:var(--cg);font-size:15px;color:var(--gris4);line-height:1.5;}
+.serie-box{margin:48px 0 0;padding:28px 30px;background:var(--blanc);border:1px solid var(--brd);border-left:3px solid var(--bn);}
+.serie-eyebrow{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bn);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.serie-list{display:flex;flex-direction:column;gap:4px;}
+.serie-item{display:flex;align-items:center;gap:16px;padding:13px 12px;border-radius:2px;transition:var(--tr);}
+a.serie-item:hover{background:var(--or-bg);}
+.serie-rank{font-family:var(--pd);font-size:11px;font-weight:700;color:var(--or);letter-spacing:.03em;flex-shrink:0;width:70px;}
+.serie-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.serie-info strong{font-family:var(--pd);font-size:14.5px;font-weight:700;color:var(--gris1);line-height:1.3;}
+.serie-date{font-size:10.5px;color:var(--gris5);}
+.serie-item--current{background:var(--or-bg);}
+.serie-item--current .serie-rank{color:var(--bn);}
+.serie-here{font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bn);margin-left:auto;flex-shrink:0;background:rgba(14,61,82,.08);padding:4px 8px;border-radius:1px;}
+@media(max-width:520px){.serie-rank{width:56px;font-size:10px;}.serie-here{display:none;}}
 footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
@@ -334,7 +347,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 
       <p class="chapeau">Le Groupe de la Banque africaine de développement (BAD) et le Fonds d'équipement communal (FEC) ont officialisé, mercredi 22 juillet à Rabat, un deuxième accord de prêt de 150 millions d'euros destiné à soutenir la dynamique d'investissement des collectivités territoriales marocaines. Le financement lui-même n'est pas une nouveauté du jour : il avait été approuvé par le Conseil d'administration de la BAD le 10 décembre 2025 à Abidjan. Ce qui s'est joué à Rabat, c'est la cérémonie de signature formelle — accompagnée, elle, de deux éléments réellement nouveaux : un accord de don et une lettre d'intention inscrivant la coopération entre les deux institutions dans une perspective de long terme.</p>
 
-      <p>Deux semaines après les 205 millions d'euros accordés pour le corridor ferroviaire <a href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">Kénitra–Marrakech</a>, c'est le deuxième engagement financier de la BAD au Maroc que nous documentons cet été. Le rapprochement n'est pas anodin : il montre que la dynamique d'investissement institutionnel ne se limite pas aux grands corridors stratégiques nationaux, elle irrigue aussi l'échelon territorial.</p>
+      <p>Deux semaines après les 205 millions d'euros accordés pour le <a href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">corridor ferroviaire Kénitra–Marrakech</a>, c'est le deuxième engagement financier de la BAD au Maroc que nous documentons cet été. Le rapprochement n'est pas anodin : il montre que la dynamique d'investissement institutionnel ne se limite pas aux grands corridors stratégiques nationaux, elle irrigue aussi l'échelon territorial.</p>
 
       <div class="highlight-box">
         <div class="hb-title"><i class="fas fa-bolt"></i> Ce qu'il faut retenir</div>
@@ -359,6 +372,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 
       <h2 id="sec4"><span class="h2-marker"></span>Pourquoi ce dossier nous concerne directement</h2>
       <p>Notre édition de lancement, <em>Maroc, terre d'investissement</em> (septembre 2026), documente précisément cette accumulation de signaux. Après le corridor ferroviaire, c'est au tour des territoires ruraux et des collectivités locales de bénéficier de cette dynamique de financement — un fil que nous continuerons de suivre à mesure que de nouveaux accords seront annoncés.</p>
+      <p>Dès le lendemain, ce fil s'est prolongé avec un troisième signal : un prêt de 100 M€ à <a href="bad-gotion-100-millions-euros-gigafactory-batteries-maroc">Gotion Power Morocco</a> pour la première gigafactory de batteries électriques intégrée d'Afrique.</p>
 
       <div class="cta-box">
         <h3>Recevez nos décryptages en avant-première</h3>
@@ -393,20 +407,23 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <p><strong>Sources :</strong> Communiqué officiel BAD/FEC (22 juillet 2026) ; approbation du Conseil d'administration confirmée par <a href="https://www.financialafrik.com/2025/12/12/maroc-la-bad-accorde-150-millions-deuros-au-fec-pour-accelerer-linvestissement-territorial/" target="_blank" rel="noopener">Financial Afrik</a> et <a href="https://www.leconomiste.com/investissements-dans-les-territoires-la-bad-accorde-150-millions-deuros-au-fec/" target="_blank" rel="noopener">L'Economiste</a> (décembre 2025) ; données FEC via EcoActu.ma. Document à valeur informative ; se référer aux communiqués officiels pour les termes définitifs des financements.</p>
     </div>
 
-    <!-- LIRE ENSUITE -->
-    <div class="lire-ensuite">
-      <div class="le-title">À lire également</div>
-      <div class="le-grid">
-        <div class="le-card">
-          <div class="le-cat">Finance</div>
-          <h4><a href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">205 M€ de la BAD pour le rail marocain : ce que révèle vraiment ce financement</a></h4>
-          <p>Notre analyse complète du premier signal de la séquence : le financement du corridor ferroviaire Kénitra-Marrakech.</p>
+    <!-- SÉRIE -->
+    <div class="serie-box">
+      <div class="serie-eyebrow"><i class="fas fa-layer-group"></i> Le fil BAD Maroc 2026 — 3 signaux</div>
+      <div class="serie-list">
+        <a href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse" class="serie-item">
+          <span class="serie-rank">Signal 1/3</span>
+          <span class="serie-info"><strong>205 M€ pour le rail marocain</strong><span class="serie-date">10 juillet 2026</span></span>
+        </a>
+        <div class="serie-item serie-item--current">
+          <span class="serie-rank">Signal 2/3</span>
+          <span class="serie-info"><strong>150 M€ BAD-FEC pour les territoires</strong><span class="serie-date">23 juillet 2026</span></span>
+          <span class="serie-here">Vous êtes ici</span>
         </div>
-        <div class="le-card">
-          <div class="le-cat">Investissement</div>
-          <h4><a href="charte-investissement-maroc-2026">Charte de l'Investissement 2026 : primes, conditions et dossier CRI, le guide complet</a></h4>
-          <p>Le dispositif de primes directes qui complète, côté investisseurs privés, la montée en puissance des financements institutionnels.</p>
-        </div>
+        <a href="bad-gotion-100-millions-euros-gigafactory-batteries-maroc" class="serie-item">
+          <span class="serie-rank">Signal 3/3</span>
+          <span class="serie-info"><strong>100 M€ pour la gigafactory Gotion</strong><span class="serie-date">24 juillet 2026</span></span>
+        </a>
       </div>
     </div>
 

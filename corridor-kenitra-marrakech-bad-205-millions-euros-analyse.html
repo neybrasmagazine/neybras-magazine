@@ -231,6 +231,19 @@ ul{list-style:none;}
 .le-card h4{font-family:var(--pd);font-size:16px;font-weight:700;color:var(--bn);line-height:1.3;margin-bottom:8px;}
 .le-card h4 a:hover{color:var(--or);}
 .le-card p{font-family:var(--cg);font-size:15px;color:var(--gris4);line-height:1.5;}
+.serie-box{margin:48px 0 0;padding:28px 30px;background:var(--blanc);border:1px solid var(--brd);border-left:3px solid var(--bn);}
+.serie-eyebrow{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bn);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.serie-list{display:flex;flex-direction:column;gap:4px;}
+.serie-item{display:flex;align-items:center;gap:16px;padding:13px 12px;border-radius:2px;transition:var(--tr);}
+a.serie-item:hover{background:var(--or-bg);}
+.serie-rank{font-family:var(--pd);font-size:11px;font-weight:700;color:var(--or);letter-spacing:.03em;flex-shrink:0;width:70px;}
+.serie-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.serie-info strong{font-family:var(--pd);font-size:14.5px;font-weight:700;color:var(--gris1);line-height:1.3;}
+.serie-date{font-size:10.5px;color:var(--gris5);}
+.serie-item--current{background:var(--or-bg);}
+.serie-item--current .serie-rank{color:var(--bn);}
+.serie-here{font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bn);margin-left:auto;flex-shrink:0;background:rgba(14,61,82,.08);padding:4px 8px;border-radius:1px;}
+@media(max-width:520px){.serie-rank{width:56px;font-size:10px;}.serie-here{display:none;}}
 footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
@@ -376,6 +389,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 
       <h2 id="sec5"><span class="h2-marker"></span>Pourquoi ce dossier nous concerne directement</h2>
       <p>Notre édition de lancement, <em>Maroc, terre d'investissement</em> (septembre 2026), part de ce même constat : la thèse d'investissement marocaine ne tient pas à une annonce isolée, mais à la convergence de plusieurs chantiers structurels qui redéfinissent la perception du risque-pays. Le financement PADIF est un point de données de plus dans cette démonstration — et un point qui, mis en perspective avec le sacre industriel du Maroc six semaines plus tôt, prend une tout autre dimension que celle d'un simple communiqué de financement.</p>
+      <p>La suite l'a confirmé : deux semaines plus tard, la BAD officialisait un deuxième accord de <a href="bad-fec-150-millions-euros-developpement-territorial-maroc">150 M€ avec le FEC</a> pour les collectivités territoriales, puis un troisième prêt de <a href="bad-gotion-100-millions-euros-gigafactory-batteries-maroc">100 M€ pour la première gigafactory de batteries d'Afrique</a> — trois signaux distincts qui, mis bout à bout, dessinent une trajectoire d'engagement continue plutôt qu'une série d'annonces isolées.</p>
 
       <div class="cta-box">
         <h3>Recevez nos décryptages en avant-première</h3>
@@ -410,20 +424,23 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <p><strong>Source :</strong> <a href="https://leseco.ma/maroc/corridor-ferroviaire-kenitra-marrakech-la-bad-accorde-205-millions-deuros-au-maroc.html" target="_blank" rel="noopener">Communiqué de la Banque africaine de développement</a>, relayé le 9 juillet 2026 · Indice d'industrialisation de l'Afrique 2025 (BAD, Brazzaville, mai 2026) · Stratégie-pays BAD-Maroc 2024-2029 · Déclarations publiques relatives aux financements BEI Maroc 2026 et Nador West Med. Document à valeur informative ; se référer aux communiqués officiels pour les termes définitifs des financements.</p>
     </div>
 
-    <!-- LIRE ENSUITE -->
-    <div class="lire-ensuite">
-      <div class="le-title">À lire également</div>
-      <div class="le-grid">
-        <div class="le-card">
-          <div class="le-cat">Investissement</div>
-          <h4><a href="charte-investissement-maroc-2026">Charte de l'Investissement 2026 : primes, conditions et dossier CRI, le guide complet</a></h4>
-          <p>Le dispositif de primes directes qui complète, côté investisseurs privés, la montée en puissance des financements institutionnels.</p>
+    <!-- SÉRIE -->
+    <div class="serie-box">
+      <div class="serie-eyebrow"><i class="fas fa-layer-group"></i> Le fil BAD Maroc 2026 — 3 signaux</div>
+      <div class="serie-list">
+        <div class="serie-item serie-item--current">
+          <span class="serie-rank">Signal 1/3</span>
+          <span class="serie-info"><strong>205 M€ pour le rail marocain</strong><span class="serie-date">10 juillet 2026</span></span>
+          <span class="serie-here">Vous êtes ici</span>
         </div>
-        <div class="le-card">
-          <div class="le-cat">Afrique &amp; OHADA</div>
-          <h4><a href="article-ppp-afrique">PPP en Afrique : pourquoi 60 % des projets échouent avant le premier décaissement</a></h4>
-          <p>Ce que la structuration juridique des partenariats public-privé change pour les grands projets d'infrastructure du continent.</p>
-        </div>
+        <a href="bad-fec-150-millions-euros-developpement-territorial-maroc" class="serie-item">
+          <span class="serie-rank">Signal 2/3</span>
+          <span class="serie-info"><strong>150 M€ BAD-FEC pour les territoires</strong><span class="serie-date">23 juillet 2026</span></span>
+        </a>
+        <a href="bad-gotion-100-millions-euros-gigafactory-batteries-maroc" class="serie-item">
+          <span class="serie-rank">Signal 3/3</span>
+          <span class="serie-info"><strong>100 M€ pour la gigafactory Gotion</strong><span class="serie-date">24 juillet 2026</span></span>
+        </a>
       </div>
     </div>
 
