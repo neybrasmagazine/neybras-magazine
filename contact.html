@@ -18,16 +18,17 @@
 <title>Contact & Soumissions — Neybras Magazine</title>
 <meta name="description" content="Contactez la rédaction de Neybras Magazine — soumission de tribunes, propositions d'interviews, partenariats et demandes presse."/>
 <meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Contact & Soumissions — Neybras Magazine"/>
 <meta property="og:image" content="https://neybras-magazine.com/images/og-neybras-default.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <link rel="canonical" href="https://neybras-magazine.com/contact"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--pd:'Playfair Display','Georgia',serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
+:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--bn4:#082330;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--fr:'Fraunces',Georgia,serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;--ok:#2E7D5B;--radius:14px;--shadow:0 1px 2px rgba(8,35,48,.04),0 12px 40px -18px rgba(8,35,48,.22);--shadow-soft:0 1px 3px rgba(8,35,48,.05);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;overflow-x:hidden;font-size:16px;}
 body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
@@ -68,93 +69,117 @@ ul{list-style:none;}
 .nav-a.on{color:#fff;border-bottom-color:var(--or);}
 .nav-a.star{color:rgba(184,150,90,.8);}
 .nav-a.star.on{color:var(--or-lt);border-bottom-color:var(--or-lt);}
-/* hero */
-.contact-hero{background:var(--bn);padding:56px 0 48px;border-bottom:3px solid var(--or);text-align:center;}
-.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:18px;}
-.sec-eyebrow::before,.sec-eyebrow::after{content:'';display:block;width:28px;height:1px;background:var(--or);opacity:.5;}
-.contact-hero h1{font-family:var(--pd);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:14px;}
-.contact-hero p{font-size:14px;color:rgba(255,255,255,.5);max-width:540px;margin:0 auto;line-height:1.7;}
-/* contact type cards */
-.contact-types{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--brd);margin:0;border-bottom:1px solid var(--brd);}
-.ctype{background:var(--blanc);padding:28px 24px;cursor:pointer;transition:var(--tr);text-align:center;border-bottom:3px solid transparent;}
-.ctype:hover,.ctype.active{background:#fff;border-bottom-color:var(--or);}
-.ctype.active .ctype-icon{color:var(--or);}
-.ctype-icon{font-size:22px;color:var(--gris5);margin-bottom:10px;transition:var(--tr);}
-.ctype:hover .ctype-icon{color:var(--or);}
-.ctype-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gris2);margin-bottom:4px;}
-.ctype-desc{font-size:11px;color:var(--gris4);line-height:1.5;}
-/* main layout */
-.contact-layout{display:grid;grid-template-columns:1fr 340px;gap:52px;padding:52px 0 72px;}
-/* form */
-.form-section{display:none;}
-.form-section.active{display:block;}
-.form-header{margin-bottom:28px;}
-.form-header h2{font-family:var(--pd);font-size:1.5rem;font-weight:700;color:var(--gris1);margin-bottom:6px;}
-.form-header p{font-size:13px;color:var(--gris3);line-height:1.6;}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.form-grid.full{grid-template-columns:1fr;}
-.field{display:flex;flex-direction:column;gap:6px;}
-.field.span2{grid-column:1/-1;}
-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris3);}
-label span.req{color:var(--or);}
-input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:11px 14px;border:1px solid var(--brd);font-size:13px;font-family:var(--it);background:var(--blanc);color:var(--gris1);outline:none;transition:var(--tr);-webkit-appearance:none;border-radius:0;}
-input:focus,select:focus,textarea:focus{border-color:var(--or);box-shadow:0 0 0 3px rgba(184,150,90,.08);}
-textarea{resize:vertical;min-height:150px;line-height:1.6;}
-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
-.char-count{font-size:10px;color:var(--gris5);text-align:right;margin-top:2px;}
-.file-upload{border:2px dashed var(--brd);padding:28px;text-align:center;cursor:pointer;transition:var(--tr);background:var(--blanc);}
-.file-upload:hover{border-color:var(--or);background:var(--or-bg);}
-.file-upload i{font-size:24px;color:var(--gris5);margin-bottom:8px;}
-.file-upload p{font-size:12px;color:var(--gris4);line-height:1.5;}
-.file-upload p strong{color:var(--gris2);}
-.file-upload input{display:none;}
-.form-note{background:var(--or-bg);border:1px solid var(--or-bd);padding:14px 18px;margin-top:4px;}
-.form-note p{font-size:11.5px;color:var(--gris2);line-height:1.6;}
-.form-note strong{color:var(--bn);}
-.checkbox-row{display:flex;align-items:flex-start;gap:10px;}
-.checkbox-row input[type=checkbox]{width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:var(--or);cursor:pointer;}
-.checkbox-row label{font-size:12px;color:var(--gris3);text-transform:none;letter-spacing:0;font-weight:400;line-height:1.5;cursor:pointer;}
-.checkbox-row label a{color:var(--or);text-decoration:underline;}
-.btn-submit{display:inline-flex;align-items:center;gap:10px;background:var(--bn);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:15px 36px;border:none;cursor:pointer;transition:var(--tr);margin-top:8px;}
-.btn-submit:hover{background:var(--or);color:var(--bn);}
-.btn-submit i{font-size:11px;}
-/* success message */
-.success-msg{display:none;background:var(--bn);padding:36px;text-align:center;}
-.success-msg i{font-size:36px;color:var(--or);margin-bottom:16px;}
-.success-msg h3{font-family:var(--pd);font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:8px;}
-.success-msg p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;}
-/* sidebar */
-aside{display:flex;flex-direction:column;gap:24px;}
-.sw{background:var(--blanc);border:1px solid var(--brd);padding:24px;}
-.sw-title{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gris4);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--brd2);}
-/* contact info */
-.contact-info-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--brd2);}
-.contact-info-item:last-child{border-bottom:none;padding-bottom:0;}
-.ci-icon{width:36px;height:36px;background:var(--or-bg);border:1px solid var(--or-bd);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--or);font-size:13px;}
-.ci-body{}
-.ci-label{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gris4);margin-bottom:2px;}
-.ci-value{font-size:12.5px;color:var(--gris1);font-weight:500;}
-.ci-note{font-size:10.5px;color:var(--gris4);margin-top:2px;}
-/* team */
-.team-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--brd2);}
-.team-item:last-child{border-bottom:none;padding-bottom:0;}
-.team-av{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--or-bd);flex-shrink:0;}
-.team-info{}
-.team-name{font-size:12px;font-weight:600;color:var(--gris1);}
-.team-role{font-size:10px;color:var(--gris4);margin-top:1px;}
-.team-email{font-size:10px;color:var(--or);margin-top:2px;}
-/* guidelines */
-.guide-list{display:flex;flex-direction:column;gap:12px;}
-.guide-item{display:flex;gap:10px;align-items:flex-start;}
-.guide-num{width:20px;height:20px;background:var(--or);color:var(--bn);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-.guide-text{font-size:11.5px;color:var(--gris3);line-height:1.5;}
-/* social large */
-.soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.soc-btn{display:flex;align-items:center;gap:8px;padding:12px 14px;border:1px solid var(--brd);font-size:11px;font-weight:600;color:var(--gris2);transition:var(--tr);}
-.soc-btn i{font-size:14px;}
-.soc-btn:hover{border-color:var(--or);color:var(--or);}
-.soc-btn.linkedin:hover{color:#0a66c2;border-color:#0a66c2;}
-.soc-btn.twitter:hover{color:#000;border-color:#000;}
+
+/* ---------- PAGE CONTENT ---------- */
+h1,h2,h3{font-family:var(--fr);font-weight:600;line-height:1.12;letter-spacing:-.01em;}
+.wrap{width:min(1160px,92vw);margin-inline:auto;}
+
+.hero{position:relative;background:radial-gradient(120% 140% at 85% -10%,rgba(184,150,90,.14),transparent 55%),linear-gradient(160deg,var(--bn) 0%,var(--bn2) 60%,var(--bn4) 100%);color:#fff;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:100% 2.4rem;opacity:.5;pointer-events:none;}
+.hero .wrap{position:relative;padding:4.5rem 0 4rem;max-width:min(1160px,92vw);}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or-lt);margin-bottom:1.3rem;}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--or);}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4rem);max-width:14ch;color:#fff;}
+.hero p{margin-top:1.4rem;max-width:52ch;font-size:1.08rem;color:rgba(255,255,255,.82);line-height:1.65;}
+
+.routes{margin-top:2.8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;}
+.route{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.3rem 1.2rem;cursor:pointer;text-align:left;color:#fff;font-family:inherit;transition:all .25s;position:relative;}
+.route:hover,.route.active{background:rgba(184,150,90,.1);border-color:var(--or);}
+.route .num{font-family:var(--fr);font-size:.9rem;color:var(--or-lt);display:block;margin-bottom:.7rem;}
+.route strong{display:block;font-size:.98rem;font-weight:600;margin-bottom:.25rem;}
+.route span.d{font-size:.8rem;color:rgba(255,255,255,.68);line-height:1.4;}
+.route .arrow{position:absolute;top:1.3rem;right:1.2rem;opacity:0;transform:translateX(-4px);transition:all .25s;color:var(--or-lt);}
+.route:hover .arrow,.route.active .arrow{opacity:1;transform:translateX(0);}
+
+main{padding:4rem 0 2rem;}
+.layout{display:grid;grid-template-columns:1fr 340px;gap:3.5rem;align-items:start;}
+
+.panel{display:none;animation:fade .4s ease;}
+.panel.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.panel-head{border-bottom:2px solid var(--brd);padding-bottom:1.4rem;margin-bottom:2rem;}
+.panel-head .kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:.7rem;}
+.panel-head h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--bn);}
+.panel-head p{color:var(--gris3);margin:.9rem 0 0;max-width:60ch;}
+
+.criteria{background:var(--brd2);border-left:3px solid var(--or);border-radius:0 10px 10px 0;padding:1.1rem 1.3rem;margin-bottom:2rem;font-size:.9rem;color:var(--gris2);}
+.criteria strong{color:var(--bn);}
+
+form{display:grid;gap:1.3rem;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;}
+.field{display:flex;flex-direction:column;gap:.45rem;}
+.field label{font-size:.82rem;font-weight:600;color:var(--bn);letter-spacing:.01em;}
+.field label .req{color:var(--or);margin-left:.15rem;}
+.field .hint{font-size:.75rem;color:var(--gris4);font-weight:400;}
+input,select,textarea{font-family:inherit;font-size:.92rem;color:var(--gris1);background:var(--blanc);border:1px solid var(--brd);border-radius:10px;padding:.75rem .85rem;transition:border-color .2s,box-shadow .2s;width:100%;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--bn3);box-shadow:0 0 0 3px rgba(20,80,104,.12);}
+textarea{resize:vertical;min-height:120px;}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235E6E74' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.4rem;}
+.counter{font-size:.72rem;color:var(--gris4);text-align:right;}
+
+.dropzone{border:1.5px dashed var(--brd);border-radius:12px;background:var(--brd2);padding:1.6rem;text-align:center;cursor:pointer;transition:all .2s;}
+.dropzone:hover{border-color:var(--or);background:var(--or-bg);}
+.dropzone .dz-main{font-weight:600;color:var(--bn);font-size:.9rem;}
+.dropzone .dz-sub{font-size:.76rem;color:var(--gris4);margin-top:.3rem;}
+.dropzone svg{margin-bottom:.6rem;color:var(--bn3);}
+.dropzone .fname{margin-top:.6rem;font-size:.8rem;color:var(--ok);font-weight:600;}
+
+.check{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start;font-size:.84rem;color:var(--gris2);line-height:1.5;}
+.check input{width:18px;height:18px;margin-top:.15rem;accent-color:var(--bn);border:none;padding:0;border-radius:3px;}
+.check a{color:var(--bn3);text-decoration:underline;text-underline-offset:2px;}
+
+.submit{justify-self:start;background:var(--bn);color:#fff;border:none;font-family:inherit;font-size:.92rem;font-weight:600;letter-spacing:.02em;padding:.9rem 2.2rem;border-radius:999px;cursor:pointer;transition:all .25s;margin-top:.4rem;}
+.submit:hover{background:var(--bn4);transform:translateY(-1px);box-shadow:0 10px 24px -12px rgba(8,35,48,.5);}
+.submit:active{transform:translateY(0);}
+
+.success{display:none;background:linear-gradient(135deg,var(--bn) 0%,var(--bn2) 100%);color:#fff;border-radius:var(--radius);padding:2.4rem;text-align:center;box-shadow:var(--shadow);}
+.success.show{display:block;animation:fade .4s ease;}
+.success .badge{width:56px;height:56px;border-radius:50%;background:rgba(184,150,90,.18);display:grid;place-items:center;margin:0 auto 1.2rem;color:var(--or-lt);}
+.success h3{font-size:1.5rem;margin-bottom:.6rem;}
+.success p{color:rgba(255,255,255,.82);max-width:44ch;margin:0 auto;font-size:.95rem;}
+
+.side{position:sticky;top:1.5rem;display:grid;gap:1.4rem;}
+.card{background:var(--blanc);border:1px solid var(--brd);border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow-soft);}
+.card h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-weight:600;font-family:var(--it);margin-bottom:1.2rem;}
+.contact-row{padding:.85rem 0;border-bottom:1px solid var(--brd);}
+.contact-row:last-child{border-bottom:none;padding-bottom:0;}
+.contact-row:first-of-type{padding-top:0;}
+.contact-row .l{font-size:.78rem;color:var(--gris4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem;}
+.contact-row .v{font-size:.9rem;color:var(--bn);font-weight:600;}
+.contact-row .obj{font-size:.75rem;color:var(--gris4);margin-top:.15rem;}
+.contact-row a.v:hover{color:var(--bn3);}
+
+.addr{font-size:.88rem;color:var(--gris2);line-height:1.6;}
+.addr strong{color:var(--bn);display:block;margin-bottom:.3rem;font-size:.92rem;}
+.addr .note{color:var(--gris4);font-size:.8rem;margin-top:.4rem;display:block;}
+
+.member{display:flex;gap:.85rem;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--brd);}
+.member:last-child{border-bottom:none;padding-bottom:0;}
+.member:first-of-type{padding-top:0;}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--bn);color:var(--or-lt);display:grid;place-items:center;font-family:var(--fr);font-weight:600;font-size:.85rem;flex-shrink:0;letter-spacing:.02em;}
+.member .info .n{font-size:.88rem;font-weight:600;color:var(--bn);}
+.member .info .r{font-size:.76rem;color:var(--gris4);}
+
+.guidelines{background:var(--bn4);color:rgba(255,255,255,.82);}
+.guidelines h3{color:var(--or-lt);}
+.guideline{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start;padding:.7rem 0;font-size:.83rem;line-height:1.5;}
+.guideline .g-num{width:24px;height:24px;border-radius:50%;border:1px solid rgba(184,150,90,.5);color:var(--or-lt);display:grid;place-items:center;font-size:.75rem;font-weight:600;flex-shrink:0;font-family:var(--fr);}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;gap:2.5rem;}
+  .side{position:static;}
+  .routes{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+  .grid-2{grid-template-columns:1fr;}
+  .routes{grid-template-columns:1fr;}
+  .hero .wrap{padding:3.2rem 0 3rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+
 /* footer */
 footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
@@ -177,8 +202,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .scroll-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:var(--tr);}
 .scroll-top:hover{background:var(--or-lt);}
 .scroll-top.vis{display:flex;}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:2px;}
 </style>
-<!-- Google Analytics GA4 -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
@@ -199,7 +224,6 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <span>Droit · Finance · Arbitrage · Afrique</span>
       </div>
       <div class="tb-r">
-        
         <div class="tb-lnk">
           <a href="contact">Contact</a>
           <a href="interviews">Interviews</a>
@@ -238,429 +262,281 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 </header>
 
 <!-- Hero -->
-<section class="contact-hero">
-  <div class="container">
-    <div class="sec-eyebrow"><span>Nous écrire</span></div>
-    <h1>Contact & Soumissions</h1>
-    <p>Proposez une tribune, suggérez un sujet d'interview, établissez un partenariat ou contactez simplement notre rédaction.</p>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Nous écrire</span>
+    <h1>Contact &amp; soumissions</h1>
+    <p>Proposez une tribune, suggérez un sujet d'interview, établissez un partenariat ou adressez une demande à notre rédaction. Choisissez votre parcours ci-dessous.</p>
+
+    <div class="routes">
+      <button class="route active" data-panel="tribune">
+        <span class="num">01</span>
+        <strong>Proposer une tribune</strong>
+        <span class="d">Soumettre une analyse ou une prise de position</span>
+        <span class="arrow">→</span>
+      </button>
+      <button class="route" data-panel="interview">
+        <span class="num">02</span>
+        <strong>Proposer une interview</strong>
+        <span class="d">Suggérer un expert ou demander à être interviewé</span>
+        <span class="arrow">→</span>
+      </button>
+      <button class="route" data-panel="partenariat">
+        <span class="num">03</span>
+        <strong>Partenariat</strong>
+        <span class="d">Collaboration éditoriale ou institutionnelle</span>
+        <span class="arrow">→</span>
+      </button>
+      <button class="route" data-panel="general">
+        <span class="num">04</span>
+        <strong>Contact général</strong>
+        <span class="d">Toute autre demande à la rédaction</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
   </div>
 </section>
 
-<!-- Contact type selector -->
-<div class="contact-types" id="ctypes">
-  <div class="ctype active" data-form="tribune">
-    <div class="ctype-icon"><i class="fas fa-pen-nib"></i></div>
-    <div class="ctype-label">Proposer une tribune</div>
-    <div class="ctype-desc">Soumettre une analyse ou une prise de position</div>
-  </div>
-  <div class="ctype" data-form="interview">
-    <div class="ctype-icon"><i class="fas fa-microphone-alt"></i></div>
-    <div class="ctype-label">Proposer une interview</div>
-    <div class="ctype-desc">Suggérer un expert ou demander à être interviewé</div>
-  </div>
-  <div class="ctype" data-form="partenariat">
-    <div class="ctype-icon"><i class="fas fa-handshake"></i></div>
-    <div class="ctype-label">Partenariat</div>
-    <div class="ctype-desc">Collaboration éditoriale ou institutionnelle</div>
-  </div>
-  <div class="ctype" data-form="general">
-    <div class="ctype-icon"><i class="fas fa-envelope"></i></div>
-    <div class="ctype-label">Contact général</div>
-    <div class="ctype-desc">Toute autre demande à la rédaction</div>
-  </div>
-</div>
+<main>
+  <div class="wrap layout">
+    <div class="content">
 
-<!-- Main content -->
-<div class="container">
-  <div class="contact-layout">
-    <main>
-
-      <!-- Form: Tribune -->
-      <div class="form-section active" id="form-tribune">
-        <div class="form-header">
+      <!-- ===== TRIBUNE ===== -->
+      <section class="panel active" id="panel-tribune">
+        <div class="panel-head">
+          <div class="kicker">Parcours 01</div>
           <h2>Soumettre une tribune</h2>
           <p>Neybras accueille les contributions de juristes, avocats, économistes et experts reconnus. Toute soumission est examinée par notre comité éditorial sous 5 jours ouvrables.</p>
         </div>
-
-        <div class="form-note">
-          <p><strong>Critères éditoriaux :</strong> La tribune doit porter sur une problématique juridique ou financière d'actualité, présenter une argumentation originale (3 000 à 8 000 mots), et être rédigée en français. Les contenus publicitaires ou promotionnels ne sont pas acceptés.</p>
+        <div class="criteria">
+          <strong>Critères éditoriaux —</strong> la tribune doit porter sur une problématique juridique ou financière d'actualité, présenter une argumentation originale (3 000 à 8 000 mots) et être rédigée en français. Les contenus publicitaires ou promotionnels ne sont pas acceptés.
         </div>
-
-        <form id="tribune-form" style="margin-top:28px;">
-          <div class="form-grid">
-            <div class="field">
-              <label>Prénom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre prénom" required/>
-            </div>
-            <div class="field">
-              <label>Nom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre nom" required/>
-            </div>
-            <div class="field">
-              <label>E-mail <span class="req">*</span></label>
-              <input type="email" placeholder="vous@cabinet.ma" required/>
-            </div>
-            <div class="field">
-              <label>Téléphone</label>
-              <input type="tel" placeholder="+212 6XX XXX XXX"/>
-            </div>
-            <div class="field">
-              <label>Profession / Titre <span class="req">*</span></label>
-              <input type="text" placeholder="Avocat au barreau de…, Docteur en droit…" required/>
-            </div>
-            <div class="field">
-              <label>Cabinet / Institution</label>
-              <input type="text" placeholder="Nom du cabinet ou de l'université"/>
-            </div>
-            <div class="field span2">
-              <label>Rubrique proposée <span class="req">*</span></label>
-              <select required>
-                <option value="">— Sélectionner une rubrique —</option>
-                <option>Droit des affaires</option>
-                <option>Finance & Marchés</option>
-                <option>Arbitrage & ADR</option>
-                <option>Afrique & OHADA</option>
-                <option>Sport Business</option>
-                <option>Droit social</option>
-                <option>Droit fiscal</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="field span2">
-              <label>Titre proposé de la tribune <span class="req">*</span></label>
-              <input type="text" placeholder="Titre indicatif — peut être modifié à l'édition" required/>
-            </div>
-            <div class="field span2">
-              <label>Résumé / Problématique <span class="req">*</span></label>
-              <textarea placeholder="Présentez en 3 à 5 lignes la thèse centrale de votre tribune et son intérêt pour nos lecteurs." id="resume-txt" maxlength="800" required></textarea>
-              <div class="char-count"><span id="resume-cnt">0</span>/800</div>
-            </div>
+        <form id="form-tribune" novalidate>
+          <div class="grid-2">
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
           </div>
-
-          <div style="margin-top:18px;">
-            <label style="display:block;margin-bottom:10px;">Document <span class="req">*</span><br/><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:11px;color:var(--gris4);">Joignez votre tribune en version complète (Word, PDF)</span></label>
-            <label class="file-upload" for="file-tribune">
-              <i class="fas fa-cloud-upload-alt"></i>
-              <p><strong>Cliquer pour sélectionner</strong> ou glisser-déposer<br/>.docx, .doc, .pdf — max 10 Mo</p>
-              <input type="file" id="file-tribune" accept=".docx,.doc,.pdf"/>
+          <div class="grid-2">
+            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel"></div>
+          </div>
+          <div class="grid-2">
+            <div class="field"><label>Profession / Titre<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Cabinet / Institution</label><input type="text"></div>
+          </div>
+          <div class="field">
+            <label>Rubrique proposée<span class="req">*</span></label>
+            <select required>
+              <option value="">— Sélectionner une rubrique —</option>
+              <option>Droit des affaires</option>
+              <option>Finance &amp; Marchés</option>
+              <option>Arbitrage &amp; ADR</option>
+              <option>Afrique &amp; OHADA</option>
+              <option>Sport Business</option>
+              <option>Droit social</option>
+              <option>Droit fiscal</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field"><label>Titre proposé de la tribune<span class="req">*</span></label><input type="text" required></div>
+          <div class="field">
+            <label>Résumé / Problématique<span class="req">*</span></label>
+            <textarea maxlength="800" required data-counter></textarea>
+            <div class="counter">0 / 800</div>
+          </div>
+          <div class="field">
+            <label>Document<span class="req">*</span> <span class="hint">— joignez votre tribune complète (Word, PDF)</span></label>
+            <label class="dropzone">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M8 8l4-4 4 4M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
+              <div class="dz-main">Cliquer pour sélectionner</div>
+              <div class="dz-sub">ou glisser-déposer · .docx, .doc, .pdf — max 10 Mo</div>
+              <input type="file" accept=".docx,.doc,.pdf" hidden required>
+              <div class="fname"></div>
             </label>
           </div>
-
-          <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px;">
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-exclu" required/>
-              <label for="chk-exclu">Je certifie que cette tribune est originale, non publiée ailleurs, et que je dispose de tous les droits sur ce contenu. <span class="req">*</span></label>
-            </div>
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-cgu" required/>
-              <label for="chk-cgu">J'accepte les <a href="#">conditions de contribution</a> et la <a href="#">politique de confidentialité</a> de Neybras Magazine. <span class="req">*</span></label>
-            </div>
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-nl"/>
-              <label for="chk-nl">Je souhaite être informé(e) des actualités éditoriales et des prochains appels à contributions.</label>
-            </div>
-          </div>
-
-          <div style="margin-top:24px;">
-            <button type="submit" class="btn-submit">Envoyer ma soumission <i class="fas fa-arrow-right"></i></button>
-          </div>
+          <label class="check"><input type="checkbox" required><span>Je certifie que cette tribune est originale, non publiée ailleurs, et que je dispose de tous les droits sur ce contenu.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <label class="check"><input type="checkbox" required><span>J'accepte les <a href="#">conditions de contribution</a> et la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <label class="check"><input type="checkbox"><span>Je souhaite être informé(e) des actualités éditoriales et des prochains appels à contributions.</span></label>
+          <button type="submit" class="submit">Envoyer ma soumission</button>
         </form>
-
-        <div class="success-msg" id="success-tribune">
-          <i class="fas fa-check-circle"></i>
-          <h3>Tribune reçue !</h3>
+        <div class="success" id="success-tribune">
+          <div class="badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Tribune reçue</h3>
           <p>Notre comité éditorial examinera votre contribution sous 5 jours ouvrables. Vous recevrez une réponse à l'adresse indiquée.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Form: Interview -->
-      <div class="form-section" id="form-interview">
-        <div class="form-header">
+      <!-- ===== INTERVIEW ===== -->
+      <section class="panel" id="panel-interview">
+        <div class="panel-head">
+          <div class="kicker">Parcours 02</div>
           <h2>Proposer une interview</h2>
           <p>Vous souhaitez suggérer un expert à interviewer ou être vous-même interviewé par notre équipe ? Remplissez ce formulaire et nous vous contacterons rapidement.</p>
         </div>
-        <form id="interview-form">
-          <div class="form-grid">
-            <div class="field">
-              <label>Prénom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre prénom" required/>
-            </div>
-            <div class="field">
-              <label>Nom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre nom" required/>
-            </div>
-            <div class="field">
-              <label>E-mail <span class="req">*</span></label>
-              <input type="email" placeholder="vous@cabinet.ma" required/>
-            </div>
-            <div class="field">
-              <label>Téléphone</label>
-              <input type="tel" placeholder="+212 6XX XXX XXX"/>
-            </div>
-            <div class="field span2">
-              <label>Type de demande <span class="req">*</span></label>
-              <select required>
-                <option value="">— Sélectionner —</option>
-                <option>Je souhaite être interviewé(e)</option>
-                <option>Je suggère un expert à interviewer</option>
-              </select>
-            </div>
-            <div class="field span2">
-              <label>Nom et profil de l'expert (si suggestion) ou votre profil <span class="req">*</span></label>
-              <textarea placeholder="Présentez l'expert ou vous-même : domaine d'expertise, actualité pertinente, angle d'interview suggéré." style="min-height:120px;" required></textarea>
-            </div>
-            <div class="field span2">
-              <label>Thème / Angle proposé</label>
-              <input type="text" placeholder="Ex. : L'arbitrage OHADA après la réforme 2024"/>
-            </div>
+        <form id="form-interview" novalidate>
+          <div class="grid-2">
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
           </div>
-          <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-itw-cgu" required/>
-              <label for="chk-itw-cgu">J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine. <span class="req">*</span></label>
-            </div>
+          <div class="grid-2">
+            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel"></div>
           </div>
-          <div style="margin-top:24px;">
-            <button type="submit" class="btn-submit">Envoyer ma proposition <i class="fas fa-arrow-right"></i></button>
+          <div class="field">
+            <label>Type de demande<span class="req">*</span></label>
+            <select required>
+              <option value="">— Sélectionner —</option>
+              <option>Je souhaite être interviewé(e)</option>
+              <option>Je suggère un expert à interviewer</option>
+            </select>
           </div>
+          <div class="field"><label>Nom et profil de l'expert (si suggestion) ou votre profil<span class="req">*</span></label><textarea required></textarea></div>
+          <div class="field"><label>Thème / Angle proposé</label><input type="text"></div>
+          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <button type="submit" class="submit">Envoyer ma proposition</button>
         </form>
-        <div class="success-msg" id="success-interview">
-          <i class="fas fa-check-circle"></i>
-          <h3>Proposition reçue !</h3>
+        <div class="success" id="success-interview">
+          <div class="badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Proposition reçue</h3>
           <p>Notre équipe éditoriale étudiera votre proposition et vous contactera dans les meilleurs délais.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Form: Partenariat -->
-      <div class="form-section" id="form-partenariat">
-        <div class="form-header">
+      <!-- ===== PARTENARIAT ===== -->
+      <section class="panel" id="panel-partenariat">
+        <div class="panel-head">
+          <div class="kicker">Parcours 03</div>
           <h2>Établir un partenariat</h2>
           <p>Cabinets d'avocats, institutions académiques, organisations professionnelles, centres d'arbitrage — Neybras est ouvert aux collaborations éditoriales et institutionnelles.</p>
         </div>
-        <form id="partenariat-form">
-          <div class="form-grid">
-            <div class="field">
-              <label>Prénom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre prénom" required/>
-            </div>
-            <div class="field">
-              <label>Nom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre nom" required/>
-            </div>
-            <div class="field">
-              <label>Organisation <span class="req">*</span></label>
-              <input type="text" placeholder="Nom de l'organisation" required/>
-            </div>
-            <div class="field">
-              <label>Fonction <span class="req">*</span></label>
-              <input type="text" placeholder="Votre titre ou rôle" required/>
-            </div>
-            <div class="field">
-              <label>E-mail professionnel <span class="req">*</span></label>
-              <input type="email" placeholder="contact@organisation.ma" required/>
-            </div>
-            <div class="field">
-              <label>Téléphone</label>
-              <input type="tel" placeholder="+212 5XX XXX XXX"/>
-            </div>
-            <div class="field span2">
-              <label>Type de partenariat souhaité <span class="req">*</span></label>
-              <select required>
-                <option value="">— Sélectionner —</option>
-                <option>Partenariat éditorial (co-publication)</option>
-                <option>Partenariat académique</option>
-                <option>Sponsoring de contenu</option>
-                <option>Événement / Conférence</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="field span2">
-              <label>Description du projet <span class="req">*</span></label>
-              <textarea placeholder="Décrivez votre proposition de partenariat, les objectifs et le calendrier envisagé." style="min-height:140px;" required></textarea>
-            </div>
+        <form id="form-partenariat" novalidate>
+          <div class="grid-2">
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
           </div>
-          <div style="margin-top:20px;">
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-part-cgu" required/>
-              <label for="chk-part-cgu">J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine. <span class="req">*</span></label>
-            </div>
+          <div class="grid-2">
+            <div class="field"><label>Organisation<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Fonction<span class="req">*</span></label><input type="text" required></div>
           </div>
-          <div style="margin-top:24px;">
-            <button type="submit" class="btn-submit">Envoyer ma demande <i class="fas fa-arrow-right"></i></button>
+          <div class="grid-2">
+            <div class="field"><label>E-mail professionnel<span class="req">*</span></label><input type="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel"></div>
           </div>
+          <div class="field">
+            <label>Type de partenariat souhaité<span class="req">*</span></label>
+            <select required>
+              <option value="">— Sélectionner —</option>
+              <option>Partenariat éditorial (co-publication)</option>
+              <option>Partenariat académique</option>
+              <option>Sponsoring de contenu</option>
+              <option>Événement / Conférence</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field"><label>Description du projet<span class="req">*</span></label><textarea required></textarea></div>
+          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <button type="submit" class="submit">Envoyer ma demande</button>
         </form>
-        <div class="success-msg" id="success-partenariat">
-          <i class="fas fa-check-circle"></i>
-          <h3>Demande reçue !</h3>
+        <div class="success" id="success-partenariat">
+          <div class="badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Demande reçue</h3>
           <p>Notre équipe vous contactera sous 48 heures ouvrables pour donner suite à votre proposition.</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Form: General -->
-      <div class="form-section" id="form-general">
-        <div class="form-header">
+      <!-- ===== GÉNÉRAL ===== -->
+      <section class="panel" id="panel-general">
+        <div class="panel-head">
+          <div class="kicker">Parcours 04</div>
           <h2>Contact général</h2>
           <p>Une question, une correction, un signalement ou toute autre demande ? Notre équipe vous répondra dans les 2 jours ouvrables.</p>
         </div>
-        <form id="general-form">
-          <div class="form-grid">
-            <div class="field">
-              <label>Prénom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre prénom" required/>
-            </div>
-            <div class="field">
-              <label>Nom <span class="req">*</span></label>
-              <input type="text" placeholder="Votre nom" required/>
-            </div>
-            <div class="field span2">
-              <label>E-mail <span class="req">*</span></label>
-              <input type="email" placeholder="vous@exemple.com" required/>
-            </div>
-            <div class="field span2">
-              <label>Objet <span class="req">*</span></label>
-              <select required>
-                <option value="">— Sélectionner l'objet —</option>
-                <option>Question éditoriale</option>
-                <option>Correction ou signalement d'erreur</option>
-                <option>Abonnement / Facturation</option>
-                <option>Presse et médias</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="field span2">
-              <label>Message <span class="req">*</span></label>
-              <textarea placeholder="Votre message…" required></textarea>
-            </div>
+        <form id="form-general" novalidate>
+          <div class="grid-2">
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
           </div>
-          <div style="margin-top:20px;">
-            <div class="checkbox-row">
-              <input type="checkbox" id="chk-gen-cgu" required/>
-              <label for="chk-gen-cgu">J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine. <span class="req">*</span></label>
-            </div>
+          <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
+          <div class="field">
+            <label>Objet<span class="req">*</span></label>
+            <select required>
+              <option value="">— Sélectionner l'objet —</option>
+              <option>Question éditoriale</option>
+              <option>Correction ou signalement d'erreur</option>
+              <option>Abonnement / Facturation</option>
+              <option>Presse et médias</option>
+              <option>Autre</option>
+            </select>
           </div>
-          <div style="margin-top:24px;">
-            <button type="submit" class="btn-submit">Envoyer mon message <i class="fas fa-arrow-right"></i></button>
-          </div>
+          <div class="field"><label>Message<span class="req">*</span></label><textarea required></textarea></div>
+          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <button type="submit" class="submit">Envoyer mon message</button>
         </form>
-        <div class="success-msg" id="success-general">
-          <i class="fas fa-check-circle"></i>
-          <h3>Message envoyé !</h3>
+        <div class="success" id="success-general">
+          <div class="badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Message envoyé</h3>
           <p>Nous vous répondrons sous 2 jours ouvrables à l'adresse indiquée.</p>
         </div>
-      </div>
+      </section>
 
-    </main>
+    </div>
 
-    <!-- Sidebar -->
-    <aside>
-
-      <!-- Contact info -->
-      <div class="sw">
-        <div class="sw-title">Coordonnées</div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-          <div class="ci-body">
-            <div class="ci-label">Rédaction & Tribunes</div>
-            <div class="ci-value">redaction@neybras-magazine.com</div>
-            <div class="ci-note">Objet : [Proposition de Tribune]</div>
-          </div>
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="side">
+      <div class="card">
+        <h3>Coordonnées</h3>
+        <div class="contact-row">
+          <div class="l">Rédaction &amp; Tribunes</div>
+          <a class="v" href="mailto:redaction@neybras-magazine.com">redaction@neybras-magazine.com</a>
+          <div class="obj">Objet : [Proposition de Tribune]</div>
         </div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="fas fa-handshake"></i></div>
-          <div class="ci-body">
-            <div class="ci-label">Partenariats & Publicité</div>
-            <div class="ci-value">marketing@neybras-magazine.com</div>
-            <div class="ci-note">Objet : [Partenariat Premium]</div>
-          </div>
+        <div class="contact-row">
+          <div class="l">Partenariats &amp; Publicité</div>
+          <a class="v" href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
+          <div class="obj">Objet : [Partenariat Premium]</div>
         </div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="fas fa-user"></i></div>
-          <div class="ci-body">
-            <div class="ci-label">Abonnements</div>
-            <div class="ci-value">marketing@neybras-magazine.com</div>
-            <div class="ci-note">Objet : [Abonnement Hebdo]</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="ci-body">
-            <div class="ci-label">Adresse</div>
-            <div class="ci-value">Neybras Magazine</div>
-            <div class="ci-note">Boulevard Zerktouni, Casablanca, Maroc 20000 · Sur rendez-vous uniquement</div>
-          </div>
+        <div class="contact-row">
+          <div class="l">Abonnements</div>
+          <a class="v" href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
+          <div class="obj">Objet : [Abonnement Hebdo]</div>
         </div>
       </div>
 
-      <!-- Team -->
-      <div class="sw">
-        <div class="sw-title">Équipe éditoriale</div>
-        <div class="team-item">
-          <span style="width:42px;height:42px;border-radius:50%;background:#0E3D52;border:2px solid rgba(184,150,90,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;">NE</span>
-          <div class="team-info">
-            <div class="team-name">Nadia El Fassi</div>
-            <div class="team-role">Directrice de la rédaction</div>
-            <div class="team-email">redaction@neybras-magazine.com</div>
-          </div>
-        </div>
-        <div class="team-item">
-          <span style="width:42px;height:42px;border-radius:50%;background:#1a5c3a;border:2px solid rgba(184,150,90,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;">KB</span>
-          <div class="team-info">
-            <div class="team-name">Karim Bensouda</div>
-            <div class="team-role">Rédacteur en chef adjoint</div>
-            <div class="team-email">redaction@neybras-magazine.com</div>
-          </div>
-        </div>
-        <div class="team-item">
-          <span style="width:42px;height:42px;border-radius:50%;background:#4a1a5c;border:2px solid rgba(184,150,90,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;">IT</span>
-          <div class="team-info">
-            <div class="team-name">Imane Tahiri</div>
-            <div class="team-role">Secrétaire de rédaction</div>
-            <div class="team-email">redaction@neybras-magazine.com</div>
-          </div>
+      <div class="card">
+        <h3>Adresse</h3>
+        <div class="addr">
+          <strong>Neybras Magazine</strong>
+          Boulevard Zerktouni, Casablanca, Maroc 20000
+          <span class="note">Sur rendez-vous uniquement</span>
         </div>
       </div>
 
-      <!-- Tribune guidelines -->
-      <div class="sw">
-        <div class="sw-title">Directives tribunes</div>
-        <div class="guide-list">
-          <div class="guide-item">
-            <div class="guide-num">1</div>
-            <div class="guide-text">3 000 à 8 000 mots, en français, avec notes de bas de page si nécessaire</div>
-          </div>
-          <div class="guide-item">
-            <div class="guide-num">2</div>
-            <div class="guide-text">L'auteur doit être un praticien ou chercheur identifiable avec affiliation vérifiable</div>
-          </div>
-          <div class="guide-item">
-            <div class="guide-num">3</div>
-            <div class="guide-text">Contenu original, non publié sur d'autres supports dans les 6 mois précédents</div>
-          </div>
-          <div class="guide-item">
-            <div class="guide-num">4</div>
-            <div class="guide-text">Aucun contenu à caractère publicitaire ou promotionnel n'est accepté</div>
-          </div>
-          <div class="guide-item">
-            <div class="guide-num">5</div>
-            <div class="guide-text">La rédaction se réserve le droit d'éditer pour la longueur, le style et la clarté</div>
-          </div>
+      <div class="card">
+        <h3>Équipe éditoriale</h3>
+        <div class="member">
+          <div class="avatar">NE</div>
+          <div class="info"><div class="n">Nadia El Fassi</div><div class="r">Directrice de la rédaction</div></div>
+        </div>
+        <div class="member">
+          <div class="avatar">KB</div>
+          <div class="info"><div class="n">Karim Bensouda</div><div class="r">Rédacteur en chef adjoint</div></div>
+        </div>
+        <div class="member">
+          <div class="avatar">IT</div>
+          <div class="info"><div class="n">Imane Tahiri</div><div class="r">Secrétaire de rédaction</div></div>
         </div>
       </div>
 
-      <!-- Social -->
-      <div class="sw">
-        <div class="sw-title">Nous suivre</div>
-        <div class="soc-grid">
-          <a href="#" class="soc-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="#" class="soc-btn twitter"><i class="fab fa-x-twitter"></i> X / Twitter</a>
-          <a href="#" class="soc-btn"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="#" class="soc-btn"><i class="fab fa-youtube"></i> YouTube</a>
-        </div>
+      <div class="card guidelines">
+        <h3>Directives tribunes</h3>
+        <div class="guideline"><span class="g-num">1</span><span>L'auteur doit être un praticien ou chercheur identifiable, avec affiliation vérifiable.</span></div>
+        <div class="guideline"><span class="g-num">2</span><span>Contenu original, non publié sur d'autres supports dans les 6 mois précédents.</span></div>
+        <div class="guideline"><span class="g-num">3</span><span>Aucun contenu à caractère publicitaire ou promotionnel n'est accepté.</span></div>
+        <div class="guideline"><span class="g-num">4</span><span>La rédaction se réserve le droit d'éditer pour la longueur, le style et la clarté.</span></div>
       </div>
-
     </aside>
   </div>
-</div>
+</main>
 
 <!-- Footer -->
 <footer>
@@ -671,10 +547,9 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="logo-tag">Le média qui connecte les idées aux décideurs</div>
         <p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage international et droit africain — pensée par des praticiens, pour des praticiens.</p>
         <div class="ft-soc">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="https://linkedin.com/company/neybrasfamily/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/neybrasfamily" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://web.facebook.com/profile.php?id=61580744324089" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
       <div>
@@ -711,9 +586,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="ft-bottom">
       <span class="ft-copy">© 2026 Neybras Magazine — Tous droits réservés</span>
       <div class="ft-legal">
-        <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
-        <a href="#">CGU</a>
+        <a href="mentions-legales">Mentions légales</a>
+        <a href="mentions-legales">Confidentialité</a>
       </div>
     </div>
   </div>
@@ -722,54 +596,65 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
 <script>
-// contact type tabs
-document.querySelectorAll('.ctype').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.ctype').forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const target=tab.dataset.form;
-    document.querySelectorAll('.form-section').forEach(f=>f.classList.remove('active'));
-    document.getElementById('form-'+target).classList.add('active');
+// Route switching, char counter, file name, form submit (front-end — voir Formspree à brancher)
+const routes=document.querySelectorAll('.route');
+const panels=document.querySelectorAll('.panel');
+routes.forEach(r=>r.addEventListener('click',()=>{
+  routes.forEach(x=>x.classList.remove('active'));
+  panels.forEach(x=>x.classList.remove('active'));
+  r.classList.add('active');
+  document.getElementById('panel-'+r.dataset.panel).classList.add('active');
+  document.querySelector('main').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+
+document.querySelectorAll('[data-counter]').forEach(t=>{
+  const c=t.parentElement.querySelector('.counter');
+  t.addEventListener('input',()=>c.textContent=`${t.value.length} / ${t.maxLength}`);
+});
+
+document.querySelectorAll('.dropzone input[type=file]').forEach(inp=>{
+  inp.addEventListener('change',()=>{
+    const f=inp.parentElement.querySelector('.fname');
+    f.textContent=inp.files.length?'✓ '+inp.files[0].name:'';
   });
 });
 
-// char counter
-const resumeTxt=document.getElementById('resume-txt');
-const resumeCnt=document.getElementById('resume-cnt');
-if(resumeTxt){
-  resumeTxt.addEventListener('input',()=>{
-    resumeCnt.textContent=resumeTxt.value.length;
-  });
-}
-
-// form submissions (mock)
-['tribune','interview','partenariat','general'].forEach(id=>{
-  const form=document.getElementById(id+'-form');
-  if(!form)return;
-  form.addEventListener('submit',e=>{
+const FORM_SUBJECTS={
+  tribune:"Nouvelle tribune proposée — Neybras Magazine",
+  interview:"Proposition d'interview — Neybras Magazine",
+  partenariat:"Demande de partenariat — Neybras Magazine",
+  general:"Contact général — Neybras Magazine"
+};
+document.querySelectorAll('form').forEach(form=>{
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
-    form.style.display='none';
-    const msg=document.getElementById('success-'+id);
-    if(msg){msg.style.display='block';}
-  });
-});
-
-// file upload label feedback
-const fileInput=document.getElementById('file-tribune');
-if(fileInput){
-  fileInput.addEventListener('change',()=>{
-    const label=fileInput.parentElement;
-    if(fileInput.files.length>0){
-      label.querySelector('p').innerHTML='<strong>'+fileInput.files[0].name+'</strong><br/><span style="color:var(--or)">Fichier sélectionné ✓</span>';
+    if(!form.checkValidity()){form.reportValidity();return;}
+    const key=form.id.replace('form-','');
+    const btn=form.querySelector('.submit');
+    const orig=btn?btn.textContent:'';
+    if(btn){btn.textContent='Envoi…';btn.disabled=true;}
+    try{
+      const fd=new FormData(form);
+      fd.append('_subject',FORM_SUBJECTS[key]||'Contact — Neybras Magazine');
+      fd.append('_form',key);
+      const res=await fetch('https://formspree.io/f/mgoppdpg',{method:'POST',headers:{'Accept':'application/json'},body:fd});
+      if(res.ok){
+        form.style.display='none';
+        document.getElementById('success-'+key).classList.add('show');
+      }else{
+        if(btn){btn.textContent=orig;btn.disabled=false;}
+        alert("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à redaction@neybras-magazine.com.");
+      }
+    }catch(err){
+      if(btn){btn.textContent=orig;btn.disabled=false;}
+      alert("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à redaction@neybras-magazine.com.");
     }
   });
-}
-
-// scroll top
-const st=document.getElementById('scrollTop');
-window.addEventListener('scroll',()=>{
-  st.classList.toggle('vis',window.scrollY>400);
 });
+</script>
+<script>
+const st=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{st.classList.toggle('vis',window.scrollY>400);});
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 <script>
@@ -805,7 +690,3 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
-
-
-
-
