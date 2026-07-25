@@ -313,20 +313,20 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         </div>
         <form id="form-tribune" novalidate>
           <div class="grid-2">
-            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" name="Prénom" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" name="Nom" required></div>
           </div>
           <div class="grid-2">
-            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
-            <div class="field"><label>Téléphone</label><input type="tel"></div>
+            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" name="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel" name="Téléphone"></div>
           </div>
           <div class="grid-2">
-            <div class="field"><label>Profession / Titre<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Cabinet / Institution</label><input type="text"></div>
+            <div class="field"><label>Profession / Titre<span class="req">*</span></label><input type="text" name="Profession / Titre" required></div>
+            <div class="field"><label>Cabinet / Institution</label><input type="text" name="Cabinet / Institution"></div>
           </div>
           <div class="field">
             <label>Rubrique proposée<span class="req">*</span></label>
-            <select required>
+            <select name="Rubrique proposée" required>
               <option value="">— Sélectionner une rubrique —</option>
               <option>Droit des affaires</option>
               <option>Finance &amp; Marchés</option>
@@ -338,10 +338,10 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
               <option>Autre</option>
             </select>
           </div>
-          <div class="field"><label>Titre proposé de la tribune<span class="req">*</span></label><input type="text" required></div>
+          <div class="field"><label>Titre proposé de la tribune<span class="req">*</span></label><input type="text" name="Titre proposé" required></div>
           <div class="field">
             <label>Résumé / Problématique<span class="req">*</span></label>
-            <textarea maxlength="800" required data-counter></textarea>
+            <textarea name="Résumé / Problématique" maxlength="800" required data-counter></textarea>
             <div class="counter">0 / 800</div>
           </div>
           <div class="field">
@@ -350,13 +350,13 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M8 8l4-4 4 4M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
               <div class="dz-main">Cliquer pour sélectionner</div>
               <div class="dz-sub">ou glisser-déposer · .docx, .doc, .pdf — max 10 Mo</div>
-              <input type="file" accept=".docx,.doc,.pdf" hidden required>
+              <input type="file" name="Document" accept=".docx,.doc,.pdf" hidden required>
               <div class="fname"></div>
             </label>
           </div>
-          <label class="check"><input type="checkbox" required><span>Je certifie que cette tribune est originale, non publiée ailleurs, et que je dispose de tous les droits sur ce contenu.<span class="req" style="color:var(--or)"> *</span></span></label>
-          <label class="check"><input type="checkbox" required><span>J'accepte les <a href="#">conditions de contribution</a> et la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
-          <label class="check"><input type="checkbox"><span>Je souhaite être informé(e) des actualités éditoriales et des prochains appels à contributions.</span></label>
+          <label class="check"><input type="checkbox" name="Tribune originale et droits cédés" value="Oui" required><span>Je certifie que cette tribune est originale, non publiée ailleurs, et que je dispose de tous les droits sur ce contenu.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <label class="check"><input type="checkbox" name="Conditions acceptées" value="Oui" required><span>J'accepte les <a href="#">conditions de contribution</a> et la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <label class="check"><input type="checkbox" name="Souhaite recevoir les actualités" value="Oui"><span>Je souhaite être informé(e) des actualités éditoriales et des prochains appels à contributions.</span></label>
           <button type="submit" class="submit">Envoyer ma soumission</button>
         </form>
         <div class="success" id="success-tribune">
@@ -375,24 +375,24 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         </div>
         <form id="form-interview" novalidate>
           <div class="grid-2">
-            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" name="Prénom" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" name="Nom" required></div>
           </div>
           <div class="grid-2">
-            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
-            <div class="field"><label>Téléphone</label><input type="tel"></div>
+            <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" name="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel" name="Téléphone"></div>
           </div>
           <div class="field">
             <label>Type de demande<span class="req">*</span></label>
-            <select required>
+            <select name="Type de demande" required>
               <option value="">— Sélectionner —</option>
               <option>Je souhaite être interviewé(e)</option>
               <option>Je suggère un expert à interviewer</option>
             </select>
           </div>
-          <div class="field"><label>Nom et profil de l'expert (si suggestion) ou votre profil<span class="req">*</span></label><textarea required></textarea></div>
-          <div class="field"><label>Thème / Angle proposé</label><input type="text"></div>
-          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <div class="field"><label>Nom et profil de l'expert (si suggestion) ou votre profil<span class="req">*</span></label><textarea name="Profil de l'expert" required></textarea></div>
+          <div class="field"><label>Thème / Angle proposé</label><input type="text" name="Thème / Angle proposé"></div>
+          <label class="check"><input type="checkbox" name="Confidentialité acceptée" value="Oui" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
           <button type="submit" class="submit">Envoyer ma proposition</button>
         </form>
         <div class="success" id="success-interview">
@@ -411,20 +411,20 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         </div>
         <form id="form-partenariat" novalidate>
           <div class="grid-2">
-            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" name="Prénom" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" name="Nom" required></div>
           </div>
           <div class="grid-2">
-            <div class="field"><label>Organisation<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Fonction<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Organisation<span class="req">*</span></label><input type="text" name="Organisation" required></div>
+            <div class="field"><label>Fonction<span class="req">*</span></label><input type="text" name="Fonction" required></div>
           </div>
           <div class="grid-2">
-            <div class="field"><label>E-mail professionnel<span class="req">*</span></label><input type="email" required></div>
-            <div class="field"><label>Téléphone</label><input type="tel"></div>
+            <div class="field"><label>E-mail professionnel<span class="req">*</span></label><input type="email" name="email" required></div>
+            <div class="field"><label>Téléphone</label><input type="tel" name="Téléphone"></div>
           </div>
           <div class="field">
             <label>Type de partenariat souhaité<span class="req">*</span></label>
-            <select required>
+            <select name="Type de partenariat" required>
               <option value="">— Sélectionner —</option>
               <option>Partenariat éditorial (co-publication)</option>
               <option>Partenariat académique</option>
@@ -433,8 +433,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
               <option>Autre</option>
             </select>
           </div>
-          <div class="field"><label>Description du projet<span class="req">*</span></label><textarea required></textarea></div>
-          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <div class="field"><label>Description du projet<span class="req">*</span></label><textarea name="Description du projet" required></textarea></div>
+          <label class="check"><input type="checkbox" name="Confidentialité acceptée" value="Oui" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
           <button type="submit" class="submit">Envoyer ma demande</button>
         </form>
         <div class="success" id="success-partenariat">
@@ -453,13 +453,13 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         </div>
         <form id="form-general" novalidate>
           <div class="grid-2">
-            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" required></div>
-            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Prénom<span class="req">*</span></label><input type="text" name="Prénom" required></div>
+            <div class="field"><label>Nom<span class="req">*</span></label><input type="text" name="Nom" required></div>
           </div>
-          <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" required></div>
+          <div class="field"><label>E-mail<span class="req">*</span></label><input type="email" name="email" required></div>
           <div class="field">
             <label>Objet<span class="req">*</span></label>
-            <select required>
+            <select name="Objet" required>
               <option value="">— Sélectionner l'objet —</option>
               <option>Question éditoriale</option>
               <option>Correction ou signalement d'erreur</option>
@@ -468,8 +468,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
               <option>Autre</option>
             </select>
           </div>
-          <div class="field"><label>Message<span class="req">*</span></label><textarea required></textarea></div>
-          <label class="check"><input type="checkbox" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
+          <div class="field"><label>Message<span class="req">*</span></label><textarea name="Message" required></textarea></div>
+          <label class="check"><input type="checkbox" name="Confidentialité acceptée" value="Oui" required><span>J'accepte la <a href="#">politique de confidentialité</a> de Neybras Magazine.<span class="req" style="color:var(--or)"> *</span></span></label>
           <button type="submit" class="submit">Envoyer mon message</button>
         </form>
         <div class="success" id="success-general">
@@ -625,6 +625,24 @@ const FORM_SUBJECTS={
   partenariat:"Demande de partenariat — Neybras Magazine",
   general:"Contact général — Neybras Magazine"
 };
+const FS_ENDPOINT='https://formspree.io/f/mgoppdpg';
+
+function buildPayload(form,key,withFile){
+  const fd=new FormData();
+  new FormData(form).forEach((v,k)=>{
+    if(v instanceof File){
+      if(!v.name) return;
+      fd.append('Nom du fichier joint',v.name);
+      if(withFile) fd.append(k,v);
+    }else{
+      fd.append(k,v);
+    }
+  });
+  fd.append('_subject',FORM_SUBJECTS[key]||'Contact — Neybras Magazine');
+  fd.append('_form',key);
+  return fd;
+}
+
 document.querySelectorAll('form').forEach(form=>{
   form.addEventListener('submit',async e=>{
     e.preventDefault();
@@ -633,11 +651,12 @@ document.querySelectorAll('form').forEach(form=>{
     const btn=form.querySelector('.submit');
     const orig=btn?btn.textContent:'';
     if(btn){btn.textContent='Envoi…';btn.disabled=true;}
+    const post=fd=>fetch(FS_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:fd});
     try{
-      const fd=new FormData(form);
-      fd.append('_subject',FORM_SUBJECTS[key]||'Contact — Neybras Magazine');
-      fd.append('_form',key);
-      const res=await fetch('https://formspree.io/f/mgoppdpg',{method:'POST',headers:{'Accept':'application/json'},body:fd});
+      let res=await post(buildPayload(form,key,true));
+      // Les pièces jointes ne sont acceptées que sur les formules Formspree payantes :
+      // en cas de refus, on renvoie la soumission sans le fichier pour ne pas perdre le contact.
+      if(!res.ok) res=await post(buildPayload(form,key,false));
       if(res.ok){
         form.style.display='none';
         document.getElementById('success-'+key).classList.add('show');
