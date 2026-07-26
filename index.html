@@ -713,6 +713,14 @@ ul{list-style:none}
 .inf-label{font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
 .inf-sub{font-size:11px;color:rgba(255,255,255,.25);margin-top:5px;font-style:italic;font-family:var(--cg)}
 @media(max-width:680px){.influence-grid{grid-template-columns:repeat(2,1fr)}}
+/* Variante « piliers » : preuves de qualité (remplace les chiffres d'audience) */
+.influence-bar .inf-eyebrow{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(184,150,90,.6);margin-bottom:12px}
+.influence-bar .inf-h2{font-family:var(--pd);font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;color:var(--blanc);line-height:1.15;margin-bottom:12px}
+.influence-bar .inf-lede{font-family:var(--cg);font-size:1.15rem;color:rgba(255,255,255,.55);font-style:italic;max-width:620px;margin:0 auto}
+.influence-grid--pil .inf-item{text-align:left;padding:30px 26px}
+.pil-bar{width:32px;height:2px;background:var(--or);margin-bottom:18px}
+.pil-t{font-family:var(--pd);font-size:15.5px;font-weight:700;color:var(--blanc);margin-bottom:9px;line-height:1.3}
+.pil-d{font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.45)}
 </style>
 
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -1194,8 +1202,8 @@ ul{list-style:none}
         <!-- Pub -->
         <div class="pub-w reveal delay-2">
           <div class="pub-w-l">Espace partenaire premium</div>
-          <h4>Votre marque auprès des décideurs</h4>
-          <p>2 400 professionnels du droit et de la finance — une audience ciblée et engagée.</p>
+          <h4>Votre marque dans un environnement éditorial d'exception</h4>
+          <p>Une ligne premium lue par des décideurs du droit, de la finance et de la gouvernance au Maroc et en Afrique francophone.</p>
           <a href="contact">Télécharger le Média Kit</a>
         </div>
 
@@ -1400,34 +1408,35 @@ ul{list-style:none}
 </section>
 
 <!-- ══════════════════════════════════════════════
-     BANDEAU INFLUENCE — CHIFFRES DÉCIDEURS
+     BANDEAU LIGNE ÉDITORIALE — UNE RÉDACTION DE PRATICIENS
 ══════════════════════════════════════════════ -->
-<section class="influence-bar" aria-label="Chiffres d'influence">
+<section class="influence-bar" aria-labelledby="redaction-t">
   <div class="container">
-    <div style="text-align:center;margin-bottom:28px">
-      <div style="font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,168,76,.55);margin-bottom:10px">L'audience qui décide</div>
-      <p style="font-family:var(--cg);font-size:1.15rem;color:rgba(255,255,255,.55);font-style:italic">Une communauté de professionnels du droit, de la finance et de la gouvernance</p>
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="inf-eyebrow">Ligne éditoriale</div>
+      <h2 class="inf-h2" id="redaction-t">Une rédaction de praticiens</h2>
+      <p class="inf-lede">Le droit et la finance analysés par ceux qui les pratiquent, pas par ceux qui les commentent.</p>
     </div>
-    <div class="influence-grid reveal">
+    <div class="influence-grid influence-grid--pil reveal">
       <div class="inf-item">
-        <span class="inf-num">2 400</span>
-        <div class="inf-label">Lecteurs mensuels</div>
-        <div class="inf-sub">Maroc &amp; Afrique francophone</div>
+        <div class="pil-bar"></div>
+        <div class="pil-t">Praticiens en exercice</div>
+        <p class="pil-d">Avocats, arbitres et fiscalistes qui écrivent depuis leur pratique réelle — pas de théorie.</p>
       </div>
       <div class="inf-item">
-        <span class="inf-num">12</span>
-        <div class="inf-label">Analyses publiées</div>
-        <div class="inf-sub">par des experts en exercice</div>
+        <div class="pil-bar"></div>
+        <div class="pil-t">Analyses actionnables</div>
+        <p class="pil-d">Chaque publication répond à une question concrète de décideur : que faire, quels risques, comment se positionner.</p>
       </div>
       <div class="inf-item">
-        <span class="inf-num">18</span>
-        <div class="inf-label">Experts contributeurs</div>
-        <div class="inf-sub">avocats, arbitres, financiers</div>
+        <div class="pil-bar"></div>
+        <div class="pil-t">Maroc &amp; Afrique francophone</div>
+        <p class="pil-d">Droit OHADA, fiscalité marocaine, arbitrage CIRDI, finance participative : les sujets réellement recherchés.</p>
       </div>
       <div class="inf-item">
-        <span class="inf-num">5+</span>
-        <div class="inf-label">Pays couverts</div>
-        <div class="inf-sub">Afrique &amp; international</div>
+        <div class="pil-bar"></div>
+        <div class="pil-t">Veille réglementaire</div>
+        <p class="pil-d">BAM, AMMC, CNDP, OHADA suivis en continu pour alerter sur les changements qui comptent.</p>
       </div>
     </div>
   </div>
