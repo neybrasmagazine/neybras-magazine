@@ -21,7 +21,10 @@
       try{ if(typeof window.brevoAdd==='function'){window.brevoAdd(email);} }catch(_){}
       fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'Lead-magnet — Newsletter Neybras Magazine'})})
         .catch(function(){})
-        .then(function(){ deliver(form,pdf); });
+        .then(function(){
+          if(typeof gtag==='function')gtag('event','newsletter_signup',{form_name:'lead_magnet'});
+          deliver(form,pdf);
+        });
     });
   }
   document.querySelectorAll('form.lnl-form').forEach(handle);
