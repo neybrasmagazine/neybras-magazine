@@ -212,6 +212,28 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .scroll-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:var(--tr);}
 .scroll-top:hover{background:var(--or-lt);}
 .scroll-top.vis{display:flex;}
+/* responsive */
+@media (max-width: 1100px) {
+  .sec-layout { grid-template-columns: 1fr; gap: 36px; }
+  .sec-layout > aside { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+@media (max-width: 768px) {
+  .trib-grid { grid-template-columns: 1fr; }
+  .sec-layout > aside { grid-template-columns: 1fr; }
+  .ft-grid { grid-template-columns: 1fr; }
+  .feat-trib-img { height: 240px; }
+  .feat-trib-overlay { padding: 20px 22px; }
+  .trib-list-header { flex-wrap: wrap; }
+  .ft-bottom { flex-direction: column; gap: 14px; text-align: center; }
+  .ft-legal { flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 520px) {
+  .container { padding: 0 18px; }
+  .tlist-item { gap: 12px; }
+  .tlist-num { font-size: 18px; }
+  .tb-l, .tb-lnk { display: none; }
+}
 </style>
 <!-- Google Analytics GA4 -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -252,7 +274,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div></div></a>
       <div class="hd-act">
         <button class="btn-srch"><i class="fas fa-search"></i></button>
-        <a href="#" class="btn-abo">S'abonner</a>
+        <a href="newsletter" class="btn-abo">S'abonner</a>
       </div>
     </div>
   </div>
@@ -663,18 +685,18 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="ft-links">
           <a href="interviews">Interviews</a>
           <a href="tribunes">Tribunes</a>
-          <a href="#">Dossiers spéciaux</a>
+          <a href="analyses">Dossiers spéciaux</a>
           <a href="#">Jurisprudence</a>
-          <a href="#">Agenda juridique</a>
+          <a href="evenements">Agenda juridique</a>
         </div>
       </div>
       <div>
         <div class="ft-col-title">À propos</div>
         <div class="ft-links">
           <a href="contact">Contact</a>
-          <a href="#">Équipe éditoriale</a>
-          <a href="#">Mentions légales</a>
-          <a href="#">Politique de confidentialité</a>
+          <a href="equipe">Équipe éditoriale</a>
+          <a href="mentions-legales">Mentions légales</a>
+          <a href="politique-confidentialite">Politique de confidentialité</a>
           <a href="#">Conditions d'utilisation</a>
         </div>
       </div>
@@ -682,8 +704,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="ft-bottom">
       <span class="ft-copy">© 2026 Neybras Magazine — Tous droits réservés</span>
       <div class="ft-legal">
-        <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
+        <a href="mentions-legales">Mentions légales</a>
+        <a href="politique-confidentialite">Confidentialité</a>
         <a href="#">CGU</a>
       </div>
     </div>
