@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -728,6 +723,8 @@ ul{list-style:none}
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
 <meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -1450,7 +1447,7 @@ ul{list-style:none}
     <div class="doss-mosaic reveal">
       <!-- Dossier principal -->
       <a href="article-ppp-afrique" class="doss-feature">
-        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="PPP Afrique investissement infrastructure" loading="lazy"/>
+        <img src="images/ppp-afrique-investissement-infrastructure.jpg" alt="PPP Afrique investissement infrastructure" loading="lazy" width="1600" height="1068"/>
         <div class="doss-feature-body">
           <div class="doss-badge">Dossier phare · Investissement Afrique</div>
           <h2 class="doss-h1">PPP en Afrique : pourquoi les projets échouent et comment les structurer autrement</h2>
@@ -1464,7 +1461,7 @@ ul{list-style:none}
       <!-- Dossier secondaire -->
       <div>
         <a href="article-ohada-suretes" class="doss-sm" style="display:block;margin-bottom:3px">
-          <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800" alt="OHADA sûretés droit africain" loading="lazy"/>
+          <img src="images/droit-du-travail-marocain-reforme-du-code-du.jpg" alt="OHADA sûretés droit africain" loading="lazy" width="1600" height="1067"/>
           <div class="doss-sm-body">
             <div class="doss-badge">OHADA · Sûretés</div>
             <h3 class="doss-h2">L'Acte uniforme révisé sur les sûretés : opportunité stratégique pour les prêteurs marocains</h3>
@@ -1472,7 +1469,7 @@ ul{list-style:none}
           </div>
         </a>
         <a href="article-zlecaf" class="doss-sm" style="display:block">
-          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ZLECAf commerce africain" loading="lazy"/>
+          <img src="images/zlecaf-harmonisation-juridique-echanges.jpg" alt="ZLECAf commerce africain" loading="lazy" width="1600" height="1067"/>
           <div class="doss-sm-body">
             <div class="doss-badge">ZLECAf · Commerce</div>
             <h3 class="doss-h2">ZLECAf : ce que le Maroc négocie vraiment — souveraineté réglementaire et arbitrage</h3>
@@ -1484,7 +1481,7 @@ ul{list-style:none}
     <!-- 3 dossiers du bas -->
     <div class="doss-row reveal">
       <a href="article-cirdi-maroc" class="doss-mini">
-        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Arbitrage CIRDI Maroc" loading="lazy"/>
+        <img src="images/arbitrage-international-cirdi-salle-d-audience.jpg" alt="Arbitrage CIRDI Maroc" loading="lazy" width="1600" height="1067"/>
         <div class="doss-mini-body">
           <div class="doss-badge">Arbitrage · CIRDI</div>
           <h4 class="doss-h3">CIRDI : le Maroc consolide sa jurisprudence sur la protection des investissements</h4>
@@ -1492,7 +1489,7 @@ ul{list-style:none}
         </div>
       </a>
       <a href="article-cfc-nairobi" class="doss-mini">
-        <img src="https://images.pexels.com/photos/374912/pexels-photo-374912.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Finance Casablanca hub Afrique" loading="lazy"/>
+        <img src="images/finance-casablanca-hub-afrique.jpg" alt="Finance Casablanca hub Afrique" loading="lazy" width="1600" height="1067"/>
         <div class="doss-mini-body">
           <div class="doss-badge">Finance · Hubs africains</div>
           <h4 class="doss-h3">CFC vs Nairobi vs Johannesburg : le comparatif juridique et fiscal</h4>
@@ -1500,7 +1497,7 @@ ul{list-style:none}
         </div>
       </a>
       <a href="article-ia-cndp" class="doss-mini">
-        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Intelligence artificielle régulation Maroc" loading="lazy"/>
+        <img src="images/intelligence-artificielle-regulation-maroc.jpg" alt="Intelligence artificielle régulation Maroc" loading="lazy" width="1600" height="1067"/>
         <div class="doss-mini-body">
           <div class="doss-badge">IA · Données</div>
           <h4 class="doss-h3">IA générative et loi 09-08 : la CNDP peut-elle sanctionner les opérateurs marocains ?</h4>
@@ -1798,7 +1795,7 @@ ul{list-style:none}
         </a>
         <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl">
           <div class="pl-logo">
-            <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="Neybras Family Magazine" loading="lazy"/>
+            <img src="images/neybras-family-magazine.png" alt="Neybras Family Magazine" loading="lazy" width="1600" height="1600"/>
           </div>
           <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras-family.com</div>
         </a>
@@ -1820,7 +1817,7 @@ ul{list-style:none}
         </a>
         <a href="https://www.neybras-family.com/" target="_blank" rel="noopener" class="pl" aria-hidden="true" tabindex="-1">
           <div class="pl-logo">
-            <img src="https://storage.ghost.io/c/0c/5a/0c5afe5e-0fca-4f19-aa99-a24dbdd29d7b/content/images/2026/04/Grey-Modern-Geometric-Illustrative-Data-Science-and-Technology-Logo--1-.png" alt="" loading="lazy"/>
+            <img src="images/neybras-family-magazine.png" alt="" loading="lazy" width="1600" height="1600"/>
           </div>
           <div class="pl-url"><i class="fas fa-arrow-up-right-from-square"></i> neybras-family.com</div>
         </a>
@@ -1876,9 +1873,9 @@ ul{list-style:none}
           <li><a href="arbitrage">Arbitrage</a></li>
           <li><a href="droit">Droit & Jurisprudence</a></li>
           <li><a href="finance">Finance & Marchés</a></li>
-          <li><a href="fiscalite">Fiscalité</a></li>
+          
           <li><a href="afrique">Afrique & OHADA</a></li>
-          <li><a href="gouvernance">Gouvernance</a></li>
+          
           <li><a href="premium">Premium</a></li>
         </ul>
       </div>

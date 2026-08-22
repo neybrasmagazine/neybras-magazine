@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -224,6 +219,8 @@ ul{list-style:none;}
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -271,19 +268,6 @@ ul{list-style:none;}
 </div>
 
 <div class="layout">
-
-  <nav class="toc" aria-label="Sommaire des mentions légales">
-    <p class="toc-label">Sur cette page</p>
-    <ol>
-      <li><a href="#editeur">Éditeur du site</a></li>
-      <li><a href="#direction">Direction de la publication</a></li>
-      <li><a href="#propriete">Propriété intellectuelle</a></li>
-      <li><a href="#donnees">Données personnelles</a></li>
-      <li><a href="#cookies">Cookies et traceurs</a></li>
-      <li><a href="#responsabilite">Limitation de responsabilité</a></li>
-      <li><a href="#contact">Contact &amp; droits</a></li>
-    </ol>
-  </nav>
 
   <main class="content">
 
@@ -385,18 +369,29 @@ ul{list-style:none;}
       <span class="art-num">05</span>
       <h2>Cookies et traceurs</h2>
       <p class="principle">
-        Neybras Magazine n'utilise aucun cookie publicitaire tiers à des fins de suivi commercial
-        ou de ciblage comportemental.
+        Neybras Magazine n'utilise aucun cookie publicitaire, aucun réseau de ciblage comportemental
+        et ne partage aucune donnée à des fins commerciales.
       </p>
-      <p>Ce site n'a recours qu'à des <strong>cookies techniques essentiels</strong> à son fonctionnement :</p>
+      <p>Deux informations sont conservées dans le <strong>stockage local</strong> de votre navigateur, sans cookie ni transmission au serveur :</p>
       <ul>
-        <li><strong>localStorage</strong> — mémorisation de vos préférences d'affichage (ex. : fermeture du popup newsletter). Aucune donnée personnelle n'est transmise.</li>
-        <li><strong>Polices de caractères</strong> — appel aux serveurs Google Fonts pour le chargement des typographies, soumis à la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.</li>
-        <li><strong>Icônes</strong> — chargement de Font Awesome via le CDN Cloudflare, soumis à la <a href="https://www.cloudflare.com/privacypolicy/">politique de confidentialité de Cloudflare</a>.</li>
+        <li><strong><code>nbr_consent</code></strong> — votre réponse au bandeau de consentement, pour ne pas vous la redemander à chaque page.</li>
+        <li><strong><code>nl_closed</code></strong> — la fermeture de la fenêtre d'invitation à la newsletter, pour ne plus vous la présenter.</li>
       </ul>
       <p>
-        Vous pouvez à tout moment désactiver les cookies dans les paramètres de votre navigateur, sans que cela
-        n'affecte la consultation des contenus du site.
+        La <strong>mesure d'audience Google Analytics</strong> dépose, elle, de véritables cookies
+        (<code>_ga</code> et <code>_ga_TRVG9RSKTL</code>, deux ans). Elle n'est
+        <strong>chargée qu'après votre accord explicite</strong> : si vous refusez ou ne répondez pas au bandeau,
+        le script n'est pas appelé et aucune donnée n'est transmise à Google.
+      </p>
+      <p>Deux ressources d'affichage sont chargées depuis des serveurs tiers. Elles ne déposent pas de traceur, mais leur transmettent votre adresse IP :</p>
+      <ul>
+        <li><strong>Google Fonts</strong> — typographies du site, soumis à la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.</li>
+        <li><strong>Cloudflare</strong> — icônes Font Awesome, soumis à la <a href="https://www.cloudflare.com/privacypolicy/">politique de confidentialité de Cloudflare</a>.</li>
+      </ul>
+      <p>
+        Le détail complet, et le moyen de revenir à tout moment sur votre choix, figurent sur la page
+        <a href="cookies">gestion des cookies</a>. Bloquer les traceurs depuis votre navigateur n'affecte pas la
+        consultation des articles.
       </p>
     </section>
 
@@ -424,6 +419,19 @@ ul{list-style:none;}
     </section>
 
   </main>
+
+  <nav class="toc" aria-label="Sommaire des mentions légales">
+    <p class="toc-label">Sur cette page</p>
+    <ol>
+      <li><a href="#editeur">Éditeur du site</a></li>
+      <li><a href="#direction">Direction de la publication</a></li>
+      <li><a href="#propriete">Propriété intellectuelle</a></li>
+      <li><a href="#donnees">Données personnelles</a></li>
+      <li><a href="#cookies">Cookies et traceurs</a></li>
+      <li><a href="#responsabilite">Limitation de responsabilité</a></li>
+      <li><a href="#contact">Contact &amp; droits</a></li>
+    </ol>
+  </nav>
 </div>
 
 <!-- 07 -->

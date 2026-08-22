@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -250,6 +245,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -286,7 +283,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-tribune-sukuk-maroc" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-tribune-sukuk-maroc&text=Sukuk%20au%20Maroc%20%3A%20freins%20et%20r%C3%A9formes%20du%20march%C3%A9" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a></div>
   </div>
   <div class="art-image-wrap">
-    <img src="https://images.pexels.com/photos/6771985/pexels-photo-6771985.jpeg?auto=compress&w=1200" alt="Finance islamique Sukuk Maroc — marché obligataire participatif" loading="eager"/>
+    <img src="images/finance-islamique-sukuk-maroc-marche-obligataire.jpg" alt="Finance islamique Sukuk Maroc — marché obligataire participatif" loading="eager" width="1600" height="2400"/>
     <div class="art-image-caption">Le marché marocain des Sukuk peine à décoller malgré un cadre réglementaire formellement en place depuis 2018. © Pexels</div>
   </div>
 </div></section>
@@ -437,11 +434,11 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img src="https://images.pexels.com/photos/6771985/pexels-photo-6771985.jpeg?auto=compress&w=120" class="rel-thumb" alt="Finance islamique"/>
+        <img src="images/finance-islamique-sukuk-maroc-marche-obligataire.jpg" class="rel-thumb" alt="Finance islamique" width="1600" height="2400"/>
         <div class="rel-info"><h4><a href="article-cryptoactifs">Cryptoactifs et droit financier : quelles règles pour les actifs numériques au Maroc ?</a></h4><span>Finance · 10 min</span></div>
       </div>
       <div class="rel-item">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&w=120" class="rel-thumb" alt="Afrique OHADA"/>
+        <img src="images/zlecaf-harmonisation-juridique-echanges.jpg" class="rel-thumb" alt="Afrique OHADA" width="1600" height="1067"/>
         <div class="rel-info"><h4><a href="article-cfc-nairobi">CFC vs Nairobi : la rivalité des hubs financiers africains</a></h4><span>Finance · 9 min</span></div>
       </div>
     </div>

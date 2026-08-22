@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -303,6 +298,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -406,7 +403,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     </div>
 
     <div class="art-image-wrap">
-      <img loading="lazy" src="https://images.pexels.com/photos/159606/jump-water-splash-drop-159606.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Arbitrage sportif — TAS Lausanne"/>
+      <img loading="lazy" src="images/sport-droits-television-football.webp" alt="Arbitrage sportif — TAS Lausanne" width="600" height="402"/>
       <div class="art-image-caption">L'arbitrage sportif exige réactivité et précision : chaque délai manqué devant le TAS peut être fatal à la cause du club. © Pexels</div>
     </div>
   </div>
@@ -719,21 +716,21 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="wg">
           <div class="wt">Articles liés</div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Arbitrage international"/>
+            <img loading="lazy" src="images/arbitrage-international-themis-justice-sm.webp" class="rel-thumb" alt="Arbitrage international" width="300" height="200"/>
             <div class="rel-info">
               <h4><a href="article-cirdi-maroc">CIRDI et investissements marocains : nouvelles tendances</a></h4>
               <span>Arbitrage · 10 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Agents FIFA"/>
+            <img loading="lazy" src="images/agents-fifa.jpg" class="rel-thumb" alt="Agents FIFA" width="600" height="400"/>
             <div class="rel-info">
               <h4><a href="article-agents-fifa-maroc">Agents FIFA : le nouveau règlement RFAF et ses implications au Maroc</a></h4>
               <span>Droit du Sport · 8 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/3775120/pexels-photo-3775120.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Valorisation marque sportive"/>
+            <img loading="lazy" src="images/valorisation-marque-sportive.jpg" class="rel-thumb" alt="Valorisation marque sportive" width="600" height="400"/>
             <div class="rel-info">
               <h4><a href="article-valorisation-sportif-marque">Valorisation de la marque sportive : droits et stratégie</a></h4>
               <span>Droit du Sport · 9 min</span>

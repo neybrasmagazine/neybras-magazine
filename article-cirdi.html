@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -303,6 +298,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -402,7 +399,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     </div>
 
     <div class="art-image-wrap">
-      <img loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Salle d'arbitrage international — CIRDI et investissement au Maroc"/>
+      <img loading="lazy" src="images/salle-d-arbitrage-international-cirdi-et-au.jpg" alt="Salle d'arbitrage international — CIRDI et investissement au Maroc" width="1600" height="2400"/>
       <div class="art-image-caption">Salle d'audience arbitrale — le règlement CIRDI encadre plusieurs différends entre des investisseurs étrangers et l'État marocain. © Pexels</div>
     </div>
   </div>
@@ -744,21 +741,21 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="wg">
           <div class="wt">Articles liés</div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=120" class="rel-thumb" alt="ZLECAf droit africain"/>
+            <img loading="lazy" src="images/salle-d-arbitrage-international-cirdi-et-au.jpg" class="rel-thumb" alt="ZLECAf droit africain" width="1600" height="2400"/>
             <div class="rel-info">
               <h4><a href="article-zlecaf">ZLECAf trois ans après : enjeux juridiques pour le Maroc</a></h4>
               <span>Afrique &amp; OHADA · 12 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=120" class="rel-thumb" alt="Arbitrage OHADA CCJA"/>
+            <img loading="lazy" src="images/salle-d-arbitrage-international-cirdi-et-au.jpg" class="rel-thumb" alt="Arbitrage OHADA CCJA" width="1600" height="2400"/>
             <div class="rel-info">
               <h4><a href="article-ohada-arbitrage">L'arbitrage OHADA après la révision de l'Acte uniforme</a></h4>
               <span>Arbitrage · 12 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=120" class="rel-thumb" alt="TBI Afrique modele UA"/>
+            <img loading="lazy" src="images/salle-d-arbitrage-international-cirdi-et-au.jpg" class="rel-thumb" alt="TBI Afrique modele UA" width="1600" height="2400"/>
             <div class="rel-info">
               <h4><a href="analyses">La réforme des TBI africains : vers un modèle continental</a></h4>
               <span>Analyses · 10 min</span>

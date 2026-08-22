@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -250,6 +245,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -286,7 +283,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-tribune-zlecaf-harmonisation" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-tribune-zlecaf-harmonisation&text=ZLECAf%20%3A%20l%27harmonisation%20juridique%20comme%20condition%20du%20succ%C3%A8s" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a></div>
   </div>
   <div class="art-image-wrap">
-    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&w=1200" alt="ZLECAf harmonisation juridique — échanges commerciaux africains" loading="eager"/>
+    <img src="images/zlecaf-harmonisation-juridique-echanges.jpg" alt="ZLECAf harmonisation juridique — échanges commerciaux africains" loading="eager"/>
     <div class="art-image-caption">L'intégration économique africaine exige une architecture juridique commune que les textes actuels de la ZLECAf ne fournissent pas encore. © Pexels</div>
   </div>
 </div></section>
@@ -450,11 +447,11 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&w=120" class="rel-thumb" alt="ZLECAf Afrique"/>
+        <img src="images/zlecaf-harmonisation-juridique-echanges.jpg" class="rel-thumb" alt="ZLECAf Afrique" width="1600" height="1067"/>
         <div class="rel-info"><h4><a href="article-cirdi-maroc">CIRDI et investissements post-ZLECAf : nouveaux défis</a></h4><span>Afrique · 10 min</span></div>
       </div>
       <div class="rel-item">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&w=120" class="rel-thumb" alt="OHADA"/>
+        <img src="images/zlecaf-harmonisation-juridique-echanges.jpg" class="rel-thumb" alt="OHADA" width="1600" height="1067"/>
         <div class="rel-info"><h4><a href="article-ohada-suretes">La réforme du droit des sûretés OHADA</a></h4><span>OHADA · 11 min</span></div>
       </div>
     </div>

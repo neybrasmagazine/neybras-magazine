@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -244,6 +239,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -285,7 +282,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-private-equity" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-private-equity&text=Private%20equity%20en%20Afrique%20%3A%20v%C3%A9hicules%20et%20investisseurs" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a><a href="https://api.whatsapp.com/send?text=Private%20equity%20en%20Afrique%20%3A%20v%C3%A9hicules%20et%20investisseurs%20https%3A%2F%2Fneybras-magazine.com%2Farticle-private-equity" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-whatsapp"></i></a></div>
   </div>
   <div class="art-image-wrap">
-    <img loading="lazy" src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Private equity investissement Afrique"/>
+    <img loading="lazy" src="images/private-equity-investissement-afrique.jpg" alt="Private equity investissement Afrique" width="1600" height="1067"/>
     <div class="art-image-caption">Le marché africain du private equity attire des capitaux croissants, mais exige une due diligence rigoureuse. © Pexels</div>
   </div>
 </div></section>
@@ -426,15 +423,15 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="ZLECAf"/>
+        <img loading="lazy" src="images/reformes-ohada-droit-africain-des-affaires.jpg" class="rel-thumb" alt="ZLECAf" width="1600" height="1000"/>
         <div class="rel-info"><h4><a href="article-zlecaf">ZLECAf : ce que les entreprises marocaines doivent préparer</a></h4><span>Afrique · 13 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="LF 2026"/>
+        <img loading="lazy" src="images/loi-de-finances-2026-maroc-fiscalite-entreprises.jpg" class="rel-thumb" alt="LF 2026" width="1600" height="1060"/>
         <div class="rel-info"><h4><a href="article-lf2026">Loi de Finances 2026 : dispositions fiscales clés</a></h4><span>Finance · 12 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Gouvernance Afrique"/>
+        <img loading="lazy" src="images/gouvernance-entreprises-afrique-conseil-d.jpg" class="rel-thumb" alt="Gouvernance Afrique" width="1600" height="900"/>
         <div class="rel-info"><h4><a href="article-gouvernance-afrique">Gouvernance des entreprises africaines : enjeux et meilleures pratiques</a></h4><span>Afrique · 10 min</span></div>
       </div>
     </div>

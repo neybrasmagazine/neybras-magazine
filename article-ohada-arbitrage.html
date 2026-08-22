@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -245,6 +240,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -286,7 +283,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-ohada-arbitrage" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-ohada-arbitrage&text=Arbitrage%20OHADA%20%3A%20r%C3%A9vision%20de%20l%27Acte%20uniforme%20et%20CCJA" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a><a href="https://api.whatsapp.com/send?text=Arbitrage%20OHADA%20%3A%20r%C3%A9vision%20de%20l%27Acte%20uniforme%20et%20CCJA%20https%3A%2F%2Fneybras-magazine.com%2Farticle-ohada-arbitrage" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-whatsapp"></i></a></div>
   </div>
   <div class="art-image-wrap">
-    <img loading="lazy" src="https://images.pexels.com/photos/3856635/pexels-photo-3856635.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Arbitrage OHADA CCJA Afrique"/>
+    <img loading="lazy" src="images/arbitrage-ohada-ccja-afrique.jpg" alt="Arbitrage OHADA CCJA Afrique" width="1600" height="1069"/>
     <div class="art-image-caption">La CCJA d'Abidjan est à la fois cour de cassation suprême et centre d'arbitrage institutionnel dans l'espace OHADA. © Pexels</div>
   </div>
 </div></section>
@@ -444,15 +441,15 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Exequatur"/>
+        <img loading="lazy" src="images/exequatur-jugements-etrangers-maroc-droit-prive.jpg" class="rel-thumb" alt="Exequatur" width="1600" height="1064"/>
         <div class="rel-info"><h4><a href="article-exequatur">L'exequatur des jugements étrangers au Maroc</a></h4><span>Droit · 11 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/3856635/pexels-photo-3856635.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="CIRDI"/>
+        <img loading="lazy" src="images/arbitrage-ohada-ccja-afrique.jpg" class="rel-thumb" alt="CIRDI" width="1600" height="1069"/>
         <div class="rel-info"><h4><a href="article-cirdi">CIRDI : l'arbitrage d'investissement et le Maroc</a></h4><span>Arbitrage · 12 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Réformes OHADA"/>
+        <img loading="lazy" src="images/reformes-ohada-droit-africain-des-affaires.jpg" class="rel-thumb" alt="Réformes OHADA" width="1600" height="1000"/>
         <div class="rel-info"><h4><a href="article-ohada-reforme">Réformes OHADA 2024-2026 : ce qui change</a></h4><span>Afrique · 11 min</span></div>
       </div>
     </div>

@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -257,6 +252,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -562,17 +559,14 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <div class="card">
         <h3>Équipe éditoriale</h3>
         <div class="member">
-          <div class="avatar">NE</div>
-          <div class="info"><div class="n">Nadia El Fassi</div><div class="r">Directrice de la rédaction</div></div>
+          <div class="avatar">DF</div>
+          <div class="info"><div class="n">Dalal Fahmi</div><div class="r">Directrice de la publication</div></div>
         </div>
         <div class="member">
-          <div class="avatar">KB</div>
-          <div class="info"><div class="n">Karim Bensouda</div><div class="r">Rédacteur en chef adjoint</div></div>
+          <div class="avatar">NM</div>
+          <div class="info"><div class="n">La Rédaction Neybras</div><div class="r">Analyses et suivi éditorial</div></div>
         </div>
-        <div class="member">
-          <div class="avatar">IT</div>
-          <div class="info"><div class="n">Imane Tahiri</div><div class="r">Secrétaire de rédaction</div></div>
-        </div>
+        <p style="font-size:12.5px;line-height:1.65;margin:14px 0 0"><a href="equipe" style="color:var(--or)">Voir les contributeurs</a> — praticiens du droit et de la finance qui signent leurs analyses.</p>
       </div>
 
       <div class="card guidelines">

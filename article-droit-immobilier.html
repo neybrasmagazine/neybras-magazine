@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -32,7 +27,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Acquisition immobilière au Maroc par les étrangers et les MRE"/>
 <meta name="twitter:description" content="Cadre juridique, restrictions, procédure notariale, rapatriement des fonds et recommandations pratiques pour les acquéreurs étrangers et MRE au Maroc."/>
-<meta name="twitter:image" content="https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=1200"/>
+<meta name="twitter:image" content="images/immobilier-au-maroc-acquisition-par-des-et-des.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -252,6 +247,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -293,7 +290,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-droit-immobilier" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-droit-immobilier&text=Immobilier%20au%20Maroc%20%3A%20guide%20pour%20%C3%A9trangers%20et%20MRE" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a><a href="https://api.whatsapp.com/send?text=Immobilier%20au%20Maroc%20%3A%20guide%20pour%20%C3%A9trangers%20et%20MRE%20https%3A%2F%2Fneybras-magazine.com%2Farticle-droit-immobilier" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-whatsapp"></i></a></div>
   </div>
   <div class="art-image-wrap">
-    <img loading="lazy" src="https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Immobilier au Maroc — acquisition par des étrangers et des MRE"/>
+    <img loading="lazy" src="images/immobilier-au-maroc-acquisition-par-des-et-des.jpg" alt="Immobilier au Maroc — acquisition par des étrangers et des MRE" width="1600" height="900"/>
     <div class="art-image-caption">L'acquisition immobilière au Maroc par des non-résidents conjugue ouverture de principe et restrictions ciblées dont la méconnaissance peut engager des conséquences patrimoniales durables. © Pexels</div>
   </div>
 </div></section>
@@ -606,7 +603,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Loi de finances 2026"/>
+        <img loading="lazy" src="images/loi-de-finances-2026.jpg" class="rel-thumb" alt="Loi de finances 2026" width="600" height="400"/>
         <div class="rel-info"><h4><a href="article-lf2026">Loi de finances 2026 au Maroc : les mesures fiscales clés</a></h4><span>Droit · Finance · 10 min</span></div>
       </div>
       <div class="rel-item">
@@ -614,7 +611,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="rel-info"><h4><a href="article-procedure-civile">Réforme du Code de procédure civile : ce qui change pour les entreprises</a></h4><span>Droit · 11 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/1098764/pexels-photo-1098764.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Médiation commerciale"/>
+        <img loading="lazy" src="images/mediation-commerciale-au-maroc-table-de.jpg" class="rel-thumb" alt="Médiation commerciale" width="1600" height="1066"/>
         <div class="rel-info"><h4><a href="article-mediation">Médiation commerciale au Maroc : un outil sous-exploité</a></h4><span>Droit · 9 min</span></div>
       </div>
     </div>

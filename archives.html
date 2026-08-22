@@ -1,88 +1,536 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
+<!-- Google tag (gtag.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Archives — Neybras Magazine</title>
-<meta name="description" content="Archives Neybras Magazine — Neybras Magazine, le média qui connecte les idées aux décideurs."/>
-<meta name="robots" content="noindex,follow"/>
+<meta name="description" content="L'intégralité des analyses, tribunes et entretiens publiés par Neybras Magazine, classés du plus récent au plus ancien."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:image" content="https://neybras-magazine.com/images/og-neybras-default.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <link rel="canonical" href="https://neybras-magazine.com/archives"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{overflow-x:hidden;font-family:'Inter',sans-serif;background:#fafafa;color:#1a1a1a;min-height:100vh;display:flex;flex-direction:column}
-a{text-decoration:none;color:inherit}
-.hd{background:#0E3D52;padding:14px 32px;display:flex;align-items:center;gap:14px}
-.hd-name{font-size:15px;font-weight:700;letter-spacing:.18em;color:#fff;text-transform:uppercase}
-.hd-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:rgba(184,150,90,.8)}
-.main{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 32px;text-align:center}
-.card{max-width:520px}
-.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#B8965A;border:1px solid rgba(184,150,90,.35);padding:5px 14px;margin-bottom:28px}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-weight:600;color:#0E3D52;line-height:1.2;margin-bottom:16px}
-.sub{font-size:15px;color:#555;line-height:1.7;margin-bottom:36px}
-.btn{display:inline-block;background:#0E3D52;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 28px;border-radius:1px;transition:background .2s}
-.btn:hover{background:#145068}
-.ft{background:#0a3044;padding:16px 32px;text-align:center;font-size:11px;color:rgba(255,255,255,.25)}
-</style>
+:root{--bn:#0E3D52;--bn2:#0a3044;--bn3:#145068;--or:#B8965A;--or-lt:#CCA96E;--or-bg:rgba(184,150,90,.08);--or-bd:rgba(184,150,90,.22);--page:#fafafa;--blanc:#ffffff;--gris1:#1a1a1a;--gris2:#2d2d2d;--gris3:#555555;--gris4:#888888;--gris5:#bbbbbb;--brd:#e4e4e4;--brd2:#f0f0f0;--cg:'Cormorant Garamond','Georgia',serif;--fr:'Fraunces',Georgia,serif;--it:'Inter','Helvetica Neue',sans-serif;--tr:all .22s ease;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;font-size:16px;}
+body{font-family:var(--it);background:var(--page);color:var(--gris1);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;transition:var(--tr);}
+img{max-width:100%;height:auto;display:block;}
+ul{list-style:none;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+.top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
+.tb-in{display:flex;justify-content:space-between;align-items:center;}
+.tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);letter-spacing:.05em;}
+.tb-date{color:rgba(184,150,90,.8);font-weight:500;}
+.tb-r{display:flex;align-items:center;gap:16px;}
+.tb-soc{display:flex;gap:12px;}
+.tb-soc a{color:rgba(255,255,255,.28);font-size:11px;}
+.tb-soc a:hover{color:var(--or-lt);}
+.tb-lnk{display:flex;gap:16px;}
+.tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
+.tb-lnk a:hover{color:rgba(255,255,255,.65);}
+.site-header{background:var(--bn);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.07);}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo-txt{display:flex;flex-direction:column;}
+.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
+.logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
+.hd-act{display:flex;align-items:center;gap:14px;}
+.btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;transition:var(--tr);}
+.btn-srch:hover{color:rgba(255,255,255,.85);}
+.btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
+.btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
+.main-nav{background:var(--bn);border-bottom:1px solid rgba(184,150,90,.3);}
+.nav-in{display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
+.nav-a:hover{color:rgba(255,255,255,.82);}
+.nav-a.on{color:#fff;border-bottom-color:var(--or);}
+.nav-a.star{color:rgba(184,150,90,.8);}
+.s-ov{display:none;position:fixed;inset:0;background:rgba(10,48,68,.96);z-index:9999;align-items:center;justify-content:center;}
+.s-ov.on{display:flex;}
+.s-box{width:100%;max-width:640px;padding:0 28px;}
+.s-box input{width:100%;background:none;border:none;border-bottom:1px solid rgba(184,150,90,.45);color:#fff;font-size:24px;font-family:var(--cg);padding:16px 0;outline:none;}
+.s-box input::placeholder{color:rgba(255,255,255,.22);}
+.s-close{position:absolute;top:28px;right:36px;font-size:28px;color:rgba(255,255,255,.25);cursor:pointer;background:none;border:none;}
 
+/* ---------- PAGE CONTENT ---------- */
+.masthead{background:var(--bn);color:#fff;position:relative;overflow:hidden;}
+.masthead::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 120% at 85% -10%, rgba(184,150,90,.16), transparent 60%);pointer-events:none;}
+.masthead-inner{width:min(1120px,92vw);margin:0 auto;padding:clamp(2.4rem,5vw,4rem) 0 clamp(2rem,4vw,3rem);position:relative;z-index:1;}
+.kicker{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--or-lt);font-weight:600;display:flex;align-items:center;gap:.9rem;}
+.kicker::before{content:"";width:34px;height:1px;background:var(--or);display:inline-block;}
+.masthead h1{font-family:var(--fr);font-weight:500;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:1.02;letter-spacing:-.015em;margin:.5rem 0 1.4rem;color:#fff;}
+.masthead h1 em{font-style:italic;color:var(--or-lt);}
+.lede{max-width:60ch;font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.78);line-height:1.7;}
+.meta-row{margin-top:2.2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);}
+.meta-row b{color:#fff;font-weight:600;}
+
+.layout{width:min(1120px,92vw);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(2rem,5vw,5rem);padding:clamp(3rem,6vw,5rem) 0 4rem;align-items:start;}
+
+.toc{position:sticky;top:2rem;font-size:.85rem;}
+.toc-label{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gris3);font-weight:600;margin-bottom:1.1rem;}
+.toc ol{list-style:none;counter-reset:toc;}
+.toc li{counter-increment:toc;margin:0;}
+.toc a{display:flex;gap:.9rem;align-items:baseline;padding:.55rem 0;text-decoration:none;color:var(--gris3);border-top:1px solid var(--brd);transition:color .18s ease;}
+.toc li:last-child a{border-bottom:1px solid var(--brd);}
+.toc a::before{content:counter(toc,decimal-leading-zero);font-family:var(--fr);font-size:.82rem;color:var(--or);font-weight:600;min-width:1.6em;}
+.toc a:hover,.toc a:focus-visible{color:var(--bn);}
+.toc a.active{color:var(--bn);font-weight:600;}
+
+.content{max-width:70ch;}
+.article{padding:clamp(2rem,4vw,3rem) 0;border-top:1px solid var(--brd);scroll-margin-top:2rem;}
+.content .article:first-child{border-top:none;padding-top:0;}
+.art-num{font-family:var(--fr);font-size:.85rem;font-weight:600;letter-spacing:.12em;color:var(--or);display:block;margin-bottom:.5rem;}
+.article h2{font-family:var(--fr);font-weight:500;font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;letter-spacing:-.01em;color:var(--bn);margin-bottom:1.4rem;}
+.article p{color:var(--gris3);margin:0 0 1.1rem;}
+.article p:last-child{margin-bottom:0;}
+.article strong{color:var(--gris1);font-weight:600;}
+.article a[href]{color:var(--bn);text-decoration:none;border-bottom:1px solid var(--or);padding-bottom:1px;transition:background .18s ease;}
+.article a[href]:hover{background:rgba(184,150,90,.14);}
+
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--brd);border:1px solid var(--brd);border-radius:10px;overflow:hidden;margin:0 0 1.6rem;}
+.facts div{background:var(--page);padding:1.1rem 1.3rem;}
+.facts dt{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris3);font-weight:600;margin-bottom:.35rem;}
+.facts dd{font-size:.95rem;color:var(--gris1);font-weight:500;line-height:1.4;}
+.facts dd a{border:none!important;color:var(--bn);}
+
+.principle{font-family:var(--fr);font-style:italic;font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.5;color:var(--bn);padding:1.4rem 0 1.4rem 1.6rem;border-left:3px solid var(--or);margin:0 0 1.6rem;}
+
+.article ul{list-style:none;margin:0 0 1.2rem;padding:0;}
+.article ul li{position:relative;padding-left:1.5rem;margin-bottom:.7rem;color:var(--gris3);}
+.article ul li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--or);border-radius:1px;transform:rotate(45deg);}
+.article ul li strong{color:var(--gris1);}
+
+.rights{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem;margin:0 0 1.4rem;}
+.rights span{background:var(--brd2);border:1px solid var(--brd);border-radius:8px;padding:.75rem .95rem;font-size:.85rem;font-weight:500;color:var(--bn);display:flex;align-items:center;gap:.6rem;}
+.rights span::before{content:"→";color:var(--or);font-weight:600;}
+
+.ml-badge2{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--bn);background:rgba(184,150,90,.18);border:1px solid rgba(184,150,90,.4);padding:.3rem .7rem;border-radius:100px;margin-bottom:1.2rem;}
+
+.colophon{background:var(--bn2);color:#fff;scroll-margin-top:2rem;}
+.colophon-inner{width:min(1120px,92vw);margin:0 auto;padding:clamp(3rem,6vw,4.5rem) 0;}
+.colophon .art-num{color:var(--or-lt);}
+.colophon h2{font-family:var(--fr);font-weight:500;font-size:clamp(1.6rem,3.4vw,2.3rem);color:#fff;margin-bottom:2rem;letter-spacing:-.01em;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.6rem 2.4rem;}
+.contact-grid .lab{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or-lt);font-weight:600;margin-bottom:.5rem;}
+.contact-grid .val{font-size:.95rem;color:rgba(255,255,255,.9);line-height:1.55;}
+.contact-grid .val a{color:#fff;text-decoration:none;border-bottom:1px solid var(--or);}
+.contact-grid .val a:hover{color:var(--or-lt);}
+.colophon-foot{margin-top:2.6rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;color:rgba(255,255,255,.55);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;}
+.colophon-foot .mono{font-family:var(--fr);letter-spacing:.02em;}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;}
+  .toc{position:static;order:-1;margin-bottom:1rem;}
+  .toc ol{columns:2;column-gap:1.4rem;}
+  .facts{grid-template-columns:1fr;}
+}
+@media (max-width:520px){
+  .toc ol{columns:1;}
+  .facts{grid-template-columns:1fr;}
+}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:2px;}
+
+/* FOOTER */
+.site-footer{background:var(--bn);border-top:1px solid rgba(255,255,255,.06);}
+.ft-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding:50px 0 34px;}
+.ft-brand p{font-family:var(--it);font-size:11.5px;color:rgba(255,255,255,.32);line-height:1.8;max-width:255px;margin:14px 0 16px;}
+.ft-social{display:flex;gap:10px;}
+.ft-social a{width:30px;height:30px;border:1px solid rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.32);font-size:11px;transition:var(--tr);}
+.ft-social a:hover{border-color:var(--or);color:var(--or-lt);}
+.ft-col h5{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,150,90,.7);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(184,150,90,.14);}
+.ft-col ul{display:flex;flex-direction:column;gap:9px;}
+.ft-col ul li a{font-family:var(--it);font-size:11.5px;color:rgba(255,255,255,.32);transition:var(--tr);}
+.ft-col ul li a:hover{color:rgba(255,255,255,.72);padding-left:3px;}
+.ft-btm{border-top:1px solid rgba(255,255,255,.05);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--it);font-size:10.5px;color:rgba(255,255,255,.2);}
+.ft-btm a{color:rgba(255,255,255,.25);}
+.ft-btm a:hover{color:rgba(255,255,255,.6);}
+.ft-bl{display:flex;gap:18px;}
+#stt{position:fixed;bottom:28px;right:28px;width:38px;height:38px;border:1px solid var(--brd);border-radius:50%;background:var(--blanc);color:var(--gris3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:997;transition:var(--tr);}
+#stt:hover{border-color:var(--or);color:var(--or);}
+#stt.v{display:flex;}
+@media(max-width:1100px){.ft-main{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:768px){.ft-main{grid-template-columns:1fr;}}
+@media(max-width:520px){.container{padding:0 18px;}}
+</style>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><meta property="og:type" content="website"/>
-<meta property="og:title" content="Archives — Neybras Magazine"/>
-<meta property="og:description" content="Toutes les analyses juridiques et financières publiées par Neybras Magazine, classées par date."/>
-<meta property="og:url" content="https://neybras-magazine.com/archives"/>
-<meta property="og:image" content="https://neybras-magazine.com/images/og-neybras-default.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:locale" content="fr_MA"/>
-<meta property="og:site_name" content="Neybras Magazine"/>
-<meta name="twitter:card" content="summary_large_image"/>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://neybras-magazine.com/archives#page",
+      "name": "Archives",
+      "description": "Mentions légales de Neybras Magazine — éditeur, directrice de la publication, propriété intellectuelle, protection des données personnelles et cookies.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://neybras-magazine.com/images/og-neybras-default.png"
+      },
+      "url": "https://neybras-magazine.com/archives",
+      "inLanguage": "fr-MA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Neybras Magazine",
+        "url": "https://neybras-magazine.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Neybras Magazine",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neybras-magazine.com/images/apple-touch-icon.png"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://neybras-magazine.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mentions légales"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
-<header class="hd">
-  <a href="/" style="display:flex;align-items:center;gap:12px">
-    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <defs><clipPath id="c"><circle cx="50" cy="50" r="43"/></clipPath>
-        <pattern id="v" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#c9a84c" stroke-width="2"/></pattern>
-        <pattern id="d" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#c9a84c" stroke-width="2"/></pattern>
-        <pattern id="h" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#c9a84c" stroke-width="2"/></pattern>
-      </defs>
-      <circle cx="50" cy="50" r="43" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
-      <g clip-path="url(#c)">
-        <polygon points="7,5 27,5 27,95 7,95" fill="url(#v)"/>
-        <polygon points="27,5 40,5 73,95 60,95" fill="url(#d)"/>
-        <polygon points="73,5 93,5 93,95 73,95" fill="url(#h)"/>
-      </g>
-    </svg>
-    <div>
-      <div class="hd-name">Neybras Magazine</div>
-      <div class="hd-tag">Le média qui connecte les idées aux décideurs</div>
-    </div>
-  </a>
-</header>
-<main class="main">
-  <div class="card">
-    <div class="badge">En cours de publication</div>
-    <h1>Archives Neybras Magazine</h1>
-    <p class="sub">L'ensemble de nos analyses et décryptages classés par date et par rubrique. Disponible prochainement.</p>
-    <a href="/" class="btn">Retour à l'accueil</a>
+
+<div class="top-bar"><div class="container"><div class="tb-in">
+  <div class="tb-l"><span class="tb-date">Mercredi 20 Mai 2026</span><span>·</span><span>Maroc · Afrique · Monde</span></div>
+  <div class="tb-r"><div class="tb-lnk"><a href="a-propos">À propos</a><a href="contact">Publicité</a><a href="contact">Contact</a></div>
   </div>
+</div></div></div>
+
+<header class="site-header"><div class="container"><div class="hd-in">
+  <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div></div></a>
+  <div class="hd-act"><button class="btn-srch" id="openS" aria-label="Rechercher"><i class="fas fa-search"></i></button><a href="newsletter" class="btn-abo">S'abonner</a></div>
+</div></div></header>
+
+<nav class="main-nav"><div class="container"><div class="nav-in">
+  <a href="/" class="nav-a">À la Une</a>
+  <a href="analyses" class="nav-a">Analyses</a>
+  <a href="droit" class="nav-a">Droit</a>
+  <a href="finance" class="nav-a">Finance</a>
+  <a href="afrique" class="nav-a">Afrique</a>
+  <a href="droit-du-sport" class="nav-a star">Sport Business</a>
+  <a href="arbitrage" class="nav-a">Arbitrage</a>
+  <a href="tribunes" class="nav-a">Opinion</a>
+  <a href="interviews" class="nav-a">Interviews</a>
+  <a href="evenements" class="nav-a">Événements</a>
+  <a href="premium" class="nav-a">Premium</a>
+</div></div></nav>
+
+<div class="s-ov" id="sOv"><div class="s-box"><input type="search" placeholder="Rechercher…"/><button class="s-close" id="closeS">×</button></div></div>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Tout le magazine</p>
+    <h1>Archives</h1>
+    <p class="lede">L'intégralité des analyses, tribunes et entretiens publiés depuis le lancement, du plus récent au plus ancien.</p>
+    <div class="meta-row">
+      <span>Articles · <b>38</b></span>
+      <span>Rubriques · <b>6</b></span>
+      <span>Mise à jour · <b>Août 2026</b></span>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <main class="content">
+<style>
+.arch-list{border-top:1px solid var(--brd);margin:0 0 2.4rem}
+.arch-row{display:grid;grid-template-columns:132px 1fr;gap:1.6rem;align-items:baseline;
+  padding:1.05rem 0;border-bottom:1px solid var(--brd2)}
+.arch-row:hover{background:rgba(184,150,90,.045)}
+.arch-date{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris4);
+  font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.arch-t{font-family:var(--fr);font-size:1.02rem;font-weight:600;line-height:1.35;color:var(--gris1);
+  display:block;margin-bottom:.3rem}
+.arch-row a.arch-t:hover{color:var(--or)}
+.arch-meta{font-size:.78rem;color:var(--gris4)}
+.arch-meta b{color:var(--or);font-weight:600}
+@media(max-width:640px){
+  .arch-row{grid-template-columns:1fr;gap:.35rem;padding:.95rem 0}
+  .arch-date{font-size:.68rem}
+}
+</style>
+
+<section class="article" id="a202607">
+  <span class="art-num">01</span>
+  <h2>Juillet 2026</h2>
+  <div class="arch-list">
+    <div class="arch-row">
+      <span class="arch-date">24 juillet</span>
+      <div><a class="arch-t" href="bad-gotion-100-millions-euros-gigafactory-batteries-maroc">100 M€ de la BAD pour la première gigafactory de batteries d'Afrique</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">24 juillet</span>
+      <div><a class="arch-t" href="ras-5-pourcent-loyers-seuil-500-millions-maroc">RAS de 5 % sur les loyers : pourquoi le seuil de 500 millions n'est pas le bon repère</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">23 juillet</span>
+      <div><a class="arch-t" href="bad-fec-150-millions-euros-developpement-territorial-maroc">150 M€ de la BAD et du FEC : le deuxième signal en deux semaines</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">10 juillet</span>
+      <div><a class="arch-t" href="corridor-kenitra-marrakech-bad-205-millions-euros-analyse">205 M€ de la BAD pour le rail marocain : ce que révèle vraiment ce financement</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">9 juillet</span>
+      <div><a class="arch-t" href="article-chatgpt-cabinets-avocats">Youssef El Amrani : « L'interdiction de ChatGPT, c'est le pire patch de sécurité que j'aie jamais vu »</a><span class="arch-meta"><b>Droit des affaires</b> · Youssef El Amrani</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="article" id="a202606">
+  <span class="art-num">02</span>
+  <h2>Juin 2026</h2>
+  <div class="arch-list">
+    <div class="arch-row">
+      <span class="arch-date">25 juin</span>
+      <div><a class="arch-t" href="charte-investissement-maroc-2026">Charte de l'Investissement 2026 : primes, conditions et dossier CRI, le guide complet</a><span class="arch-meta"><b>Investissement</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">24 juin</span>
+      <div><a class="arch-t" href="article-tribune-marches-publics-resiliation">Résiliation des marchés publics au Maroc : quand l'administration rompt le contrat</a><span class="arch-meta"><b>Droit des affaires</b> · Khalid Cherkaoui Semmouni</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">20 juin</span>
+      <div><a class="arch-t" href="article-arbitrage-mondial2030-entretien">Arbitrage &amp; Mondial 2030 : entretien avec Me Driss El Harti</a><span class="arch-meta"><b>Arbitrage &amp; ADR</b> · Me Driss El Harti</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="article" id="a202605">
+  <span class="art-num">03</span>
+  <h2>Mai 2026</h2>
+  <div class="arch-list">
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-droit-immobilier">Immobilier au Maroc : guide pour étrangers et MRE</a><span class="arch-meta"><b>Droit</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-exequatur">Exequatur au Maroc : procédure et jurisprudence</a><span class="arch-meta"><b>Arbitrage</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-fintech-afrique">Fintech en Afrique francophone : agrément et conformité</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-gouvernance-afrique">Gouvernance des entreprises en Afrique : cadre OHADA</a><span class="arch-meta"><b>Afrique</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-lf2026">Loi de Finances 2026 : mesures fiscales pour les entreprises</a><span class="arch-meta"><b>Finance &amp; Fiscalité</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-mediation">Médiation commerciale au Maroc : loi 08-05 et pratique</a><span class="arch-meta"><b>Droit</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-ohada-arbitrage">Arbitrage OHADA : révision de l'Acte uniforme et CCJA</a><span class="arch-meta"><b>Arbitrage</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-ohada-reforme">Réformes OHADA 2024-2026 : impact pour les entreprises</a><span class="arch-meta"><b>Afrique</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-private-equity">Private equity en Afrique : véhicules et investisseurs</a><span class="arch-meta"><b>Finance</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">21 mai</span>
+      <div><a class="arch-t" href="article-procedure-civile">Réforme du Code de procédure civile : ce qui change</a><span class="arch-meta"><b>Droit</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">20 mai</span>
+      <div><a class="arch-t" href="article-tribune-code-travail">Réforme du Code du travail : enjeux économiques et sociaux</a><span class="arch-meta"><b>Tribunes</b> · Zineb Maâti</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">20 mai</span>
+      <div><a class="arch-t" href="article-zlecaf">ZLECAf trois ans après : enjeux pour le Maroc</a><span class="arch-meta"><b>Afrique &amp; OHADA</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">19 mai</span>
+      <div><a class="arch-t" href="article-cryptoactifs">Cryptoactifs au Maroc : le cadre réglementaire BAM</a><span class="arch-meta"><b>Finance &amp; Marchés</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">18 mai</span>
+      <div><a class="arch-t" href="article-cdm2030-juridique">CdM 2030 au Maroc : analyse juridique et fiscale</a><span class="arch-meta"><b>Sport Business</b> · Me Amine Lahlou</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">18 mai</span>
+      <div><a class="arch-t" href="article-finance-participative">Finance participative au Maroc : bilan et perspectives</a><span class="arch-meta"><b>Finance &amp; Marchés</b> · Salwa Benali</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">17 mai</span>
+      <div><a class="arch-t" href="article-cirdi">CIRDI : le Maroc dans l'arbitrage d'investissement</a><span class="arch-meta"><b>Arbitrage</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">15 mai</span>
+      <div><a class="arch-t" href="article-agents-fifa-maroc">Agents FIFA au Maroc : commissions, conflits et sanctions</a><span class="arch-meta"><b>Sport Business</b> · Zineb Maâti</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">15 mai</span>
+      <div><a class="arch-t" href="article-green-bonds">Green Bonds &amp; Sukuk verts : finance durable au Maroc</a><span class="arch-meta"><b>Finance &amp; Marchés</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">15 mai</span>
+      <div><a class="arch-t" href="article-ppp-afrique">PPP en Afrique : pourquoi 60 % des projets échouent</a><span class="arch-meta"><b>Afrique &amp; OHADA</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">15 mai</span>
+      <div><a class="arch-t" href="article-procedures-collectives">Procédures collectives et loi 73-17 au Maroc</a><span class="arch-meta"><b>Droit des affaires</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">15 mai</span>
+      <div><a class="arch-t" href="article-tribune-sukuk-maroc">Sukuk au Maroc : freins et réformes du marché</a><span class="arch-meta"><b>Tribunes</b> · Salwa Benali</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">14 mai</span>
+      <div><a class="arch-t" href="article-tas-maroc">TAS et clubs marocains : stratégie en arbitrage sportif</a><span class="arch-meta"><b>Sport Business</b> · Zineb Maâti</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">12 mai</span>
+      <div><a class="arch-t" href="article-cirdi-maroc">CIRDI et investissements post-ZLECAf : enjeux pour le Maroc</a><span class="arch-meta"><b>Arbitrage &amp; ADR</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">12 mai</span>
+      <div><a class="arch-t" href="article-tribune-cirdi-exequatur">Exéquatur CIRDI en Afrique : vers l'harmonisation</a><span class="arch-meta"><b>Tribunes</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">12 mai</span>
+      <div><a class="arch-t" href="article-valorisation-sportif-marque">Le sportif-marque au Maroc : droits à l'image et fiscalité</a><span class="arch-meta"><b>Sport Business</b> · Zineb Maâti</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">10 mai</span>
+      <div><a class="arch-t" href="article-ia-cndp">IA et CNDP : le droit marocain des données face à l'IA</a><span class="arch-meta"><b>Droit des affaires</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">8 mai</span>
+      <div><a class="arch-t" href="article-code-travail">Réforme du Code du travail marocain : enjeux et perspectives</a><span class="arch-meta"><b>Droit des affaires</b> · Zineb Maâti</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">8 mai</span>
+      <div><a class="arch-t" href="article-ohada-suretes">OHADA : l'Acte uniforme révisé sur les sûretés</a><span class="arch-meta"><b>Afrique &amp; OHADA</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">8 mai</span>
+      <div><a class="arch-t" href="article-tribune-zlecaf-harmonisation">ZLECAf : l'harmonisation juridique comme condition du succès</a><span class="arch-meta"><b>Tribunes</b> · La Rédaction Neybras</span></div>
+    </div>
+    <div class="arch-row">
+      <span class="arch-date">5 mai</span>
+      <div><a class="arch-t" href="article-cfc-nairobi">CFC vs Nairobi : la bataille des hubs financiers africains</a><span class="arch-meta"><b>Finance &amp; Marchés</b> · La Rédaction Neybras</span></div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="ft">© 2026 Neybras Magazine · Casablanca, Maroc</footer>
+
+  <nav class="toc" aria-label="Sommaire de la page">
+    <p class="toc-label">Sur cette page</p>
+    <ol>
+      <li><a href="#a202607">Juillet 2026</a></li>
+      <li><a href="#a202606">Juin 2026</a></li>
+      <li><a href="#a202605">Mai 2026</a></li>
+    </ol>
+  </nav>
+
+</div>
+
+<!-- 07 -->
+<section class="colophon" id="contact">
+  <div class="colophon-inner">
+    <span class="art-num">07</span>
+    <h2>Contact &amp; droits</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="lab">Rédaction générale</p>
+        <p class="val"><a href="mailto:redaction@neybras-magazine.com">redaction@neybras-magazine.com</a></p>
+      </div>
+      <div>
+        <p class="lab">Direction &amp; partenariats</p>
+        <p class="val"><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></p>
+      </div>
+      <div>
+        <p class="lab">Adresse</p>
+        <p class="val">Capital A, Bureau n°9<br>Bouskoura<br>Casablanca, Maroc</p>
+      </div>
+      <div>
+        <p class="lab">Site éditeur</p>
+        <p class="val"><a href="https://neybras.com">neybras.com</a></p>
+      </div>
+    </div>
+    <div class="colophon-foot">
+      <span class="mono">© 2026 Neybras Publishing — Tous droits réservés</span>
+      <span>Directrice de la publication : Dalal Fahmi · Dernière mise à jour : Mai 2026</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container">
+  <div class="ft-main">
+    <div class="ft-brand">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:2px">
+        <div><div style="font-family:var(--it);font-size:14px;font-weight:700;letter-spacing:.18em;color:#fff;text-transform:uppercase">Neybras Magazine</div><div style="font-family:var(--cg);font-style:italic;font-size:10px;color:rgba(184,150,90,.7);letter-spacing:.05em;margin-top:1px">Le média qui connecte les idées aux décideurs</div></div>
+      </div>
+      <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+
+    </div>
+    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li></ul></div>
+    <div class="ft-col"><h5>Le Magazine</h5><ul><li><a href="a-propos">À propos</a></li><li><a href="interviews">Interviews</a></li><li><a href="tribunes">Tribunes</a></li><li><a href="newsletter">Newsletter</a></li><li><a href="contact">Publicité</a></li></ul></div>
+    <div class="ft-col"><h5>Légal</h5><ul><li><a href="mentions-legales" style="color:rgba(255,255,255,.65)">Mentions légales</a></li><li><a href="contact">Contact</a></li><li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li><li><a href="mailto:redaction@neybras-magazine.com">redaction@neybras-magazine.com</a></li></ul></div>
+  </div>
+  <div class="ft-btm"><span>© 2026 Neybras Publishing / Dalal Fahmi · Tous droits réservés · Casablanca, Maroc</span><div class="ft-bl"><a href="mentions-legales">Mentions légales</a><a href="contact">Contact</a></div></div>
+</div></footer>
+
+<button id="stt" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+<script>
+const sOv=document.getElementById('sOv');
+document.getElementById('openS').onclick=()=>{sOv.classList.add('on');sOv.querySelector('input').focus();};
+document.getElementById('closeS').onclick=()=>sOv.classList.remove('on');
+sOv.onclick=e=>{if(e.target===sOv)sOv.classList.remove('on');};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')sOv.classList.remove('on');});
+const stt=document.getElementById('stt');
+window.addEventListener('scroll',()=>stt.classList.toggle('v',scrollY>400));
+stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+<script>
+(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
+</script>
 <script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
 <script>
 (function(){
@@ -112,5 +560,20 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-we
   document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
 })();
 </script>
+<script>
+  // Active state du sommaire au scroll
+  const tocLinks2 = [...document.querySelectorAll('.toc a')];
+  const tocMap2 = new Map(tocLinks2.map(a => [a.getAttribute('href').slice(1), a]));
+  const io2 = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks2.forEach(l => l.classList.remove('active'));
+        tocMap2.get(e.target.id)?.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => io2.observe(s));
+</script>
+
 </body>
 </html>

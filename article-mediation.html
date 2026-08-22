@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -275,6 +270,8 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -358,7 +355,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       </div>
     </div>
     <div class="art-image-wrap">
-      <img loading="lazy" src="https://images.pexels.com/photos/1098764/pexels-photo-1098764.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Médiation commerciale au Maroc — table de négociation"/>
+      <img loading="lazy" src="images/mediation-commerciale-au-maroc-table-de.jpg" alt="Médiation commerciale au Maroc — table de négociation" width="1600" height="1066"/>
       <div class="art-image-caption">La médiation commerciale offre un cadre confidentiel et souple pour résoudre les litiges d'affaires, bien loin de la lourdeur du contentieux judiciaire. © Pexels</div>
     </div>
   </div>
@@ -702,21 +699,21 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         <div class="wg">
           <div class="wt">Articles liés</div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Procédure civile Maroc"/>
+            <img loading="lazy" src="images/droit-du-travail-marocain-reforme-du-code-du.jpg" class="rel-thumb" alt="Procédure civile Maroc" width="1600" height="1067"/>
             <div class="rel-info">
               <h4><a href="article-procedure-civile">La procédure civile marocaine : repères pour le praticien</a></h4>
               <span>Droit · 12 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="CIRDI arbitrage investissement"/>
+            <img loading="lazy" src="images/arbitrage-international-cirdi-salle-d-audience.jpg" class="rel-thumb" alt="CIRDI arbitrage investissement" width="1600" height="1067"/>
             <div class="rel-info">
               <h4><a href="article-cirdi">Le CIRDI et le Maroc : arbitrage d'investissement et engagements conventionnels</a></h4>
               <span>Arbitrage · 14 min</span>
             </div>
           </div>
           <div class="rel-item">
-            <img loading="lazy" src="https://images.pexels.com/photos/1056553/pexels-photo-1056553.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Exequatur Maroc"/>
+            <img loading="lazy" src="images/arbitrage-exequatur-sentence-sm.webp" class="rel-thumb" alt="Exequatur Maroc" width="300" height="199"/>
             <div class="rel-info">
               <h4><a href="article-exequatur">L'exequatur au Maroc : reconnaissance et exécution des décisions étrangères</a></h4>
               <span>Droit · 11 min</span>

@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -274,6 +269,8 @@ ul{list-style:none;}
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div class="top-bar"><div class="container"><div class="tb-in">
@@ -467,7 +464,7 @@ ul{list-style:none;}
       </div>
       <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
     </div>
-    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li><li><a href="gouvernance">Gouvernance</a></li></ul></div>
+    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li></ul></div>
     <div class="ft-col"><h5>Le Magazine</h5><ul><li><a href="a-propos">À propos</a></li><li><a href="equipe">Notre équipe</a></li><li><a href="interviews">Interviews</a></li><li><a href="tribunes">Tribunes</a></li><li><a href="newsletter">Newsletter</a></li><li><a href="contact">Publicité</a></li></ul></div>
     <div class="ft-col"><h5>Contact</h5><ul><li><a href="contact">Nous contacter</a></li><li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li><li><a href="contact">Média Kit</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="politique-confidentialite">Confidentialité</a></li></ul></div>
   </div>

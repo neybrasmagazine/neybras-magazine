@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRVG9RSKTL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  (function(){
-    var p = window.location.pathname.replace(/\.html$/i, '');
-    var loc = window.location.origin + p + window.location.search;
-    gtag('config', 'G-TRVG9RSKTL', { page_path: p, page_location: loc });
-  })();
+  window.NBR_GA_ID = 'G-TRVG9RSKTL';
+  /* Analytics chargé uniquement après consentement — voir assets/consent.js */
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -281,6 +276,8 @@ ul{list-style:none;}
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/consent.css"/>
+<script src="assets/consent.js" defer></script>
 </head>
 <body>
 <div id="prog"></div>
@@ -557,19 +554,19 @@ ul{list-style:none;}
     <div class="wg">
       <div class="wt">Articles liés</div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="Exequatur Maroc"/>
+        <img loading="lazy" src="images/exequatur-jugements-etrangers-maroc-droit-prive.jpg" class="rel-thumb" alt="Exequatur Maroc" width="1600" height="1064"/>
         <div class="rel-info"><h4><a href="article-exequatur">L'exequatur des jugements étrangers au Maroc</a></h4><span>Arbitrage · 11 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/3856635/pexels-photo-3856635.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="CIRDI Maroc"/>
+        <img loading="lazy" src="images/arbitrage-ohada-ccja-afrique.jpg" class="rel-thumb" alt="CIRDI Maroc" width="1600" height="1069"/>
         <div class="rel-info"><h4><a href="article-cirdi-maroc">CIRDI et investissements marocains en Afrique</a></h4><span>Arbitrage · 12 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="CdM 2030 juridique"/>
+        <img loading="lazy" src="images/cdm-2030-juridique.jpg" class="rel-thumb" alt="CdM 2030 juridique" width="600" height="400"/>
         <div class="rel-info"><h4><a href="article-cdm2030-juridique">CdM 2030 : conventions FIFA et responsabilité juridique</a></h4><span>Droit du sport · 14 min</span></div>
       </div>
       <div class="rel-item">
-        <img loading="lazy" src="https://images.pexels.com/photos/1098764/pexels-photo-1098764.jpeg?auto=compress&cs=tinysrgb&w=200" class="rel-thumb" alt="TAS Maroc"/>
+        <img loading="lazy" src="images/mediation-commerciale-au-maroc-table-de.jpg" class="rel-thumb" alt="TAS Maroc" width="1600" height="1066"/>
         <div class="rel-info"><h4><a href="article-tas-maroc">Le TAS et la justice sportive au Maroc</a></h4><span>Arbitrage · 10 min</span></div>
       </div>
     </div>
@@ -592,7 +589,7 @@ ul{list-style:none;}
       </div>
       <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
     </div>
-    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li><li><a href="gouvernance">Gouvernance</a></li></ul></div>
+    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li></ul></div>
     <div class="ft-col"><h5>Le Magazine</h5><ul><li><a href="a-propos">À propos</a></li><li><a href="equipe">Notre équipe</a></li><li><a href="interviews">Interviews</a></li><li><a href="tribunes">Tribunes</a></li><li><a href="newsletter">Newsletter</a></li><li><a href="contact">Publicité</a></li></ul></div>
     <div class="ft-col"><h5>Contact</h5><ul><li><a href="contact">Nous contacter</a></li><li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li><li><a href="contact">Média Kit</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="politique-confidentialite">Confidentialité</a></li></ul></div>
   </div>
