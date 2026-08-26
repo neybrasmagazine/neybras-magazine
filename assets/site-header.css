@@ -35,3 +35,10 @@
   .site-header .logo-name{font-size:15px;}
   .site-header .logo-mark{width:46px;height:46px;}
 }
+
+/* Bandeau supérieur — date du jour (assets/site-date.js).
+   Le <span class="tb-date"> est livré [hidden] : tant que le script
+   n'a pas posé la date réelle, ni la date ni le séparateur qui la
+   suit ne s'affichent. Aucune date figée n'est jamais montrée. */
+.tb-date[hidden]{display:none;}
+.tb-date[hidden] + span{display:none;}

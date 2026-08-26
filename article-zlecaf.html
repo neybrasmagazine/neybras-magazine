@@ -235,7 +235,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -312,7 +312,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   <div class="container">
     <div class="tb-in">
       <div class="tb-l">
-        <span class="tb-date">Mercredi 20 Mai 2026</span>
+        <span class="tb-date" hidden></span>
         <span>·</span>
         <span>Casablanca</span>
         <span>·</span>
@@ -812,9 +812,7 @@ const st=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
-<script>
-(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
-</script>
+
 <script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
 <script>
 (function(){

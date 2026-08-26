@@ -722,7 +722,7 @@ ul{list-style:none}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
 <link rel="stylesheet" href="assets/consent.css"/>
 <script src="assets/consent.js" defer></script>
 </head>
@@ -733,7 +733,7 @@ ul{list-style:none}
   <div class="container">
     <div class="tb-in">
       <div class="tb-l">
-        <span class="tb-date"><i class="far fa-calendar-alt"></i> Mercredi 20 Mai 2026</span>
+        <span class="tb-date" hidden><i class="far fa-calendar-alt"></i></span>
         <span style="color:rgba(255,255,255,.1)">|</span>
         <span>Maroc · Afrique · Monde</span>
       </div>
@@ -2000,8 +2000,6 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
     setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
   }
 })();
-</script><script>
-(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){var ic=el.querySelector('i');if(ic){el.innerHTML='';el.appendChild(ic);el.appendChild(document.createTextNode(' '+s));}else{el.textContent=s;}});})();
 </script>
 <script>
 (function(){

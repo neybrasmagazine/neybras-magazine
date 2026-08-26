@@ -209,7 +209,7 @@ ul{list-style:none;}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -282,7 +282,7 @@ ul{list-style:none;}
 <body>
 <div id="prog"></div>
 <div class="top-bar"><div class="container"><div class="tb-in">
-  <div class="tb-l"><span class="tb-date">Samedi 20 Juin 2026</span><span>·</span><span>Maroc · Afrique · Monde</span></div>
+  <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Maroc · Afrique · Monde</span></div>
   <div class="tb-r"><div class="tb-lnk"><a href="a-propos">À propos</a><a href="contact">Publicité</a><a href="contact">Contact</a></div>
   </div>
 </div></div></div>
@@ -614,7 +614,7 @@ const stt=document.getElementById('stt');
 window.addEventListener('scroll',()=>stt.classList.toggle('v',scrollY>400));
 stt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 </script>
-<script>(function(){var j=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],m=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],d=new Date(),s=j[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear();document.querySelectorAll('.tb-date').forEach(function(el){el.textContent=s;});})();</script>
+
 <script>
 (function(){
   var FS='https://formspree.io/f/mgoppdpg';
