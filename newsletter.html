@@ -35,8 +35,6 @@ a{text-decoration:none;color:inherit;transition:all .2s}
 .logo-wrap{display:flex;align-items:center;gap:12px}
 .logo-name{font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1}
 .logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px}
-.btn-home{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:all .2s}
-.btn-home:hover{border-color:var(--or-lt);color:var(--or-lt)}
 
 /* ── HERO ── */
 .hero{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 32px}
@@ -80,7 +78,6 @@ h1 em{font-style:italic;color:var(--or)}
 .bitem i{color:var(--or);margin-top:3px;flex-shrink:0}
 
 /* ── FOOTER ── */
-.site-footer{background:var(--bn2);padding:18px 32px;text-align:center;font-family:var(--it);font-size:10.5px;color:rgba(255,255,255,.22)}
 
 /* ── SUCCESS (Formspree redirect) ── */
 @media(max-width:600px){
@@ -88,6 +85,57 @@ h1 em{font-style:italic;color:var(--or)}
   .nl-form input[type="email"]{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px}
   .nl-form button{border-radius:1px}
   .hd-in{padding:10px 18px}
+}
+
+/* ============================================================
+   Chrome standard du site — repris du gabarit de faq.html
+   (bandeau supérieur, conteneur, pied de page à quatre colonnes).
+   L'en-tête et la barre de navigation sont, eux, entièrement
+   pilotés par assets/site-header.css, chargé en dernier.
+   ============================================================ */
+:root{--tr:all .22s ease;--bn3:#145068;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+
+.top-bar{background:var(--bn2);border-bottom:1px solid rgba(255,255,255,.06);padding:6px 0;}
+.tb-in{display:flex;justify-content:space-between;align-items:center;}
+.tb-l{display:flex;align-items:center;gap:16px;font-size:10px;color:rgba(255,255,255,.32);}
+.tb-date{color:rgba(184,150,90,.8);font-weight:500;}
+.tb-r{display:flex;align-items:center;gap:16px;}
+.tb-lnk{display:flex;gap:16px;}
+.tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
+.tb-lnk a:hover{color:rgba(255,255,255,.65);}
+
+/* ── Renvoi vers l'abonnement payant ─────────────────────────
+   Placé hors de .card : le script d'inscription remplace le
+   contenu de .card en cas de succès, ce renvoi doit lui survivre. */
+.abo-renvoi{background:#fff;border-top:1px solid var(--brd);padding:44px 32px;}
+.abo-renvoi .inner{max-width:540px;margin:0 auto;text-align:center;}
+.abo-renvoi h2{font-family:var(--cg);font-size:24px;font-weight:600;color:var(--bn);margin-bottom:12px;}
+.abo-renvoi p{font-family:var(--cg);font-size:16px;line-height:1.7;color:var(--gris3);}
+.abo-renvoi a{color:var(--or);font-weight:600;border-bottom:1px solid var(--or-bd);}
+.abo-renvoi a:hover{border-color:var(--or);}
+
+/* ── Pied de page ─────────────────────────────────────────── */
+footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.ft-brand .logo-name{font-size:14px;margin-bottom:6px;}
+.ft-brand .logo-tag{font-size:10px;margin-bottom:14px;}
+.ft-desc{font-size:11.5px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px;}
+.ft-col-title{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(184,150,90,.7);margin-bottom:16px;}
+.ft-links{display:flex;flex-direction:column;gap:9px;}
+.ft-links a{font-size:11.5px;color:rgba(255,255,255,.35);transition:var(--tr);}
+.ft-links a:hover{color:rgba(255,255,255,.72);}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.ft-copy{font-size:10px;color:rgba(255,255,255,.22);line-height:1.7;}
+.ft-legal{display:flex;gap:20px;}
+.ft-legal a{font-size:10px;color:rgba(255,255,255,.22);}
+.ft-legal a:hover{color:rgba(255,255,255,.5);}
+@media(max-width:900px){.ft-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){
+  .ft-grid{grid-template-columns:1fr;}
+  .container{padding:0 18px;}
+  .ft-bottom{flex-direction:column;align-items:flex-start;}
+  .abo-renvoi{padding:36px 18px;}
 }
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -148,12 +196,30 @@ h1 em{font-style:italic;color:var(--or)}
 </head>
 <body>
 
-<header class="site-header">
-  <div class="hd-in">
-    <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div></div></a>
-    <a href="/" class="btn-home">← Accueil</a>
-  </div>
-</header>
+<div class="top-bar"><div class="container"><div class="tb-in">
+  <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Maroc · Afrique · Monde</span></div>
+  <div class="tb-r"><div class="tb-lnk"><a href="a-propos">À propos</a><a href="contact">Publicité</a><a href="contact">Contact</a></div></div>
+</div></div></div>
+
+<header class="site-header"><div class="container"><div class="hd-in">
+  <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le média qui connecte les idées aux décideurs</div></div></a>
+  <div class="hd-act"><button class="btn-srch" aria-label="Rechercher"><i class="fas fa-search"></i></button><a href="newsletter" class="btn-news">Newsletter</a><a href="abonnement" class="btn-abo">S'abonner</a></div>
+</div></div>
+<nav class="main-nav" aria-label="Navigation principale"><div class="container"><div class="nav-in">
+  <a href="/" class="nav-a">À la Une</a>
+  <a href="analyses" class="nav-a">Analyses</a>
+  <a href="droit" class="nav-a">Droit</a>
+  <a href="finance" class="nav-a">Finance</a>
+  <a href="afrique" class="nav-a">Afrique</a>
+  <a href="droit-du-sport" class="nav-a star">Sport Business</a>
+  <a href="arbitrage" class="nav-a">Arbitrage</a>
+  <a href="tribunes" class="nav-a">Opinion</a>
+  <a href="interviews" class="nav-a">Interviews</a>
+  <a href="evenements" class="nav-a">Événements</a>
+  <a href="abonnement" class="nav-a">Abonnement</a><a href="newsletter" class="nav-a nav-nl">Newsletter</a>
+  <a href="premium" class="nav-a">Annonceurs</a>
+</div></div></nav></header>
+
 
 <main class="hero">
   <div class="card">
@@ -176,10 +242,45 @@ h1 em{font-style:italic;color:var(--or)}
   </div>
 </main>
 
-<footer class="site-footer">
-  © 2026 Neybras Magazine · Casablanca, Maroc ·
-  <a href="mentions-legales" style="color:rgba(255,255,255,.3);margin-left:8px">Mentions légales</a>
+
+<section class="abo-renvoi">
+  <div class="inner">
+    <h2>Vous souhaitez recevoir le magazine ?</h2>
+    <p>La lettre d'information est gratuite. Pour recevoir les quatre parutions annuelles de Neybras Magazine à l'adresse de votre choix, découvrez <a href="abonnement">nos formules d'abonnement</a>.</p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo-name">Neybras</div>
+        <div class="logo-tag">Le média qui connecte les idées aux décideurs</div>
+        <p class="ft-desc">Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+      </div>
+      <div><div class="ft-col-title">Rubriques</div><div class="ft-links">
+        <a href="droit-du-sport">Sport Business</a><a href="arbitrage">Arbitrage</a>
+        <a href="droit">Droit & Jurisprudence</a><a href="finance">Finance & Marchés</a>
+        <a href="afrique">Afrique & OHADA</a>
+      </div></div>
+      <div><div class="ft-col-title">Le Magazine</div><div class="ft-links">
+        <a href="a-propos">À propos</a><a href="equipe">Notre équipe</a>
+        <a href="interviews">Interviews</a><a href="tribunes">Tribunes</a>
+        <a href="abonnement">Abonnement</a><a href="newsletter">Newsletter</a>
+        <a href="premium">Annonceurs</a>
+      </div></div>
+      <div><div class="ft-col-title">Contact</div><div class="ft-links">
+        <a href="contact">Nous contacter</a><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
+        <a href="faq">FAQ</a><a href="mentions-legales">Mentions légales</a>
+        <a href="politique-confidentialite">Confidentialité</a>
+      </div></div>
+    </div>
+    <div class="ft-bottom">
+      <span class="ft-copy">© 2026 Neybras Publishing. Tous droits réservés.<br>Capital A, Bureau n° 9, Bouskoura, Casablanca</span>
+      <div class="ft-legal"><a href="mentions-legales">Mentions légales</a><a href="politique-confidentialite">Confidentialité</a><a href="cookies">Cookies</a></div>
+    </div>
+  </div>
 </footer>
+
 
 <script>
 document.getElementById('nl-form').addEventListener('submit', async function(e) {
