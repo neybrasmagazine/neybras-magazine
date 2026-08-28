@@ -42,3 +42,15 @@
    suit ne s'affichent. Aucune date figée n'est jamais montrée. */
 .tb-date[hidden]{display:none;}
 .tb-date[hidden] + span{display:none;}
+
+/* Bandeau supérieur — repli mobile (correction d'un défaut préexistant).
+   Le bloc de droite (.tb-r) ne se replie pas : sous environ 490px il
+   pousse la page au-delà de la fenêtre et provoque un défilement
+   horizontal, visible notamment sur /premium.
+   Il ne contient que des liens de navigation — Contact, Interviews,
+   Tribunes, À propos, Publicité — tous présents ailleurs sur la même
+   page, dans le menu principal ou le pied de page : le masquer sous
+   768px ne retire aucune destination au visiteur. */
+@media(max-width:768px){
+  .tb-r{display:none;}
+}
