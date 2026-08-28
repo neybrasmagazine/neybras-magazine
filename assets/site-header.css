@@ -15,7 +15,7 @@
 .site-header .logo-name{font-family:'Inter','Helvetica Neue',sans-serif;font-size:18px;font-weight:700;letter-spacing:.2em;color:#ffffff;text-transform:uppercase;line-height:1;}
 .site-header .logo-tag{font-family:'Cormorant Garamond','Georgia',serif;font-style:italic;font-size:11px;color:#B8965A;letter-spacing:.06em;margin-top:3px;}
 
-.site-header .hd-act{display:flex;align-items:center;gap:22px;}
+.site-header .hd-act{display:flex;align-items:center;gap:14px;}
 .site-header .btn-srch{background:none;border:none;color:rgba(255,255,255,.45);font-size:15px;cursor:pointer;padding:6px;transition:color .2s ease;line-height:1;}
 .site-header .btn-srch:hover{color:#ffffff;}
 .site-header .btn-abo{background:#B8965A;color:#0E3D52;font-family:'Inter','Helvetica Neue',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 22px;border-radius:2px;border:none;cursor:pointer;white-space:nowrap;transition:background .2s ease;}
@@ -42,3 +42,41 @@
    suit ne s'affichent. Aucune date figée n'est jamais montrée. */
 .tb-date[hidden]{display:none;}
 .tb-date[hidden] + span{display:none;}
+
+/* ============================================================
+   En-tête — deux actions distinctes
+   ------------------------------------------------------------
+   « Newsletter »  -> /newsletter  : lettre d'information gratuite.
+                     Traitement secondaire (contour).
+   « S'abonner »   -> /abonnement  : abonnement payant, quatre
+                     parutions. Action principale, en position
+                     terminale à droite.
+
+   L'action principale garde l'or plein sur navy (.btn-abo, déjà
+   défini plus haut) : l'en-tête étant lui-même en #0E3D52, un
+   bouton bleu plein y serait invisible. C'est le traitement que
+   le site emploie déjà pour ses actions principales sur fond
+   sombre (.btn-primary des pages de rubrique).
+   ============================================================ */
+.site-header .btn-news{
+  background:transparent;
+  color:rgba(255,255,255,.72);
+  font-family:'Inter','Helvetica Neue',sans-serif;
+  font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 18px;
+  border:1px solid rgba(255,255,255,.28);border-radius:2px;
+  cursor:pointer;white-space:nowrap;
+  transition:border-color .2s ease,color .2s ease;
+}
+.site-header .btn-news:hover{border-color:#CCA96E;color:#CCA96E;}
+
+/* Repli mobile — sous 600px l'en-tête est trop étroit pour deux boutons.
+   « S'abonner » (action principale) reste visible ; « Newsletter » se
+   replie dans la barre de navigation, qui tient lieu de menu déroulant
+   sur ce site : elle défile horizontalement et reste atteignable.
+   Les tailles de touche ne sont pas réduites. */
+.main-nav .nav-a.nav-nl{display:none;}
+@media(max-width:600px){
+  .site-header .btn-news{display:none;}
+  .main-nav .nav-a.nav-nl{display:block;}
+}
