@@ -105,16 +105,6 @@ h1 em{font-style:italic;color:var(--or)}
 .tb-lnk a{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.07em;text-transform:uppercase;}
 .tb-lnk a:hover{color:rgba(255,255,255,.65);}
 
-/* ── Renvoi vers l'abonnement payant ─────────────────────────
-   Placé hors de .card : le script d'inscription remplace le
-   contenu de .card en cas de succès, ce renvoi doit lui survivre. */
-.abo-renvoi{background:#fff;border-top:1px solid var(--brd);padding:44px 32px;}
-.abo-renvoi .inner{max-width:540px;margin:0 auto;text-align:center;}
-.abo-renvoi h2{font-family:var(--cg);font-size:24px;font-weight:600;color:var(--bn);margin-bottom:12px;}
-.abo-renvoi p{font-family:var(--cg);font-size:16px;line-height:1.7;color:var(--gris3);}
-.abo-renvoi a{color:var(--or);font-weight:600;border-bottom:1px solid var(--or-bd);}
-.abo-renvoi a:hover{border-color:var(--or);}
-
 /* ── Pied de page ─────────────────────────────────────────── */
 footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48px 0 28px;}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
@@ -135,7 +125,6 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   .ft-grid{grid-template-columns:1fr;}
   .container{padding:0 18px;}
   .ft-bottom{flex-direction:column;align-items:flex-start;}
-  .abo-renvoi{padding:36px 18px;}
 }
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -216,7 +205,6 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   <a href="tribunes" class="nav-a">Opinion</a>
   <a href="interviews" class="nav-a">Interviews</a>
   <a href="evenements" class="nav-a">Événements</a>
-  <a href="abonnement" class="nav-a">Abonnement</a>
   <a href="premium" class="nav-a">Annonceurs</a>
 </div></div></nav></header>
 
@@ -242,13 +230,6 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   </div>
 </main>
 
-
-<section class="abo-renvoi">
-  <div class="inner">
-    <h2>Vous souhaitez recevoir le magazine ?</h2>
-    <p>La lettre d'information est gratuite. Pour recevoir les quatre parutions annuelles de Neybras Magazine à l'adresse de votre choix, découvrez <a href="abonnement">nos formules d'abonnement</a>.</p>
-  </div>
-</section>
 <footer>
   <div class="container">
     <div class="ft-grid">
@@ -265,7 +246,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <div><div class="ft-col-title">Le Magazine</div><div class="ft-links">
         <a href="a-propos">À propos</a><a href="equipe">Notre équipe</a>
         <a href="interviews">Interviews</a><a href="tribunes">Tribunes</a>
-        <a href="abonnement">Abonnement</a><a href="newsletter">Newsletter</a>
+        <a href="newsletter">Newsletter</a>
         <a href="premium">Annonceurs</a>
       </div></div>
       <div><div class="ft-col-title">Contact</div><div class="ft-links">
