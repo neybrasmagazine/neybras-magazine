@@ -7,3 +7,4 @@ Sitemap: https://neybras-magazine.com/sitemap.xml
 # Exclure les fichiers techniques et gabarits d'email
 Disallow: /palette-preview.html
 Disallow: /email-
+Disallow: /composants.html

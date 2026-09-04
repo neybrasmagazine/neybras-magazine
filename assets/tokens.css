@@ -1,0 +1,164 @@
+/* ============================================================
+   NEYBRAS MAGAZINE — JETONS DE CONCEPTION
+   ------------------------------------------------------------
+   Source : Neybras Magazine, Vol. 001, septembre 2026.
+   Les couleurs ne sont pas choisies, elles sont MESURÉES dans
+   le PDF du numéro — valeur des opérateurs de couleur des flux
+   de contenu, et échantillonnage des pages rendues.
+
+   Aucune valeur en dur ailleurs. Si une couleur, un corps ou
+   une espacement manque ici, on l'ajoute ici — on ne l'écrit
+   pas dans une feuille de page.
+   ============================================================ */
+
+:root {
+
+  /* ---------- COULEURS ----------------------------------------
+     Relevé du Vol. 001 :
+       #2E4A7A  404 poses sur 21 des 24 pages — encadrés,
+                intertitres, exergues, folios, filets de marge.
+                C'est LA couleur du magazine.
+       #0C2038  fond de couverture (dégradé #08192D → #142C48).
+       #264653  teinte secondaire, 6 pages.
+       #2B2B2B  texte courant (jamais du noir pur).
+       #6B6B6B  texte secondaire.  #E2DEDF  filets.
+       #FCD850  or, UNIQUEMENT en couverture, nulle part à
+                l'intérieur. Retenu ici en champagne #B8965A :
+                sur écran, le jaune de la couverture vire au
+                criard. C'est le seul écart assumé au relevé.
+     ------------------------------------------------------------ */
+
+  --nbr-bleu:        #2E4A7A;   /* bleu de marque */
+  --nbr-bleu-fonce:  #243A61;   /* survol, états actifs */
+  --nbr-bleu-clair:  #3D5D93;   /* liens sur fond sombre */
+  --nbr-nuit:        #0C2038;   /* fond profond : hero, pied de page */
+  --nbr-nuit-2:      #142C48;   /* haut du dégradé de couverture */
+  --nbr-ardoise:     #264653;   /* teinte secondaire */
+
+  --nbr-or:          #B8965A;   /* accent : filets, capitales, sur fond sombre */
+  --nbr-or-fonce:    #806534;   /* accent en TEXTE sur fond clair (voir contraste) */
+
+  --nbr-encre:       #2B2B2B;   /* texte courant */
+  --nbr-gris:        #6B6B6B;   /* texte secondaire, légendes */
+  --nbr-filet:       #E2DEDF;   /* filets, séparateurs */
+  --nbr-papier:      #FCFCFC;   /* fond de page */
+  --nbr-blanc:       #FFFFFF;
+  --nbr-creme:       #F4F1EC;   /* fond d'encadré sur page claire */
+
+  /* Voiles, dérivés des teintes ci-dessus. Jamais d'autre alpha. */
+  --nbr-bleu-voile:  rgba(46, 74, 122, .08);
+  --nbr-bleu-bord:   rgba(46, 74, 122, .20);
+  --nbr-or-voile:    rgba(184, 150, 90, .10);
+  --nbr-or-bord:     rgba(184, 150, 90, .32);
+  --nbr-nuit-voile:  rgba(12, 32, 56, .60);
+
+  /* CONTRASTE — vérifié, à ne pas contourner
+       #2E4A7A sur blanc ........ 8,9:1   AA + AAA
+       #2B2B2B sur blanc ........ 13,9:1  AA + AAA
+       #6B6B6B sur blanc ......... 5,3:1  AA
+       #B8965A sur blanc ......... 2,8:1  ÉCHOUE — décor seulement :
+                                          filets, aplats, gros corps.
+                                          Pour de l'or en texte sur
+                                          fond clair : --nbr-or-fonce
+                                          (5,4:1 sur blanc, 4,8:1 sur creme).
+       #B8965A sur #0C2038 ....... 5,9:1  AA
+       blanc  sur #2E4A7A ........ 8,9:1  AA + AAA
+       blanc  sur #0C2038 ....... 16,4:1  AA + AAA
+     ------------------------------------------------------------ */
+
+
+  /* ---------- TYPOGRAPHIE -------------------------------------
+     Deux familles, pas trois (le Vol. 001 en compte vingt-deux,
+     résidu de gabarits : ce n'est pas un système à reproduire).
+
+     Titres : Playfair Display, serif à fort contraste, en écho
+     au logotype de couverture, qui est une didone. Déjà chargée
+     par le site — c'est Cormorant Garamond qui sort.
+
+     Texte : Inter. Le numéro compose en Poppins 13 pt ; Poppins
+     est une géométrique, fatigante en lecture longue sur écran.
+     Écart assumé, signalé à la direction de la publication.
+     ------------------------------------------------------------ */
+
+  --nbr-titre: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --nbr-texte: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Échelle de tierce majeure (×1,25) sur une base de 17 px.
+     Les trois plus grands corps sont fluides : ils se posent
+     entre le mobile et le grand écran sans palier. */
+  --t-2xs:  0.706rem;   /* 12 px — mentions légales, folios */
+  --t-xs:   0.824rem;   /* 14 px — étiquettes, méta */
+  --t-sm:   0.941rem;   /* 16 px — texte secondaire */
+  --t-base: 1rem;       /* 17 px — texte courant */
+  --t-md:   1.176rem;   /* 20 px — chapô */
+  --t-lg:   1.471rem;   /* 25 px — titre de bloc */
+  --t-xl:   clamp(1.647rem, 1.4rem + 1.2vw, 1.824rem);   /* 28-31 px */
+  --t-2xl:  clamp(1.941rem, 1.5rem + 2.2vw, 2.294rem);   /* 33-39 px */
+  --t-3xl:  clamp(2.294rem, 1.6rem + 3.4vw, 2.882rem);   /* 39-49 px */
+
+  --nbr-base-px: 17px;  /* posé sur <html> */
+
+  --lh-serre:  1.15;    /* grands titres */
+  --lh-titre:  1.25;    /* titres de bloc */
+  --lh-texte:  1.65;    /* lecture longue */
+  --lh-lache:  1.8;     /* encadrés aérés */
+
+  --ls-titre:  -0.015em;
+  --ls-texte:  0;
+  --ls-caps:   0.14em;  /* capitales espacées : étiquettes de rubrique */
+
+  --poids-normal: 400;
+  --poids-moyen:  500;
+  --poids-gras:   700;
+  --poids-noir:   900;  /* réservé aux titres Playfair de une */
+
+  --mesure: 68ch;       /* largeur de lecture confortable */
+
+
+  /* ---------- ESPACEMENTS -------------------------------------
+     Base 4 px. Le print respire : les valeurs hautes servent
+     entre blocs, pas seulement à l'intérieur. */
+  --e-1:   0.235rem;   /*  4 px */
+  --e-2:   0.471rem;   /*  8 px */
+  --e-3:   0.706rem;   /* 12 px */
+  --e-4:   0.941rem;   /* 16 px */
+  --e-5:   1.412rem;   /* 24 px */
+  --e-6:   1.882rem;   /* 32 px */
+  --e-7:   2.824rem;   /* 48 px */
+  --e-8:   3.765rem;   /* 64 px */
+  --e-9:   5.647rem;   /* 96 px */
+  --e-10:  7.529rem;   /* 128 px */
+
+  --gouttiere: var(--e-6);
+  --largeur-max: 1180px;
+
+
+  /* ---------- RAYONS, FILETS, MOUVEMENT -----------------------
+     Le numéro n'a pas un seul angle arrondi. On garde donc
+     l'angle vif par défaut, et un rayon minime là où une
+     surface cliquable a besoin d'être détourée.
+     Pas de dégradé, pas d'ombre portée marquée, pas d'animation
+     décorative : la seule ombre admise lève une carte au survol. */
+  --r-0: 0;
+  --r-1: 2px;
+  --r-2: 3px;
+
+  --filet: 1px solid var(--nbr-filet);
+  --filet-bleu: 1px solid var(--nbr-bleu-bord);
+
+  --duree: .18s;
+  --courbe: cubic-bezier(.4, 0, .2, 1);
+  --transition: var(--duree) var(--courbe);
+
+  --ombre-carte: 0 1px 3px rgba(12, 32, 56, .07);
+  --ombre-levee: 0 6px 20px rgba(12, 32, 56, .11);
+
+  /* Anneau de focus : visible sur fond clair comme sur fond sombre. */
+  --focus: 2px solid var(--nbr-or);
+  --focus-decalage: 2px;
+}
+
+/* Le mouvement est une préférence, pas un acquis. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --duree: 0s; }
+}

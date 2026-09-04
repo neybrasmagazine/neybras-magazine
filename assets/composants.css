@@ -1,0 +1,406 @@
+/* ============================================================
+   NEYBRAS MAGAZINE — COMPOSANTS DE BASE
+   ------------------------------------------------------------
+   Ne contient AUCUNE valeur en dur : tout vient de tokens.css,
+   qui doit être chargé avant.
+
+   Les encadrés reprennent ceux du Vol. 001 : l'encadré chiffré
+   (« Un cas d'école — 60 millions de dirhams », p. 9), la
+   checklist (« Trois réflexes le jour de la notification »,
+   p. 15) et le bloc de sources en pied d'article, que le print
+   pose systématiquement et que le web ne posait pas encore.
+   ============================================================ */
+
+/* ---------- SOCLE ------------------------------------------- */
+
+html { font-size: var(--nbr-base-px); -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--nbr-papier);
+  color: var(--nbr-encre);
+  font-family: var(--nbr-texte);
+  font-size: var(--t-base);
+  line-height: var(--lh-texte);
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--nbr-bleu); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { color: var(--nbr-bleu-fonce); }
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: var(--focus);
+  outline-offset: var(--focus-decalage);
+}
+
+.nbr-contenu { max-width: var(--largeur-max); margin-inline: auto; padding-inline: var(--gouttiere); }
+.nbr-lecture { max-width: var(--mesure); }
+
+
+/* ---------- TITRES ------------------------------------------ */
+
+.nbr-h1, .nbr-h2, .nbr-h3 {
+  font-family: var(--nbr-titre);
+  color: var(--nbr-nuit);
+  letter-spacing: var(--ls-titre);
+  margin: 0;
+  text-wrap: balance;
+}
+.nbr-h1 { font-size: var(--t-3xl); font-weight: var(--poids-noir); line-height: var(--lh-serre); }
+.nbr-h2 { font-size: var(--t-2xl); font-weight: var(--poids-gras); line-height: var(--lh-titre); }
+.nbr-h3 { font-size: var(--t-lg);  font-weight: var(--poids-gras); line-height: var(--lh-titre); }
+
+/* Intertitre dans le corps : sans serif, bleu, comme dans le numéro. */
+.nbr-intertitre {
+  font-family: var(--nbr-texte);
+  font-size: var(--t-md);
+  font-weight: var(--poids-gras);
+  line-height: var(--lh-titre);
+  color: var(--nbr-bleu);
+  margin: var(--e-7) 0 var(--e-3);
+}
+
+.nbr-chapo {
+  font-size: var(--t-md);
+  line-height: var(--lh-titre);
+  color: var(--nbr-gris);
+  max-width: var(--mesure);
+  margin: var(--e-4) 0 0;
+  text-wrap: pretty;
+}
+
+
+/* ---------- ÉTIQUETTES -------------------------------------- */
+
+.nbr-etiquette {
+  display: inline-block;
+  font-size: var(--t-2xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  padding: var(--e-1) var(--e-3);
+  border: 1px solid var(--nbr-bleu-bord);
+  color: var(--nbr-bleu);
+  background: var(--nbr-bleu-voile);
+  border-radius: var(--r-1);
+}
+.nbr-etiquette--format {
+  border-color: var(--nbr-or-bord);
+  color: var(--nbr-or-fonce);
+  background: var(--nbr-or-voile);
+}
+.nbr-etiquette--sombre {
+  border-color: var(--nbr-or-bord);
+  color: var(--nbr-or);
+  background: transparent;
+}
+
+
+/* ---------- FIL D'ARIANE ------------------------------------ */
+
+.nbr-ariane { font-size: var(--t-xs); color: var(--nbr-gris); }
+.nbr-ariane ol { list-style: none; display: flex; flex-wrap: wrap; gap: var(--e-2); margin: 0; padding: 0; }
+.nbr-ariane li + li::before { content: '›'; margin-right: var(--e-2); color: var(--nbr-filet); }
+.nbr-ariane a { color: var(--nbr-gris); text-decoration: none; }
+.nbr-ariane a:hover { color: var(--nbr-bleu); text-decoration: underline; }
+.nbr-ariane [aria-current] { color: var(--nbr-encre); }
+
+
+/* ---------- LIGNE AUTEUR ------------------------------------ */
+
+.nbr-signature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-3);
+  font-size: var(--t-xs);
+  color: var(--nbr-gris);
+  padding: var(--e-4) 0;
+  border-top: var(--filet);
+  border-bottom: var(--filet);
+}
+.nbr-signature__portrait {
+  width: 2.4rem; height: 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.nbr-signature__nom { color: var(--nbr-encre); font-weight: var(--poids-gras); }
+.nbr-signature__qualite { color: var(--nbr-gris); }
+.nbr-signature__sep { color: var(--nbr-gris); }
+
+
+/* ---------- « CE QU'IL FAUT RETENIR » -----------------------
+   En tête d'article. La promesse du magazine est d'être
+   actionnable : elle se tient dès la première ligne. */
+
+.nbr-retenir {
+  border-left: 3px solid var(--nbr-or);
+  background: var(--nbr-creme);
+  padding: var(--e-5) var(--e-5) var(--e-5) var(--e-6);
+  margin: var(--e-6) 0;
+}
+.nbr-retenir__titre {
+  font-size: var(--t-2xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--nbr-or-fonce);
+  margin: 0 0 var(--e-3);
+}
+.nbr-retenir ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--e-3); }
+.nbr-retenir li { position: relative; padding-left: var(--e-5); font-size: var(--t-sm); line-height: var(--lh-texte); }
+.nbr-retenir li::before {
+  content: '';
+  position: absolute; left: 0; top: .62em;
+  width: var(--e-3); height: 1px;
+  background: var(--nbr-or);
+}
+
+
+/* ---------- ENCADRÉ CHIFFRÉ ---------------------------------
+   Reprend « Un cas d'école — 60 millions de dirhams » (p. 9) :
+   aplat bleu, titre en capitales, tableau de valeurs, total
+   détaché par un filet. */
+
+.nbr-chiffres {
+  background: var(--nbr-bleu);
+  color: var(--nbr-blanc);
+  padding: var(--e-5) var(--e-6);
+  margin: var(--e-6) 0;
+}
+.nbr-chiffres__titre {
+  font-size: var(--t-xs);
+  font-weight: var(--poids-moyen);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  margin: 0 0 var(--e-5);
+  color: var(--nbr-blanc);
+}
+.nbr-chiffres__ligne {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--e-4);
+  padding: var(--e-2) 0;
+  font-size: var(--t-sm);
+}
+.nbr-chiffres__ligne dt { color: rgba(255, 255, 255, .82); }
+.nbr-chiffres__ligne dd { margin: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.nbr-chiffres dl { margin: 0; }
+.nbr-chiffres__total {
+  margin-top: var(--e-3);
+  padding-top: var(--e-3);
+  border-top: 1px solid rgba(255, 255, 255, .26);
+  font-weight: var(--poids-gras);
+}
+
+
+/* ---------- ENCADRÉ CHECKLIST -------------------------------
+   Reprend « Trois réflexes le jour de la notification » (p. 15). */
+
+.nbr-reflexes {
+  border: var(--filet-bleu);
+  padding: var(--e-5) var(--e-6);
+  margin: var(--e-6) 0;
+  background: var(--nbr-blanc);
+}
+.nbr-reflexes__titre {
+  font-size: var(--t-2xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--nbr-bleu);
+  margin: 0 0 var(--e-4);
+}
+.nbr-reflexes ol { margin: 0; padding: 0; list-style: none; counter-reset: reflexe; display: grid; gap: var(--e-4); }
+.nbr-reflexes li { counter-increment: reflexe; display: grid; grid-template-columns: auto 1fr; gap: var(--e-4); font-size: var(--t-sm); }
+.nbr-reflexes li::before {
+  content: counter(reflexe);
+  font-family: var(--nbr-titre);
+  font-size: var(--t-lg);
+  font-weight: var(--poids-gras);
+  line-height: 1;
+  color: var(--nbr-or);
+}
+
+
+/* ---------- CITATION DE JURISPRUDENCE -----------------------
+   Jamais sans sa référence complète : c'est le point qui
+   sépare un média juridique d'un site de référencement. */
+
+.nbr-juris {
+  margin: var(--e-6) 0;
+  padding-left: var(--e-5);
+  border-left: 2px solid var(--nbr-bleu);
+}
+.nbr-juris blockquote {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: var(--lh-lache);
+  color: var(--nbr-encre);
+}
+.nbr-juris__ref {
+  display: block;
+  margin-top: var(--e-3);
+  font-size: var(--t-2xs);
+  font-style: normal;
+  letter-spacing: .02em;
+  color: var(--nbr-gris);
+}
+
+
+/* ---------- EXERGUE ----------------------------------------- */
+
+.nbr-exergue {
+  margin: var(--e-7) 0;
+  font-family: var(--nbr-texte);
+  font-size: var(--t-lg);
+  font-weight: var(--poids-gras);
+  font-style: italic;
+  line-height: var(--lh-titre);
+  letter-spacing: .01em;
+  color: var(--nbr-bleu);
+  max-width: var(--mesure);
+}
+.nbr-exergue::before {
+  content: '”';
+  display: block;
+  font-family: var(--nbr-titre);
+  font-size: var(--t-3xl);
+  font-style: normal;
+  line-height: .5;
+  color: var(--nbr-bleu);
+  margin-bottom: var(--e-3);
+}
+
+
+/* ---------- BLOC SOURCES ------------------------------------
+   Obligatoire en fin d'article, jamais optionnel. */
+
+.nbr-sources {
+  margin: var(--e-7) 0 0;
+  padding-top: var(--e-4);
+  border-top: 2px solid var(--nbr-nuit);
+}
+.nbr-sources__titre {
+  font-size: var(--t-2xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--nbr-nuit);
+  margin: 0 0 var(--e-3);
+}
+.nbr-sources ol { margin: 0; padding-left: var(--e-5); display: grid; gap: var(--e-2); }
+.nbr-sources li { font-size: var(--t-2xs); line-height: var(--lh-texte); color: var(--nbr-gris); }
+.nbr-sources li a { color: var(--nbr-gris); }
+
+
+/* ---------- BLOC AUTEUR ------------------------------------- */
+
+.nbr-auteur {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--e-5);
+  align-items: start;
+  margin: var(--e-7) 0;
+  padding: var(--e-5);
+  background: var(--nbr-creme);
+}
+.nbr-auteur__portrait { width: 5rem; height: 5rem; object-fit: cover; border-radius: 50%; }
+.nbr-auteur__nom { font-family: var(--nbr-titre); font-size: var(--t-lg); font-weight: var(--poids-gras); color: var(--nbr-nuit); margin: 0; }
+.nbr-auteur__qualite { font-size: var(--t-xs); color: var(--nbr-bleu); margin: var(--e-1) 0 var(--e-3); }
+.nbr-auteur__bio { font-size: var(--t-sm); margin: 0 0 var(--e-3); }
+.nbr-auteur__liens { display: flex; flex-wrap: wrap; gap: var(--e-4); font-size: var(--t-xs); }
+
+
+/* ---------- CARTE ARTICLE ----------------------------------- */
+
+.nbr-carte {
+  display: flex;
+  flex-direction: column;
+  background: var(--nbr-blanc);
+  border: var(--filet);
+  border-radius: var(--r-1);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.nbr-carte:hover { box-shadow: var(--ombre-levee); transform: translateY(-2px); }
+.nbr-carte__image { aspect-ratio: 3 / 2; width: 100%; object-fit: cover; display: block; }
+.nbr-carte__corps { padding: var(--e-4); display: flex; flex-direction: column; gap: var(--e-3); flex: 1; }
+.nbr-carte__titre { font-family: var(--nbr-titre); font-size: var(--t-md); font-weight: var(--poids-gras); line-height: var(--lh-titre); margin: 0; }
+.nbr-carte__titre a { color: var(--nbr-nuit); text-decoration: none; }
+.nbr-carte__titre a:hover { color: var(--nbr-bleu); }
+.nbr-carte__meta { margin-top: auto; font-size: var(--t-2xs); color: var(--nbr-gris); }
+.nbr-carte__meta b { color: var(--nbr-encre); font-weight: var(--poids-moyen); }
+
+
+/* ---------- BOUTONS ----------------------------------------- */
+
+.nbr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  font-family: var(--nbr-texte);
+  font-size: var(--t-xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--e-3) var(--e-5);
+  border: 1px solid transparent;
+  border-radius: var(--r-1);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.nbr-btn--principal { background: var(--nbr-bleu); color: var(--nbr-blanc); }
+.nbr-btn--principal:hover { background: var(--nbr-bleu-fonce); color: var(--nbr-blanc); }
+.nbr-btn--secondaire { background: transparent; color: var(--nbr-bleu); border-color: var(--nbr-bleu-bord); }
+.nbr-btn--secondaire:hover { border-color: var(--nbr-bleu); background: var(--nbr-bleu-voile); }
+.nbr-btn--or { background: var(--nbr-or); color: var(--nbr-nuit); }
+.nbr-btn--or:hover { background: var(--nbr-or-fonce); color: var(--nbr-blanc); }
+
+
+/* ---------- FORMULAIRE -------------------------------------- */
+
+.nbr-champ { display: grid; gap: var(--e-2); }
+.nbr-champ label { font-size: var(--t-xs); font-weight: var(--poids-moyen); color: var(--nbr-encre); }
+.nbr-champ input, .nbr-champ textarea, .nbr-champ select {
+  font-family: var(--nbr-texte);
+  font-size: var(--t-sm);
+  color: var(--nbr-encre);
+  background: var(--nbr-blanc);
+  border: var(--filet);
+  border-radius: var(--r-1);
+  padding: var(--e-3) var(--e-4);
+  width: 100%;
+}
+.nbr-champ input:focus, .nbr-champ textarea:focus { border-color: var(--nbr-bleu); }
+.nbr-champ__aide { font-size: var(--t-2xs); color: var(--nbr-gris); }
+
+
+/* ---------- SURFACE SOMBRE ---------------------------------- */
+
+.nbr-sombre { background: var(--nbr-nuit); color: var(--nbr-blanc); }
+.nbr-sombre .nbr-h1, .nbr-sombre .nbr-h2, .nbr-sombre .nbr-h3 { color: var(--nbr-blanc); }
+.nbr-sombre .nbr-chapo { color: rgba(255, 255, 255, .74); }
+.nbr-sombre a { color: var(--nbr-or); }
+
+
+/* ---------- GRILLE ------------------------------------------ */
+
+.nbr-grille { display: grid; gap: var(--e-5); }
+.nbr-grille--3 { grid-template-columns: repeat(3, 1fr); }
+.nbr-grille--2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 900px) {
+  .nbr-grille--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .nbr-grille--3, .nbr-grille--2 { grid-template-columns: 1fr; }
+  .nbr-auteur { grid-template-columns: 1fr; }
+  :root { --gouttiere: var(--e-4); }
+}

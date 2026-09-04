@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Composants — Neybras Magazine</title>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="description" content="Page interne de démonstration des jetons et composants de la refonte. Non publiée."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;700&display=swap"/>
+<link rel="stylesheet" href="assets/tokens.css"/>
+<link rel="stylesheet" href="assets/composants.css"/>
+<style>
+  /* Habillage propre à cette page de démonstration : il ne fait pas
+     partie du système, il sert seulement à présenter les pièces. */
+  .demo-entete { background: var(--nbr-nuit); color: var(--nbr-blanc); padding: var(--e-8) 0 var(--e-7); }
+  .demo-entete p { max-width: var(--mesure); color: rgba(255,255,255,.74); margin: var(--e-4) 0 0; }
+  .demo-section { padding: var(--e-8) 0; border-bottom: var(--filet); }
+  .demo-section > h2 {
+    font-family: var(--nbr-texte); font-size: var(--t-2xs); font-weight: var(--poids-gras);
+    letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-gris);
+    margin: 0 0 var(--e-6); padding-bottom: var(--e-3); border-bottom: var(--filet);
+  }
+  .demo-note { font-size: var(--t-2xs); color: var(--nbr-gris); max-width: var(--mesure); margin: var(--e-3) 0 var(--e-5); }
+  .demo-note b { color: var(--nbr-encre); }
+  .demo-rang { display: flex; flex-wrap: wrap; gap: var(--e-4); align-items: center; margin-bottom: var(--e-5); }
+
+  .jetons { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--e-4); }
+  .jeton__pave { height: 5.2rem; border: var(--filet); border-radius: var(--r-1); }
+  .jeton__nom { font-size: var(--t-2xs); font-weight: var(--poids-gras); margin-top: var(--e-2); }
+  .jeton__val { font-size: var(--t-2xs); color: var(--nbr-gris); font-variant-numeric: tabular-nums; }
+  .jeton__ou  { font-size: var(--t-2xs); color: var(--nbr-gris); line-height: 1.4; margin-top: var(--e-1); }
+
+  .echelle { display: grid; gap: var(--e-4); }
+  .echelle > div { display: grid; grid-template-columns: 7rem 1fr; gap: var(--e-4); align-items: baseline; border-bottom: var(--filet); padding-bottom: var(--e-3); }
+  .echelle code { font-size: var(--t-2xs); color: var(--nbr-gris); }
+</style>
+</head>
+<body>
+
+<header class="demo-entete nbr-sombre">
+  <div class="nbr-contenu">
+    <span class="nbr-etiquette nbr-etiquette--sombre">Document interne · non publié</span>
+    <h1 class="nbr-h1" style="margin-top:var(--e-4)">Jetons et composants</h1>
+    <p>Phase 2 de la refonte. Les couleurs ne sont pas choisies : elles sont relevées dans le PDF du Vol. 001, valeur par valeur. Les encadrés reprennent ceux du numéro. Tout ce qui suit vient de <code>assets/tokens.css</code> et <code>assets/composants.css</code> — aucune valeur en dur.</p>
+  </div>
+</header>
+
+<main class="nbr-contenu">
+
+  <!-- ========== COULEURS ========== -->
+  <section class="demo-section">
+    <h2>Couleurs relevées dans le Vol. 001</h2>
+    <p class="demo-note">Chaque valeur est mesurée : opérateurs de couleur des flux de contenu pour les pages vectorielles, échantillonnage des pixels pour la couverture. <b>Le navy <code>#0E3D52</code> et l'or <code>#B8965A</code> du site actuel n'apparaissent nulle part dans le numéro.</b></p>
+    <div class="jetons">
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-bleu)"></div>
+        <div class="jeton__nom">--nbr-bleu</div><div class="jeton__val">#2E4A7A</div>
+        <div class="jeton__ou">404 poses sur 21 des 24 pages : encadrés, intertitres, exergues, folios</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-nuit)"></div>
+        <div class="jeton__nom">--nbr-nuit</div><div class="jeton__val">#0C2038</div>
+        <div class="jeton__ou">Fond de couverture</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-nuit-2)"></div>
+        <div class="jeton__nom">--nbr-nuit-2</div><div class="jeton__val">#142C48</div>
+        <div class="jeton__ou">Haut du dégradé de couverture</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-ardoise)"></div>
+        <div class="jeton__nom">--nbr-ardoise</div><div class="jeton__val">#264653</div>
+        <div class="jeton__ou">Teinte secondaire, 6 pages</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-or)"></div>
+        <div class="jeton__nom">--nbr-or</div><div class="jeton__val">#B8965A</div>
+        <div class="jeton__ou">Écart assumé : le print pose #FCD850, mais en couverture seulement — sur écran ce jaune vire au criard</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-encre)"></div>
+        <div class="jeton__nom">--nbr-encre</div><div class="jeton__val">#2B2B2B</div>
+        <div class="jeton__ou">Texte courant, 20 pages. Jamais de noir pur</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-gris)"></div>
+        <div class="jeton__nom">--nbr-gris</div><div class="jeton__val">#6B6B6B</div>
+        <div class="jeton__ou">Texte secondaire, légendes</div>
+      </div>
+      <div>
+        <div class="jeton__pave" style="background:var(--nbr-filet)"></div>
+        <div class="jeton__nom">--nbr-filet</div><div class="jeton__val">#E2DEDF</div>
+        <div class="jeton__ou">Filets et séparateurs</div>
+      </div>
+    </div>
+
+    <p class="demo-note" style="margin-top:var(--e-6)"><b>Contraste vérifié.</b> Bleu sur blanc 8,9:1 · encre sur blanc 13,9:1 · gris sur blanc 5,3:1 · or sur nuit 5,9:1 — tous conformes AA. <b>L'or sur fond clair plafonne à 2,8:1 et échoue :</b> il est réservé aux filets, aux aplats et aux gros corps. Pour de l'or en texte sur fond clair, le jeton <code>--nbr-or-fonce</code> (#806534, 5,4:1 sur blanc et 4,8:1 sur crème) existe pour cela.</p>
+  </section>
+
+  <!-- ========== TYPOGRAPHIE ========== -->
+  <section class="demo-section">
+    <h2>Deux familles</h2>
+    <p class="demo-note">Le Vol. 001 compte <b>vingt-deux polices</b> — résidu de gabarits, pas un système. Playfair Display répond au logotype de couverture, qui est une didone. Inter porte le texte : le numéro compose en Poppins 13 pt, une géométrique fatigante en lecture longue sur écran. C'est le seul écart typographique au print.</p>
+    <div class="echelle">
+      <div><code>--t-3xl · Playfair 900</code><span class="nbr-h1">Les textes existent, ils restent illisibles</span></div>
+      <div><code>--t-2xl · Playfair 700</code><span class="nbr-h2">Trente pour cent, mais pas pour tout le monde</span></div>
+      <div><code>--t-lg · Playfair 700</code><span class="nbr-h3">Une créance conditionnelle</span></div>
+      <div><code>--t-md · Inter 700</code><span class="nbr-intertitre" style="margin:0">Ce que cela change dans le modèle</span></div>
+      <div><code>--t-md · Inter 400</code><span class="nbr-chapo" style="margin:0">Quatre ans après son adoption, la nouvelle Charte est pleinement opérationnelle.</span></div>
+      <div><code>--t-base · Inter 400</code><span>Le décaissement est échelonné. Le dispositif destiné aux petites et moyennes entreprises en donne la version explicite.</span></div>
+      <div><code>--t-xs · Inter 400</code><span style="font-size:var(--t-xs);color:var(--nbr-gris)">Par Houda Hachami · 8 septembre 2026 · 12 min de lecture</span></div>
+    </div>
+  </section>
+
+  <!-- ========== ÉTIQUETTES, ARIANE, BOUTONS ========== -->
+  <section class="demo-section">
+    <h2>Étiquettes, fil d'Ariane, boutons</h2>
+    <div class="demo-rang">
+      <span class="nbr-etiquette">Droit</span>
+      <span class="nbr-etiquette">Finance</span>
+      <span class="nbr-etiquette">Afrique</span>
+      <span class="nbr-etiquette nbr-etiquette--format">Tribune</span>
+      <span class="nbr-etiquette nbr-etiquette--format">Analyse</span>
+      <span class="nbr-etiquette nbr-etiquette--format">Entretien</span>
+      <span class="nbr-etiquette nbr-etiquette--format">Jurisprudence</span>
+    </div>
+    <nav class="nbr-ariane" aria-label="Fil d'Ariane" style="margin-bottom:var(--e-5)">
+      <ol>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="droit">Droit</a></li>
+        <li><a href="droit">Fiscalité</a></li>
+        <li aria-current="page">Analyse</li>
+      </ol>
+    </nav>
+    <div class="demo-rang">
+      <a class="nbr-btn nbr-btn--principal" href="#">Lire l'analyse</a>
+      <a class="nbr-btn nbr-btn--secondaire" href="#">Recevoir la newsletter</a>
+      <a class="nbr-btn nbr-btn--or" href="#">Demander un exemplaire</a>
+    </div>
+  </section>
+
+  <!-- ========== SIGNATURE ========== -->
+  <section class="demo-section">
+    <h2>Ligne de signature</h2>
+    <p class="demo-note">Nom, qualité, barreau ou institution, date, temps de lecture. La qualité n'est pas décorative : c'est ce qui fait la différence entre un avis et une analyse.</p>
+    <div class="nbr-signature nbr-lecture">
+      <img class="nbr-signature__portrait" src="images/apple-touch-icon.png" alt="" width="180" height="180"/>
+      <span class="nbr-signature__nom">Me Driss El Harti</span>
+      <span class="nbr-signature__sep">·</span>
+      <span class="nbr-signature__qualite">Avocat au barreau de Tanger, arbitrage international</span>
+      <span class="nbr-signature__sep">·</span>
+      <span>12 septembre 2026</span>
+      <span class="nbr-signature__sep">·</span>
+      <span>9 min de lecture</span>
+    </div>
+  </section>
+
+  <!-- ========== CE QU'IL FAUT RETENIR ========== -->
+  <section class="demo-section">
+    <h2>Ce qu'il faut retenir</h2>
+    <p class="demo-note">En tête d'article, trois puces, jamais plus.</p>
+    <div class="nbr-retenir nbr-lecture">
+      <p class="nbr-retenir__titre">Ce qu'il faut retenir</p>
+      <ul>
+        <li>Les 30 % sont un plafond de cumul, pas un taux d'entrée : quatre des cinq primes communes ne rapportent plus rien une fois les primes territoriale et sectorielle acquises.</li>
+        <li>La prime est une créance conditionnelle : la moitié est versée à hauteur de 50 % d'engagement justifié, le solde après exécution complète.</li>
+        <li>Le calendrier de closing s'allonge : six à douze mois entre dépôt au centre régional d'investissement et signature ; au-delà de 250 millions de dirhams, l'approbation relève d'une commission ministérielle.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== ENCADRÉS DU PRINT ========== -->
+  <section class="demo-section">
+    <h2>Les encadrés du numéro, portés en web</h2>
+    <p class="demo-note">À gauche, l'encadré chiffré de la page 9. À droite, la checklist de la page 15. Le print les pose déjà ; le web ne les avait pas.</p>
+    <div class="nbr-grille nbr-grille--2">
+
+      <div class="nbr-chiffres" style="margin:0">
+        <p class="nbr-chiffres__titre">Un cas d'école — 60 millions de dirhams, industrie, catégorie B</p>
+        <dl>
+          <div class="nbr-chiffres__ligne"><dt>Ratio emplois / capital investi</dt><dd>7 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Approche genre</dt><dd>3 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Emplois d'avenir et montée en gamme</dt><dd>3 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Développement durable</dt><dd>3 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Intégration locale</dt><dd>3 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Prime territoriale (catégorie B)</dt><dd>15 %</dd></div>
+          <div class="nbr-chiffres__ligne"><dt>Prime sectorielle (industrie)</dt><dd>5 %</dd></div>
+          <div class="nbr-chiffres__ligne nbr-chiffres__total"><dt>Total théorique</dt><dd>39 %</dd></div>
+        </dl>
+      </div>
+
+      <div class="nbr-reflexes" style="margin:0">
+        <p class="nbr-reflexes__titre">Trois réflexes le jour de la notification</p>
+        <ol>
+          <li>Vérifier la procédure — la mise en demeure préalable a-t-elle été faite ?</li>
+          <li>Constituer la preuve de l'exécution avant que le chantier ne soit vidé.</li>
+          <li>Saisir dans le délai : il court de la notification, pas de la découverte.</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== EXERGUE ET JURISPRUDENCE ========== -->
+  <section class="demo-section">
+    <h2>Exergue et citation de jurisprudence</h2>
+    <p class="nbr-exergue nbr-lecture">Les 30 % sont un plafond de cumul, non un taux d'entrée</p>
+    <div class="nbr-juris nbr-lecture">
+      <blockquote>La résiliation anticipée d'un accord de concession, même avant le début des travaux, peut constituer une violation du traitement juste et équitable dès lors qu'elle déjoue des attentes légitimes créées par l'État.</blockquote>
+      <cite class="nbr-juris__ref">CIRDI, affaire n° ARB/12/6, sentence du 21 juillet 2017, § 412 — cité à titre d'illustration du gabarit</cite>
+    </div>
+  </section>
+
+  <!-- ========== SOURCES ========== -->
+  <section class="demo-section">
+    <h2>Bloc sources</h2>
+    <p class="demo-note">Obligatoire en fin d'article, jamais optionnel. Références reprises telles quelles de la page 9 du Vol. 001.</p>
+    <div class="nbr-sources nbr-lecture" style="margin-top:0">
+      <p class="nbr-sources__titre">Sources</p>
+      <ol>
+        <li>Loi-cadre n° 03-22 formant charte de l'investissement, promulguée par le dahir n° 1-22-76 du 9 décembre 2022.</li>
+        <li>Décrets n° 2-23-1 à 2-23-3 ; arrêtés du chef du gouvernement n° 3-12-23 à 3-14-23.</li>
+        <li>Décret n° 2-25-342 et décisions publiées au Bulletin officiel n° 7454 du 6 novembre 2025.</li>
+        <li>Communiqués du Département du Chef du gouvernement, 10<sup>e</sup> et 11<sup>e</sup> Commissions nationales des investissements, avril et juillet 2026.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== AUTEUR ========== -->
+  <section class="demo-section">
+    <h2>Bloc auteur</h2>
+    <div class="nbr-auteur nbr-lecture" style="margin:0">
+      <img class="nbr-auteur__portrait" src="images/apple-touch-icon.png" alt="" width="180" height="180"/>
+      <div>
+        <p class="nbr-auteur__nom">Me Driss El Harti</p>
+        <p class="nbr-auteur__qualite">Avocat au barreau de Tanger · Arbitrage international</p>
+        <p class="nbr-auteur__bio">Il intervient sur les contentieux d'infrastructure et les clauses compromissoires des marchés publics. Il signe « Arbitrer avant de construire » dans le Vol. 001.</p>
+        <div class="nbr-auteur__liens">
+          <a href="#">Tous ses articles</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Son cabinet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CARTES ========== -->
+  <section class="demo-section">
+    <h2>Cartes d'article</h2>
+    <div class="nbr-grille nbr-grille--3">
+      <article class="nbr-carte">
+        <div class="nbr-carte__corps">
+          <span class="nbr-etiquette">Droit</span>
+          <h3 class="nbr-carte__titre"><a href="#">Trente pour cent, mais pas pour tout le monde</a></h3>
+          <p class="nbr-carte__meta"><b>Houda Hachami</b> · 8 septembre 2026 · 12 min</p>
+        </div>
+      </article>
+      <article class="nbr-carte">
+        <div class="nbr-carte__corps">
+          <span class="nbr-etiquette">Finance</span>
+          <h3 class="nbr-carte__titre"><a href="#">Compte à rebours prudentiel des banques marocaines</a></h3>
+          <p class="nbr-carte__meta"><b>Tahar Louazzi</b> · 8 septembre 2026 · 9 min</p>
+        </div>
+      </article>
+      <article class="nbr-carte">
+        <div class="nbr-carte__corps">
+          <span class="nbr-etiquette">Afrique</span>
+          <span class="nbr-etiquette nbr-etiquette--format" style="align-self:start">Tribune</span>
+          <h3 class="nbr-carte__titre"><a href="#">Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</a></h3>
+          <p class="nbr-carte__meta"><b>Me Mamadou Ismaïla Konaté</b> · 8 septembre 2026 · 14 min</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== FORMULAIRE ========== -->
+  <section class="demo-section" style="border-bottom:none">
+    <h2>Champs de formulaire</h2>
+    <p class="demo-note">Le libellé de l'adresse ne laisse aucun doute sur ce qui est demandé : deux lecteurs sollicités jusqu'ici ont répondu en donnant leur e-mail.</p>
+    <div class="nbr-grille nbr-grille--2 nbr-lecture" style="max-width:640px">
+      <div class="nbr-champ">
+        <label for="d-nom">Nom et prénom</label>
+        <input id="d-nom" type="text" autocomplete="name"/>
+      </div>
+      <div class="nbr-champ">
+        <label for="d-org">Organisation</label>
+        <input id="d-org" type="text" autocomplete="organization"/>
+      </div>
+      <div class="nbr-champ" style="grid-column:1/-1">
+        <label for="d-adr">Adresse postale pour l'expédition de l'exemplaire imprimé</label>
+        <textarea id="d-adr" rows="3" autocomplete="street-address"></textarea>
+        <p class="nbr-champ__aide">Rue, ville, code postal, pays. La réception du magazine est gratuite et nominative, sous réserve d'éligibilité.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
