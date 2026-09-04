@@ -1,69 +1,76 @@
 /* ============================================================
    NEYBRAS MAGAZINE — JETONS DE CONCEPTION
    ------------------------------------------------------------
-   Source : Neybras Magazine, Vol. 001, septembre 2026.
-   Les couleurs ne sont pas choisies, elles sont MESURÉES dans
-   le PDF du numéro — valeur des opérateurs de couleur des flux
-   de contenu, et échantillonnage des pages rendues.
+   La palette est celle du site — Bleu Pétrole #0E3D52 et
+   Champagne #B8965A — conservée sur décision de la direction
+   de la publication. Elle ne change pas.
+
+   Pour mémoire, et pour que personne ne la redécouvre :
+   le relevé du PDF du Vol. 001 donne d'autres valeurs — bleu
+   #2E4A7A sur 21 des 24 pages, #0C2038 en couverture, or
+   #FCD850 en couverture seulement. Le print et le web ne
+   partagent donc pas leurs bleus. Écart connu, assumé.
 
    Aucune valeur en dur ailleurs. Si une couleur, un corps ou
-   une espacement manque ici, on l'ajoute ici — on ne l'écrit
+   un espacement manque ici, on l'ajoute ici — on ne l'écrit
    pas dans une feuille de page.
    ============================================================ */
 
 :root {
 
   /* ---------- COULEURS ----------------------------------------
-     Relevé du Vol. 001 :
-       #2E4A7A  404 poses sur 21 des 24 pages — encadrés,
-                intertitres, exergues, folios, filets de marge.
-                C'est LA couleur du magazine.
-       #0C2038  fond de couverture (dégradé #08192D → #142C48).
-       #264653  teinte secondaire, 6 pages.
-       #2B2B2B  texte courant (jamais du noir pur).
-       #6B6B6B  texte secondaire.  #E2DEDF  filets.
-       #FCD850  or, UNIQUEMENT en couverture, nulle part à
-                l'intérieur. Retenu ici en champagne #B8965A :
-                sur écran, le jaune de la couverture vire au
-                criard. C'est le seul écart assumé au relevé.
+     Valeurs canoniques du site, verrouillées depuis juillet 2026
+     par assets/site-header.css : navy #0E3D52 « Bleu Pétrole »,
+     or #B8965A « Champagne ». Les nuances proviennent du :root
+     historique des pages, pas d'une invention.
      ------------------------------------------------------------ */
 
-  --nbr-bleu:        #2E4A7A;   /* bleu de marque */
-  --nbr-bleu-fonce:  #243A61;   /* survol, états actifs */
-  --nbr-bleu-clair:  #3D5D93;   /* liens sur fond sombre */
-  --nbr-nuit:        #0C2038;   /* fond profond : hero, pied de page */
-  --nbr-nuit-2:      #142C48;   /* haut du dégradé de couverture */
-  --nbr-ardoise:     #264653;   /* teinte secondaire */
+  --nbr-bleu:        #0E3D52;   /* bleu de marque — Bleu Pétrole */
+  --nbr-bleu-fonce:  #0a3044;   /* survol, états actifs */
+  --nbr-bleu-clair:  #145068;   /* aplats secondaires */
+  --nbr-nuit:        #0a3044;   /* fond profond : hero, pied de page */
+  --nbr-nuit-2:      #114060;   /* second ton des fonds profonds */
+  --nbr-ardoise:     #145068;   /* teinte secondaire */
 
-  --nbr-or:          #B8965A;   /* accent : filets, capitales, sur fond sombre */
-  --nbr-or-fonce:    #806534;   /* accent en TEXTE sur fond clair (voir contraste) */
+  --nbr-or:          #B8965A;   /* accent — Champagne */
+  --nbr-or-clair:    #CCA96E;   /* or en TEXTE sur le bleu de marque */
+  --nbr-or-fonce:    #806534;   /* or en TEXTE sur fond clair */
 
-  --nbr-encre:       #2B2B2B;   /* texte courant */
-  --nbr-gris:        #6B6B6B;   /* texte secondaire, légendes */
-  --nbr-filet:       #E2DEDF;   /* filets, séparateurs */
-  --nbr-papier:      #FCFCFC;   /* fond de page */
+  --nbr-encre:       #3d5265;   /* texte courant */
+  --nbr-gris:        #5e7080;   /* texte secondaire, légendes */
+  --nbr-filet:       #e8eaec;   /* filets, séparateurs */
+  --nbr-papier:      #FAFAF9;   /* fond de page */
   --nbr-blanc:       #FFFFFF;
-  --nbr-creme:       #F4F1EC;   /* fond d'encadré sur page claire */
+  --nbr-creme:       #f4efe6;   /* fond d'encadré sur page claire */
+  --nbr-creme-2:     #ece5d8;   /* second beige */
 
   /* Voiles, dérivés des teintes ci-dessus. Jamais d'autre alpha. */
-  --nbr-bleu-voile:  rgba(46, 74, 122, .08);
-  --nbr-bleu-bord:   rgba(46, 74, 122, .20);
+  --nbr-bleu-voile:  rgba(14, 61, 82, .07);
+  --nbr-bleu-bord:   rgba(14, 61, 82, .20);
   --nbr-or-voile:    rgba(184, 150, 90, .10);
   --nbr-or-bord:     rgba(184, 150, 90, .32);
-  --nbr-nuit-voile:  rgba(12, 32, 56, .60);
+  --nbr-nuit-voile:  rgba(10, 48, 68, .60);
 
-  /* CONTRASTE — vérifié, à ne pas contourner
-       #2E4A7A sur blanc ........ 8,9:1   AA + AAA
-       #2B2B2B sur blanc ........ 13,9:1  AA + AAA
-       #6B6B6B sur blanc ......... 5,3:1  AA
+  /* CONTRASTE — vérifié sur la page rendue, à ne pas contourner
+       #0E3D52 sur #FAFAF9 ...... 11,1:1  AA + AAA
+       #3d5265 sur #FAFAF9 ....... 7,8:1  AA + AAA
+       #5e7080 sur #FAFAF9 ....... 4,9:1  AA, mais de justesse :
+                                          sur la crème #f4efe6 il tombe
+                                          à 4,5:1 et n'a plus de marge.
+                                          Dans un encadré crème, le texte
+                                          secondaire prend --nbr-encre.
+       blanc  sur #0E3D52 ....... 11,6:1  AA + AAA
+       blanc  sur #0a3044 ....... 13,8:1  AA + AAA
        #B8965A sur blanc ......... 2,8:1  ÉCHOUE — décor seulement :
                                           filets, aplats, gros corps.
-                                          Pour de l'or en texte sur
-                                          fond clair : --nbr-or-fonce
-                                          (5,4:1 sur blanc, 4,8:1 sur creme).
-       #B8965A sur #0C2038 ....... 5,9:1  AA
-       blanc  sur #2E4A7A ........ 8,9:1  AA + AAA
-       blanc  sur #0C2038 ....... 16,4:1  AA + AAA
+                                          Pour de l'or en TEXTE sur
+                                          fond clair : --nbr-or-fonce.
+       #B8965A sur #0E3D52 ....... 4,2:1  ÉCHOUE de peu — sur le bleu
+                                          de marque, l'or en texte doit
+                                          être --nbr-or-clair (#CCA96E,
+                                          5,2:1). L'or plein ne convient
+                                          que sur le fond nuit #0a3044
+                                          (5,0:1).
      ------------------------------------------------------------ */
 
 

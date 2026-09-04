@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Le magazine — Neybras Magazine</title>
+<meta name="description" content="Neybras Magazine, revue trimestrielle de droit des affaires, de finance et d'investissement au Maroc et en Afrique francophone. Vol. 001, septembre 2026 : sommaire, contributeurs, diffusion et demande d'exemplaire."/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="canonical" href="https://neybras-magazine.com/magazine"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;700&display=swap"/>
+<link rel="stylesheet" href="assets/tokens.css"/>
+<link rel="stylesheet" href="assets/composants.css"/>
+<style>
+/* Page du magazine. Uniquement des jetons — aucune valeur en dur. */
+
+/* --- Bandeau de tête --- */
+.mag-tete { background: var(--nbr-nuit); color: var(--nbr-blanc); padding: var(--e-7) 0 0; text-align: center; }
+.mag-logo { font-family: var(--nbr-titre); font-size: var(--t-3xl); font-weight: var(--poids-noir); letter-spacing: .04em; margin: 0; }
+.mag-logo span { display: block; font-family: var(--nbr-texte); font-size: var(--t-xs); font-weight: var(--poids-moyen); letter-spacing: .42em; text-transform: uppercase; color: var(--nbr-or-clair); margin-top: var(--e-2); }
+.mag-baseline { margin-top: var(--e-6); background: var(--nbr-bleu); color: var(--nbr-blanc); font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; padding: var(--e-3) var(--e-4); }
+
+/* --- Navigation --- */
+.mag-nav { background: var(--nbr-nuit); border-bottom: 1px solid rgba(255,255,255,.12); }
+.mag-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--e-6); }
+.mag-nav a { display: block; padding: var(--e-3) 0; color: rgba(255,255,255,.82); font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; text-decoration: none; }
+.mag-nav a:hover, .mag-nav a[aria-current] { color: var(--nbr-or-clair); }
+
+/* --- Dernier numéro --- */
+.mag-dernier { background: linear-gradient(180deg, var(--nbr-creme) 0%, var(--nbr-papier) 100%); padding: var(--e-9) 0; }
+.mag-dernier__grille { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--e-9); align-items: center; }
+.mag-couv { display: flex; justify-content: center; }
+.mag-couv img { width: 100%; max-width: 22rem; height: auto; box-shadow: 0 22px 48px rgba(10,48,68,.26), 0 2px 6px rgba(10,48,68,.14); transform: rotate(-2deg); transition: transform var(--transition); }
+.mag-couv:hover img { transform: rotate(0) translateY(-4px); }
+.mag-eyebrow { font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-or-fonce); margin: 0 0 var(--e-4); }
+.mag-fiches { display: flex; flex-wrap: wrap; gap: var(--e-3); margin: var(--e-5) 0; padding: 0; list-style: none; }
+.mag-fiches li { font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: .08em; text-transform: uppercase; color: var(--nbr-encre); background: var(--nbr-blanc); border: 1px solid var(--nbr-or-bord); border-radius: var(--r-1); padding: var(--e-2) var(--e-4); }
+
+/* --- Sections --- */
+.mag-sec { padding: var(--e-8) 0; border-top: var(--filet); }
+.mag-sec__titre { font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-gris); margin: 0 0 var(--e-5); }
+
+/* --- Cinq sujets --- */
+.mag-sujets { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--e-4); list-style: none; padding: 0; margin: 0; }
+.mag-sujets li { border-top: 2px solid var(--nbr-or); padding-top: var(--e-3); font-size: var(--t-sm); font-weight: var(--poids-gras); color: var(--nbr-bleu); }
+.mag-sujets span { display: block; font-weight: var(--poids-normal); font-size: var(--t-2xs); color: var(--nbr-gris); margin-top: var(--e-1); }
+
+/* --- Édito --- */
+.mag-edito { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--e-6); align-items: start; }
+.mag-edito__sig { font-size: var(--t-xs); }
+.mag-edito__sig b { display: block; font-family: var(--nbr-titre); font-size: var(--t-md); color: var(--nbr-bleu); }
+.mag-edito p { max-width: var(--mesure); }
+.mag-edito p:first-of-type::first-letter { font-family: var(--nbr-titre); font-size: 3.4em; font-weight: var(--poids-gras); float: left; line-height: .82; padding: .06em .1em 0 0; color: var(--nbr-bleu); }
+
+/* --- Sommaire --- */
+.mag-sommaire { list-style: none; margin: 0; padding: 0; }
+.mag-sommaire li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--e-4); align-items: baseline; padding: var(--e-4) 0; border-bottom: var(--filet); }
+.mag-sommaire__sig { display: block; font-size: var(--t-2xs); letter-spacing: .06em; text-transform: uppercase; color: var(--nbr-or-fonce); margin-bottom: var(--e-1); }
+.mag-sommaire__titre { font-family: var(--nbr-titre); font-size: var(--t-md); font-weight: var(--poids-gras); color: var(--nbr-bleu); line-height: var(--lh-titre); }
+.mag-sommaire__page { font-family: var(--nbr-titre); font-size: var(--t-lg); font-weight: var(--poids-gras); color: var(--nbr-gris); font-variant-numeric: tabular-nums; }
+
+/* --- Contributeurs --- */
+.mag-contrib { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--e-5); list-style: none; padding: 0; margin: 0; }
+.mag-contrib li { border-top: var(--filet-bleu); padding-top: var(--e-4); }
+.mag-contrib b { display: block; font-family: var(--nbr-titre); font-size: var(--t-md); color: var(--nbr-bleu); }
+.mag-contrib span { display: block; font-size: var(--t-xs); color: var(--nbr-gris); margin-top: var(--e-2); }
+
+/* --- Diffusion --- */
+.mag-diff { background: var(--nbr-bleu); color: var(--nbr-blanc); padding: var(--e-7); }
+.mag-diff__grille { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--e-7); align-items: start; }
+.mag-diff h2 { font-family: var(--nbr-titre); font-size: var(--t-xl); font-weight: var(--poids-gras); color: var(--nbr-blanc); margin: 0 0 var(--e-4); }
+.mag-diff dl { margin: 0; }
+.mag-diff dl div { display: flex; justify-content: space-between; gap: var(--e-4); padding: var(--e-3) 0; border-bottom: 1px solid rgba(255,255,255,.16); font-size: var(--t-sm); }
+.mag-diff dt { color: rgba(255,255,255,.86); }
+.mag-diff dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: var(--poids-gras); }
+.mag-diff__phrase { font-family: var(--nbr-titre); font-size: var(--t-lg); font-style: italic; color: var(--nbr-or-clair); margin: var(--e-5) 0 0; }
+.mag-diff__tirage { font-size: var(--t-2xs); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-or-clair); margin: 0 0 var(--e-4); }
+
+/* --- Demande --- */
+.mag-demande { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--e-6); align-items: start; }
+.mag-form { border: var(--filet-bleu); padding: var(--e-6); background: var(--nbr-blanc); display: grid; gap: var(--e-4); }
+.mag-form h3 { font-family: var(--nbr-titre); font-size: var(--t-lg); font-weight: var(--poids-gras); color: var(--nbr-bleu); margin: 0; }
+.mag-form__intro { font-size: var(--t-sm); color: var(--nbr-encre); margin: 0; }
+.mag-form__mention { font-size: var(--t-2xs); color: var(--nbr-encre); margin: 0; }
+.mag-form__consent { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--e-3); font-size: var(--t-2xs); color: var(--nbr-encre); }
+.mag-form__etat { font-size: var(--t-xs); margin: 0; min-height: 1.4em; }
+
+/* --- Archives --- */
+.mag-archives { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--e-6); list-style: none; padding: 0; margin: 0; }
+.mag-archives img { width: 100%; height: auto; box-shadow: var(--ombre-carte); }
+.mag-archives b { display: block; font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-gris); margin-top: var(--e-3); }
+.mag-archives p { font-family: var(--nbr-titre); font-size: var(--t-md); color: var(--nbr-bleu); margin: var(--e-1) 0 0; }
+.mag-apres { border: 1px dashed var(--nbr-bleu-bord); display: grid; place-content: center; text-align: center; padding: var(--e-6); color: var(--nbr-gris); font-size: var(--t-sm); }
+
+@media (max-width: 900px) {
+  .mag-dernier__grille, .mag-diff__grille, .mag-demande, .mag-edito { grid-template-columns: 1fr; gap: var(--e-6); }
+  .mag-couv { order: -1; }
+  .mag-sujets { grid-template-columns: repeat(2, 1fr); }
+  .mag-contrib, .mag-archives { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .mag-sujets, .mag-contrib, .mag-archives { grid-template-columns: 1fr; }
+  .mag-sommaire li { grid-template-columns: minmax(0, 1fr) auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="mag-tete">
+  <div class="nbr-contenu">
+    <p class="mag-logo">Neybras <span>Magazine</span></p>
+  </div>
+  <p class="mag-baseline">Le droit et la finance qui éclairent les décisions</p>
+</header>
+
+<nav class="mag-nav" aria-label="Navigation principale">
+  <div class="nbr-contenu">
+    <ul>
+      <li><a href="/">À la une</a></li>
+      <li><a href="droit">Droit</a></li>
+      <li><a href="finance">Finance</a></li>
+      <li><a href="afrique">Afrique</a></li>
+      <li><a href="magazine" aria-current="page">Magazine</a></li>
+      <li><a href="tribunes">Tribunes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ===== DERNIER NUMÉRO ===== -->
+  <section class="mag-dernier" aria-labelledby="dernier-t">
+    <div class="nbr-contenu">
+      <div class="mag-dernier__grille">
+        <div class="mag-couv">
+          <img src="images/couverture-neybras-magazine-vol001-septembre-2026.jpg"
+               alt="Couverture du Vol. 001, septembre 2026 : Me Mamadou Ismaïla Konaté"
+               width="840" height="1176" fetchpriority="high" decoding="async"/>
+        </div>
+        <div>
+          <p class="mag-eyebrow">Dernier numéro · Vol. 001 · Septembre 2026</p>
+          <h1 class="nbr-h1" id="dernier-t">Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</h1>
+          <p class="nbr-chapo">En couverture, Me Mamadou Ismaïla Konaté, avocat à la Cour aux barreaux du Mali et de Paris, arbitre international, ancien ministre de la Justice du Mali.</p>
+          <ul class="mag-fiches">
+            <li>24 pages</li>
+            <li>Trimestriel</li>
+            <li>Diffusion nominative contrôlée</li>
+          </ul>
+          <a class="nbr-btn nbr-btn--principal" href="#demande">Demander un exemplaire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nbr-contenu">
+
+    <!-- ===== POURQUOI LIRE CE NUMÉRO ===== -->
+    <section class="mag-sec" style="border-top:none" aria-labelledby="pourquoi-t">
+      <h2 class="mag-sec__titre" id="pourquoi-t">Pourquoi lire ce numéro</h2>
+      <p class="nbr-chapo" style="margin-top:0">Ce numéro analyse les transformations qui redessinent l'environnement de l'investissement au Maroc : charte de l'investissement, PPP et arbitrage, prudentiel bancaire, fiscalité du sport, IA et conformité, et relations juridiques avec l'Afrique francophone.</p>
+    </section>
+
+    <!-- ===== CINQ SUJETS ===== -->
+    <section class="mag-sec" aria-labelledby="sujets-t">
+      <h2 class="mag-sec__titre" id="sujets-t">Cinq sujets à ne pas manquer</h2>
+      <ul class="mag-sujets">
+        <li>Investissement<span>Charte, primes, dossier CRI</span></li>
+        <li>PPP &amp; Arbitrage<span>Clause écrite en dernier</span></li>
+        <li>Finance<span>Échéance prudentielle 2027</span></li>
+        <li>Fiscalité<span>Clubs en sociétés sportives</span></li>
+        <li>Maroc–Afrique<span>Circulation des actes</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== ÉDITO ===== -->
+    <section class="mag-sec" aria-labelledby="edito-t">
+      <h2 class="mag-sec__titre" id="edito-t">L'édito — « Un rendez-vous utile »</h2>
+      <div class="mag-edito">
+        <p class="mag-edito__sig"><b>Dalal Fahmi</b>Directrice de la publication</p>
+        <div>
+          <p>Trente pour cent d'aide à l'investissement. Une échéance prudentielle en 2027. Un verrou fiscal levé sur le sport professionnel. Ces annonces ont circulé. Presque aucune n'a été lue jusqu'au point où elle devient une décision : quel seuil franchir, quelle trésorerie mobiliser, quelle clause écrire avant de signer.</p>
+          <p>Les textes existent, ils sont publics, et ils restent illisibles au moment précis où il faudrait s'en servir. Neybras Magazine se propose de combler cet écart — non en résumant l'actualité, mais en donnant la parole à ceux qui la fabriquent : avocats, dirigeants, experts en gouvernance, régulateurs.</p>
+          <p>Un magazine ne se lance pas par hasard, et il ne se lance jamais au bon moment — il se lance quand le sujet ne peut plus attendre. C'est le cas ici.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOMMAIRE ===== -->
+    <section class="mag-sec" aria-labelledby="sommaire-t">
+      <h2 class="mag-sec__titre" id="sommaire-t">Sommaire du Vol. 001</h2>
+      <ol class="mag-sommaire">
+        <li><div><span class="mag-sommaire__sig">Édito · Dalal Fahmi</span><span class="mag-sommaire__titre">Un rendez-vous utile</span></div><span class="mag-sommaire__page">03</span></li>
+        <li><div><span class="mag-sommaire__sig">Me Mamadou Ismaïla Konaté</span><span class="mag-sommaire__titre">Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</span></div><span class="mag-sommaire__page">06</span></li>
+        <li><div><span class="mag-sommaire__sig">Par Houda Hachami</span><span class="mag-sommaire__titre">Trente pour cent, mais pas pour tout le monde</span></div><span class="mag-sommaire__page">08</span></li>
+        <li><div><span class="mag-sommaire__sig">Par Haitam Dehhak</span><span class="mag-sommaire__titre">Gigafactory : le Maroc n'était pas le plus offrant</span></div><span class="mag-sommaire__page">10</span></li>
+        <li><div><span class="mag-sommaire__sig">Me Driss El Harti</span><span class="mag-sommaire__titre">Arbitrer avant de construire</span></div><span class="mag-sommaire__page">12</span></li>
+        <li><div><span class="mag-sommaire__sig">Pr. Khalid Cherkaoui Semmouni</span><span class="mag-sommaire__titre">Marché résilié : tout se joue dans les dix jours</span></div><span class="mag-sommaire__page">14</span></li>
+        <li><div><span class="mag-sommaire__sig">Par Tahar Louazzi</span><span class="mag-sommaire__titre">Compte à rebours prudentiel des banques marocaines</span></div><span class="mag-sommaire__page">16</span></li>
+        <li><div><span class="mag-sommaire__sig">Me Amine Lahlou</span><span class="mag-sommaire__titre">Le verrou n'était pas sportif</span></div><span class="mag-sommaire__page">18</span></li>
+        <li><div><span class="mag-sommaire__sig">Youssef El Amrani</span><span class="mag-sommaire__titre">L'IA est déjà dans vos dossiers</span></div><span class="mag-sommaire__page">20</span></li>
+        <li><div><span class="mag-sommaire__sig">Par Haitam Dehhak</span><span class="mag-sommaire__titre">L'IA ne restitue pas le droit qu'elle n'a jamais lu</span></div><span class="mag-sommaire__page">22</span></li>
+      </ol>
+    </section>
+
+    <!-- ===== CONTRIBUTEURS ===== -->
+    <section class="mag-sec" aria-labelledby="contrib-t">
+      <h2 class="mag-sec__titre" id="contrib-t">Les contributeurs de ce numéro</h2>
+      <ul class="mag-contrib">
+        <li><b>Me Mamadou Ismaïla Konaté</b><span>Avocat à la Cour, inscrit aux barreaux du Mali et de Paris, arbitre international. Membre de la Cour d'Arbitrage de Casablanca depuis sa création. Ancien Garde des Sceaux, ministre de la Justice du Mali.</span></li>
+        <li><b>Me Driss El Harti</b><span>Avocat au barreau de Tanger. Spécialiste en arbitrage international.</span></li>
+        <li><b>Pr. Khalid Cherkaoui Semmouni</b><span>Professeur universitaire de droit public. Head of Legal &amp; HR. Spécialiste des contrats d'affaires.</span></li>
+        <li><b>Me Amine Lahlou</b><span>Avocat au barreau de Casablanca. Droit du sport et arbitrage international.</span></li>
+        <li><b>Youssef El Amrani</b><span>Responsable de la sécurité des systèmes d'information (RSSI / CISO). Expert gouvernance, risque et conformité.</span></li>
+        <li><b>La rédaction</b><span>Houda Hachami, Haitam Dehhak et Tahar Louazzi, sous la direction de Salma Aittajer, rédactrice en chef.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== DIFFUSION ===== -->
+    <section class="mag-sec" aria-labelledby="diff-t">
+      <div class="mag-diff">
+        <div class="mag-diff__grille">
+          <div>
+            <p class="mag-diff__tirage">Diffusion — Vol. 001 · Septembre 2026</p>
+            <h2 id="diff-t">Tirage 1 000 exemplaires, un par destinataire</h2>
+            <p style="color:rgba(255,255,255,.86);margin:0">La revue n'est ni vendue au numéro, ni diffusée en kiosque, ni accessible par abonnement. Elle est adressée nominativement et gratuitement à une liste institutionnelle qualifiée, dans la limite d'une dotation par destinataire.</p>
+            <p class="mag-diff__phrase">« Aucun ne reçoit la revue par hasard. »</p>
+          </div>
+          <dl>
+            <div><dt>Cabinets d'avocats et de conseil</dt><dd>33,7 %</dd></div>
+            <div><dt>Directions juridiques et financières d'entreprises</dt><dd>21,5 %</dd></div>
+            <div><dt>Institutions publiques et régulateurs</dt><dd>20,5 %</dd></div>
+            <div><dt>Banques et institutions financières</dt><dd>13,3 %</dd></div>
+            <div><dt>Autres</dt><dd>11 %</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEMANDE D'EXEMPLAIRE ===== -->
+    <section class="mag-sec" id="demande" aria-labelledby="demande-t">
+      <h2 class="mag-sec__titre" id="demande-t">Demander un exemplaire</h2>
+      <div class="mag-demande">
+
+        <form class="mag-form" method="post" action="https://formspree.io/f/mgoppdpg" data-nbr-form="magazine_numerique">
+          <h3>Édition numérique</h3>
+          <p class="mag-form__intro">Le numéro vous est adressé par courriel, en PDF. Aucun lien public n'est diffusé.</p>
+          <input type="hidden" name="form_name" value="magazine_numerique"/>
+          <div class="nbr-champ"><label for="n-nom">Nom et prénom</label><input id="n-nom" name="nom" type="text" autocomplete="name" required/></div>
+          <div class="nbr-champ"><label for="n-fonction">Fonction</label><input id="n-fonction" name="fonction" type="text" autocomplete="organization-title" required/></div>
+          <div class="nbr-champ"><label for="n-org">Organisation</label><input id="n-org" name="organisation" type="text" autocomplete="organization" required/></div>
+          <div class="nbr-champ"><label for="n-mail">Adresse électronique professionnelle</label><input id="n-mail" name="email" type="email" autocomplete="email" required/></div>
+          <label class="mag-form__consent"><input type="checkbox" name="consentement" required/><span>J'accepte que ces informations soient utilisées pour traiter ma demande, conformément à la <a href="politique-confidentialite">politique de confidentialité</a>.</span></label>
+          <button class="nbr-btn nbr-btn--principal" type="submit">Recevoir le numéro</button>
+          <p class="mag-form__etat" role="status" aria-live="polite"></p>
+        </form>
+
+        <form class="mag-form" method="post" action="https://formspree.io/f/mgoppdpg" data-nbr-form="magazine_imprime">
+          <h3>Édition imprimée</h3>
+          <p class="mag-form__intro">La réception du magazine est gratuite et nominative, sous réserve d'éligibilité. La rédaction confirme l'inscription avant la parution suivante.</p>
+          <input type="hidden" name="form_name" value="magazine_imprime"/>
+          <div class="nbr-champ"><label for="i-nom">Nom et prénom</label><input id="i-nom" name="nom" type="text" autocomplete="name" required/></div>
+          <div class="nbr-champ"><label for="i-fonction">Fonction</label><input id="i-fonction" name="fonction" type="text" autocomplete="organization-title" required/></div>
+          <div class="nbr-champ"><label for="i-org">Organisation</label><input id="i-org" name="organisation" type="text" autocomplete="organization" required/></div>
+          <div class="nbr-champ">
+            <label for="i-adresse">Adresse postale pour l'expédition de l'exemplaire imprimé</label>
+            <textarea id="i-adresse" name="adresse_postale" rows="3" autocomplete="street-address" required></textarea>
+            <p class="nbr-champ__aide">Rue, ville, code postal, pays.</p>
+          </div>
+          <div class="nbr-champ"><label for="i-tel">Téléphone</label><input id="i-tel" name="telephone" type="tel" autocomplete="tel" required/></div>
+          <div class="nbr-champ"><label for="i-mail">Adresse électronique professionnelle</label><input id="i-mail" name="email" type="email" autocomplete="email" required/></div>
+          <label class="mag-form__consent"><input type="checkbox" name="consentement" required/><span>J'accepte que ces informations, adresse postale comprise, soient utilisées pour l'expédition de la revue, conformément à la <a href="politique-confidentialite">politique de confidentialité</a>.</span></label>
+          <button class="nbr-btn nbr-btn--principal" type="submit">Demander l'exemplaire imprimé</button>
+          <p class="mag-form__etat" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ===== ARCHIVES ===== -->
+    <section class="mag-sec" aria-labelledby="arch-t">
+      <h2 class="mag-sec__titre" id="arch-t">Les numéros</h2>
+      <ul class="mag-archives">
+        <li>
+          <img src="images/couverture-neybras-magazine-vol001-septembre-2026.jpg" alt="Couverture du Vol. 001" width="840" height="1176" loading="lazy" decoding="async"/>
+          <b>Vol. 001 · Septembre 2026</b>
+          <p>Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</p>
+        </li>
+        <li class="mag-apres">Le Vol. 002 paraîtra en décembre 2026. Son sommaire est arrêté par la rédaction, numéro par numéro.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<script src="assets/site-fraicheur.js" defer></script>
+<script>
+/* Envoi des deux formulaires sans quitter la page. Même point de collecte
+   que le reste du site (Formspree) ; l'événement GA4 suit la convention
+   déjà en place et reste conditionné au consentement analytique. */
+document.querySelectorAll('form[data-nbr-form]').forEach(function (form) {
+  var etat = form.querySelector('.mag-form__etat');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bouton = form.querySelector('button[type=submit]');
+    bouton.disabled = true;
+    etat.style.color = 'var(--nbr-gris)';
+    etat.textContent = 'Envoi en cours…';
+    fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form)
+    }).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      etat.style.color = 'var(--nbr-bleu)';
+      etat.textContent = 'Demande reçue. La rédaction revient vers vous avant la parution suivante.';
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { form_name: form.getAttribute('data-nbr-form') });
+      }
+    }).catch(function () {
+      etat.style.color = 'var(--nbr-or-fonce)';
+      etat.textContent = 'L\'envoi a échoué. Écrivez-nous à marketing@neybras-magazine.com.';
+    }).finally(function () {
+      bouton.disabled = false;
+    });
+  });
+});
+</script>
+</body>
+</html>

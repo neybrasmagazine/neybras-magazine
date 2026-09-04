@@ -43,7 +43,7 @@
   <div class="nbr-contenu">
     <span class="nbr-etiquette nbr-etiquette--sombre">Document interne · non publié</span>
     <h1 class="nbr-h1" style="margin-top:var(--e-4)">Jetons et composants</h1>
-    <p>Phase 2 de la refonte. Les couleurs ne sont pas choisies : elles sont relevées dans le PDF du Vol. 001, valeur par valeur. Les encadrés reprennent ceux du numéro. Tout ce qui suit vient de <code>assets/tokens.css</code> et <code>assets/composants.css</code> — aucune valeur en dur.</p>
+    <p>Phase 2 de la refonte. La palette est celle du site — Bleu Pétrole et Champagne — conservée telle quelle. Les encadrés, eux, reprennent ceux du Vol. 001. Tout ce qui suit vient de <code>assets/tokens.css</code> et <code>assets/composants.css</code> — aucune valeur en dur.</p>
   </div>
 </header>
 
@@ -51,52 +51,52 @@
 
   <!-- ========== COULEURS ========== -->
   <section class="demo-section">
-    <h2>Couleurs relevées dans le Vol. 001</h2>
-    <p class="demo-note">Chaque valeur est mesurée : opérateurs de couleur des flux de contenu pour les pages vectorielles, échantillonnage des pixels pour la couverture. <b>Le navy <code>#0E3D52</code> et l'or <code>#B8965A</code> du site actuel n'apparaissent nulle part dans le numéro.</b></p>
+    <h2>La palette du site</h2>
+    <p class="demo-note">Bleu Pétrole et Champagne, conservés tels quels. Pour mémoire : le relevé du PDF du Vol. 001 donne d'autres valeurs — bleu <code>#2E4A7A</code> sur 21 des 24 pages, <code>#0C2038</code> en couverture, or <code>#FCD850</code> en couverture seulement. <b>Le print et le web ne partagent pas leurs bleus</b> ; c'est un écart connu, pas un oubli.</p>
     <div class="jetons">
       <div>
         <div class="jeton__pave" style="background:var(--nbr-bleu)"></div>
-        <div class="jeton__nom">--nbr-bleu</div><div class="jeton__val">#2E4A7A</div>
-        <div class="jeton__ou">404 poses sur 21 des 24 pages : encadrés, intertitres, exergues, folios</div>
+        <div class="jeton__nom">--nbr-bleu</div><div class="jeton__val">#0E3D52</div>
+        <div class="jeton__ou">Bleu Pétrole, couleur de marque</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-nuit)"></div>
-        <div class="jeton__nom">--nbr-nuit</div><div class="jeton__val">#0C2038</div>
-        <div class="jeton__ou">Fond de couverture</div>
+        <div class="jeton__nom">--nbr-nuit</div><div class="jeton__val">#0a3044</div>
+        <div class="jeton__ou">Fond profond : hero, pied de page</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-nuit-2)"></div>
-        <div class="jeton__nom">--nbr-nuit-2</div><div class="jeton__val">#142C48</div>
-        <div class="jeton__ou">Haut du dégradé de couverture</div>
+        <div class="jeton__nom">--nbr-nuit-2</div><div class="jeton__val">#114060</div>
+        <div class="jeton__ou">Second ton des fonds profonds</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-ardoise)"></div>
-        <div class="jeton__nom">--nbr-ardoise</div><div class="jeton__val">#264653</div>
-        <div class="jeton__ou">Teinte secondaire, 6 pages</div>
+        <div class="jeton__nom">--nbr-ardoise</div><div class="jeton__val">#145068</div>
+        <div class="jeton__ou">Aplats secondaires</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-or)"></div>
         <div class="jeton__nom">--nbr-or</div><div class="jeton__val">#B8965A</div>
-        <div class="jeton__ou">Écart assumé : le print pose #FCD850, mais en couverture seulement — sur écran ce jaune vire au criard</div>
+        <div class="jeton__ou">Champagne, accent unique</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-encre)"></div>
-        <div class="jeton__nom">--nbr-encre</div><div class="jeton__val">#2B2B2B</div>
-        <div class="jeton__ou">Texte courant, 20 pages. Jamais de noir pur</div>
+        <div class="jeton__nom">--nbr-encre</div><div class="jeton__val">#3d5265</div>
+        <div class="jeton__ou">Texte courant</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-gris)"></div>
-        <div class="jeton__nom">--nbr-gris</div><div class="jeton__val">#6B6B6B</div>
+        <div class="jeton__nom">--nbr-gris</div><div class="jeton__val">#5e7080</div>
         <div class="jeton__ou">Texte secondaire, légendes</div>
       </div>
       <div>
         <div class="jeton__pave" style="background:var(--nbr-filet)"></div>
-        <div class="jeton__nom">--nbr-filet</div><div class="jeton__val">#E2DEDF</div>
+        <div class="jeton__nom">--nbr-filet</div><div class="jeton__val">#e8eaec</div>
         <div class="jeton__ou">Filets et séparateurs</div>
       </div>
     </div>
 
-    <p class="demo-note" style="margin-top:var(--e-6)"><b>Contraste vérifié.</b> Bleu sur blanc 8,9:1 · encre sur blanc 13,9:1 · gris sur blanc 5,3:1 · or sur nuit 5,9:1 — tous conformes AA. <b>L'or sur fond clair plafonne à 2,8:1 et échoue :</b> il est réservé aux filets, aux aplats et aux gros corps. Pour de l'or en texte sur fond clair, le jeton <code>--nbr-or-fonce</code> (#806534, 5,4:1 sur blanc et 4,8:1 sur crème) existe pour cela.</p>
+    <p class="demo-note" style="margin-top:var(--e-6)"><b>Contraste vérifié sur la page rendue.</b> Bleu sur papier 11,1:1 · encre 7,8:1 · gris 4,9:1 · blanc sur bleu 11,6:1 — conformes AA. <b>Deux pièges de l'or</b>, tous deux couverts par un jeton : sur fond clair il plafonne à 2,8:1 et échoue, d'où <code>--nbr-or-fonce</code> (#806534) pour le texte ; et <b>sur le Bleu Pétrole lui-même il n'atteint que 4,2:1</b>, d'où <code>--nbr-or-clair</code> (#CCA96E, 5,2:1). L'or plein ne convient en texte que sur le fond nuit #0a3044.</p>
   </section>
 
   <!-- ========== TYPOGRAPHIE ========== -->
