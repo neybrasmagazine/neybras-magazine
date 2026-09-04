@@ -1,3 +1,12 @@
+# Le PDF du magazine ne doit PAS entrer dans le dépôt.
+# Le dépôt est public et GitHub Pages sert tout ce qu'il contient :
+# un fichier déposé ici est téléchargeable par quiconque connaît son
+# URL, même sans lien depuis une page. Or la revue est en diffusion
+# nominative contrôlée — c'est l'argument vendu aux annonceurs.
+# L'édition numérique se sert par lien signé à expiration, envoyé
+# après soumission du formulaire de demande.
+documents/neybras-magazine-vol*.pdf
+
 # Dev / outils locaux
 .claude/
 palette-preview.html
