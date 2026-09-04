@@ -145,6 +145,11 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .mg-edito p:first-of-type::first-letter{font-family:var(--pd);font-size:3.2em;font-weight:700;float:left;line-height:.82;padding:.06em .1em 0 0;color:var(--bn);}
 
 .mg-sommaire li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--brd2);}
+.mg-sommaire li:target{background:var(--or-bg);box-shadow:-14px 0 0 var(--or-bg),14px 0 0 var(--or-bg);}
+.mg-badge{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:3px 7px;border-radius:2px;margin-bottom:7px;}
+.mg-badge--analyse{background:var(--bn);color:#fff;}
+.mg-badge--tribune{background:var(--or);color:var(--bn2);}
+.mg-badge--interview{background:#145068;color:#fff;}
 .mg-sommaire-sig{display:block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--or-f);margin-bottom:4px;}
 .mg-sommaire-t{font-family:var(--pd);font-size:17px;font-weight:600;color:var(--bn);line-height:1.35;}
 .mg-sommaire-p{font-family:var(--pd);font-size:22px;font-weight:700;color:var(--gris3);font-variant-numeric:tabular-nums;}
@@ -302,15 +307,15 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div class="mg-sec-title">Sommaire</div>
     <ol class="mg-sommaire">
       <li><div><span class="mg-sommaire-sig">Édito · Dalal Fahmi</span><span class="mg-sommaire-t">Un rendez-vous utile</span></div><span class="mg-sommaire-p">03</span></li>
-      <li><div><span class="mg-sommaire-sig">Me Mamadou Ismaïla Konaté</span><span class="mg-sommaire-t">Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</span></div><span class="mg-sommaire-p">06</span></li>
-      <li><div><span class="mg-sommaire-sig">Par Houda Hachami</span><span class="mg-sommaire-t">Trente pour cent, mais pas pour tout le monde</span></div><span class="mg-sommaire-p">08</span></li>
-      <li><div><span class="mg-sommaire-sig">Par Haitam Dehhak</span><span class="mg-sommaire-t">Gigafactory : le Maroc n'était pas le plus offrant</span></div><span class="mg-sommaire-p">10</span></li>
-      <li><div><span class="mg-sommaire-sig">Me Driss El Harti</span><span class="mg-sommaire-t">Arbitrer avant de construire</span></div><span class="mg-sommaire-p">12</span></li>
-      <li><div><span class="mg-sommaire-sig">Pr. Khalid Cherkaoui Semmouni</span><span class="mg-sommaire-t">Marché résilié : tout se joue dans les dix jours</span></div><span class="mg-sommaire-p">14</span></li>
-      <li><div><span class="mg-sommaire-sig">Par Tahar Louazzi</span><span class="mg-sommaire-t">Compte à rebours prudentiel des banques marocaines</span></div><span class="mg-sommaire-p">16</span></li>
-      <li><div><span class="mg-sommaire-sig">Me Amine Lahlou</span><span class="mg-sommaire-t">Le verrou n'était pas sportif</span></div><span class="mg-sommaire-p">18</span></li>
-      <li><div><span class="mg-sommaire-sig">Youssef El Amrani</span><span class="mg-sommaire-t">L'IA est déjà dans vos dossiers</span></div><span class="mg-sommaire-p">20</span></li>
-      <li><div><span class="mg-sommaire-sig">Par Haitam Dehhak</span><span class="mg-sommaire-t">L'IA ne restitue pas le droit qu'elle n'a jamais lu</span></div><span class="mg-sommaire-p">22</span></li>
+      <li id="p06"><div><span class="mg-badge mg-badge--tribune">Tribune</span><span class="mg-sommaire-sig">Me Mamadou Ismaïla Konaté</span><span class="mg-sommaire-t">Maroc–Afrique : l'argent voyage vite, le droit doit le rattraper</span></div><span class="mg-sommaire-p">06</span></li>
+      <li id="p08"><div><span class="mg-badge mg-badge--analyse">Analyse</span><span class="mg-sommaire-sig">Par Houda Hachami</span><span class="mg-sommaire-t">Trente pour cent, mais pas pour tout le monde</span></div><span class="mg-sommaire-p">08</span></li>
+      <li id="p10"><div><span class="mg-badge mg-badge--analyse">Analyse</span><span class="mg-sommaire-sig">Par Haitam Dehhak</span><span class="mg-sommaire-t">Gigafactory : le Maroc n'était pas le plus offrant</span></div><span class="mg-sommaire-p">10</span></li>
+      <li id="p12"><div><span class="mg-badge mg-badge--tribune">Tribune</span><span class="mg-sommaire-sig">Me Driss El Harti</span><span class="mg-sommaire-t">Arbitrer avant de construire</span></div><span class="mg-sommaire-p">12</span></li>
+      <li id="p14"><div><span class="mg-badge mg-badge--tribune">Tribune</span><span class="mg-sommaire-sig">Pr. Khalid Cherkaoui Semmouni</span><span class="mg-sommaire-t">Marché résilié : tout se joue dans les dix jours</span></div><span class="mg-sommaire-p">14</span></li>
+      <li id="p16"><div><span class="mg-badge mg-badge--analyse">Analyse</span><span class="mg-sommaire-sig">Par Tahar Louazzi</span><span class="mg-sommaire-t">Compte à rebours prudentiel des banques marocaines</span></div><span class="mg-sommaire-p">16</span></li>
+      <li id="p18"><div><span class="mg-badge mg-badge--tribune">Tribune</span><span class="mg-sommaire-sig">Me Amine Lahlou</span><span class="mg-sommaire-t">Le verrou n'était pas sportif</span></div><span class="mg-sommaire-p">18</span></li>
+      <li id="p20"><div><span class="mg-badge mg-badge--interview">Interview</span><span class="mg-sommaire-sig">Youssef El Amrani</span><span class="mg-sommaire-t">L'IA est déjà dans vos dossiers</span></div><span class="mg-sommaire-p">20</span></li>
+      <li id="p22"><div><span class="mg-badge mg-badge--analyse">Analyse</span><span class="mg-sommaire-sig">Par Haitam Dehhak</span><span class="mg-sommaire-t">L'IA ne restitue pas le droit qu'elle n'a jamais lu</span></div><span class="mg-sommaire-p">22</span></li>
     </ol>
   </div>
 </section>

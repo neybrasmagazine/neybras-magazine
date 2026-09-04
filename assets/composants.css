@@ -118,7 +118,7 @@ a:hover { color: var(--nbr-bleu-fonce); }
 }
 .nbr-badge--analyse   { background: var(--nbr-bleu); color: var(--nbr-blanc); }
 .nbr-badge--tribune   { background: var(--nbr-or);   color: var(--nbr-nuit); }
-.nbr-badge--interview { background: var(--nbr-gris); color: var(--nbr-blanc); }
+.nbr-badge--interview { background: var(--nbr-ardoise); color: var(--nbr-blanc); }
 
 
 /* ---------- FIL D'ARIANE ------------------------------------ */
