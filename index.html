@@ -71,6 +71,8 @@
   --or:     #B8965A;
   --or2:    #CCA96E;
   --or3:    #D9BA88;
+  /* Or lisible en TEXTE sur fond clair : #B8965A n atteint que 2,8:1. */
+  --or-f:   #806534;
   --or-dim: rgba(184,150,90,.12);
   --or-b:   rgba(184,150,90,.22);
   --blanc:  #ffffff;
@@ -1523,15 +1525,6 @@ ul{list-style:none}
     </div>
     <div class="itw-grid">
       
-      <article class="itw reveal delay-1">
-        <img src="images/salwa-benali-fiscaliste.jpg" alt="Salwa Benali fiscaliste Maroc" loading="lazy" width="400" height="600"/>
-        <div class="itw-body">
-          <span class="tag t-fis">Tribune</span>
-          <h3><a href="interviews">« La TVA sur les services numériques étrangers au Maroc : une réforme nécessaire mais encore mal calibrée »</a></h3>
-          <p>Analyse critique par Salwa Benali, maître de conférences en droit fiscal à l'Université Hassan II et conseillère de multinationales.</p>
-          <div class="itw-by"><i class="fas fa-pen-nib"></i> Tribune exclusive · Salwa Benali</div>
-        </div>
-      </article>
       
       <article class="itw reveal delay-3">
         <img src="images/zineb-maati-juriste-sport.jpg" alt="Zineb Maâti juriste droit du sport" loading="lazy" width="600" height="600"/>
@@ -1765,29 +1758,71 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
 });
 </script>
 <!-- POPUP NEWSLETTER -->
-<div id="nl-popup" style="display:none;position:fixed;inset:0;background:rgba(10,48,68,.82);z-index:9998;align-items:center;justify-content:center;">
-  <div style="background:#fff;max-width:480px;width:90%;padding:44px 40px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.28);">
-    <button onclick="nlClose()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#888;cursor:pointer;line-height:1;">×</button>
-    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#B8965A;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
-      <span style="display:inline-block;width:20px;height:1px;background:#B8965A;"></span>Newsletter Neybras
+<!-- Pop-up : le magazine, pas la newsletter. Une seule sollicitation,
+     et elle mene au formulaire de demande, jamais a un telechargement. -->
+<div id="mag-popup" role="dialog" aria-modal="true" aria-labelledby="mag-popup-t" hidden
+     style="position:fixed;inset:0;background:rgba(10,48,68,.86);z-index:9998;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:var(--blanc);max-width:620px;width:100%;padding:34px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.30);display:flex;gap:28px;align-items:center;">
+    <button type="button" id="mag-popup-x" aria-label="Fermer"
+            style="position:absolute;top:10px;right:14px;background:none;border:none;font-size:24px;line-height:1;color:var(--gris);cursor:pointer;">&times;</button>
+
+    <img src="images/couverture-neybras-magazine-vol001-septembre-2026.jpg"
+         alt="Couverture du Vol. 001, septembre 2026" width="840" height="1176" loading="lazy" decoding="async"
+         style="width:150px;height:auto;flex:0 0 auto;box-shadow:0 12px 30px rgba(10,48,68,.28);"/>
+
+    <div>
+      <div style="font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-f);margin-bottom:12px;">
+        Neybras Magazine &middot; Vol. 001 &middot; Septembre 2026
+      </div>
+      <h2 id="mag-popup-t" style="font-family:var(--pd);font-size:1.7rem;font-weight:700;color:var(--bn);line-height:1.18;margin:0 0 10px;">
+        Procurez-vous votre exemplaire
+      </h2>
+      <p style="font-family:var(--it);font-size:13.5px;color:var(--gris2);line-height:1.6;margin:0 0 20px;">
+        Premi&egrave;re &eacute;dition inaugurale. En couverture, Me Mamadou Isma&iuml;la Konat&eacute;, avocat &agrave; la Cour aux barreaux du Mali et de Paris, arbitre international.
+      </p>
+      <a href="magazine#demande" id="mag-popup-cta"
+         style="display:inline-block;background:var(--bn);color:var(--blanc);font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;text-decoration:none;border-radius:var(--r);">
+        Demander un exemplaire
+      </a>
+      <p style="font-family:var(--it);font-size:10px;color:var(--gris);margin:12px 0 0;">
+        Diffusion nominative contr&ocirc;l&eacute;e &middot; sous r&eacute;serve d&rsquo;&eacute;ligibilit&eacute;
+      </p>
     </div>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.85rem;font-weight:600;color:#0E3D52;line-height:1.2;margin-bottom:10px;">Recevez le décryptage juridique &amp; financier en avant-première</h2>
-    <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:#555;line-height:1.65;margin-bottom:22px;">Interviews exclusives, décryptages d'experts et actualité du droit des affaires — chaque semaine dans votre boîte mail.</p>
-    <form id="nl-popup-form"  style="display:flex;gap:0;">
-      <input id="nl-popup-email" type="email" name="email" placeholder="Votre email professionnel" required style="flex:1;padding:11px 14px;border:1px solid #e4e4e4;border-right:none;font-size:13px;font-family:'Inter',sans-serif;outline:none;"/>
-      <button type="submit" style="padding:11px 20px;background:#0E3D52;color:#fff;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">S'abonner</button>
-    </form>
-    <p style="font-family:'Inter',sans-serif;font-size:9.5px;color:#aaa;margin-top:10px;text-align:center;">Gratuit · Désinscription en 1 clic</p>
   </div>
 </div>
 <script>
 (function(){
-  function nlClose(){document.getElementById('nl-popup').style.display='none';localStorage.setItem('nl_closed','1');}
-  function nlSubmit(e){e.preventDefault();var em=document.getElementById('nl-popup-email').value;if(em&&em.includes('@')){var btn=document.querySelector('#nl-popup-form button');if(btn){btn.textContent='...';btn.disabled=true;}brevoAdd(em).then(function(){document.getElementById('nl-popup-form').innerHTML='<p style="text-align:center;font-family:Inter,sans-serif;font-size:13px;color:#27ae60;padding:12px 0;">✓ Merci ! Vous recevrez notre prochaine newsletter.</p>';localStorage.setItem('nl_closed','1');setTimeout(function(){document.getElementById('nl-popup').style.display='none';},3000);}).catch(function(){if(btn){btn.textContent="S\'abonner";btn.disabled=false;}});}}
-  window.nlClose=nlClose;window.nlSubmit=nlSubmit;
-  if(!localStorage.getItem('nl_closed')){
-    setTimeout(function(){document.getElementById('nl-popup').style.display='flex';},5000);
+  var boite = document.getElementById("mag-popup");
+  if (!boite) return;
+  var CLE = "nbr_mag_popup";
+  var dernierFocus = null;
+
+  function ferme(){
+    boite.hidden = true;
+    boite.style.display = "none";
+    try { localStorage.setItem(CLE, "1"); } catch (e) {}
+    if (dernierFocus && dernierFocus.focus) dernierFocus.focus();
+    document.removeEventListener("keydown", auClavier);
   }
+  function auClavier(e){ if (e.key === "Escape") ferme(); }
+  function ouvre(){
+    dernierFocus = document.activeElement;
+    boite.hidden = false;
+    boite.style.display = "flex";
+    document.addEventListener("keydown", auClavier);
+    var x = document.getElementById("mag-popup-x");
+    if (x) x.focus();
+  }
+
+  document.getElementById("mag-popup-x").addEventListener("click", ferme);
+  boite.addEventListener("click", function(e){ if (e.target === boite) ferme(); });
+  document.getElementById("mag-popup-cta").addEventListener("click", function(){
+    try { localStorage.setItem(CLE, "1"); } catch (e) {}
+  });
+
+  var deja = false;
+  try { deja = localStorage.getItem(CLE) === "1"; } catch (e) {}
+  if (!deja) setTimeout(ouvre, 5000);
 })();
 </script>
 <script>
@@ -1815,7 +1850,7 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
       }
     });
   }
-  document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
+  document.querySelectorAll('.nl-form,.nl-w').forEach(attachNl);
 })();
 </script>
 <script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
