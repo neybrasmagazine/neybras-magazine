@@ -141,6 +141,26 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .scroll-top.vis{display:flex;}
 @media(max-width:1100px){.id-grid{grid-template-columns:1fr;}.issue-facts{grid-template-columns:1fr;}.contrib-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr;}}
 @media(max-width:700px){.ft-grid{grid-template-columns:1fr 1fr;}.pricing-table td,.pricing-table th{padding:12px 14px;}}
+
+/* ═══ KIT MÉDIA ═══ */
+#tarifs .sec-eyebrow{color:var(--or-f);} /* l or sur fond clair plafonne a 2,8:1 */
+:root{--or-f:#806534;} /* or lisible en texte sur fond clair */
+.kit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;max-width:1000px;margin:0 auto;}
+.kit-liste{margin:0;padding:0;list-style:none;}
+.kit-liste li{position:relative;padding-left:26px;margin-bottom:14px;font-size:14px;color:var(--gris3);line-height:1.7;}
+.kit-liste li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:1px;background:var(--or);}
+.kit-liste b{color:var(--gris1);font-weight:600;}
+.kit-form{border:1px solid var(--or-bd);background:var(--blanc);padding:32px;}
+.kit-champ{margin-bottom:14px;}
+.kit-champ label{display:block;font-size:11px;font-weight:600;color:var(--gris2);margin-bottom:5px;}
+.kit-champ input{width:100%;font-family:var(--it);font-size:13px;color:var(--gris1);background:var(--blanc);border:1px solid var(--brd);padding:10px 12px;}
+.kit-champ input:focus{outline:none;border-color:var(--bn);}
+.kit-consent{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:11px;color:var(--gris3);line-height:1.6;margin-bottom:18px;}
+.kit-consent a{color:var(--bn);text-decoration:underline;}
+.kit-btn{background:var(--bn);color:#fff;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;border:none;cursor:pointer;transition:var(--tr);}
+.kit-btn:hover{background:var(--bn2);}
+.kit-etat{font-size:12px;margin-top:12px;min-height:1.4em;}
+@media(max-width:900px){.kit-grid{grid-template-columns:1fr;gap:32px;}}
 </style>
 <!-- Google Analytics GA4 -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -228,7 +248,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <p class="hero-sub">Le premier média B2B d'analyse dédié au droit, à la finance et à la gouvernance au Maroc et en Afrique francophone. Lancement du numéro fondateur : septembre 2026.</p>
     <div class="hero-ctas">
       <a href="contact" class="cta-primary"><i class="fas fa-envelope"></i> Devenir Partenaire Fondateur</a>
-      <a href="#tarifs" class="cta-secondary"><i class="fas fa-arrow-down"></i> Recevoir la grille tarifaire</a>
+      <a href="#tarifs" class="cta-secondary"><i class="fas fa-arrow-down"></i> Recevoir notre kit média</a>
     </div>
   </div>
 </section>
@@ -318,12 +338,34 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   </div>
 </section>
 
-<!-- Grille tarifaire -->
+<!-- Kit média -->
 <section class="section" id="tarifs">
   <div class="container">
-    <div class="sec-eyebrow"><span>Offre Partenaire Fondateur</span></div>
-    <h2 class="sec-h2">Pour recevoir la grille tarifaire par email.</h2>
-    <a href="mailto:marketing@neybras-magazine.com?subject=Grille%20tarifaire%20-%20Partenaire%20Fondateur" class="btn-contact"><i class="fas fa-envelope"></i> Demander la grille tarifaire</a>
+    <div class="sec-eyebrow"><span>Kit média</span></div>
+    <h2 class="sec-h2">Recevoir notre kit média</h2>
+    <div class="kit-grid">
+      <div>
+        <ul class="kit-liste">
+          <li><b>La répartition complète du lectorat</b> — la composition du fichier de diffusion, poste par poste.</li>
+          <li><b>La grille tarifaire</b> — les formats, leurs emplacements et leurs prix.</li>
+          <li><b>Les spécifications techniques</b> — dimensions, résolutions, profils colorimétriques, formats de fichier et dates de remise.</li>
+          <li><b>Le calendrier de parution</b> — dates de sortie et bouclages commerciaux.</li>
+        </ul>
+        <p style="font-size:12.5px;color:var(--gris3);line-height:1.75;margin-top:22px;border-top:1px solid var(--brd);padding-top:18px;">Neybras Magazine ne commercialise ni sa ligne éditoriale, ni ses sujets, ni ses signatures. Tout contenu fourni par un partenaire paraît sous la mention « Communication partenaire ».</p>
+      </div>
+
+      <form class="kit-form" method="post" action="https://formspree.io/f/mgoppdpg" data-kit-form="kit_media">
+        <input type="hidden" name="form_name" value="kit_media"/>
+        <div class="kit-champ"><label for="k-nom">Nom et prénom</label><input id="k-nom" name="nom" type="text" autocomplete="name" required/></div>
+        <div class="kit-champ"><label for="k-fonction">Fonction</label><input id="k-fonction" name="fonction" type="text" autocomplete="organization-title" required/></div>
+        <div class="kit-champ"><label for="k-org">Organisation</label><input id="k-org" name="organisation" type="text" autocomplete="organization" required/></div>
+        <div class="kit-champ"><label for="k-mail">Adresse électronique professionnelle</label><input id="k-mail" name="email" type="email" autocomplete="email" required/></div>
+        <label class="kit-consent"><input type="checkbox" name="consentement" required/><span>J'accepte que ces informations soient utilisées pour m'adresser le kit média, conformément à la <a href="politique-confidentialite">politique de confidentialité</a>.</span></label>
+        <button class="kit-btn" type="submit">Recevoir le kit média</button>
+        <p class="kit-etat" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
   </div>
 </section>
 
@@ -381,6 +423,34 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
   }
   document.querySelectorAll('.nl-form,.nl-w,#nl-popup-form').forEach(attachNl);
 })();
+</script>
+
+<script>
+/* Meme point de collecte que le reste du site. Le kit est adresse par
+   courriel : aucun fichier public, sans quoi la demande ne servirait a rien. */
+document.querySelectorAll('form[data-kit-form]').forEach(function (form) {
+  var etat = form.querySelector('.kit-etat');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bouton = form.querySelector('button[type=submit]');
+    bouton.disabled = true;
+    etat.style.color = '#555555';
+    etat.textContent = 'Envoi en cours…';
+    fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        form.reset();
+        etat.style.color = '#0E3D52';
+        etat.textContent = 'Demande reçue. Le kit média vous est adressé par courriel.';
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'kit_media' });
+      })
+      .catch(function () {
+        etat.style.color = '#806534';
+        etat.textContent = "L'envoi a échoué. Écrivez-nous à marketing@neybras-magazine.com.";
+      })
+      .finally(function () { bouton.disabled = false; });
+  });
+});
 </script>
 </body>
 </html>
