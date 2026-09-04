@@ -99,6 +99,27 @@ a:hover { color: var(--nbr-bleu-fonce); }
   background: transparent;
 }
 
+/* Badges de format — la seule chose qui distingue une analyse d'une
+   tribune ou d'un entretien. Ils remplacent les sous-rubriques
+   Opinion / Interviews : un article garde une identité unique et
+   l'affiche à l'identique partout où il est repris.
+   Aplats pleins, pour qu'ils se lisent d'un coup d'œil en tête de
+   vignette. Contrastes vérifiés : blanc sur marine 11,6:1, nuit sur
+   or 5,0:1, blanc sur gris 5,2:1. */
+.nbr-badge {
+  display: inline-block;
+  font-size: var(--t-2xs);
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  padding: var(--e-1) var(--e-3);
+  border: 1px solid transparent;
+  border-radius: var(--r-1);
+}
+.nbr-badge--analyse   { background: var(--nbr-bleu); color: var(--nbr-blanc); }
+.nbr-badge--tribune   { background: var(--nbr-or);   color: var(--nbr-nuit); }
+.nbr-badge--interview { background: var(--nbr-gris); color: var(--nbr-blanc); }
+
 
 /* ---------- FIL D'ARIANE ------------------------------------ */
 
