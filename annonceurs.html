@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://neybras-magazine.com/images/og-neybras-default.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<link rel="canonical" href="https://neybras-magazine.com/premium"/>
+<link rel="canonical" href="https://neybras-magazine.com/annonceurs"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -174,14 +174,14 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://neybras-magazine.com/premium#page",
+      "@id": "https://neybras-magazine.com/annonceurs#page",
       "name": "Espaces publicitaires & partenariats",
       "description": "Devenez partenaire fondateur de Neybras Magazine, le premier média B2B d'analyse dédié au droit, à la finance et à la gouvernance au Maroc et en Afrique francophone. Lancement du numéro fondateur en septembre 2026.",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://neybras-magazine.com/images/og-neybras-default.png"
       },
-      "url": "https://neybras-magazine.com/premium",
+      "url": "https://neybras-magazine.com/annonceurs",
       "inLanguage": "fr-MA",
       "isPartOf": {
         "@type": "WebSite",
@@ -237,7 +237,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   <a href="droit-du-sport" class="nav-a star">Sport Business</a>
   <a href="arbitrage" class="nav-a">Arbitrage</a>
   <a href="magazine" class="nav-a">Magazine</a>
-  <a href="premium" class="nav-a on">Annonceurs</a>
+  <a href="annonceurs" class="nav-a on">Annonceurs</a>
 </div></div></nav></header>
 
 <!-- Hero -->
@@ -297,18 +297,256 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   </div>
 </section>
 
-<!-- Comité éditorial -->
-<section class="section">
-  <div class="container">
-    <div class="sec-eyebrow"><span>Nos contributeurs</span></div>
-    <h2 class="sec-h2">Un comité éditorial, pas une promesse d'audience.</h2>
-    <p class="sec-lead">Plutôt que d'afficher des pourcentages de lectorat qu'on ne peut pas encore vérifier, nous mettons en avant qui écrit dans le magazine — c'est ce qui construit la crédibilité pour ce type de lecteur. Contributeurs confirmés pour le Vol. 001 et les numéros suivants :</p>
-    <div class="contrib-grid">
-      <div class="contrib-item"><img src="images/driss-el-harti-avocat-tanger.jpg" alt="Me Driss El Harti" class="contrib-photo" width="1474" height="1474"/><div><span class="contrib-name">Me Driss El Harti</span><span class="contrib-role">— Arbitrage, Tanger</span></div></div>
-      <div class="contrib-item"><img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" class="contrib-photo" width="1100" height="1100"/><div><span class="contrib-name">Me Amine Lahlou</span><span class="contrib-role">— Droit du sport et fiscalité</span></div></div>
-      <div class="contrib-item"><img src="images/portrait-salwa-benali.jpg" alt="Salwa Benali" class="contrib-photo" width="200" height="200"/><div><span class="contrib-name">Salwa Benali</span><span class="contrib-role">— Finance participative</span></div></div>
-      <div class="contrib-item"><img src="images/zineb-maati-juriste-sport.jpg" alt="Me Zineb Maâti" class="contrib-photo" width="600" height="600"/><div><span class="contrib-name">Me Zineb Maâti</span><span class="contrib-role"></span></div></div>
+<!-- ============================================================
+     Neybras Magazine — page /annonceurs
+     Bloc « Contributeurs de ce numéro » + « La rédaction »
+     Source : ours du Vol. 001 — Septembre 2026, p. 4
+     Charte : #0E3D52 / #C9A84C / #EDF2F4 / #4C6470 — Playfair Display + Inter
+     CSS scopé sous .nb-equipe : supprimable si les classes du site couvrent déjà ces composants.
+     ============================================================ -->
+
+<style>
+.nb-equipe {
+  --nb-bleu: #0E3D52;
+  --nb-or: #C9A84C;
+  --nb-clair: #EDF2F4;
+  --nb-ligne: #C3D1D8;
+  --nb-gris: #4C6470;
+  padding: 4.5rem 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--nb-bleu);
+}
+.nb-equipe__inner { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+.nb-equipe__eyebrow {
+  font-size: .8125rem;
+  letter-spacing: .04em;
+  color: var(--nb-or);
+  margin: 0 0 .75rem;
+}
+.nb-equipe__titre {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 2.75rem;
+  max-width: 24ch;
+}
+
+/* — Contributeurs — */
+.nb-contributeurs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--nb-ligne);
+}
+.nb-contributeur {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--nb-ligne);
+}
+.nb-contributeur__portrait,
+.nb-contributeur__initiales {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex: 0 0 64px;
+  object-fit: cover;
+}
+.nb-contributeur__initiales {
+  display: grid;
+  place-items: center;
+  background: var(--nb-clair);
+  color: var(--nb-bleu);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.0625rem;
+  border: 1px solid var(--nb-ligne);
+}
+.nb-contributeur__nom {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+.nb-contributeur__bio {
+  margin: .375rem 0 0;
+  font-size: .9375rem;
+  line-height: 1.55;
+  color: var(--nb-gris);
+  max-width: 60ch;
+}
+
+/* — Rédaction — */
+.nb-redaction {
+  margin-top: 3.5rem;
+  padding: 2rem 2rem 2.25rem;
+  background: var(--nb-clair);
+  border-left: 3px solid var(--nb-or);
+}
+.nb-redaction__titre {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.375rem;
+  margin: 0 0 1.5rem;
+}
+.nb-redaction__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.125rem 2.5rem;
+}
+.nb-redaction__fonction {
+  display: block;
+  font-size: .8125rem;
+  color: var(--nb-gris);
+}
+.nb-redaction__nom {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: .125rem;
+}
+.nb-redaction__note {
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--nb-ligne);
+  font-size: .875rem;
+  line-height: 1.6;
+  color: var(--nb-gris);
+  max-width: 62ch;
+}
+
+@media (max-width: 640px) {
+  .nb-redaction__liste { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .nb-contributeur { gap: 1rem; }
+  .nb-contributeur__portrait,
+  .nb-contributeur__initiales { width: 52px; height: 52px; flex-basis: 52px; }
+  .nb-redaction { padding: 1.5rem 1.25rem 1.75rem; }
+}
+</style>
+
+<section class="nb-equipe" id="contributeurs">
+  <div class="nb-equipe__inner">
+
+    <p class="nb-equipe__eyebrow">Contributeurs de ce numéro</p>
+    <h2 class="nb-equipe__titre">Un comité éditorial, pas une promesse d'audience.</h2>
+
+    <ul class="nb-contributeurs">
+
+      <!-- Portrait haute définition + autorisation écrite à obtenir avant mise en ligne -->
+      <li class="nb-contributeur">
+        <span class="nb-contributeur__initiales" aria-hidden="true">MK</span>
+        <div>
+          <span class="nb-contributeur__nom">Me Mamadou Ismaïla Konaté</span>
+          <p class="nb-contributeur__bio">
+            Avocat à la Cour, inscrit aux barreaux du Mali et de Paris, arbitre international.
+            Membre de la Cour d'Arbitrage de Casablanca depuis sa création. Ancien Garde des Sceaux,
+            ministre de la Justice de la République du Mali.
+          </p>
+        </div>
+      </li>
+
+      <li class="nb-contributeur">
+        <img class="nb-contributeur__portrait"
+             src="https://neybras-magazine.com/images/driss-el-harti-avocat-tanger.jpg"
+             alt="Portrait de Me Driss El Harti" loading="lazy" width="64" height="64">
+        <div>
+          <span class="nb-contributeur__nom">Me Driss El Harti</span>
+          <p class="nb-contributeur__bio">
+            Avocat au barreau de Tanger, spécialiste en arbitrage international.
+          </p>
+        </div>
+      </li>
+
+      <!-- Portrait à ajouter dans /images/ -->
+      <li class="nb-contributeur">
+        <span class="nb-contributeur__initiales" aria-hidden="true">KC</span>
+        <div>
+          <span class="nb-contributeur__nom">Pr. Khalid Cherkaoui Semmouni</span>
+          <p class="nb-contributeur__bio">
+            Professeur universitaire de droit, spécialiste des contrats d'affaires.
+            Head of Legal &amp; HR.
+          </p>
+        </div>
+      </li>
+
+      <li class="nb-contributeur">
+        <img class="nb-contributeur__portrait"
+             src="https://neybras-magazine.com/images/portrait-amine-lahlou.jpg"
+             alt="Portrait de Me Amine Lahlou" loading="lazy" width="64" height="64">
+        <div>
+          <span class="nb-contributeur__nom">Me Amine Lahlou</span>
+          <p class="nb-contributeur__bio">
+            Avocat au barreau de Casablanca, droit du sport et arbitrage international.
+          </p>
+        </div>
+      </li>
+
+      <!-- Portrait à ajouter dans /images/ -->
+      <li class="nb-contributeur">
+        <span class="nb-contributeur__initiales" aria-hidden="true">YA</span>
+        <div>
+          <span class="nb-contributeur__nom">Youssef El Amrani</span>
+          <p class="nb-contributeur__bio">
+            Responsable de la sécurité des systèmes d'information (RSSI/CISO),
+            expert gouvernance, risque et conformité.
+          </p>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="nb-redaction">
+      <h3 class="nb-redaction__titre">La rédaction</h3>
+      <ul class="nb-redaction__liste">
+        <li>
+          <span class="nb-redaction__fonction">Directrice de la publication</span>
+          <span class="nb-redaction__nom">Dalal Fahmi</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Rédactrice en chef</span>
+          <span class="nb-redaction__nom">Salma Aittajer</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Rédaction</span>
+          <span class="nb-redaction__nom">Houda Hachami, Haitam Dehhak, Tahar Louazzi</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Création artistique &amp; technique</span>
+          <span class="nb-redaction__nom">Ghali Seddik</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Responsable marketing &amp; commercial</span>
+          <span class="nb-redaction__nom">Mamoun Lahmoudi</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Chargée commerciale</span>
+          <span class="nb-redaction__nom">Rania Sehri</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Responsable financière</span>
+          <span class="nb-redaction__nom">Aya Benjelloun</span>
+        </li>
+        <li>
+          <span class="nb-redaction__fonction">Assistante de direction</span>
+          <span class="nb-redaction__nom">Khadija Choukri</span>
+        </li>
+      </ul>
+      <p class="nb-redaction__note">
+        Les analyses non signées sont de la rédaction. Les opinions exprimées dans les tribunes et
+        entretiens n'engagent que leurs auteurs et ne sauraient être opposées à leurs employeurs,
+        ordres ou institutions de rattachement. Neybras Magazine ne commercialise ni sa ligne
+        éditoriale, ni ses sujets, ni ses signatures.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -383,7 +621,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     <div><div class="logo-name" style="font-family:var(--it);font-size:14px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;margin-bottom:6px;">Neybras</div><div style="font-family:var(--cg);font-style:italic;font-size:10px;color:rgba(184,150,90,.75);margin-bottom:14px;">Le droit et la finance qui éclairent les décisions</div><p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage international et droit africain.</p></div>
     <div><div class="ft-col-title">Rubriques</div><div class="ft-links"><a href="droit">Droit des affaires</a><a href="finance">Finance &amp; Marchés</a><a href="arbitrage">Arbitrage &amp; ADR</a><a href="afrique">Afrique &amp; OHADA</a><a href="droit-du-sport">Sport Business</a></div></div>
     <div><div class="ft-col-title">Magazine</div><div class="ft-links"><a href="interviews">Interviews</a><a href="tribunes">Tribunes</a><a href="analyses">Analyses</a><a href="evenements">Événements</a></div></div>
-    <div><div class="ft-col-title">Partenariats</div><div class="ft-links"><a href="premium" style="color:rgba(184,150,90,.7)">Annonceurs</a><a href="contact">Nous contacter</a><a href="a-propos">À propos</a><a href="mentions-legales">Mentions légales</a></div></div>
+    <div><div class="ft-col-title">Partenariats</div><div class="ft-links"><a href="annonceurs" style="color:rgba(184,150,90,.7)">Annonceurs</a><a href="contact">Nous contacter</a><a href="a-propos">À propos</a><a href="mentions-legales">Mentions légales</a></div></div>
   </div>
   <div class="ft-bottom"><span class="ft-copy">© 2026 Neybras Publishing. Tous droits réservés.<br>Capital A, Bureau n° 9, Bouskoura, Casablanca</span><div class="ft-legal"><a href="mentions-legales">Mentions légales</a><a href="contact">Contact</a></div></div>
 </div></footer>

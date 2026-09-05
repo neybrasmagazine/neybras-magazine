@@ -9,23 +9,26 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-# ── 3. CdM 2030 legacy slug ────────────────────────────────────────────
+# ── 3. Ancienne page Annonceurs (ex /premium) ─────────────────────────
+RewriteRule ^premium/?$ /annonceurs [R=301,L]
+
+# ── 4. CdM 2030 legacy slug ────────────────────────────────────────────
 RewriteRule ^article-cdm2030(\.html)?$ /article-cdm2030-juridique [L,R=301]
 
-# ── 4. Anciens slugs alternatifs ───────────────────────────────────────
+# ── 5. Anciens slugs alternatifs ───────────────────────────────────────
 RewriteRule ^article-finance-participative-maroc/?$ /article-finance-participative [L,R=301]
 RewriteRule ^article-zlecaf-maroc/?$                /article-zlecaf [L,R=301]
 
-# ── 5. Supprimer l'extension .html (URLs propres) ─────────────────────
+# ── 6. Supprimer l'extension .html (URLs propres) ─────────────────────
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
 RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 
-# ── 6. Servir le fichier .html pour les URLs sans extension ────────────
+# ── 7. Servir le fichier .html pour les URLs sans extension ────────────
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
 
-# ── 7. Sécurité : cacher les fichiers sensibles ────────────────────────
+# ── 8. Sécurité : cacher les fichiers sensibles ────────────────────────
 <FilesMatch "\.(git|env|htpasswd)$">
   Order allow,deny
   Deny from all
