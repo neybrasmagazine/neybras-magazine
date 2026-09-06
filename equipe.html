@@ -89,6 +89,14 @@ ul{list-style:none;}
 .team-name{font-family:var(--pd);font-size:16px;font-weight:700;color:var(--bn);margin-bottom:2px;}
 .team-role{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--or);margin-bottom:10px;text-transform:uppercase;}
 .team-bio{font-family:var(--cg);font-size:14.5px;color:var(--gris3);line-height:1.62;}
+
+/* La rédaction */
+.redac-section{padding:64px 0;}
+.redac-inner{max-width:860px;margin:0 auto;background:var(--blanc);border:1px solid var(--brd);border-left:3px solid var(--or);padding:34px 38px 30px;}
+.redac-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;}
+.redac-fn{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:4px;}
+.redac-nom{font-family:var(--pd);font-size:15.5px;font-weight:700;color:var(--bn);line-height:1.35;}
+.redac-note{margin-top:28px;padding-top:22px;border-top:1px solid var(--brd);font-family:var(--cg);font-size:14.5px;color:var(--gris4);line-height:1.7;}
 /* CTA */
 .cta-section{background:var(--bn);padding:64px 0;text-align:center;}
 .cta-section h2{font-family:var(--pd);font-size:2rem;font-weight:700;color:#fff;margin-bottom:12px;}
@@ -120,7 +128,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .scroll-top:hover{background:var(--or-lt);}
 .scroll-top.vis{display:flex;}
 @media(max-width:900px){.dir-layout{grid-template-columns:1fr;}.team-grid{grid-template-columns:1fr;}.ft-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){.dir-layout{grid-template-columns:1fr;}.dir-photo{width:100%;height:220px;}.team-card{flex-direction:column;align-items:center;text-align:center;}.ft-grid{grid-template-columns:1fr;}}
+@media(max-width:600px){.dir-layout{grid-template-columns:1fr;}.redac-grid{grid-template-columns:1fr;}.redac-inner{padding:26px 22px 24px;}.dir-photo{width:100%;height:220px;}.team-card{flex-direction:column;align-items:center;text-align:center;}.ft-grid{grid-template-columns:1fr;}}
 </style>
 <!-- Google Analytics GA4 -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -225,51 +233,96 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 </section>
 
 <!-- Contributeurs -->
-<div class="contrib-section">
+<div class="contrib-section" id="contributeurs">
   <div class="container">
     <div class="section-title">Nos contributeurs</div>
     <h2 class="section-h2">Praticiens du droit et de la finance</h2>
     <div class="team-grid">
       <div class="team-card">
+        <div class="team-photo" style="background:#12303f;display:flex;align-items:center;justify-content:center;font-family:var(--pd);font-size:22px;font-weight:700;color:#fff;">MK</div>
+        <div>
+          <div class="team-name">Me Mamadou Ismaïla Konaté</div>
+          <div class="team-role">Contributeur, Arbitrage international</div>
+          <p class="team-bio">Avocat à la Cour, inscrit aux barreaux du Mali et de Paris, arbitre international. Membre de la Cour d'Arbitrage de Casablanca depuis sa création. Ancien Garde des Sceaux, ministre de la Justice de la République du Mali.</p>
+        </div>
+      </div>
+      <div class="team-card">
         <img src="images/driss-el-harti-avocat-tanger.jpg" alt="Me Driss El Harti" class="team-photo" width="1474" height="1474"/>
         <div>
           <div class="team-name">Me Driss El Harti</div>
           <div class="team-role">Contributeur, Arbitrage international</div>
-          <p class="team-bio">Avocat spécialisé en arbitrage, basé à Tanger. Ses analyses portent sur le règlement des différends commerciaux et l'arbitrage international en zone CIRDI et OHADA.</p>
+          <p class="team-bio">Avocat au barreau de Tanger, spécialiste en arbitrage international. Ses analyses portent sur le règlement des différends commerciaux et l'arbitrage international en zone CIRDI et OHADA.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:#12303f;display:flex;align-items:center;justify-content:center;font-family:var(--pd);font-size:22px;font-weight:700;color:#fff;">KC</div>
+        <div>
+          <div class="team-name">Pr. Khalid Cherkaoui Semmouni</div>
+          <div class="team-role">Contributeur, Contrats d'affaires</div>
+          <p class="team-bio">Professeur universitaire de droit, spécialiste des contrats d'affaires. Head of Legal &amp; HR.</p>
         </div>
       </div>
       <div class="team-card">
         <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" class="team-photo" width="1100" height="1100"/>
         <div>
           <div class="team-name">Me Amine Lahlou</div>
-          <div class="team-role">Contributeur, Droit du sport et fiscalité</div>
-          <p class="team-bio">Avocat spécialisé en droit du sport et fiscalité, apporte un éclairage juridique sur les enjeux économiques du sport professionnel et les questions fiscales associées.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/portrait-salwa-benali.jpg" alt="Salwa Benali" class="team-photo" width="200" height="200"/>
-        <div>
-          <div class="team-name">Salwa Benali</div>
-          <div class="team-role">Contributrice, Finance participative</div>
-          <p class="team-bio">Experte en finance participative, analyse les dynamiques de la finance islamique et ses applications au marché marocain.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/zineb-maati-juriste-sport.jpg" alt="Me Zineb Maâti" class="team-photo" width="600" height="600"/>
-        <div>
-          <div class="team-name">Me Zineb Maâti</div>
-          <div class="team-role">Contributrice</div>
-          <p class="team-bio">Avocate, apporte son expertise juridique aux dossiers d'analyse du magazine.</p>
+          <div class="team-role">Contributeur, Droit du sport et arbitrage</div>
+          <p class="team-bio">Avocat au barreau de Casablanca, droit du sport et arbitrage international. Apporte un éclairage juridique sur les enjeux économiques du sport professionnel.</p>
         </div>
       </div>
       <div class="team-card">
         <div class="team-photo" style="background:#12303f;display:flex;align-items:center;justify-content:center;font-family:var(--pd);font-size:22px;font-weight:700;color:#fff;">YA</div>
         <div>
           <div class="team-name">Youssef El Amrani</div>
-          <div class="team-role">Contributeur, Cybersécurité & Gouvernance IA</div>
+          <div class="team-role">Contributeur, Cybersécurité &amp; Gouvernance IA</div>
           <p class="team-bio">Responsable de la Sécurité des Systèmes d'Information (RSSI/CISO) et expert en gouvernance, risque et conformité (GRC).</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- La rédaction -->
+<div class="redac-section" id="redaction">
+  <div class="container">
+    <div class="section-title">Notre équipe</div>
+    <h2 class="section-h2">La rédaction</h2>
+    <div class="redac-inner">
+      <div class="redac-grid">
+        <div>
+          <div class="redac-fn">Directrice de la publication</div>
+          <div class="redac-nom">Dalal Fahmi</div>
+        </div>
+        <div>
+          <div class="redac-fn">Rédactrice en chef</div>
+          <div class="redac-nom">Salma Aittajer</div>
+        </div>
+        <div>
+          <div class="redac-fn">Rédaction</div>
+          <div class="redac-nom">Houda Hachami, Haitam Dehhak, Tahar Louazzi</div>
+        </div>
+        <div>
+          <div class="redac-fn">Création artistique &amp; technique</div>
+          <div class="redac-nom">Ghali Seddik</div>
+        </div>
+        <div>
+          <div class="redac-fn">Responsable marketing &amp; commercial</div>
+          <div class="redac-nom">Mamoun Lahmoudi</div>
+        </div>
+        <div>
+          <div class="redac-fn">Chargée commerciale</div>
+          <div class="redac-nom">Rania Sehri</div>
+        </div>
+        <div>
+          <div class="redac-fn">Responsable financière</div>
+          <div class="redac-nom">Aya Benjelloun</div>
+        </div>
+        <div>
+          <div class="redac-fn">Assistante de direction</div>
+          <div class="redac-nom">Khadija Choukri</div>
+        </div>
+      </div>
+      <p class="redac-note">Les analyses non signées sont de la rédaction. Les opinions exprimées dans les tribunes et entretiens n'engagent que leurs auteurs et ne sauraient être opposées à leurs employeurs, ordres ou institutions de rattachement. Neybras Magazine ne commercialise ni sa ligne éditoriale, ni ses sujets, ni ses signatures.</p>
     </div>
   </div>
 </div>
