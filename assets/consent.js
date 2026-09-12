@@ -1,12 +1,44 @@
 /* Consentement à la mesure d'audience — Neybras Magazine
    Google Analytics n'est chargé qu'après un accord explicite.
-   Le choix est conservé dans localStorage (nbr_consent), pas dans un cookie. */
+   Le choix est conservé dans localStorage (nbr_consent), pas dans un cookie,
+   pendant six mois : passé ce délai, il est effacé et le bandeau revient.
+   Les cookies de mesure sont limités à treize mois, et supprimés dès que
+   le visiteur refuse, retire son accord ou que son accord a expiré. */
 (function () {
   var CLE = 'nbr_consent';
   var ID = window.NBR_GA_ID || 'G-TRVG9RSKTL';
+  var DUREE_CHOIX_MS = 182 * 24 * 3600 * 1000;   /* six mois */
+  var DUREE_COOKIE_S = 395 * 24 * 3600;          /* treize mois */
+
+  /* Supprime _ga, _ga_<ID> et les anciens _gid/_gat, quel que soit le
+     domaine sur lequel Google Analytics les a posés. */
+  function effacerCookiesGA() {
+    var noms = document.cookie.split(';')
+      .map(function (c) { return c.trim().split('=')[0]; })
+      .filter(function (n) { return n === '_ga' || n.indexOf('_ga_') === 0 || n === '_gid' || n === '_gat'; });
+    if (!noms.length) return;
+    var hote = location.hostname;
+    var domaines = ['', hote, '.' + hote];
+    var parties = hote.split('.');
+    if (parties.length > 2) domaines.push('.' + parties.slice(-2).join('.'));
+    noms.forEach(function (nom) {
+      domaines.forEach(function (d) {
+        document.cookie = nom + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
+      });
+    });
+  }
 
   function lire() {
-    try { return JSON.parse(localStorage.getItem(CLE) || 'null'); } catch (e) { return null; }
+    var etat;
+    try { etat = JSON.parse(localStorage.getItem(CLE) || 'null'); } catch (e) { return null; }
+    if (!etat || !etat.choix) return null;
+    var date = Date.parse(etat.date);
+    if (!date || Date.now() - date > DUREE_CHOIX_MS) {
+      try { localStorage.removeItem(CLE); } catch (e) {}
+      effacerCookiesGA();
+      return null;
+    }
+    return etat;
   }
   function ecrire(valeur) {
     try {
@@ -14,7 +46,15 @@
     } catch (e) { /* navigation privée : le bandeau réapparaîtra */ }
   }
 
+  /* Arrête toute collecte, y compris sur la page en cours si la balise
+     était déjà chargée, puis efface les cookies existants. */
+  function desactiverAnalytics() {
+    window['ga-disable-' + ID] = true;
+    effacerCookiesGA();
+  }
+
   function chargerAnalytics() {
+    window['ga-disable-' + ID] = false;
     if (window.__nbrGaCharge) return;
     window.__nbrGaCharge = true;
     var s = document.createElement('script');
@@ -26,7 +66,8 @@
     var p = window.location.pathname.replace(/\.html$/i, '');
     gtag('config', ID, {
       page_path: p,
-      page_location: window.location.origin + p + window.location.search
+      page_location: window.location.origin + p + window.location.search,
+      cookie_expires: DUREE_COOKIE_S
     });
   }
 
@@ -61,6 +102,7 @@
       var choix = b.getAttribute('data-nbr');
       ecrire(choix);
       if (choix === 'granted') chargerAnalytics();
+      else desactiverAnalytics();
       retirerBandeau(el);
     });
   }
@@ -68,16 +110,18 @@
   function demarrer() {
     var etat = lire();
     if (etat && etat.choix === 'granted') { chargerAnalytics(); return; }
-    if (etat && etat.choix === 'denied') return;
+    if (etat && etat.choix === 'denied') { effacerCookiesGA(); return; }
     afficherBandeau();
   }
 
-  /* Permet de rouvrir le choix depuis la page cookies : <a href="#" data-nbr-rouvrir> */
+  /* Permet de rouvrir le choix depuis la page cookies : <button data-nbr-rouvrir>.
+     Retirer son choix suspend la mesure jusqu'à la nouvelle réponse. */
   document.addEventListener('click', function (e) {
     var lien = e.target.closest('[data-nbr-rouvrir]');
     if (!lien) return;
     e.preventDefault();
     try { localStorage.removeItem(CLE); } catch (err) {}
+    desactiverAnalytics();
     if (!document.getElementById('nbr-consent')) afficherBandeau();
   });
 
