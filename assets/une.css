@@ -1,0 +1,293 @@
+/* ============================================================
+   NEYBRAS MAGAZINE — LA UNE (page d'accueil)
+   ------------------------------------------------------------
+   Toutes les valeurs viennent de assets/tokens.css, chargé avant.
+   Seuls les voiles blancs sur fond sombre sont écrits ici.
+
+   Ordre de la page, arrêté après le Volume 001 :
+   signature du média · À la Une · dossier digital ·
+   dernières analyses · rubriques · entretien · magazine ·
+   ligne éditoriale.
+   ============================================================ */
+
+.u-sec { padding: var(--e-8) 0; }
+
+.u-k {
+  font-family: var(--nbr-texte);
+  font-size: .72rem;
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--nbr-or-fonce);
+  margin: 0;
+}
+
+.u-h2 {
+  font-family: var(--nbr-titre);
+  font-weight: var(--poids-gras);
+  font-size: var(--t-2xl);
+  line-height: var(--lh-titre);
+  letter-spacing: var(--ls-titre);
+  color: var(--nbr-nuit);
+  margin: .35rem 0 0;
+  text-wrap: balance;
+}
+
+.u-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--e-5);
+  padding-bottom: var(--e-4);
+  border-bottom: 2px solid var(--nbr-nuit);
+  margin-bottom: var(--e-6);
+}
+.u-head .u-h2 { margin: 0; }
+
+.u-more { font-size: .8rem; font-weight: 600; color: var(--nbr-bleu); text-decoration: none; white-space: nowrap; }
+.u-more:hover { color: var(--nbr-bleu-fonce); text-decoration: underline; }
+
+.u-meta { font-size: .76rem; color: var(--nbr-gris); margin: 0; font-variant-numeric: tabular-nums; }
+
+.u-badge {
+  display: inline-block;
+  font-size: .64rem;
+  font-weight: var(--poids-gras);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  padding: .22rem .5rem;
+  border-radius: var(--r-1);
+}
+.u-badge--analyse   { background: var(--nbr-bleu);    color: var(--nbr-blanc); }
+.u-badge--tribune   { background: var(--nbr-or);      color: var(--nbr-nuit); }
+.u-badge--interview { background: var(--nbr-ardoise); color: var(--nbr-blanc); }
+
+.u-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--nbr-texte);
+  font-size: .74rem;
+  font-weight: var(--poids-gras);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .9rem 1.45rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-1);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.u-btn--or { background: var(--nbr-or); color: var(--nbr-nuit); }
+.u-btn--or:hover { background: var(--nbr-or-clair); color: var(--nbr-nuit); }
+.u-btn--bleu { background: var(--nbr-bleu); color: var(--nbr-blanc); }
+.u-btn--bleu:hover { background: var(--nbr-bleu-fonce); color: var(--nbr-blanc); }
+.u-btn--ligne { background: transparent; color: var(--nbr-bleu); border-color: var(--nbr-bleu-bord); }
+.u-btn--ligne:hover { border-color: var(--nbr-bleu); background: var(--nbr-bleu-voile); color: var(--nbr-bleu); }
+
+.u-act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e-4) var(--e-5); margin-top: var(--e-6); }
+
+
+/* ---------- 1. SIGNATURE DU MÉDIA --------------------------- */
+
+.u-sig { background: var(--nbr-papier); border-bottom: var(--filet); padding: var(--e-6) 0 var(--e-5); }
+.u-sig__in { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--e-6); align-items: end; }
+.u-sig h1 {
+  font-family: var(--nbr-titre);
+  font-weight: var(--poids-gras);
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: var(--ls-titre);
+  color: var(--nbr-nuit);
+  margin: .45rem 0 0;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+.u-sig h1 em { font-style: italic; font-weight: var(--poids-normal); color: var(--nbr-bleu); }
+.u-sig__ear {
+  margin: 0;
+  text-align: right;
+  font-size: .8rem;
+  line-height: 1.75;
+  color: var(--nbr-gris);
+  border-left: var(--filet);
+  padding-left: var(--e-5);
+}
+.u-sig__ear b { display: block; color: var(--nbr-encre); font-weight: 600; letter-spacing: .05em; }
+
+
+/* ---------- 2. À LA UNE ------------------------------------- */
+
+.u-une { background: var(--nbr-nuit); color: var(--nbr-blanc); }
+.u-une__in { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-8); align-items: center; }
+.u-une .u-k { color: var(--nbr-or); display: flex; align-items: center; gap: .75rem; }
+.u-une .u-k::before { content: ""; width: 2rem; height: 1px; background: var(--nbr-or); }
+.u-une__rub { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: var(--e-5) 0 var(--e-4); font-size: .78rem; letter-spacing: .04em; color: rgba(255, 255, 255, .72); }
+.u-une h2 {
+  font-family: var(--nbr-titre);
+  font-weight: var(--poids-noir);
+  font-size: clamp(2.1rem, 1.35rem + 3vw, 3.4rem);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+.u-une h2 a { color: var(--nbr-blanc); text-decoration: none; }
+.u-une h2 a:hover { color: var(--nbr-or-clair); }
+.u-une__sig { margin: var(--e-5) 0 0; font-size: .92rem; line-height: 1.55; color: rgba(255, 255, 255, .74); max-width: 62ch; }
+.u-une__sig b { color: var(--nbr-blanc); font-weight: 600; }
+.u-une__chapo { margin: var(--e-4) 0 0; font-size: 1.06rem; line-height: 1.68; color: rgba(255, 255, 255, .88); max-width: 62ch; }
+.u-une__q {
+  margin: var(--e-6) 0 0;
+  padding-top: var(--e-4);
+  border-top: 1px solid rgba(255, 255, 255, .16);
+  font-family: var(--nbr-titre);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: var(--nbr-or-clair);
+  max-width: 54ch;
+}
+.u-une__meta { font-size: .76rem; color: rgba(255, 255, 255, .64); }
+.u-une__cover { margin: 0; justify-self: end; width: 100%; max-width: 340px; }
+.u-une__cover a { display: block; }
+.u-une__cover img { display: block; width: 100%; height: auto; box-shadow: 0 24px 60px rgba(0, 0, 0, .38); transition: transform var(--transition); }
+.u-une__cover a:hover img { transform: translateY(-3px); }
+.u-une__cover figcaption { margin-top: .8rem; font-size: .74rem; line-height: 1.5; color: rgba(255, 255, 255, .64); }
+
+
+/* ---------- 3. DOSSIER DIGITAL ------------------------------ */
+
+.u-dos__head {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: var(--e-7);
+  align-items: end;
+  padding-bottom: var(--e-5);
+  border-bottom: 2px solid var(--nbr-nuit);
+  margin-bottom: var(--e-6);
+}
+.u-dos__chapo { margin: 0; font-size: 1rem; line-height: 1.68; color: var(--nbr-encre); max-width: 62ch; }
+.u-dos__note { display: block; margin-top: .5rem; font-size: .76rem; color: var(--nbr-gris); }
+
+/* Grille réglée comme un sommaire : des cases, pas des cartes flottantes. */
+.u-dos__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: var(--filet);
+  border-left: var(--filet);
+}
+.u-dos__grid > li { border-right: var(--filet); border-bottom: var(--filet); background: var(--nbr-blanc); }
+.u-dos__card { display: flex; flex-direction: column; gap: .65rem; height: 100%; padding: var(--e-5); color: inherit; text-decoration: none; transition: background var(--transition); }
+.u-dos__card:hover { background: var(--nbr-bleu-voile); }
+.u-dos__fig { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: 1.95rem; line-height: 1.1; color: var(--nbr-bleu); }
+.u-dos__txt { margin: 0; flex: 1; font-size: .95rem; line-height: 1.58; color: var(--nbr-encre); }
+.u-dos__by { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; padding-top: .75rem; border-top: var(--filet); font-size: .76rem; color: var(--nbr-gris); }
+.u-dos__excl { color: var(--nbr-or-fonce); font-weight: 600; }
+.u-dos__foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--e-4); margin-top: var(--e-6); }
+
+
+/* ---------- 4. DERNIÈRES ANALYSES --------------------------- */
+
+.u-ana-sec { padding-top: 0; }
+.u-ana { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.u-ana > li { display: flex; flex-direction: column; padding: 0 var(--e-5); border-left: var(--filet); }
+.u-ana > li:first-child { padding-left: 0; border-left: 0; }
+.u-ana > li:last-child { padding-right: 0; }
+.u-ana .u-badge { align-self: flex-start; }
+.u-ana h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: 1.45rem; line-height: 1.22; margin: .8rem 0 .45rem; text-wrap: balance; }
+.u-ana h3 a { color: var(--nbr-nuit); text-decoration: none; }
+.u-ana h3 a:hover { color: var(--nbr-bleu); text-decoration: underline; }
+.u-ana__by { margin: 0 0 .55rem; font-size: .82rem; font-weight: 600; color: var(--nbr-encre); }
+.u-ana__dek { margin: 0 0 .8rem; flex: 1; font-size: .95rem; line-height: 1.62; color: var(--nbr-encre); }
+
+
+/* ---------- 5. RUBRIQUES ------------------------------------ */
+
+.u-rub { background: var(--nbr-creme); }
+.u-rub__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--e-6); }
+.u-rub__col { display: flex; flex-direction: column; gap: .6rem; padding-top: var(--e-4); border-top: 2px solid var(--nbr-nuit); }
+.u-rub__name { display: flex; justify-content: space-between; font-size: .76rem; font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-nuit); text-decoration: none; }
+a.u-rub__name:hover { color: var(--nbr-bleu); }
+.u-rub__col .u-badge { align-self: flex-start; margin-top: .35rem; }
+.u-rub__col h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: 1.2rem; line-height: 1.28; margin: 0; text-wrap: balance; }
+.u-rub__col h3 a { color: var(--nbr-nuit); text-decoration: none; }
+.u-rub__col h3 a:hover { color: var(--nbr-bleu); text-decoration: underline; }
+.u-rub__by { margin: 0; font-size: .82rem; font-weight: 600; color: var(--nbr-encre); }
+/* Sur la crème, le texte secondaire prend l'encre (voir tokens.css). */
+.u-rub__dek { margin: 0; flex: 1; font-size: .9rem; line-height: 1.6; color: var(--nbr-encre); }
+.u-rub__etat { margin: 0; padding-top: .6rem; border-top: 1px solid var(--nbr-or-bord); font-size: .76rem; color: var(--nbr-encre); }
+.u-rub__etat b { color: var(--nbr-or-fonce); font-weight: 600; }
+
+
+/* ---------- 6. L'ENTRETIEN ---------------------------------- */
+
+.u-itw__in { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--e-7); align-items: center; max-width: 60rem; }
+.u-itw__photo { display: block; width: 180px; height: 180px; object-fit: cover; border-radius: 50%; }
+.u-itw h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: var(--t-2xl); line-height: 1.15; letter-spacing: var(--ls-titre); margin: .65rem 0 .45rem; text-wrap: balance; }
+.u-itw h3 a { color: var(--nbr-nuit); text-decoration: none; }
+.u-itw h3 a:hover { color: var(--nbr-bleu); }
+.u-itw__by { margin: 0 0 .9rem; font-size: .86rem; line-height: 1.55; color: var(--nbr-gris); }
+.u-itw__by b { color: var(--nbr-encre); font-weight: 600; }
+.u-itw__dek { margin: 0 0 1rem; font-size: 1rem; line-height: 1.66; color: var(--nbr-encre); max-width: 62ch; }
+.u-itw blockquote {
+  margin: 0 0 1rem;
+  padding-left: var(--e-4);
+  border-left: 2px solid var(--nbr-or);
+  font-family: var(--nbr-titre);
+  font-style: italic;
+  font-size: 1.18rem;
+  line-height: 1.45;
+  color: var(--nbr-bleu);
+  max-width: 56ch;
+}
+
+
+/* ---------- 7. LE MAGAZINE ---------------------------------- */
+
+.u-mag { background: var(--nbr-bleu); color: var(--nbr-blanc); }
+.u-mag__in { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--e-8); align-items: center; }
+.u-mag .u-k { color: var(--nbr-or-clair); }
+.u-mag .u-h2 { color: var(--nbr-blanc); }
+.u-mag__txt { margin: var(--e-4) 0 0; font-size: 1rem; line-height: 1.7; color: rgba(255, 255, 255, .86); max-width: 58ch; }
+.u-mag__note { font-size: .8rem; color: rgba(255, 255, 255, .74); }
+/* L'ours du numéro, en colophon. */
+.u-colo { margin: 0; border-top: 1px solid rgba(255, 255, 255, .24); }
+.u-colo > div { display: flex; justify-content: space-between; gap: var(--e-4); padding: .8rem 0; border-bottom: 1px solid rgba(255, 255, 255, .14); font-size: .9rem; }
+.u-colo dt { color: rgba(255, 255, 255, .72); }
+.u-colo dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+
+/* ---------- 8. LA LIGNE NEYBRAS ----------------------------- */
+
+.u-ligne__in { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-7); align-items: end; padding-top: var(--e-5); border-top: 2px solid var(--nbr-nuit); }
+.u-ligne__txt { margin: .65rem 0 0; font-family: var(--nbr-titre); font-size: clamp(1.3rem, 1.1rem + .9vw, 1.7rem); line-height: 1.36; color: var(--nbr-nuit); max-width: 42ch; text-wrap: pretty; }
+.u-ligne__formats { margin: .9rem 0 0; font-size: .82rem; letter-spacing: .08em; color: var(--nbr-gris); }
+.u-ligne__side { display: flex; flex-direction: column; align-items: flex-start; gap: var(--e-4); }
+.u-ligne__side p { margin: 0; font-size: .88rem; line-height: 1.62; color: var(--nbr-encre); }
+
+
+/* ---------- RESPONSIVE -------------------------------------- */
+
+@media (max-width: 1000px) {
+  .u-une__in, .u-mag__in, .u-ligne__in, .u-dos__head { grid-template-columns: 1fr; gap: var(--e-6); }
+  .u-une__cover { justify-self: start; max-width: 250px; }
+  .u-dos__grid, .u-rub__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .u-ana { grid-template-columns: 1fr; }
+  .u-ana > li, .u-ana > li:last-child { padding: var(--e-5) 0 0; border-left: 0; border-top: var(--filet); margin-top: var(--e-5); }
+  .u-ana > li:first-child { padding-top: 0; border-top: 0; margin-top: 0; }
+}
+
+@media (max-width: 640px) {
+  .u-sec { padding: var(--e-7) 0; }
+  .u-ana-sec { padding-top: 0; }
+  .u-sig__in { grid-template-columns: 1fr; gap: var(--e-4); }
+  .u-sig__ear { text-align: left; border-left: 0; padding-left: 0; }
+  .u-dos__grid, .u-rub__grid { grid-template-columns: 1fr; }
+  .u-itw__in { grid-template-columns: 1fr; gap: var(--e-5); }
+  .u-itw__photo { width: 120px; height: 120px; }
+  .u-head { flex-direction: column; align-items: flex-start; gap: .5rem; }
+}
