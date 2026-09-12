@@ -1228,33 +1228,16 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
 <!-- POPUP NEWSLETTER -->
 <!-- Pop-up : le magazine, pas la newsletter. Une seule sollicitation,
      et elle mene au formulaire de demande, jamais a un telechargement. -->
-<div id="mag-popup" role="dialog" aria-modal="true" aria-labelledby="mag-popup-t" hidden
-     style="position:fixed;inset:0;background:rgba(10,48,68,.86);z-index:9998;align-items:center;justify-content:center;padding:20px;">
-  <div style="background:var(--blanc);max-width:620px;width:100%;padding:34px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.30);display:flex;gap:28px;align-items:center;">
-    <button type="button" id="mag-popup-x" aria-label="Fermer"
-            style="position:absolute;top:10px;right:14px;background:none;border:none;font-size:24px;line-height:1;color:var(--gris);cursor:pointer;">&times;</button>
-
-    <img src="images/couverture-neybras-magazine-vol001-septembre-2026.jpg"
-         alt="Couverture du Vol. 001, septembre 2026" width="840" height="1176" loading="lazy" decoding="async"
-         style="width:150px;height:auto;flex:0 0 auto;box-shadow:0 12px 30px rgba(10,48,68,.28);"/>
-
-    <div>
-      <div style="font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-f);margin-bottom:12px;">
-        Neybras Magazine &middot; Vol. 001 &middot; Septembre 2026
-      </div>
-      <h2 id="mag-popup-t" style="font-family:var(--pd);font-size:1.7rem;font-weight:700;color:var(--bn);line-height:1.18;margin:0 0 10px;">
-        Procurez-vous votre exemplaire
-      </h2>
-      <p style="font-family:var(--it);font-size:13.5px;color:var(--gris2);line-height:1.6;margin:0 0 20px;">
-        Premi&egrave;re &eacute;dition inaugurale. En couverture, Me Mamadou Isma&iuml;la Konat&eacute;, avocat &agrave; la Cour aux barreaux du Mali et de Paris, arbitre international.
-      </p>
-      <a href="/magazine/septembre-2026#demande" id="mag-popup-cta"
-         style="display:inline-block;background:var(--bn);color:var(--blanc);font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;text-decoration:none;border-radius:var(--r);">
-        Demander un exemplaire
-      </a>
-      <p style="font-family:var(--it);font-size:10px;color:var(--gris);margin:12px 0 0;">
-        Diffusion nominative contr&ocirc;l&eacute;e &middot; sous r&eacute;serve d&rsquo;&eacute;ligibilit&eacute;
-      </p>
+<div id="mag-popup" class="u-pop" role="dialog" aria-modal="true" aria-labelledby="mag-popup-t" hidden>
+  <div class="u-pop__boite">
+    <button type="button" id="mag-popup-x" class="u-pop__x" aria-label="Fermer">&times;</button>
+    <img class="u-pop__cover" src="images/couverture-neybras-magazine-vol001-septembre-2026.jpg" alt="Couverture du Vol. 001, septembre 2026" width="840" height="1176" loading="lazy" decoding="async"/>
+    <div class="u-pop__corps">
+      <p class="u-k">Neybras Magazine &middot; Vol. 001 &middot; Septembre 2026</p>
+      <h2 id="mag-popup-t" class="u-pop__t">Procurez-vous votre exemplaire</h2>
+      <p class="u-pop__txt">Premi&egrave;re &eacute;dition inaugurale. En couverture, Me Mamadou Isma&iuml;la Konat&eacute;, avocat &agrave; la Cour aux barreaux du Mali et de Paris, arbitre international.</p>
+      <a href="/magazine/septembre-2026#demande" id="mag-popup-cta" class="u-btn u-btn--bleu">Demander un exemplaire</a>
+      <p class="u-pop__note">Diffusion nominative contr&ocirc;l&eacute;e &middot; sous r&eacute;serve d&rsquo;&eacute;ligibilit&eacute;</p>
     </div>
   </div>
 </div>
@@ -1267,16 +1250,23 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
 
   function ferme(){
     boite.hidden = true;
-    boite.style.display = "none";
     try { localStorage.setItem(CLE, "1"); } catch (e) {}
     if (dernierFocus && dernierFocus.focus) dernierFocus.focus();
     document.removeEventListener("keydown", auClavier);
   }
   function auClavier(e){ if (e.key === "Escape") ferme(); }
+  /* Le bandeau de consentement (assets/consent.js) passe en premier :
+     tant qu'il est affiché, le pop-up attend qu'il soit retiré. */
+  function attendreConsentement(){
+    var obs = new MutationObserver(function(){
+      if (!document.getElementById("nbr-consent")) { obs.disconnect(); setTimeout(ouvre, 1500); }
+    });
+    obs.observe(document.body, { childList: true });
+  }
   function ouvre(){
+    if (document.getElementById("nbr-consent")) { attendreConsentement(); return; }
     dernierFocus = document.activeElement;
     boite.hidden = false;
-    boite.style.display = "flex";
     document.addEventListener("keydown", auClavier);
     var x = document.getElementById("mag-popup-x");
     if (x) x.focus();

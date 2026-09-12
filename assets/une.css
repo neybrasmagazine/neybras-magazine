@@ -270,6 +270,64 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 .u-ligne__side p { margin: 0; font-size: .88rem; line-height: 1.62; color: var(--nbr-encre); }
 
 
+/* ---------- POP-UP DU NUMÉRO --------------------------------
+   Une seule sollicitation, vers le formulaire de demande. Il ne
+   s'ouvre qu'une fois le bandeau de consentement refermé : les deux
+   fenêtres ne se superposent jamais. */
+
+.u-pop {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--e-4);
+  background: var(--nbr-nuit-voile);
+}
+.u-pop[hidden] { display: none; }
+.u-pop__boite {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--e-6);
+  width: 100%;
+  max-width: 620px;
+  max-height: calc(100vh - 2 * var(--e-4));
+  overflow-y: auto;
+  padding: var(--e-6);
+  background: var(--nbr-blanc);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .30);
+}
+.u-pop__x {
+  position: absolute;
+  top: .4rem;
+  right: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--nbr-gris);
+  cursor: pointer;
+}
+.u-pop__x:hover { color: var(--nbr-nuit); }
+.u-pop__x:focus-visible, .u-pop a:focus-visible { outline: var(--focus); outline-offset: var(--focus-decalage); }
+.u-pop__cover { flex: 0 0 auto; display: block; width: 150px; height: auto; box-shadow: 0 12px 30px rgba(10, 48, 68, .28); }
+.u-pop__corps { min-width: 0; }
+.u-pop .u-k { margin-bottom: .75rem; padding-right: 2rem; }
+.u-pop__t { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: 1.7rem; line-height: 1.18; color: var(--nbr-bleu); margin: 0 0 .6rem; text-wrap: balance; }
+.u-pop__txt { margin: 0 0 1.25rem; font-size: .86rem; line-height: 1.6; color: var(--nbr-encre); }
+.u-pop__note { margin: .75rem 0 0; font-size: .72rem; color: var(--nbr-gris); }
+
+@media (max-width: 560px) {
+  .u-pop__boite { flex-direction: column; align-items: flex-start; gap: var(--e-4); padding: var(--e-5); }
+  .u-pop__cover { width: 96px; }
+  .u-pop__t { font-size: 1.4rem; }
+}
+
+
 /* ---------- RESPONSIVE -------------------------------------- */
 
 @media (max-width: 1000px) {
