@@ -54,3 +54,6 @@
 @media(max-width:768px){
   .tb-r{display:none;}
 }
+
+/* Adresses e-mail : jamais coupees en fin de ligne (le navigateur coupait au trait d union de neybras-magazine.com). */
+a[href^="mailto:"]{white-space:nowrap}
