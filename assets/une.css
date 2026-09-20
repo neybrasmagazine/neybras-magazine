@@ -225,7 +225,7 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 
 /* ---------- 6. L'ENTRETIEN ---------------------------------- */
 
-.u-itw__in { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--e-7); align-items: center; max-width: 60rem; }
+.u-itw__in { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--e-7); align-items: start; max-width: 60rem; }
 .u-itw__photo { display: block; width: 180px; height: 180px; object-fit: cover; border-radius: 50%; }
 .u-itw h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: var(--t-2xl); line-height: 1.15; letter-spacing: var(--ls-titre); margin: .65rem 0 .45rem; text-wrap: balance; }
 .u-itw h3 a { color: var(--nbr-nuit); text-decoration: none; }
