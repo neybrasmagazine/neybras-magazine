@@ -347,5 +347,7 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
   .u-dos__grid, .u-rub__grid { grid-template-columns: 1fr; }
   .u-itw__in { grid-template-columns: 1fr; gap: var(--e-5); }
   .u-itw__photo { width: 120px; height: 120px; }
+  /* Titre d'entretien repris de l'article : souvent long, on le calibre pour l'ecran etroit. */
+  .u-itw h3 { font-size: var(--t-lg); line-height: 1.25; }
   .u-head { flex-direction: column; align-items: flex-start; gap: .5rem; }
 }
