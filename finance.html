@@ -105,9 +105,13 @@ ul{list-style:none;}
 .sf-img{overflow:hidden;}
 .sf-img img{width:100%;height:380px;object-fit:cover;transition:transform .6s ease;}
 .sf-img:hover img{transform:scale(1.03);}
-/* Portrait sur fond bleu : affiche a sa proportion, sans etirement ni recadrage du visage. */
-.sf-img--portrait{background:var(--bn2);display:flex;justify-content:center;}
-.sf-img--portrait img{width:auto;max-width:100%;height:380px;object-fit:contain;border-left:1px solid rgba(184,150,90,.25);border-right:1px solid rgba(184,150,90,.25);}
+/* Une portee par un visuel vertical : la colonne image prend la proportion du portrait
+   au lieu du paysage habituel, et l'image l'occupe en entier. */
+.sec-featured--portrait{grid-template-columns:340px 1fr;}
+.sf-img--portrait{background:var(--bn2);}
+.sf-img--portrait img{width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center;border-right:1px solid rgba(184,150,90,.25);}
+/* Colonne de texte elargie : centree plutot que calee en bas, sinon le haut reste vide. */
+.sec-featured--portrait .sf-body{justify-content:center;}
 .sf-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:flex-end;}
 .sf-cat{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
 .sf-cat::before{content:'';width:16px;height:1px;background:var(--or);}
@@ -246,7 +250,11 @@ ul{list-style:none;}
 #stt:hover{border-color:var(--or);color:var(--or);}
 #stt.v{display:flex;}
 
-@media(max-width:1100px){.sec-featured{grid-template-columns:1fr;}.sf-img img{height:260px;}.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:1100px){.sec-featured{grid-template-columns:1fr;}.sf-img img{height:260px;}.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}
+/* En colonne unique : le portrait garde sa proportion, plein cadre sur telephone,
+   plafonne a 340px au-dela sinon il occuperait toute la hauteur de l'ecran. */
+.sec-featured--portrait{grid-template-columns:1fr;}
+.sf-img--portrait img{width:100%;max-width:340px;height:auto;min-height:0;margin:0 auto;object-fit:contain;border-right:0;border-bottom:1px solid rgba(184,150,90,.25);}}
 @media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}}
 @media(max-width:520px){.container{padding:0 18px;}}
 </style>
@@ -378,7 +386,7 @@ ul{list-style:none;}
       </div>
     </div>
 
-    <div class="sec-featured">
+    <div class="sec-featured sec-featured--portrait">
       <div class="sf-img sf-img--portrait">
         <img src="images/ismail-bassy.jpg" alt="Ismail Bassy, Directeur Administratif et Financier du Raja Club Athletic S.A" loading="eager" width="510" height="630"/>
       </div>
