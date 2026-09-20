@@ -105,6 +105,9 @@ ul{list-style:none;}
 .sf-img{overflow:hidden;}
 .sf-img img{width:100%;height:380px;object-fit:cover;transition:transform .6s ease;}
 .sf-img:hover img{transform:scale(1.03);}
+/* Portrait sur fond bleu : affiche a sa proportion, sans etirement ni recadrage du visage. */
+.sf-img--portrait{background:var(--bn2);display:flex;justify-content:center;}
+.sf-img--portrait img{width:auto;max-width:100%;height:380px;object-fit:contain;border-left:1px solid rgba(184,150,90,.25);border-right:1px solid rgba(184,150,90,.25);}
 .sf-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:flex-end;}
 .sf-cat{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
 .sf-cat::before{content:'';width:16px;height:1px;background:var(--or);}
@@ -150,6 +153,10 @@ ul{list-style:none;}
 .acard-body p{font-family:var(--cg);font-size:15px;font-style:italic;color:var(--gris4);line-height:1.6;margin-bottom:14px;}
 .acard-foot{display:flex;align-items:center;gap:8px;padding:10px 20px;border-top:1px solid var(--brd2);font-family:var(--it);font-size:10.5px;color:var(--gris4);}
 .acard-foot .by{font-weight:600;color:var(--gris3);}
+/* Dossier en fin de grille : occupe toute la largeur, image en banniere. */
+.acard--pleine{grid-column:1/-1;}
+.acard--pleine img{height:230px;}
+.acard--pleine .acard-body h3{font-size:19px;}
 
 .art-list{display:flex;flex-direction:column;gap:0;}
 .alist-item{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--brd2);transition:var(--tr);align-items:start;}
@@ -372,19 +379,21 @@ ul{list-style:none;}
     </div>
 
     <div class="sec-featured">
-      <div class="sf-img">
-        <img src="images/salle-reunion-casablanca-hassan-ii.jpg" alt="Salle de réunion Casablanca avec vue sur la mosquée Hassan II" loading="eager" width="1536" height="1024"/>
+      <div class="sf-img sf-img--portrait">
+        <img src="images/ismail-bassy.jpg" alt="Ismail Bassy, Directeur Administratif et Financier du Raja Club Athletic S.A" loading="eager" width="510" height="630"/>
       </div>
       <div class="sf-body">
-        <div class="sf-cat">Analyse exclusive</div>
-        <h2 class="sf-h"><a href="article-finance-participative">Finance participative au Maroc : bilan à mi-parcours, obstacles réglementaires et perspectives d'expansion en Afrique subsaharienne</a></h2>
-        <p class="sf-deck">Cinq ans après le lancement officiel des banques participatives, le secteur atteint 8 milliards de dirhams d'actifs. Une success story incomplète qui appelle des réformes fiscales et contractuelles profondes.</p>
+        <div class="sf-cat">Entretien · Sport business</div>
+        <h2 class="sf-h"><a href="raja-sa-ismail-bassy-societe-sportive">Raja S.A : « Chaque décision sportive doit désormais être analysée sous l'angle de son impact financier »</a></h2>
+        <p class="sf-deck">Du statut associatif à la société sportive, les clubs de football marocains changent de modèle. Le directeur financier du Raja explique ce que cette transformation change dans les comptes et dans l'accès au financement.</p>
         <div class="sf-meta">
-          <span class="by">Salwa Benali</span>
+          <span class="by">Ismail Bassy</span>
           <span>·</span>
-          <span>13 min de lecture</span>
+          <span>Propos recueillis par la rédaction</span>
+          <span>·</span>
+          <span>5 min de lecture</span>
         </div>
-        <a href="article-finance-participative" class="sf-read">Lire l'analyse <i class="fas fa-arrow-right"></i></a>
+        <a href="raja-sa-ismail-bassy-societe-sportive" class="sf-read">Lire l'entretien <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
 
@@ -472,21 +481,20 @@ ul{list-style:none;}
               <span class="by">La Rédaction Neybras</span><span>·</span><span>8 min</span>
             </div>
           </article>
-        </div>
 
-        <div class="blk-title">À lire également</div>
-        <div class="art-list">
-          
-          <div class="alist-item">
-            <img src="images/finance-banques-participatives-maroc.webp" alt="Banques participatives" loading="lazy" width="200" height="300"/>
-            <div>
-              <span class="ali-cat">Finance islamique</span>
-              <div class="ali-title"><a href="article-finance-participative">Finance participative au Maroc : bilan et perspectives</a></div>
-              <div class="ali-meta">Zineb Maâti · 9 min</div>
+          <article class="acard acard--pleine">
+            <div class="acard-iw">
+              <img src="images/salle-reunion-casablanca-hassan-ii.jpg" alt="Salle de réunion à Casablanca avec vue sur la mosquée Hassan II" loading="lazy" width="1536" height="1024"/>
             </div>
-          </div>
-          
-          
+            <div class="acard-body">
+              <span class="acard-cat">Dossier · Finance islamique</span>
+              <h3><a href="article-finance-participative">Finance participative au Maroc : bilan à mi-parcours, obstacles réglementaires et perspectives d'expansion en Afrique subsaharienne</a></h3>
+              <p>Cinq ans après le lancement officiel des banques participatives, le secteur atteint 8 milliards de dirhams d'actifs. Une success story incomplète qui appelle des réformes fiscales et contractuelles profondes.</p>
+            </div>
+            <div class="acard-foot">
+              <span class="by">Salwa Benali</span><span>·</span><span>13 min</span>
+            </div>
+          </article>
         </div>
 
       </main>
