@@ -10,17 +10,13 @@
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Notre équipe — Neybras Magazine</title>
-<meta name="description" content="L'équipe éditoriale de Neybras Magazine : avocats, arbitres et experts financiers qui signent les analyses du droit des affaires et de la finance au Maroc et en Afrique francophone."/>
+<title>Politique de corrections — Neybras Magazine</title>
+<meta name="description" content="Neybras Magazine s'adresse à des lecteurs qui connaissent leur sujet. Chaque chiffre, chaque référence juridique et chaque citation doit pouvoir résister à leur lecture."/>
 <meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://neybras-magazine.com/equipe"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Notre équipe — Neybras Magazine"/>
-<meta property="og:description" content="L'équipe éditoriale de Neybras Magazine : avocats, arbitres et experts financiers qui signent les analyses du droit des affaires et de la finance au Maroc et en Afrique francophone."/>
 <meta property="og:image" content="https://neybras-magazine.com/images/og-neybras-default.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:locale" content="fr_MA"/>
+<link rel="canonical" href="https://neybras-magazine.com/corrections"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -62,42 +58,54 @@ ul{list-style:none;}
 .nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
 .nav-a:hover{color:rgba(255,255,255,.82);}
 .nav-a.on{color:#fff;border-bottom-color:var(--or);}
-.nav-a.star{color:rgba(184,150,90,.75);}
-/* Hero */
-.eq-hero{background:var(--bn);padding:72px 0 60px;border-bottom:3px solid var(--or);text-align:center;}
+.nav-a.star{color:rgba(184,150,90,.8);}
+/* hero */
+.ap-hero{background:var(--bn);padding:72px 0 60px;border-bottom:3px solid var(--or);text-align:center;}
 .sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:18px;}
 .sec-eyebrow::before,.sec-eyebrow::after{content:'';display:block;width:28px;height:1px;background:var(--or);opacity:.5;}
-.eq-hero h1{font-family:var(--pd);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:18px;}
-.eq-hero p{font-family:var(--cg);font-style:italic;font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,.6);max-width:720px;margin:0 auto;line-height:1.65;}
-/* Direction éditoriale */
-.dir-section{padding:72px 0 60px;}
-.dir-layout{display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start;max-width:860px;margin:0 auto;}
-.dir-layout-nophoto{grid-template-columns:1fr;max-width:640px;text-align:center;}
-.dir-photo{width:200px;height:240px;object-fit:cover;border:1px solid var(--brd);}
+.ap-hero h1{font-family:var(--pd);font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;}
+.ap-hero p{font-family:var(--cg);font-style:italic;font-size:clamp(15px,2vw,20px);color:rgba(255,255,255,.6);max-width:620px;margin:0 auto;line-height:1.6;}
+/* sections */
+section{padding:64px 0;}
+.section-title{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:12px;}
+.section-h2{font-family:var(--pd);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--bn);margin-bottom:24px;line-height:1.2;}
+.section-body{font-family:var(--cg);font-size:19px;color:var(--gris3);line-height:1.78;max-width:780px;}
+.section-body p{margin-bottom:20px;}
+/* deux colonnes */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.border-left{border-left:3px solid var(--or);padding-left:28px;}
+/* chiffres */
+.stats-section{background:var(--bn);padding:60px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.06);margin-top:40px;}
+.stat-item{background:var(--bn2);padding:36px 28px;text-align:center;}
+.stat-num{font-family:var(--pd);font-size:2.8rem;font-weight:900;color:var(--or);line-height:1;margin-bottom:8px;}
+.stat-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+/* Variante « engagements » : preuves de qualité (remplace les chiffres d'audience) */
+.stat-item--pil{text-align:left;padding:32px 26px;}
+.stat-ico{font-size:18px;color:var(--or);margin-bottom:16px;}
+.stat-title{font-family:var(--pd);font-size:15.5px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.3;}
+.stat-desc{font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.45);}
+/* rubriques cards */
+.rubriques-section{background:var(--brd2);padding:64px 0;}
+.cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px;}
+.rub-card{background:var(--blanc);border:1px solid var(--brd);padding:28px 20px;text-align:center;transition:var(--tr);position:relative;overflow:hidden;}
+.rub-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--or);transform:scaleX(0);transition:var(--tr);}
+.rub-card:hover{border-color:rgba(184,150,90,.4);box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.rub-card:hover::after{transform:scaleX(1);}
+.rub-icon{font-size:28px;color:var(--or);margin-bottom:14px;}
+.rub-name{font-family:var(--pd);font-size:13px;font-weight:700;color:var(--bn);margin-bottom:8px;line-height:1.3;}
+.rub-desc{font-size:11px;color:var(--gris4);line-height:1.5;}
+/* direction éditoriale */
+.dir-section{padding:72px 0;}
+.dir-layout{display:grid;grid-template-columns:200px 1fr;gap:52px;align-items:start;max-width:860px;}
+.dir-photo{width:200px;height:260px;object-fit:cover;border:1px solid var(--brd);}
 .dir-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:8px;}
-.dir-name{font-family:var(--pd);font-size:1.8rem;font-weight:700;color:var(--bn);margin-bottom:4px;}
-.dir-role{font-size:13px;color:var(--gris4);margin-bottom:18px;}
-.dir-bio{font-family:var(--cg);font-size:17px;color:var(--gris3);line-height:1.72;}
-/* Contributeurs */
-.contrib-section{background:var(--brd2);padding:64px 0;}
-.section-title{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:12px;text-align:center;}
-.section-h2{font-family:var(--pd);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--bn);margin-bottom:40px;line-height:1.2;text-align:center;}
-.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:960px;margin:0 auto;}
-.team-card{display:flex;gap:20px;background:var(--blanc);border:1px solid var(--brd);padding:26px;align-items:flex-start;transition:var(--tr);}
-.team-card:hover{border-color:rgba(184,150,90,.4);box-shadow:0 4px 20px rgba(0,0,0,.06);}
-.team-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:2px solid var(--or-bd);flex-shrink:0;}
-.team-name{font-family:var(--pd);font-size:16px;font-weight:700;color:var(--bn);margin-bottom:2px;}
-.team-role{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--or);margin-bottom:10px;text-transform:uppercase;}
-.team-bio{font-family:var(--cg);font-size:14.5px;color:var(--gris3);line-height:1.62;}
-
-/* La rédaction */
-.redac-section{padding:64px 0;}
-.redac-inner{max-width:860px;margin:0 auto;background:var(--blanc);border:1px solid var(--brd);border-left:3px solid var(--or);padding:34px 38px 30px;}
-.redac-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;}
-.redac-fn{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:4px;}
-.redac-nom{font-family:var(--pd);font-size:15.5px;font-weight:700;color:var(--bn);line-height:1.35;}
-.redac-note{margin-top:28px;padding-top:22px;border-top:1px solid var(--brd);font-family:var(--cg);font-size:14.5px;color:var(--gris4);line-height:1.7;}
-/* CTA */
+.dir-name{font-family:var(--pd);font-size:2rem;font-weight:700;color:var(--bn);margin-bottom:4px;}
+.dir-role{font-size:13px;color:var(--gris4);margin-bottom:20px;}
+.dir-bio{font-family:var(--cg);font-size:18px;color:var(--gris3);line-height:1.72;margin-bottom:20px;}
+.dir-email{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--or);border:1px solid var(--or-bd);padding:8px 16px;transition:var(--tr);}
+.dir-email:hover{background:var(--or-bg);}
+/* contact CTA */
 .cta-section{background:var(--bn);padding:64px 0;text-align:center;}
 .cta-section h2{font-family:var(--pd);font-size:2rem;font-weight:700;color:#fff;margin-bottom:12px;}
 .cta-section p{font-family:var(--cg);font-style:italic;font-size:18px;color:rgba(255,255,255,.55);margin-bottom:36px;}
@@ -127,8 +135,17 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 .scroll-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:var(--tr);}
 .scroll-top:hover{background:var(--or-lt);}
 .scroll-top.vis{display:flex;}
-@media(max-width:900px){.dir-layout{grid-template-columns:1fr;}.team-grid{grid-template-columns:1fr;}.ft-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){.dir-layout{grid-template-columns:1fr;}.redac-grid{grid-template-columns:1fr;}.redac-inner{padding:26px 22px 24px;}.dir-photo{width:100%;height:220px;}.team-card{flex-direction:column;align-items:center;text-align:center;}.ft-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){.two-col,.dir-layout{grid-template-columns:1fr;}.cards-grid{grid-template-columns:repeat(2,1fr);}.stats-grid{grid-template-columns:repeat(2,1fr);}.ft-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr;}.stats-grid{grid-template-columns:1fr 1fr;}.dir-layout{grid-template-columns:1fr;}.dir-photo{width:100%;height:220px;}.ft-grid{grid-template-columns:1fr;}}
+/* Politique de corrections */
+.corr-page{padding:72px 0 88px;}
+.corr-page .corr-in{max-width:760px;margin:0 auto;}
+.corr-page h1{font-family:var(--pd);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;color:var(--bn);line-height:1.2;margin-bottom:24px;}
+.corr-page h2{font-family:var(--pd);font-size:clamp(1.25rem,2.4vw,1.5rem);font-weight:700;color:var(--bn);margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--brd);}
+.corr-page p{font-size:16.5px;line-height:1.8;color:var(--gris2);margin-bottom:14px;}
+.corr-page a{color:var(--bn);font-weight:600;border-bottom:1px solid var(--or);}
+.corr-page a:hover{color:#806534;border-color:#806534;}
+@media(max-width:600px){.corr-page{padding:48px 0 64px;}.corr-page p{font-size:15.5px;}}
 </style>
 <!-- Google Analytics GA4 -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
@@ -141,15 +158,11 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AboutPage",
-      "@id": "https://neybras-magazine.com/equipe#page",
-      "name": "Notre équipe",
-      "description": "L'équipe éditoriale de Neybras Magazine : avocats, arbitres et experts financiers qui signent les analyses du droit des affaires et de la finance au Maroc et en Afrique francophone.",
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://neybras-magazine.com/images/og-neybras-default.png"
-      },
-      "url": "https://neybras-magazine.com/equipe",
+      "@type": "WebPage",
+      "@id": "https://neybras-magazine.com/corrections#page",
+      "name": "Politique de corrections",
+      "description": "Neybras Magazine s'adresse à des lecteurs qui connaissent leur sujet. Chaque chiffre, chaque référence juridique et chaque citation doit pouvoir résister à leur lecture.",
+      "url": "https://neybras-magazine.com/corrections",
       "inLanguage": "fr-MA",
       "isPartOf": {
         "@type": "WebSite",
@@ -177,7 +190,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Notre équipe"
+          "name": "Politique de corrections"
         }
       ]
     }
@@ -190,15 +203,15 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 <body>
 
 <div class="top-bar"><div class="container"><div class="tb-in">
-  <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Maroc · Afrique · Monde</span></div>
-  <div class="tb-r"><div class="tb-lnk"><a href="a-propos">À propos</a><a href="contact">Publicité</a><a href="contact">Contact</a></div></div>
+  <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Casablanca</span><span>·</span><span>Droit · Finance · Arbitrage · Afrique</span></div>
+  <div class="tb-r"><div class="tb-lnk"><a href="contact">Contact</a><a href="magazine">Le magazine</a><a href="analyses">Analyses</a><a href="evenements">Événements</a><a href="interviews">Interviews</a><a href="tribunes">Tribunes</a></div></div>
 </div></div></div>
 
 <header class="site-header"><div class="container"><div class="hd-in">
   <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le droit et la finance qui éclairent les décisions</div></div></a>
-  <div class="hd-act"><button class="btn-srch" aria-label="Rechercher"><i class="fas fa-search"></i></button><a href="newsletter" class="btn-abo">Newsletter</a></div>
+  <div class="hd-act"><button class="btn-srch"><i class="fas fa-search"></i></button><a href="newsletter" class="btn-abo">Newsletter</a></div>
 </div></div>
-<nav class="main-nav" aria-label="Navigation principale"><div class="container"><div class="nav-in">
+<nav class="main-nav"><div class="container"><div class="nav-in">
   <a href="/" class="nav-a">À la Une</a>
   <a href="droit" class="nav-a">Droit</a>
   <a href="finance" class="nav-a">Finance</a>
@@ -209,136 +222,22 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   <a href="annonceurs" class="nav-a">Annonceurs</a>
 </div></div></nav></header>
 
-<!-- Hero -->
-<section class="eq-hero">
+<!-- Politique de corrections -->
+<section class="corr-page">
   <div class="container">
-    <div class="sec-eyebrow"><span>Le magazine</span></div>
-    <h1>L'équipe éditoriale de Neybras Magazine</h1>
-    <p>Neybras Magazine s'appuie sur un comité de contributeurs praticiens — avocats, arbitres et experts financiers — engagés dans l'analyse du droit des affaires et de la finance au Maroc et en Afrique francophone. Chaque contribution est signée par un expert reconnu dans son domaine, garantissant une expertise verticale plutôt qu'un traitement généraliste de l'actualité.</p>
-  </div>
-</section>
-
-<!-- Direction éditoriale -->
-<section class="dir-section">
-  <div class="container">
-    <div class="dir-layout dir-layout-nophoto">
-      <div>
-        <div class="dir-label">Direction de la publication</div>
-        <div class="dir-name">Dalal Fahmi</div>
-        <div class="dir-role">Directrice de la publication</div>
-        <p class="dir-bio">Fondatrice de Neybras Magazine, pilote la ligne éditoriale et la stratégie de développement du média à l'intersection du droit, de la finance et de la gouvernance.</p>
-      </div>
+    <div class="corr-in">
+<h1>Notre politique de corrections</h1>
+<p>Neybras Magazine s'adresse à des lecteurs qui connaissent leur sujet. Chaque chiffre, chaque référence juridique et chaque citation doit pouvoir résister à leur lecture.</p>
+<h2>Notre méthode</h2>
+<p>Nous privilégions les sources primaires : textes publiés au Bulletin officiel, décisions de justice, communiqués officiels et rapports des institutions concernées. Une information de presse n'est jamais présentée comme un fait établi lorsque la source d'origine est accessible.</p>
+<h2>Quand nous nous trompons</h2>
+<p>Toute erreur signalée est examinée. Lorsqu'elle est confirmée, nous corrigeons l'article et l'indiquons en toute transparence par un rectificatif daté. Lorsqu'un article ne répond plus à nos exigences, nous le retirons et le signalons.</p>
+<h2>Nous signaler une erreur</h2>
+<p>Écrivez à la rédaction en précisant l'article concerné et la source qui fonde votre remarque. Nous vous répondrons personnellement.</p>
+<p><a href="contact">Contacter la rédaction</a></p>
     </div>
   </div>
 </section>
-
-<!-- Contributeurs -->
-<div class="contrib-section" id="contributeurs">
-  <div class="container">
-    <div class="section-title">Nos contributeurs</div>
-    <h2 class="section-h2">Praticiens du droit et de la finance</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="images/mamadou-ismaila-konate-avocat-arbitre.jpg" alt="Me Mamadou Ismaïla Konaté" class="team-photo" width="400" height="400"/>
-        <div>
-          <div class="team-name">Me Mamadou Ismaïla Konaté</div>
-          <div class="team-role">Contributeur, Arbitrage international</div>
-          <p class="team-bio">Avocat à la Cour, inscrit aux barreaux du Mali et de Paris, arbitre international. Membre de la Cour d'Arbitrage de Casablanca depuis sa création. Ancien Garde des Sceaux, ministre de la Justice de la République du Mali.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/driss-el-harti-avocat-tanger.jpg" alt="Me Driss El Harti" class="team-photo" width="1474" height="1474"/>
-        <div>
-          <div class="team-name">Me Driss El Harti</div>
-          <div class="team-role">Contributeur, Arbitrage international</div>
-          <p class="team-bio">Avocat au barreau de Tanger, spécialiste en arbitrage international. Ses analyses portent sur le règlement des différends commerciaux et l'arbitrage international en zone CIRDI et OHADA.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/khalid-cherkaoui-semmouni-professeur-droit.jpg" alt="Pr. Khalid Cherkaoui Semmouni" class="team-photo" width="400" height="400"/>
-        <div>
-          <div class="team-name">Pr. Khalid Cherkaoui Semmouni</div>
-          <div class="team-role">Contributeur, Contrats d'affaires</div>
-          <p class="team-bio">Professeur universitaire de droit, spécialiste des contrats d'affaires. Head of Legal &amp; HR.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/portrait-amine-lahlou.jpg" alt="Me Amine Lahlou" class="team-photo" width="1100" height="1100"/>
-        <div>
-          <div class="team-name">Me Amine Lahlou</div>
-          <div class="team-role">Contributeur, Droit du sport et arbitrage</div>
-          <p class="team-bio">Avocat au barreau de Casablanca, droit du sport et arbitrage international. Apporte un éclairage juridique sur les enjeux économiques du sport professionnel.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <img src="images/youssef-el-amrani-rssi-gouvernance.jpg" alt="Youssef El Amrani" class="team-photo" width="400" height="400"/>
-        <div>
-          <div class="team-name">Youssef El Amrani</div>
-          <div class="team-role">Contributeur, Cybersécurité &amp; Gouvernance IA</div>
-          <p class="team-bio">Responsable de la Sécurité des Systèmes d'Information (RSSI/CISO) et expert en gouvernance, risque et conformité (GRC).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- La rédaction -->
-<div class="redac-section" id="redaction">
-  <div class="container">
-    <div class="section-title">Notre équipe</div>
-    <h2 class="section-h2">La rédaction</h2>
-    <div class="redac-inner">
-      <div class="redac-grid">
-        <div>
-          <div class="redac-fn">Directrice de la publication</div>
-          <div class="redac-nom">Dalal Fahmi</div>
-        </div>
-        <div>
-          <div class="redac-fn">Rédactrice en chef</div>
-          <div class="redac-nom">Salma Aittajer</div>
-        </div>
-        <div>
-          <div class="redac-fn">Rédaction</div>
-          <div class="redac-nom">Houda Hachami, Haitam Dehhak, Tahar Louazzi</div>
-        </div>
-        <div>
-          <div class="redac-fn">Création artistique &amp; technique</div>
-          <div class="redac-nom">Ghali Seddik</div>
-        </div>
-        <div>
-          <div class="redac-fn">Responsable marketing &amp; commercial</div>
-          <div class="redac-nom">Mamoun Lahmoudi</div>
-        </div>
-        <div>
-          <div class="redac-fn">Chargée commerciale</div>
-          <div class="redac-nom">Rania Sehri</div>
-        </div>
-        <div>
-          <div class="redac-fn">Responsable financière</div>
-          <div class="redac-nom">Aya Benjelloun</div>
-        </div>
-        <div>
-          <div class="redac-fn">Assistante de direction</div>
-          <div class="redac-nom">Khadija Choukri</div>
-        </div>
-      </div>
-      <p class="redac-note">Les analyses non signées sont de la rédaction. Les opinions exprimées dans les tribunes et entretiens n'engagent que leurs auteurs et ne sauraient être opposées à leurs employeurs, ordres ou institutions de rattachement. Neybras Magazine ne commercialise ni sa ligne éditoriale, ni ses sujets, ni ses signatures.</p>
-    </div>
-  </div>
-</div>
-
-<!-- CTA contact -->
-<div class="cta-section">
-  <div class="container">
-    <div class="sec-eyebrow"><span>Nous rejoindre</span></div>
-    <h2>Contribuer à Neybras</h2>
-    <p>Vous êtes praticien, chercheur ou expert ? Partagez votre analyse avec nos lecteurs professionnels.</p>
-    <div class="cta-btns">
-      <a href="contact" class="btn-primary"><i class="fas fa-pen-nib"></i> Proposer une tribune</a>
-      <a href="mailto:redaction@neybras.com" class="btn-secondary"><i class="fas fa-envelope"></i> Nous écrire</a>
-    </div>
-  </div>
-</div>
 
 <footer>
   <div class="container">
@@ -346,36 +245,35 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <div class="ft-brand">
         <div class="logo-name">Neybras</div>
         <div class="logo-tag">Le droit et la finance qui éclairent les décisions</div>
-        <p class="ft-desc">Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+        <p class="ft-desc">La référence francophone en droit des affaires, finance, arbitrage et droit africain.</p>
       </div>
       <div><div class="ft-col-title">Rubriques</div><div class="ft-links">
-        <a href="droit-du-sport">Sport Business</a><a href="arbitrage">Arbitrage</a>
-        <a href="droit">Droit & Jurisprudence</a><a href="finance">Finance & Marchés</a>
-        <a href="afrique">Afrique & OHADA</a>
+        <a href="droit">Droit des affaires</a><a href="finance">Finance & Marchés</a>
+        <a href="arbitrage">Arbitrage & ADR</a><a href="afrique">Afrique & OHADA</a>
+        <a href="droit-du-sport">Sport Business</a>
       </div></div>
-      <div><div class="ft-col-title">Le Magazine</div><div class="ft-links">
-        <a href="a-propos">À propos</a><a href="corrections">Politique de corrections</a><a href="equipe">Notre équipe</a>
-        <a href="magazine">Le magazine</a><a href="analyses">Analyses</a><a href="evenements">Événements</a><a href="interviews">Interviews</a><a href="tribunes">Tribunes</a>
-        <a href="newsletter">Newsletter</a><a href="contact">Publicité</a>
+      <div><div class="ft-col-title">Magazine</div><div class="ft-links">
+        <a href="interviews">Interviews</a><a href="tribunes">Tribunes</a>
+        <a href="analyses">Analyses</a><a href="a-propos">À propos</a><a href="corrections">Politique de corrections</a>
       </div></div>
-      <div><div class="ft-col-title">Contact</div><div class="ft-links">
-        <a href="contact">Nous contacter</a><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
-        <a href="contact">Média Kit</a><a href="mentions-legales">Mentions légales</a>
+      <div><div class="ft-col-title">Légal</div><div class="ft-links">
+        <a href="contact">Contact</a><a href="mentions-legales">Mentions légales</a>
         <a href="politique-confidentialite">Confidentialité</a>
+        <a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a>
       </div></div>
     </div>
     <div class="ft-bottom">
-      <span class="ft-copy">© 2026 Neybras Publishing. Tous droits réservés.</span>
-      <div class="ft-legal"><a href="mentions-legales">Mentions légales</a><a href="politique-confidentialite">Confidentialité</a><a href="cookies">Cookies</a></div>
+      <span class="ft-copy">© 2026 Neybras Publishing. Tous droits réservés.<br>Capital A, Bureau n° 9, Bouskoura, Casablanca</span>
+      <div class="ft-legal"><a href="mentions-legales">Mentions légales</a><a href="politique-confidentialite">Confidentialité</a></div>
     </div>
   </div>
 </footer>
 
-<button class="scroll-top" id="scrollTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 <script>
-var st=document.getElementById('scrollTop');
-window.addEventListener('scroll',function(){st.classList.toggle('vis',window.scrollY>400);});
-st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+const st=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
+st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 
 <script>(function(){var FS="https://formspree.io/f/mgoppdpg";function add(e){return fetch(FS,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:e,_subject:"Inscription newsletter — Neybras Magazine"})});}window.brevoAdd=add;window.brevoSubmit=function(ev){ev.preventDefault();var f=ev.target,inp=f.querySelector("input[type=email]"),btn=f.querySelector("button");if(!inp||!inp.value.includes("@"))return false;var em=inp.value,orig=btn?btn.textContent:"";if(btn){btn.textContent="...";btn.disabled=true;}add(em).then(function(){if(btn){btn.textContent="✓ Abonnement confirmé !";btn.style.background="#27ae60";}if(inp)inp.value="";setTimeout(function(){if(btn){btn.textContent=orig;btn.style.background="";btn.disabled=false;}},3000);}).catch(function(){if(btn){btn.textContent=orig;btn.disabled=false;}});return false;};})();</script>
