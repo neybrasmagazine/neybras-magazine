@@ -333,8 +333,8 @@ scTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 // Copy link
 function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{alert('Lien copié !');});}
-document.getElementById('cpyFloat').addEventListener('click',copyLink);
-document.getElementById('cpyBar').addEventListener('click',copyLink);
+document.getElementById('cpyFloat')?.addEventListener('click',copyLink);
+document.getElementById('cpyBar')?.addEventListener('click',copyLink);
 
 // Search overlay
 const srchOv=document.getElementById('srchOv');

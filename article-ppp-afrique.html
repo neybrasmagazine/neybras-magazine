@@ -223,7 +223,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
 <script>
 const prog=document.getElementById('prog');
 window.addEventListener('scroll',()=>{const art=document.querySelector('.art-text');if(!art)return;prog.style.width=Math.min(100,(Math.max(0,-art.getBoundingClientRect().top)/art.offsetHeight)*100)+'%';});
-document.getElementById('copyLink2').addEventListener('click',()=>{navigator.clipboard.writeText(window.location.href).then(()=>{const btn=document.getElementById('copyLink2');const o=btn.innerHTML;btn.innerHTML='<i class="fas fa-check"></i> Copié !';setTimeout(()=>btn.innerHTML=o,2000);});});
+document.getElementById('copyLink2')?.addEventListener('click',()=>{navigator.clipboard.writeText(window.location.href).then(()=>{const btn=document.getElementById('copyLink2');const o=btn.innerHTML;btn.innerHTML='<i class="fas fa-check"></i> Copié !';setTimeout(()=>btn.innerHTML=o,2000);});});
 const st=document.getElementById('scrollTop');
 window.addEventListener('scroll',()=>st.classList.toggle('vis',window.scrollY>400));
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
