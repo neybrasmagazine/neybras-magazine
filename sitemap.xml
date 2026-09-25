@@ -160,18 +160,6 @@
   </url>
 
   <!-- Articles — Droit du Sport & CdM 2030 -->
-  <url>
-    <loc>https://neybras-magazine.com/article-tas-maroc</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://neybras-magazine.com/article-valorisation-sportif-marque</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Articles — Arbitrage -->
   <url>
@@ -197,12 +185,6 @@
   <url>
     <loc>https://neybras-magazine.com/article-tribune-sukuk-maroc</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://neybras-magazine.com/article-tribune-marches-publics-resiliation</loc>
-    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
