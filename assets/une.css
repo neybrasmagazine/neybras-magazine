@@ -154,6 +154,13 @@
 .u-une__cover img { display: block; width: 100%; height: auto; box-shadow: 0 24px 60px rgba(0, 0, 0, .38); transition: transform var(--transition); }
 .u-une__cover a:hover img { transform: translateY(-3px); }
 .u-une__cover figcaption { margin-top: .8rem; font-size: .74rem; line-height: 1.5; color: rgba(255, 255, 255, .64); }
+/* À la Une : tribune publiée en ligne, sous la une du numéro */
+.u-une__web { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-8); align-items: center; margin-top: var(--e-8); padding-top: var(--e-7); border-top: 1px solid rgba(255, 255, 255, .16); }
+.u-une__web h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.2rem); line-height: 1.15; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.u-une__web h3 a { color: var(--nbr-blanc); text-decoration: none; }
+.u-une__web h3 a:hover { color: var(--nbr-or-clair); }
+.u-une__web-vis { display: block; justify-self: end; width: 100%; max-width: 340px; }
+.u-une__web-vis img { display: block; width: 100%; height: auto; border: 1px solid rgba(255, 255, 255, .16); }
 
 
 /* ---------- 3. DOSSIER DIGITAL ------------------------------ */
@@ -335,7 +342,8 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 /* ---------- RESPONSIVE -------------------------------------- */
 
 @media (max-width: 1000px) {
-  .u-une__in, .u-mag__in, .u-ligne__in, .u-dos__head { grid-template-columns: 1fr; gap: var(--e-6); }
+  .u-une__in, .u-une__web, .u-mag__in, .u-ligne__in, .u-dos__head { grid-template-columns: 1fr; gap: var(--e-6); }
+  .u-une__web-vis { justify-self: start; max-width: 250px; }
   .u-une__cover { justify-self: start; max-width: 250px; }
   .u-dos__grid, .u-rub__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .u-ana { grid-template-columns: 1fr; }
