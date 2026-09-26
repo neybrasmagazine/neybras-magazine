@@ -203,6 +203,10 @@
 .u-ana h3 a:hover { color: var(--nbr-bleu); text-decoration: underline; }
 .u-ana__by { margin: 0 0 .55rem; font-size: .82rem; font-weight: 600; color: var(--nbr-encre); }
 .u-ana__dek { margin: 0 0 .8rem; flex: 1; font-size: .95rem; line-height: 1.62; color: var(--nbr-encre); }
+/* Articles publiés en ligne, sous les analyses du numéro */
+.u-ana--web { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: var(--e-6); padding-top: var(--e-6); border-top: var(--filet); }
+.u-ana--web h3 { font-size: 1.2rem; }
+.u-ana--web .u-meta { margin-top: auto; }
 
 
 /* ---------- 5. RUBRIQUES ------------------------------------ */
