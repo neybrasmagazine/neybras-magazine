@@ -76,7 +76,7 @@
   </url>
   <url>
     <loc>https://neybras-magazine.com/droit-du-sport</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -142,6 +142,12 @@
   </url>
 
   <!-- Articles — Droit du Sport & CdM 2030 -->
+  <url>
+    <loc>https://neybras-magazine.com/article-contentieux-sportif-cjue-tas-maroc</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 
   <!-- Articles — Arbitrage -->
 
