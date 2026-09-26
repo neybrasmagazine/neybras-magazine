@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Le chiffre 30 % en or, barré, au-dessus de la mention VAN nette de l'aide.">
+  <rect width="1200" height="630" fill="#0E3D52"/>
+  <text x="600" y="330" text-anchor="middle" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="700" font-size="260" fill="#C9A84C">30 %</text>
+  <line x1="330" y1="250" x2="870" y2="250" stroke="#C3D1D8" stroke-width="6" stroke-linecap="round"/>
+  <text x="600" y="455" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="44" letter-spacing="6" fill="#EDF2F4">VAN NETTE DE L'AIDE</text>
+</svg>
