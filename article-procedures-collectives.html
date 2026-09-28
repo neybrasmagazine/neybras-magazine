@@ -54,7 +54,7 @@ ul{list-style:none;}
 .hd-in{display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
 .logo-wrap{display:flex;align-items:center;gap:12px;}
 .logo-txt{display:flex;flex-direction:column;}
-.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
+.logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:var(--blanc);text-transform:uppercase;line-height:1;}
 .logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
 .hd-act{display:flex;align-items:center;gap:14px;}
 .btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;}
@@ -65,7 +65,7 @@ ul{list-style:none;}
 .nav-in::-webkit-scrollbar{display:none;}
 .nav-a{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);padding:10px 15px;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
 .nav-a:hover{color:rgba(255,255,255,.82);}
-.nav-a.on{color:#fff;border-bottom-color:var(--or);}
+.nav-a.on{color:var(--blanc);border-bottom-color:var(--or);}
 .nav-a.star{color:rgba(184,150,90,.75);}
 .art-hero{background:var(--blanc);border-bottom:1px solid var(--brd);padding:52px 0 0;}
 .art-hero-inner{max-width:900px;margin:0 auto;padding:0 32px;}
@@ -80,7 +80,7 @@ ul{list-style:none;}
 .art-deck{font-family:var(--cg);font-size:clamp(15px,2vw,19px);font-weight:400;font-style:italic;color:var(--gris3);line-height:1.55;margin-bottom:26px;max-width:740px;}
 .art-meta{display:flex;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--gris4);padding:18px 0;border-top:1px solid var(--brd2);border-bottom:1px solid var(--brd2);margin-bottom:38px;}
 .am-author-wrap{display:flex;align-items:center;gap:9px;}
-.am-av{width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid var(--or-bd);}.am-av-initials{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-size:11px;font-weight:700;color:#fff;letter-spacing:.03em;flex-shrink:0;border:1.5px solid var(--or-bd);}
+.am-av{width:30px;height:30px;border-radius:50%;object-fit:cover;border:1.5px solid var(--or-bd);}.am-av-initials{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-size:11px;font-weight:700;color:var(--blanc);letter-spacing:.03em;flex-shrink:0;border:1.5px solid var(--or-bd);}
 .am-name{font-weight:600;color:var(--gris2);font-size:12px;}
 .am-dot{color:var(--gris5);margin:0 10px;}
 .am-item{font-size:11.5px;}
@@ -132,14 +132,14 @@ ul{list-style:none;}
 .share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--brd);}
 .share-lbl{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris4);margin-right:4px;}
 .sh-a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:10.5px;font-weight:600;transition:var(--tr);}
-.sh-li{background:#0a66c2;color:#fff;}
+.sh-li{background:#0a66c2;color:var(--blanc);}
 .sh-li:hover{background:#0855a1;}
-.sh-tw{background:#0f1419;color:#fff;}
-.sh-wa{background:#25d366;color:#fff;}
+.sh-tw{background:#0f1419;color:var(--blanc);}
+.sh-wa{background:#25d366;color:var(--blanc);}
 .sh-cp{background:transparent;color:var(--gris3);border:1px solid var(--brd);cursor:pointer;}
 .sh-cp:hover{border-color:var(--or);color:var(--or);}
 .author-box{margin:40px 0;padding:28px 32px;background:var(--blanc);border:1px solid var(--brd);border-top:2px solid var(--bn);display:grid;grid-template-columns:68px 1fr;gap:22px;align-items:start;}
-.author-box-av{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-size:20px;font-weight:700;color:#fff;letter-spacing:.04em;flex-shrink:0;border:2px solid var(--or-bd);}
+.author-box-av{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--it);font-size:20px;font-weight:700;color:var(--blanc);letter-spacing:.04em;flex-shrink:0;border:2px solid var(--or-bd);}
 .auth-label{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris4);margin-bottom:5px;}
 .auth-name{font-family:var(--pd);font-size:18px;font-weight:700;color:var(--bn);margin-bottom:3px;}
 .auth-role{font-size:11.5px;color:var(--gris4);margin-bottom:12px;}
@@ -291,7 +291,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
   <h1 class="art-h1">Procédures collectives et loi 73-17 : la réforme du droit marocain des entreprises en difficulté</h1>
   <p class="art-deck">La loi 73-17 a profondément remanié le droit marocain des difficultés des entreprises. En introduisant la procédure de sauvegarde et en renforçant la prévention, le législateur marocain s'est aligné sur les meilleures pratiques internationales — non sans laisser subsister d'importantes lacunes pratiques.</p>
   <div class="art-meta">
-    <div class="am-author-wrap"><span class="am-av-initials" style="background:#0E3D52;">NM</span><span class="am-name">La Rédaction Neybras</span></div>
+    <div class="am-author-wrap"><span class="am-av-initials" style="background:var(--bn);">NM</span><span class="am-name">La Rédaction Neybras</span></div>
     <span class="am-dot">·</span><span class="am-item"><i class="far fa-clock" style="margin-right:4px"></i>10 min de lecture</span>
     <div class="am-share-wrap"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-procedures-collectives" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-linkedin-in"></i></a><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneybras-magazine.com%2Farticle-procedures-collectives&text=Proc%C3%A9dures%20collectives%20et%20loi%2073-17%20au%20Maroc" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-x-twitter"></i></a><a href="https://api.whatsapp.com/send?text=Proc%C3%A9dures%20collectives%20et%20loi%2073-17%20au%20Maroc%20https%3A%2F%2Fneybras-magazine.com%2Farticle-procedures-collectives" target="_blank" rel="noopener" class="am-sh"><i class="fab fa-whatsapp"></i></a></div>
   </div>
@@ -381,7 +381,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
       <button class="sh-a sh-cp" id="copyLink2"><i class="fas fa-link"></i> Copier le lien</button>
     </div>
 
-    <aside class="rectificatif" style="margin:32px 0;padding:18px 22px;border-left:3px solid #B8965A;background:#f9f6ef;font-size:14px;line-height:1.65;color:#2d2d2d;">
+    <aside class="rectificatif" style="margin:32px 0;padding:18px 22px;border-left:3px solid var(--or);background:#f9f6ef;font-size:14px;line-height:1.65;color:var(--gris2);">
       <strong>Rectificatif — 25 septembre 2026.</strong> À la suite d'une vérification de ses références sur le texte du Code de commerce (livre V, issu de la loi n° 73-17), cet article a été corrigé sur les points suivants :
       <ul style="margin:10px 0 0 18px;list-style:disc;">
       <li>« loi 73-17 modifiant et complétant la loi 15-95 » → loi n° 73-17 <strong>abrogeant et remplaçant le livre V</strong> de la loi n° 15-95 formant code de commerce</li>
@@ -420,7 +420,7 @@ footer{background:var(--bn2);border-top:3px solid rgba(184,150,90,.3);padding:48
     </aside>
 
     <div class="author-box">
-      <div class="author-box-av" style="background:#0E3D52;">NM</div>
+      <div class="author-box-av" style="background:var(--bn);">NM</div>
       <div>
         <div class="auth-label">À propos</div>
         <div class="auth-name">La Rédaction Neybras</div>
@@ -509,7 +509,7 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
           if(typeof gtag==='function')gtag('event','newsletter_signup',{form_name:'newsletter'});
-          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:var(--or);font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
         }else{
           if(btn){btn.textContent="S'abonner";btn.disabled=false;}
         }
