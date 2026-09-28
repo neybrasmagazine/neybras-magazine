@@ -144,53 +144,7 @@ ul { list-style: none; }
 }
 .sec-topic:hover { color: var(--or-lt); border-color: rgba(184,150,90,.4); }
 
-/* Featured article in hero */
-.sec-featured {
-  display: grid; grid-template-columns: 1fr 420px; gap: 0;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  margin-bottom: -1px;
-}
-.sf-img { overflow: hidden; }
-.sf-img img { width: 100%; height: 380px; object-fit: cover; transition: transform .6s ease; }
-.sf-img:hover img { transform: scale(1.03); }
-.sf-body {
-  padding: 40px 36px;
-  display: flex; flex-direction: column; justify-content: flex-end;
-}
-.sf-cat {
-  font-family: var(--it); font-size: 9px; font-weight: 700;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--or); margin-bottom: 16px;
-  display: flex; align-items: center; gap: 8px;
-}
-.sf-cat::before { content: ''; width: 16px; height: 1px; background: var(--or); }
-.sf-h {
-  font-family: var(--cg); font-size: clamp(22px,2.8vw,32px);
-  font-weight: 600; color: #fff; line-height: 1.22;
-  margin-bottom: 14px;
-}
-.sf-h a:hover { color: var(--or-lt); }
-.sf-deck {
-  font-family: var(--cg); font-size: 15.5px; font-style: italic;
-  color: rgba(255,255,255,.52); line-height: 1.65; margin-bottom: 20px;
-}
-.sf-meta {
-  font-family: var(--it); font-size: 11px;
-  color: rgba(255,255,255,.35);
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-}
-.sf-meta .by { color: rgba(255,255,255,.6); font-weight: 600; }
-.sf-read {
-  margin-top: 22px;
-  display: inline-flex; align-items: center; gap: 7px;
-  font-family: var(--it); font-size: 9.5px; font-weight: 700;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: var(--or); border-bottom: 1px solid rgba(184,150,90,.35);
-  padding-bottom: 1px; transition: var(--tr);
-}
-.sf-read:hover { color: var(--or-lt); border-color: var(--or-lt); }
-.sf-read i { font-size: 8px; }
+/* Bloc « À la Une » : assets/a-la-une-rubrique.css */
 
 /* ════ MAIN LAYOUT ════ */
 .sec-wrap { padding: 52px 0 72px; }
@@ -376,8 +330,6 @@ ul { list-style: none; }
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
-  .sec-featured { grid-template-columns: 1fr; }
-  .sf-img img { height: 260px; }
   .sec-layout { grid-template-columns: 1fr; }
   .sec-aside { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .ft-main { grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -398,7 +350,7 @@ ul { list-style: none; }
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/a-la-une-rubrique.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -521,7 +473,24 @@ ul { list-style: none; }
       </div>
     </div>
 
-    <!-- Article à la une de la rubrique -->
+    <div class="sec-featured sec-featured--portrait">
+      <div class="sf-img sf-img--portrait">
+        <img src="images/khalid-cherkaoui-semmouni.jpg" alt="Pr. Khalid Cherkaoui Semmouni, Professeur universitaire de droit public · Head of Legal &amp; HR · Spécialiste des contrats d'affaires" loading="eager" width="510" height="630"/>
+      </div>
+      <div class="sf-body">
+        <div class="sf-cat">Tribune · Droit</div>
+        <h2 class="sf-h"><a href="article-tribune-marches-publics-resiliation">Marché résilié : tout se joue dans les dix jours</a></h2>
+        <p class="sf-deck">Le décret de 2023 encadre strictement le pouvoir de l'administration de mettre fin à un marché, et le juge administratif sanctionne les résiliations expédiées. Les titulaires, eux, découvrent ces garanties le jour où la lettre arrive. C'est-à-dire trop tard pour les préparer.</p>
+        <div class="sf-meta">
+          <span class="by">Pr. Khalid Cherkaoui Semmouni</span>
+          <span>·</span>
+          <span>Professeur universitaire de droit public · Head of Legal &amp; HR · Spécialiste des contrats d'affaires</span>
+          <span>·</span>
+          <span>4 min de lecture</span>
+        </div>
+        <a href="article-tribune-marches-publics-resiliation" class="sf-read">Lire la tribune <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -541,13 +510,22 @@ ul { list-style: none; }
 
         <div class="art-grid">
           <div class="acard">
-            <div class="acard-iw"><a href="article-procedures-collectives"><img src="images/droit-procedures-collectives-themis-sm.webp" alt="Procédures collectives — droit des entreprises en difficulté au Maroc" loading="lazy" width="480" height="320"/></a></div>
+            <div class="acard-iw"><a href="article-procedures-collectives"><img src="images/droit-procedures-collectives-themis-vignette.webp" alt="Procédures collectives — droit des entreprises en difficulté au Maroc" style="object-position:center top;" loading="lazy" width="480" height="360"/></a></div>
             <div class="acard-body">
               <span class="acard-cat">Analyse · Droit des affaires</span>
               <h3><a href="article-procedures-collectives">Procédures collectives et loi 73-17 : la réforme du droit marocain des entreprises en difficulté</a></h3>
               <p>Analyse de la loi 73-17 réformant les procédures collectives au Maroc : sauvegarde, redressement judiciaire, liquidation et prévention.</p>
             </div>
             <div class="acard-foot"><span class="by">La Rédaction Neybras</span><span>·</span><span>10 min de lecture</span></div>
+          </div>
+          <div class="acard">
+            <div class="acard-iw"><a href="article-arbitrage-clause-grands-projets-maroc"><img src="images/arbitrage-clause-grands-projets-maroc-vignette.webp" alt="Balance dorée de la justice posée sur un bureau, à côté d’un livre et d’un stylo" loading="lazy" width="480" height="360"/></a></div>
+            <div class="acard-body">
+              <span class="acard-cat">Tribune · Arbitrage</span>
+              <h3><a href="article-arbitrage-clause-grands-projets-maroc">Arbitrer avant de construire</a></h3>
+              <p>Pour les grands projets marocains, la clause d’arbitrage ne peut plus être une formalité</p>
+            </div>
+            <div class="acard-foot"><span class="by">Me Driss El Harti</span><span>·</span><span>8 min de lecture</span></div>
           </div>
         </div>
 
