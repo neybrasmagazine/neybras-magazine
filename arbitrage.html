@@ -79,20 +79,7 @@ ul{list-style:none;}
 .sec-topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
 .sec-topic{font-family:var(--it);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:1px;transition:var(--tr);}
 .sec-topic:hover{color:var(--or-lt);border-color:rgba(184,150,90,.4);}
-.sec-featured{display:grid;grid-template-columns:1fr 420px;gap:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
-.sf-img{overflow:hidden;}
-.sf-img img{width:100%;height:380px;object-fit:cover;transition:transform .6s ease;}
-.sf-img:hover img{transform:scale(1.03);}
-.sf-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:flex-end;}
-.sf-cat{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.sf-cat::before{content:'';width:16px;height:1px;background:var(--or);}
-.sf-h{font-family:var(--cg);font-size:clamp(22px,2.8vw,32px);font-weight:600;color:#fff;line-height:1.22;margin-bottom:14px;}
-.sf-h a:hover{color:var(--or-lt);}
-.sf-deck{font-family:var(--cg);font-size:15.5px;font-style:italic;color:rgba(255,255,255,.52);line-height:1.65;margin-bottom:20px;}
-.sf-meta{font-family:var(--it);font-size:11px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.sf-meta .by{color:rgba(255,255,255,.6);font-weight:600;}
-.sf-read{margin-top:22px;display:inline-flex;align-items:center;gap:7px;font-family:var(--it);font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);border-bottom:1px solid rgba(184,150,90,.35);padding-bottom:1px;transition:var(--tr);}
-.sf-read:hover{color:var(--or-lt);}
+/* Bloc « À la Une » : assets/a-la-une-rubrique.css */
 
 /* STATS BAR */
 .stats-bar{background:rgba(255,255,255,.05);border-top:1px solid rgba(255,255,255,.07);padding:18px 0;}
@@ -201,7 +188,7 @@ ul{list-style:none;}
 #stt{position:fixed;bottom:28px;right:28px;width:38px;height:38px;border:1px solid var(--brd);border-radius:50%;background:var(--blanc);color:var(--gris3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:997;transition:var(--tr);}
 #stt:hover{border-color:var(--or);color:var(--or);}
 #stt.v{display:flex;}
-@media(max-width:1100px){.sec-featured{grid-template-columns:1fr;}.sf-img img{height:260px;}.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}.stats-inner{flex-wrap:wrap;}.stat-item{flex:1 1 calc(50% - 16px);}}
+@media(max-width:1100px){.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}.stats-inner{flex-wrap:wrap;}.stat-item{flex:1 1 calc(50% - 16px);}}
 @media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}}
 @media(max-width:520px){.container{padding:0 18px;}}
 </style>
@@ -210,7 +197,7 @@ ul{list-style:none;}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/a-la-une-rubrique.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -300,6 +287,25 @@ ul{list-style:none;}
     </div>
 
 
+    <div class="sec-featured sec-featured--portrait">
+      <div class="sf-img sf-img--portrait">
+        <img src="images/driss-el-harti.jpg" alt="Me Driss El Harti, Avocat au Barreau de Tanger, spécialiste en arbitrage international" loading="eager" width="510" height="630"/>
+      </div>
+      <div class="sf-body">
+        <div class="sf-cat">Tribune · Arbitrage</div>
+        <h2 class="sf-h"><a href="article-arbitrage-clause-grands-projets-maroc">Arbitrer avant de construire</a></h2>
+        <p class="sf-deck">Pour les grands projets marocains, la clause d’arbitrage ne peut plus être une formalité</p>
+        <div class="sf-meta">
+          <span class="by">Me Driss El Harti</span>
+          <span>·</span>
+          <span>Avocat au Barreau de Tanger, spécialiste en arbitrage international</span>
+          <span>·</span>
+          <span>8 min de lecture</span>
+        </div>
+        <a href="article-arbitrage-clause-grands-projets-maroc" class="sf-read">Lire la tribune <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
     <div class="stats-bar">
       <div class="stats-inner">
         <div class="stat-item"><span class="stat-n">340+</span><span class="stat-l">Affaires CIRDI impliquant l'Afrique</span></div>
@@ -317,13 +323,13 @@ ul{list-style:none;}
 
     <div class="art-grid">
       <div class="acard">
-        <div class="acard-iw"><a href="article-arbitrage-clause-grands-projets-maroc"><img src="images/arbitrage-clause-grands-projets-maroc-sm.webp" alt="Balance dorée de la justice posée sur un bureau, à côté d’un livre et d’un stylo" loading="lazy" width="480" height="360"/></a></div>
+        <div class="acard-iw"><a href="article-contentieux-sportif-cjue-tas-maroc"><img src="images/droit-sport-contentieux-vestiaire-vignette.webp" alt="Droit du sport — le contentieux sportif international sort du vestiaire" style="object-position:center top;" loading="lazy" width="480" height="360"/></a></div>
         <div class="acard-body">
-          <span class="acard-cat">Tribune · Arbitrage</span>
-          <h3><a href="article-arbitrage-clause-grands-projets-maroc">Arbitrer avant de construire</a></h3>
-          <p>Pour les grands projets marocains, la clause d’arbitrage ne peut plus être une formalité</p>
+          <span class="acard-cat">Tribune · Sport Business</span>
+          <h3><a href="article-contentieux-sportif-cjue-tas-maroc">Droit du sport : le contentieux sort du vestiaire</a></h3>
+          <p>Diarra, Semenya, Seraing : trois arrêts européens resserrent le contrôle du juge étatique sur le TAS — ce que cela change pour les clubs et sociétés sportives marocaines.</p>
         </div>
-        <div class="acard-foot"><span class="by">Me Driss El Harti</span><span>·</span><span>8 min de lecture</span></div>
+        <div class="acard-foot"><span class="by">Me Amine Lahlou</span><span>·</span><span>8 min de lecture</span></div>
       </div>
     </div>
 
