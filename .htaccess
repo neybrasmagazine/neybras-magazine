@@ -18,6 +18,7 @@ RewriteRule ^article-cdm2030(\.html)?$ /article-cdm2030-juridique [L,R=301]
 # ── 5. Anciens slugs alternatifs ───────────────────────────────────────
 RewriteRule ^article-finance-participative-maroc/?$ /article-finance-participative [L,R=301]
 RewriteRule ^article-zlecaf-maroc/?$                /article-zlecaf [L,R=301]
+RewriteRule ^charte-investissement-maroc-2026(\.html)?/?$ /charte-investissement-maroc-prime-30-cfo [L,R=301]
 
 # ── 6. Supprimer l'extension .html (URLs propres) ─────────────────────
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
