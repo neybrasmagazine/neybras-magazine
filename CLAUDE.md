@@ -180,8 +180,10 @@ compléter avec l'article pertinent le plus récent, et le signaler.
 3. Préparer les images selon la section 4.2 (visuel principal + -sm,
    portrait si nécessaire).
 4. Renseigner les métadonnées sur le modèle des pages existantes : title,
-   meta description, canonical, og:title, og:description, og:image
-   (1200×630), og:image:alt.
+   meta description, canonical, og:title, og:description, og:image,
+   og:image:alt. og:image : 1200×630 si la source le permet ; sinon, la plus
+   grande taille disponible au ratio le plus proche de 1,91:1, sans jamais
+   agrandir (minimum 1080 px de large).
 5. Ajouter la publication partout où les publications de ce type
    apparaissent : page(s) de rubrique, accueil si pertinent, archives,
    pages /interviews, /tribunes ou /analyses, articles liés, sitemap.
