@@ -171,6 +171,22 @@ Une section vide est masquée proprement, sans titre orphelin. Une grille
 n'est jamais laissée incomplète (ex. 2 entrées dans 3 colonnes) : la
 compléter avec l'article pertinent le plus récent, et le signaler.
 
+Règle valable pour tous les contributeurs, tribune ou entretien :
+
+- Quand sa publication est « À la Une » d'une rubrique : bloc identique à
+  celui de /finance (Bassy) et de /droit-du-sport (Lahlou). Portrait
+  recadré à la main au format 510×630 et au cadrage de images/ismail-bassy.jpg
+  (nommé images/prenom-nom.jpg), surtitre « Type · Rubrique », titre H2 lié
+  en gros plan, chapeau de la publication, ligne auteur « Nom · fonction ·
+  X min de lecture » (entretien : « Propos recueillis par la rédaction »),
+  bouton « Lire la tribune » ou « Lire l'entretien ».
+- Sa carte dans une liste (« Dernières analyses », autres rubriques)
+  utilise une vignette 4:3 recadrée à la main (suffixe -vignette : 480×360
+  pour les cartes .acard, 160×120 pour les items 80×60), affichée en
+  object-fit: cover.
+- Une publication n'est listée que dans les rubriques qui correspondent à
+  son sujet.
+
 ---
 
 ## 7. Procédure pour chaque nouvelle publication
