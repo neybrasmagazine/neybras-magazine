@@ -88,6 +88,11 @@ dédiée, sur demande explicite.
 - Temps de lecture : repris de l'article ; s'il n'existe pas, le calculer
   sur la base de 230 mots par minute, arrondi à la minute supérieure, et
   le signaler.
+- Publication aussi parue dans le magazine imprimé : la page de l'article
+  porte, juste sous la ligne auteur, la mention « Paru dans Neybras
+  Magazine, Vol. 001, septembre 2026 » (numéro et mois du volume concerné),
+  en petit texte italique (classe .art-paru). Le texte web reste celui du
+  numéro imprimé, sans réécriture.
 - Aucun format commercial dans l'espace éditorial (« Article sponsorisé »,
   « Interview CEO », etc.). Séparation stricte éditorial / commercial.
 
