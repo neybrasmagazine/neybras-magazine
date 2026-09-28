@@ -145,6 +145,12 @@
 
   <!-- Articles — Arbitrage -->
   <url>
+    <loc>https://neybras-magazine.com/article-ohada-arbitrage</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://neybras-magazine.com/article-arbitrage-clause-grands-projets-maroc</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
