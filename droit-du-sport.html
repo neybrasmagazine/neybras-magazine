@@ -80,31 +80,7 @@ ul{list-style:none;}
 .sec-topic{font-family:var(--it);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:1px;transition:var(--tr);}
 .sec-topic:hover{color:var(--or-lt);border-color:rgba(184,150,90,.4);}
 
-/* Featured avec image pleine largeur */
-.sec-featured-full{position:relative;height:460px;overflow:hidden;margin-bottom:-1px;}
-.sec-featured-full img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;}
-.sec-featured-full:hover img{transform:scale(1.03);}
-.sf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,48,68,.95) 0%,rgba(10,48,68,.4) 55%,transparent 100%);}
-.sf-content{position:absolute;bottom:0;left:0;right:0;padding:40px 40px 36px;}
-.sf-cat{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.sf-cat::before{content:'';width:16px;height:1px;background:var(--or);}
-.sf-h{font-family:var(--cg);font-size:clamp(26px,3.5vw,42px);font-weight:600;color:#fff;line-height:1.18;margin-bottom:12px;max-width:700px;}
-.sf-h a:hover{color:var(--or-lt);}
-.sf-meta{font-family:var(--it);font-size:11px;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
-.sf-meta .by{color:rgba(255,255,255,.7);font-weight:600;}
-.sf-read{display:inline-flex;align-items:center;gap:7px;font-family:var(--it);font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);border-bottom:1px solid rgba(184,150,90,.4);padding-bottom:1px;transition:var(--tr);}
-.sf-read:hover{color:var(--or-lt);}
-/* Featured 2 colonnes (photo auteur + texte) — modèle Arbitrage */
-.sec-featured{display:grid;grid-template-columns:1fr 420px;gap:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
-.sec-featured .sf-img{overflow:hidden;}
-.sec-featured .sf-img img{width:100%;height:380px;object-fit:cover;object-position:center 12%;transition:transform .6s ease;}
-.sec-featured .sf-img:hover img{transform:scale(1.03);}
-.sec-featured .sf-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:flex-end;}
-.sec-featured .sf-h{font-size:clamp(22px,2.6vw,30px);max-width:none;margin-bottom:14px;}
-.sec-featured .sf-meta{margin-bottom:0;}
-.sec-featured .sf-read{margin-top:22px;}
-.sf-deck{font-family:var(--cg);font-size:15.5px;font-style:italic;color:rgba(255,255,255,.52);line-height:1.65;margin-bottom:20px;}
-@media(max-width:1100px){.sec-featured{grid-template-columns:1fr;}.sec-featured .sf-img img{height:300px;}}
+/* Bloc « À la Une » : assets/a-la-une-rubrique.css */
 
 /* Grille 3 vignettes sous le featured */
 .sub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.08);}
@@ -218,8 +194,10 @@ ul{list-style:none;}
 #stt{position:fixed;bottom:28px;right:28px;width:38px;height:38px;border:1px solid var(--brd);border-radius:50%;background:var(--blanc);color:var(--gris3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:997;transition:var(--tr);}
 #stt:hover{border-color:var(--or);color:var(--or);}
 #stt.v{display:flex;}
-@media(max-width:1100px){.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}.sub-grid{grid-template-columns:1fr;}.sec-featured-full{height:320px;}}
-@media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}.sf-content{padding:24px;}}
+.sec-layout--aside-seul{grid-template-columns:1fr;}
+.sec-layout--aside-seul .sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:1100px){.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}.sub-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside,.sec-layout--aside-seul .sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}}
 @media(max-width:520px){.container{padding:0 18px;}}
 </style>
 <!-- Google Analytics GA4 -->
@@ -227,7 +205,7 @@ ul{list-style:none;}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/a-la-une-rubrique.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -316,28 +294,30 @@ ul{list-style:none;}
       </div>
     </div>
 
-    <!-- Featured — photo auteur + texte (mise en page identique à Arbitrage) -->
+    <div class="sec-featured sec-featured--portrait">
+      <div class="sf-img sf-img--portrait sf-img--paysage">
+        <img src="images/droit-sport-contentieux-vestiaire.jpg" alt="Droit du sport — le contentieux sportif international sort du vestiaire" loading="eager" width="1600" height="617" style="object-position:74% 0;"/>
+      </div>
+      <div class="sf-body">
+        <div class="sf-cat">Sport Business · Arbitrage</div>
+        <h2 class="sf-h"><a href="article-contentieux-sportif-cjue-tas-maroc">Droit du sport : le contentieux sort du vestiaire</a></h2>
+        <p class="sf-deck">Diarra, Semenya, Seraing : trois arrêts européens resserrent le contrôle du juge étatique sur le TAS — ce que cela change pour les clubs et sociétés sportives marocaines.</p>
+        <div class="sf-meta">
+          <span class="by">Me Amine Lahlou</span>
+          <span>·</span>
+          <span>26 sept. 2026</span>
+          <span>·</span>
+          <span>8 min de lecture</span>
+        </div>
+        <a href="article-contentieux-sportif-cjue-tas-maroc" class="sf-read">Lire l'analyse <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
 
   </div>
 </section>
 
-<div class="sec-wrap"><div class="container"><div class="sec-layout">
-  <main>
-    <div class="blk-title">Dernières analyses Sport Business</div>
-
-    <div class="art-grid">
-      <div class="acard">
-        <div class="acard-iw"><a href="article-contentieux-sportif-cjue-tas-maroc"><img src="images/droit-sport-contentieux-vestiaire-sm.webp" alt="Droit du sport — le contentieux sportif international sort du vestiaire" loading="lazy" width="480" height="185"/></a></div>
-        <div class="acard-body">
-          <span class="acard-cat">Sport Business · Arbitrage</span>
-          <h3><a href="article-contentieux-sportif-cjue-tas-maroc">Droit du sport : le contentieux sort du vestiaire</a></h3>
-          <p>Diarra, Semenya, Seraing : trois arrêts européens resserrent le contrôle du juge étatique sur le TAS — ce que cela change pour les clubs et sociétés sportives marocaines.</p>
-        </div>
-        <div class="acard-foot"><span class="by">Me Amine Lahlou</span><span>·</span><span>26 sept. 2026</span></div>
-      </div>
-    </div>
-
-  </main>
+<div class="sec-wrap"><div class="container"><div class="sec-layout sec-layout--aside-seul">
+  <!-- « Dernières analyses Sport Business » masquée : la seule carte (Lahlou) est désormais l'À la Une. À rétablir dès qu'une nouvelle analyse est publiée. -->
 
   <aside class="sec-aside" aria-label="Contenu complémentaire">
 
