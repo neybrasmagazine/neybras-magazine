@@ -32,6 +32,4 @@
      plafonne a 340px au-dela sinon il occuperait toute la hauteur de l'ecran. */
   .sec-featured--portrait{grid-template-columns:1fr;}
   .sf-img--portrait img{width:100%;max-width:340px;height:auto;min-height:0;margin:0 auto;object-fit:contain;border-right:0;border-bottom:1px solid rgba(184,150,90,.25);}
-  /* Visuel paysage dans la meme colonne : il reprend toute la largeur au lieu d'une bande de 340px. */
-  .sf-img--portrait.sf-img--paysage img{max-width:none;height:220px;object-fit:cover;}
 }

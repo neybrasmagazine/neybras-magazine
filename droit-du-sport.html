@@ -194,10 +194,8 @@ ul{list-style:none;}
 #stt{position:fixed;bottom:28px;right:28px;width:38px;height:38px;border:1px solid var(--brd);border-radius:50%;background:var(--blanc);color:var(--gris3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:997;transition:var(--tr);}
 #stt:hover{border-color:var(--or);color:var(--or);}
 #stt.v{display:flex;}
-.sec-layout--aside-seul{grid-template-columns:1fr;}
-.sec-layout--aside-seul .sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 @media(max-width:1100px){.sec-layout{grid-template-columns:1fr;}.sec-aside{position:static;display:grid;grid-template-columns:1fr 1fr;gap:20px;}.ft-main{grid-template-columns:1fr 1fr;gap:28px;}.sub-grid{grid-template-columns:1fr;}}
-@media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside,.sec-layout--aside-seul .sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}}
+@media(max-width:768px){.art-grid{grid-template-columns:1fr;}.sec-header{flex-direction:column;align-items:flex-start;gap:20px;}.sec-aside{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.nl-form input{border-right:1px solid var(--brd);border-radius:1px;margin-bottom:8px;}.nl-form button{border-radius:1px;}}
 @media(max-width:520px){.container{padding:0 18px;}}
 </style>
 <!-- Google Analytics GA4 -->
@@ -295,29 +293,44 @@ ul{list-style:none;}
     </div>
 
     <div class="sec-featured sec-featured--portrait">
-      <div class="sf-img sf-img--portrait sf-img--paysage">
-        <img src="images/droit-sport-contentieux-vestiaire.jpg" alt="Droit du sport — le contentieux sportif international sort du vestiaire" loading="eager" width="1600" height="617" style="object-position:74% 0;"/>
+      <div class="sf-img sf-img--portrait">
+        <img src="images/amine-lahlou.jpg" alt="Me Amine Lahlou, Avocat au barreau de Casablanca · Cabinet Lahlou &amp; Associés" loading="eager" width="510" height="630"/>
       </div>
       <div class="sf-body">
-        <div class="sf-cat">Sport Business · Arbitrage</div>
+        <div class="sf-cat">Tribune · Sport Business</div>
         <h2 class="sf-h"><a href="article-contentieux-sportif-cjue-tas-maroc">Droit du sport : le contentieux sort du vestiaire</a></h2>
         <p class="sf-deck">Diarra, Semenya, Seraing : trois arrêts européens resserrent le contrôle du juge étatique sur le TAS — ce que cela change pour les clubs et sociétés sportives marocaines.</p>
         <div class="sf-meta">
           <span class="by">Me Amine Lahlou</span>
           <span>·</span>
-          <span>26 sept. 2026</span>
+          <span>Avocat au barreau de Casablanca · Cabinet Lahlou &amp; Associés</span>
           <span>·</span>
           <span>8 min de lecture</span>
         </div>
-        <a href="article-contentieux-sportif-cjue-tas-maroc" class="sf-read">Lire l'analyse <i class="fas fa-arrow-right"></i></a>
+        <a href="article-contentieux-sportif-cjue-tas-maroc" class="sf-read">Lire la tribune <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
 
   </div>
 </section>
 
-<div class="sec-wrap"><div class="container"><div class="sec-layout sec-layout--aside-seul">
-  <!-- « Dernières analyses Sport Business » masquée : la seule carte (Lahlou) est désormais l'À la Une. À rétablir dès qu'une nouvelle analyse est publiée. -->
+<div class="sec-wrap"><div class="container"><div class="sec-layout">
+  <main>
+    <div class="blk-title">Dernières analyses Sport Business</div>
+
+    <div class="art-grid">
+      <div class="acard">
+        <div class="acard-iw"><a href="raja-sa-ismail-bassy-societe-sportive"><img src="images/ismail-bassy-sm.webp" alt="Ismail Bassy, Directeur Administratif et Financier du Raja Club Athletic S.A" loading="lazy" width="480" height="270"/></a></div>
+        <div class="acard-body">
+          <span class="acard-cat">Entretien · Sport Business</span>
+          <h3><a href="raja-sa-ismail-bassy-societe-sportive">Raja S.A : « Chaque décision sportive doit désormais être analysée également sous l'angle de son impact financier »</a></h3>
+          <p>Du statut associatif à la société sportive, les clubs de football marocains changent de modèle. Le directeur financier du Raja explique ce que cette transformation change dans les comptes et dans l'accès au financement.</p>
+        </div>
+        <div class="acard-foot"><span class="by">Ismail Bassy</span><span>·</span><span>21 sept. 2026</span></div>
+      </div>
+    </div>
+
+  </main>
 
   <aside class="sec-aside" aria-label="Contenu complémentaire">
 
