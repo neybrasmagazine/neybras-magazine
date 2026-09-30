@@ -7,35 +7,41 @@ Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 User-agent: *
 Allow: /
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+Disallow: /_docs/
 
 Sitemap: https://neybras-magazine.com/sitemap.xml
