@@ -1,45 +1,46 @@
 # Neybras Magazine
 
-> Neybras Magazine est un média du droit, de la finance et des affaires au Maroc et en Afrique francophone, édité par Neybras Publishing à Casablanca. Il publie des analyses, des tribunes et des entretiens signés, en français, sur le web et dans une édition imprimée (Vol. 001, septembre 2026).
+> Premium B2B magazine (print and digital) based in Casablanca, Morocco, published in French. Legal and financial analysis for business decision-makers in Morocco and French-speaking Africa.
 
-Les textes sont rédigés en grande partie par des praticiens en exercice (avocats, arbitres, fiscalistes, financiers). Chaque contribution signée est publiée avec le nom et la fonction de son auteur. Les contenus éditoriaux sont séparés des contenus commerciaux. Pour citer un article, indiquer l'auteur, le titre et l'URL de la page.
+## Type & Format
 
-## Thématiques couvertes
+- Publisher: Neybras Publishing, Casablanca (Morocco)
+- Periodicity: 4 issues per year (quarterly)
+- Print circulation: 1,000 copies (controlled, nominative distribution)
+- Pagination: 24 pages
+- First print issue: Vol. 001, September 2026
+- Language: French
 
-- Droit des affaires marocain : procédures collectives, contrats, droit des sociétés, réformes législatives
-- Fiscalité et réformes financières : loi de finances, retenue à la source, fiscalité du sportif
-- Investissement au Maroc : charte de l'investissement, financements de la Banque africaine de développement, grands projets d'infrastructure
-- Finance et marchés : bourse, green bonds, finance participative, régulation (AMMC, Bank Al-Maghrib)
-- Arbitrage et modes alternatifs de règlement des différends : CIRDI, CCI, clauses compromissoires, exequatur des sentences arbitrales
-- Afrique et zone OHADA : droit OHADA, sûretés, ZLECAf, partenariats public-privé, investissements panafricains
-- Droit et business du sport : Coupe du monde 2030, agents, droits à l'image, contentieux sportif
+## Core Expertise & Themes
 
-## Rubriques
+Neybras Magazine provides legal and financial analysis for C-level executives, general counsels, business lawyers, CFOs and investors in Morocco and French-speaking Africa. It breaks down regulatory changes into information usable for decisions. Signed contributions (analyses, opinion pieces, interviews) are published with the author's name and role.
 
-- [Droit des affaires](https://neybras-magazine.com/droit): analyses de droit des affaires
-- [Finance](https://neybras-magazine.com/finance): finance, marchés et investissement
-- [Afrique](https://neybras-magazine.com/afrique): Afrique et zone OHADA
-- [Arbitrage](https://neybras-magazine.com/arbitrage): arbitrage et ADR
-- [Droit du sport](https://neybras-magazine.com/droit-du-sport): droit et business du sport
+Key coverage areas:
 
-## Formats de publication
+- Moroccan business law and case law
+- Corporate finance, taxation and investment incentives (for example Framework Law 03-22 and the Investment Charter)
+- Infrastructure projects, public-private partnerships and international arbitration
+- Investments in Sub-Saharan Africa and the OHADA zone
+- Sport business and the transformation of sports clubs
+- Artificial intelligence and legal tech
 
-- [Analyses](https://neybras-magazine.com/analyses): articles de la rédaction et analyses signées
-- [Tribunes](https://neybras-magazine.com/tribunes): points de vue de praticiens, signés
-- [Entretiens](https://neybras-magazine.com/interviews): entretiens avec des acteurs du droit et de la finance
-- [Archives](https://neybras-magazine.com/archives): ensemble des publications
+## Key Sections & Directory
 
-## Le magazine et l'éditeur
+- [Home](https://neybras-magazine.com/)
+- [About](https://neybras-magazine.com/a-propos): presentation, format and editorial line
+- [Business law](https://neybras-magazine.com/droit)
+- [Finance](https://neybras-magazine.com/finance)
+- [Africa & OHADA](https://neybras-magazine.com/afrique)
+- [Arbitration](https://neybras-magazine.com/arbitrage)
+- [Sports law and business](https://neybras-magazine.com/droit-du-sport)
+- [Analyses](https://neybras-magazine.com/analyses), [Opinion pieces](https://neybras-magazine.com/tribunes), [Interviews](https://neybras-magazine.com/interviews), [Archives](https://neybras-magazine.com/archives)
+- [Print magazine](https://neybras-magazine.com/magazine)
+- [Team](https://neybras-magazine.com/equipe)
+- [Corrections policy](https://neybras-magazine.com/corrections)
+- [Sitemap](https://neybras-magazine.com/sitemap.xml)
 
-- [À propos](https://neybras-magazine.com/a-propos): présentation, ligne éditoriale et rubriques
-- [L'équipe](https://neybras-magazine.com/equipe): équipe et contributeurs
-- [Le magazine imprimé](https://neybras-magazine.com/magazine): édition imprimée
-- [Corrections](https://neybras-magazine.com/corrections): politique et registre des corrections
-- [Contact](https://neybras-magazine.com/contact): rédaction (redaction@neybras.com) et partenariats (marketing@neybras-magazine.com)
-- [Mentions légales](https://neybras-magazine.com/mentions-legales)
+## Contact
 
-## Optionnel
-
-- [Plan du site](https://neybras-magazine.com/sitemap.xml)
-- [FAQ](https://neybras-magazine.com/faq)
-- [Newsletter](https://neybras-magazine.com/newsletter)
+- Editorial team: redaction@neybras.com
+- Marketing and partnerships: marketing@neybras-magazine.com
+- [Contact page](https://neybras-magazine.com/contact)
