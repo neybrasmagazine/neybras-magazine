@@ -102,6 +102,9 @@ ul{list-style:none;}
 .sec-topic:hover{color:var(--or-lt);border-color:rgba(184,150,90,.4);}
 
 /* Bloc « À la Une » : assets/a-la-une-rubrique.css */
+/* À la Une avec visuel thématique : la photo occupe toute la hauteur du bloc (pas de bande de fond) */
+.sec-featured--photo .sf-img img{height:100%;min-height:380px;}
+@media(max-width:1100px){.sec-featured--photo .sf-img img{height:260px;min-height:0;}}
 
 /* Ticker financier */
 .fin-ticker{background:rgba(255,255,255,.05);border-top:1px solid rgba(255,255,255,.07);padding:10px 0;overflow:hidden;}
@@ -357,22 +360,20 @@ ul{list-style:none;}
       </div>
     </div>
 
-    <div class="sec-featured sec-featured--portrait">
-      <div class="sf-img sf-img--portrait">
-        <img src="images/ismail-bassy.jpg" alt="Ismail Bassy, Directeur Administratif et Financier du Raja Club Athletic S.A" loading="eager" width="510" height="630"/>
+    <div class="sec-featured sec-featured--photo">
+      <div class="sf-img">
+        <img src="images/signature-bad-onda-pemia-casablanca-une.webp" alt="Cérémonie de signature entre la Banque africaine de développement et l'Office national des aéroports à Casablanca" loading="eager" width="1257" height="853"/>
       </div>
       <div class="sf-body">
-        <div class="sf-cat">Entretien · Sport business</div>
-        <h2 class="sf-h"><a href="raja-sa-ismail-bassy-societe-sportive">Raja S.A : « Chaque décision sportive doit désormais être analysée également sous l'angle de son impact financier »</a></h2>
-        <p class="sf-deck">Du statut associatif à la société sportive, les clubs de football marocains changent de modèle. Le directeur financier du Raja explique ce que cette transformation change dans les comptes et dans l'accès au financement.</p>
+        <div class="sf-cat">Analyse · Afrique</div>
+        <h2 class="sf-h"><a href="bad-270-millions-euros-aeroports-maroc">BAD&nbsp;: 270&nbsp;millions d’euros pour moderniser les aéroports du Maroc</a></h2>
+        <p class="sf-deck">En visite au Maroc, le président de la Banque africaine de développement a présidé, le 29&nbsp;septembre, aux côtés de Nadia Fettah, la signature d’un prêt de 270&nbsp;millions d’euros à l’Office national des aéroports. Derrière le montant, un enjeu de capacité. Le Royaume veut moderniser et accroître ses capacités aéroportuaires d’ici 2030, et s’affirmer comme hub aérien de référence entre l’Afrique, l’Europe et le reste du monde.</p>
         <div class="sf-meta">
-          <span class="by">Ismail Bassy</span>
+          <span class="by">La Rédaction Neybras</span>
           <span>·</span>
-          <span>Propos recueillis par la rédaction</span>
-          <span>·</span>
-          <span>5 min de lecture</span>
+          <span>4 min de lecture</span>
         </div>
-        <a href="raja-sa-ismail-bassy-societe-sportive" class="sf-read">Lire l'entretien <i class="fas fa-arrow-right"></i></a>
+        <a href="bad-270-millions-euros-aeroports-maroc" class="sf-read">Lire l'analyse <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
 
@@ -405,6 +406,15 @@ ul{list-style:none;}
 
         <div class="blk-title">Dernières analyses</div>
         <div class="art-grid">
+      <div class="acard">
+        <div class="acard-iw"><a href="raja-sa-ismail-bassy-societe-sportive"><img src="images/ismail-bassy-vignette.webp" alt="Ismail Bassy, Directeur Administratif et Financier du Raja Club Athletic S.A" style="object-position:center top;" loading="lazy" width="480" height="360"/></a></div>
+        <div class="acard-body">
+          <span class="acard-cat">Entretien · Sport business</span>
+          <h3><a href="raja-sa-ismail-bassy-societe-sportive">Raja S.A : « Chaque décision sportive doit désormais être analysée également sous l'angle de son impact financier »</a></h3>
+          <p>Du statut associatif à la société sportive, les clubs de football marocains changent de modèle. Le directeur financier du Raja explique ce que cette transformation change dans les comptes et dans l'accès au financement.</p>
+        </div>
+        <div class="acard-foot"><span class="by">Ismail Bassy</span><span>·</span><span>5 min de lecture</span></div>
+      </div>
 
 
 
@@ -414,13 +424,6 @@ ul{list-style:none;}
         <div class="blk-title">Financements &amp; fiscalité</div>
         <div class="art-list">
 
-          <div class="alist-item">
-            <img src="images/signature-bad-onda-pemia-casablanca-sm.webp" alt="Cérémonie de signature entre la Banque africaine de développement et l'Office national des aéroports à Casablanca" loading="lazy" width="160" height="120"/>
-            <div>
-              <span class="ali-cat">Analyse · Afrique</span>
-              <div class="ali-title"><a href="bad-270-millions-euros-aeroports-maroc">BAD&nbsp;: 270&nbsp;millions d’euros pour moderniser les aéroports du Maroc</a></div>
-              <div class="ali-meta">La Rédaction Neybras · 3 min</div>
-            </div>
           </div>
 
           <div class="alist-item">
