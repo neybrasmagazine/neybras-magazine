@@ -1,0 +1,45 @@
+# Neybras Magazine
+
+> Neybras Magazine est un média du droit, de la finance et des affaires au Maroc et en Afrique francophone, édité par Neybras Publishing à Casablanca. Il publie des analyses, des tribunes et des entretiens signés, en français, sur le web et dans une édition imprimée (Vol. 001, septembre 2026).
+
+Les textes sont rédigés en grande partie par des praticiens en exercice (avocats, arbitres, fiscalistes, financiers). Chaque contribution signée est publiée avec le nom et la fonction de son auteur. Les contenus éditoriaux sont séparés des contenus commerciaux. Pour citer un article, indiquer l'auteur, le titre et l'URL de la page.
+
+## Thématiques couvertes
+
+- Droit des affaires marocain : procédures collectives, contrats, droit des sociétés, réformes législatives
+- Fiscalité et réformes financières : loi de finances, retenue à la source, fiscalité du sportif
+- Investissement au Maroc : charte de l'investissement, financements de la Banque africaine de développement, grands projets d'infrastructure
+- Finance et marchés : bourse, green bonds, finance participative, régulation (AMMC, Bank Al-Maghrib)
+- Arbitrage et modes alternatifs de règlement des différends : CIRDI, CCI, clauses compromissoires, exequatur des sentences arbitrales
+- Afrique et zone OHADA : droit OHADA, sûretés, ZLECAf, partenariats public-privé, investissements panafricains
+- Droit et business du sport : Coupe du monde 2030, agents, droits à l'image, contentieux sportif
+
+## Rubriques
+
+- [Droit des affaires](https://neybras-magazine.com/droit): analyses de droit des affaires
+- [Finance](https://neybras-magazine.com/finance): finance, marchés et investissement
+- [Afrique](https://neybras-magazine.com/afrique): Afrique et zone OHADA
+- [Arbitrage](https://neybras-magazine.com/arbitrage): arbitrage et ADR
+- [Droit du sport](https://neybras-magazine.com/droit-du-sport): droit et business du sport
+
+## Formats de publication
+
+- [Analyses](https://neybras-magazine.com/analyses): articles de la rédaction et analyses signées
+- [Tribunes](https://neybras-magazine.com/tribunes): points de vue de praticiens, signés
+- [Entretiens](https://neybras-magazine.com/interviews): entretiens avec des acteurs du droit et de la finance
+- [Archives](https://neybras-magazine.com/archives): ensemble des publications
+
+## Le magazine et l'éditeur
+
+- [À propos](https://neybras-magazine.com/a-propos): présentation, ligne éditoriale et rubriques
+- [L'équipe](https://neybras-magazine.com/equipe): équipe et contributeurs
+- [Le magazine imprimé](https://neybras-magazine.com/magazine): édition imprimée
+- [Corrections](https://neybras-magazine.com/corrections): politique et registre des corrections
+- [Contact](https://neybras-magazine.com/contact): rédaction (redaction@neybras.com) et partenariats (marketing@neybras-magazine.com)
+- [Mentions légales](https://neybras-magazine.com/mentions-legales)
+
+## Optionnel
+
+- [Plan du site](https://neybras-magazine.com/sitemap.xml)
+- [FAQ](https://neybras-magazine.com/faq)
+- [Newsletter](https://neybras-magazine.com/newsletter)
