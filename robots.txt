@@ -1,10 +1,41 @@
-User-agent: *
+# -------------------------------------------------------------------------
+# ROBOTS.TXT FUSIONNÉ & OPTIMISÉ POUR L'IA (AIO) - NEYBRAS MAGAZINE
+# -------------------------------------------------------------------------
+
+User-agent: GPTBot
 Allow: /
-
-# Sitemap
-Sitemap: https://neybras-magazine.com/sitemap.xml
-
-# Exclure les fichiers techniques et gabarits d'email
 Disallow: /palette-preview.html
 Disallow: /email-
 Disallow: /composants.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /palette-preview.html
+Disallow: /email-
+Disallow: /composants.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /palette-preview.html
+Disallow: /email-
+Disallow: /composants.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /palette-preview.html
+Disallow: /email-
+Disallow: /composants.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /palette-preview.html
+Disallow: /email-
+Disallow: /composants.html
+
+User-agent: *
+Allow: /
+Disallow: /palette-preview.html
+Disallow: /email-
+Disallow: /composants.html
+
+Sitemap: https://neybras-magazine.com/sitemap.xml
