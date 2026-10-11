@@ -88,32 +88,26 @@
 .u-act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e-4) var(--e-5); margin-top: var(--e-6); }
 
 
-/* ---------- 1. SIGNATURE DU MÉDIA --------------------------- */
+/* ---------- 1. HERO : bande claire --------------------------- */
+/* Fond clair agrandi : promesse, sous-titre, deux CTA hiérarchisés, preuve de crédibilité. */
 
-.u-sig { background: var(--nbr-papier); border-bottom: var(--filet); padding: var(--e-6) 0 var(--e-5); }
-.u-sig__in { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--e-6); align-items: end; }
+.u-sig { background: var(--nbr-papier); border-bottom: var(--filet); padding: var(--e-9) 0 var(--e-6); }
+.u-sig__in { max-width: 52rem; }
 .u-sig h1 {
   font-family: var(--nbr-titre);
   font-weight: var(--poids-gras);
-  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.6rem);
-  line-height: 1.12;
+  font-size: var(--t-3xl);
+  line-height: var(--lh-serre);
   letter-spacing: var(--ls-titre);
   color: var(--nbr-nuit);
-  margin: .45rem 0 0;
-  max-width: 24ch;
+  margin: var(--e-3) 0 0;
+  max-width: 22ch;
   text-wrap: balance;
 }
 .u-sig h1 em { font-style: italic; font-weight: var(--poids-normal); color: var(--nbr-bleu); }
-.u-sig__ear {
-  margin: 0;
-  text-align: right;
-  font-size: .8rem;
-  line-height: 1.75;
-  color: var(--nbr-gris);
-  border-left: var(--filet);
-  padding-left: var(--e-5);
-}
-.u-sig__ear b { display: block; color: var(--nbr-encre); font-weight: 600; letter-spacing: .05em; }
+.u-sig__sub { margin: var(--e-5) 0 0; max-width: var(--mesure); font-size: var(--t-md); line-height: var(--lh-texte); color: var(--nbr-encre); }
+.u-sig .u-act { margin-top: var(--e-6); }
+.u-sig__preuve { margin: var(--e-8) 0 0; padding-top: var(--e-4); border-top: var(--filet); font-size: var(--t-xs); letter-spacing: .04em; line-height: 1.6; color: var(--nbr-gris); }
 
 
 /* ---------- 2. À LA UNE ------------------------------------- */
@@ -357,8 +351,8 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 @media (max-width: 640px) {
   .u-sec { padding: var(--e-7) 0; }
   .u-dos { padding-top: 0; }
-  .u-sig__in { grid-template-columns: 1fr; gap: var(--e-4); }
-  .u-sig__ear { text-align: left; border-left: 0; padding-left: 0; }
+  .u-sig { padding: var(--e-7) 0 var(--e-5); }
+  .u-sig__preuve { margin-top: var(--e-6); }
   .u-dos__grid, .u-rub__grid { grid-template-columns: 1fr; }
   .u-itw__in { grid-template-columns: 1fr; gap: var(--e-5); }
   .u-itw__photo { width: 120px; height: 120px; }
