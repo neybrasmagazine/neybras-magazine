@@ -177,33 +177,16 @@ ul{list-style:none}
 .nl-form button:hover{background:var(--nbr-bleu-fonce)}
 .nl-note{margin-top:14px;font-size:10px;color:var(--nbr-gris)}
 
-.site-footer{background:var(--bn2);border-top:1px solid rgba(201,168,76,.1)}
-.ft-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px;padding:56px 0 38px}
-.ft-brand p{font-size:12px;color:rgba(255,255,255,.36);line-height:1.8;max-width:265px;margin:14px 0 18px}
-.ft-col h5{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,.15)}
-.ft-col ul{display:flex;flex-direction:column;gap:9px}
-.ft-col ul li a{font-size:12px;color:rgba(255,255,255,.36);display:flex;align-items:center;gap:6px;transition:var(--tr)}
-.ft-col ul li a::before{content:'›';color:var(--or);font-size:13px}
-.ft-col ul li a:hover{color:var(--or);padding-left:3px}
-.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:rgba(255,255,255,.2)}
-.ft-bottom a{color:rgba(255,255,255,.28)}
-.ft-bottom a:hover{color:var(--or)}
-.ft-bl{display:flex;gap:18px}
-
 /* Scroll top */
 #stt{position:fixed;bottom:28px;right:28px;width:40px;height:40px;background:var(--or);color:var(--bn);border:none;border-radius:50%;font-size:14px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(201,168,76,.45);z-index:999;transition:var(--tr)}
 #stt:hover{background:var(--or2);transform:translateY(-2px)}
 #stt.v{display:flex}
 
 /* ═══ RESPONSIVE ═══ */
-@media(max-width:900px){
-  .ft-main{grid-template-columns:1fr 1fr;gap:28px}
-}
 @media(max-width:680px){
   .nl-form{flex-direction:column}
   .nl-form input{border-right:1px solid var(--nbr-bleu-bord);border-radius:var(--r);margin-bottom:8px}
   .nl-form button{border-radius:var(--r)}
-  .ft-main{grid-template-columns:1fr}
   .tb-in{flex-direction:column;gap:7px}
   .hd-in{flex-wrap:wrap;gap:10px}
 }
