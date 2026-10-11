@@ -947,18 +947,12 @@ ul{list-style:none}
 <section class="nl-sec" id="newsletter" aria-label="Newsletter Neybras Magazine">
   <div class="container">
     <div class="nl-pre">Newsletter Neybras</div>
-    <h2 class="nl-h">Analyses juridiques et financières<br/><em>chaque lundi matin.</em></h2>
-    <p class="nl-sub">Chaque lundi matin, recevez une synthèse des analyses juridiques et financières rédigées par nos experts praticiens.</p>
+    <h2 class="nl-h">Recevez les analyses juridiques et financières<br/><em>de Neybras Magazine.</em></h2>
+    <p class="nl-sub">Les analyses, tribunes et entretiens de Neybras Magazine, rédigés par la rédaction et par des praticiens du droit et de la finance.</p>
     <form class="nl-form" ><input type="email" name="email" placeholder="Votre email professionnel" required/>
-      <button type="submit">S'abonner</button>
+      <button type="submit">Recevoir les analyses</button>
     </form>
-    <p class="nl-note">Analyses pour juristes et dirigeants · Gratuit · Désinscription immédiate</p>
-    <div class="nl-preuves">
-      <div class="nl-preuve"><i class="fas fa-shield-alt"></i> Aucun spam</div>
-      <div class="nl-preuve"><i class="fas fa-lock"></i> Données protégées</div>
-      <div class="nl-preuve"><i class="fas fa-star"></i> Contenu exclusif</div>
-      <div class="nl-preuve"><i class="fas fa-times-circle"></i> Désinscription libre</div>
-    </div>
+    <p class="nl-note">Gratuit · <a href="politique-confidentialite">Politique de confidentialité</a></p>
   </div>
 </section>
 
@@ -1189,12 +1183,12 @@ document.querySelectorAll('.btn-nl').forEach(btn=>{
         var data=await res.json().catch(function(){return{};});
         if(res.ok&&data.ok){
           if(typeof gtag==='function')gtag('event','newsletter_signup',{form_name:'newsletter'});
-          form.innerHTML='<p style="color:#B8965A;font-size:13px;padding:6px 0">✓ Merci ! Vérifiez votre boîte mail.</p>';
+          form.innerHTML='<p style="color:var(--nbr-or-fonce);font-size:13px;padding:6px 0">Merci. Votre inscription est enregistrée.</p>';
         }else{
-          if(btn){btn.textContent="S'abonner";btn.disabled=false;}
+          if(btn){btn.textContent="Recevoir les analyses";btn.disabled=false;}
         }
       }catch(err){
-        if(btn){btn.textContent="S'abonner";btn.disabled=false;}
+        if(btn){btn.textContent="Recevoir les analyses";btn.disabled=false;}
       }
     });
   }
