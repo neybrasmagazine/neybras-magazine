@@ -199,7 +199,7 @@ ul{list-style:none;}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><script src="assets/site-date.js" defer></script>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/site-footer.css"/><script src="assets/site-date.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -467,20 +467,75 @@ ul{list-style:none;}
 </div></div></div>
 <!-- FOOTER -->
 
-<footer class="site-footer"><div class="container">
-  <div class="ft-main">
-    <div class="ft-brand">
-      <div style="display:flex;align-items:center;gap:11px;margin-bottom:2px">
-        <div><div style="font-family:var(--it);font-size:14px;font-weight:700;letter-spacing:.18em;color:#fff;text-transform:uppercase">Neybras Magazine</div><div style="font-family:var(--cg);font-style:italic;font-size:10px;color:rgba(184,150,90,.7);letter-spacing:.05em;margin-top:1px">Le droit et la finance qui éclairent les décisions</div></div>
+<footer class="nbr-footer">
+  <div class="nbr-footer__in">
+    <div class="nbr-footer__main">
+      <div class="nbr-footer__brand">
+        <div class="nbr-footer__id">
+          <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <clipPath id="nf-c"><circle cx="50" cy="50" r="43"/></clipPath>
+              <pattern id="nf-v" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" style="stroke:var(--or)" stroke-width="2"/></pattern>
+              <pattern id="nf-d" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" style="stroke:var(--or)" stroke-width="2"/></pattern>
+              <pattern id="nf-h" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" style="stroke:var(--or)" stroke-width="2"/></pattern>
+            </defs>
+            <circle cx="50" cy="50" r="43" style="fill:var(--bn)"/>
+            <circle cx="50" cy="50" r="43" fill="none" style="stroke:var(--or)" stroke-width="2.5"/>
+            <g clip-path="url(#nf-c)">
+              <polygon points="7,5 27,5 27,95 7,95" fill="url(#nf-v)"/>
+              <polygon points="27,5 40,5 73,95 60,95" fill="url(#nf-d)"/>
+              <polygon points="73,5 93,5 93,95 73,95" fill="url(#nf-h)"/>
+            </g>
+          </svg>
+          <div>
+            <div class="nbr-footer__name">Neybras Magazine</div>
+            <div class="nbr-footer__tag">Le droit et la finance qui éclairent les décisions</div>
+          </div>
+        </div>
+        <p class="nbr-footer__desc">Analyses juridiques et financières pour les décideurs du Maroc et d'Afrique francophone.</p>
       </div>
-      <p>Média digital de référence sur le droit du sport, l'arbitrage international, la finance et la gouvernance au Maroc et en Afrique francophone.</p>
+      <nav class="nbr-footer__col" aria-label="Le média">
+        <p class="nbr-footer__t">Le média</p>
+        <ul>
+          <li><a href="/a-propos">À propos</a></li>
+          <li><a href="/equipe">Notre équipe</a></li>
+          <li><a href="/magazine">Le magazine</a></li>
+          <li><a href="/corrections">Politique de corrections</a></li>
+          <li><a href="/newsletter">Newsletter</a></li>
+          <li><a href="/evenements">Événements</a></li>
+        </ul>
+      </nav>
+      <nav class="nbr-footer__col" aria-label="Les rubriques">
+        <p class="nbr-footer__t">Les rubriques</p>
+        <ul>
+          <li><a href="/droit">Droit</a></li>
+          <li><a href="/finance">Finance</a></li>
+          <li><a href="/afrique">Afrique</a></li>
+          <li><a href="/droit-du-sport">Sport Business</a></li>
+          <li><a href="/arbitrage">Arbitrage</a></li>
+          <li><a href="/analyses">Analyses</a></li>
+          <li><a href="/tribunes">Tribunes</a></li>
+          <li><a href="/interviews">Interviews</a></li>
+          <li><a href="/archives">Archives</a></li>
+        </ul>
+      </nav>
+      <nav class="nbr-footer__col" aria-label="Contact et partenariats">
+        <p class="nbr-footer__t">Contact et partenariats</p>
+        <ul>
+          <li><a href="/contact">Nous contacter</a></li>
+          <li><a href="/annonceurs">Annonceurs</a></li>
+          <li><a href="/annonceurs#tarifs">Kit média</a></li>
+          <li>Rédaction : <a href="mailto:redaction@neybras.com">redaction@neybras.com</a></li>
+          <li>Partenariats : <a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="ft-col"><h5>Rubriques</h5><ul><li><a href="droit-du-sport">Sport Business</a></li><li><a href="arbitrage">Arbitrage</a></li><li><a href="droit">Droit & Jurisprudence</a></li><li><a href="finance">Finance & Marchés</a></li><li><a href="afrique">Afrique & OHADA</a></li></ul></div>
-    <div class="ft-col"><h5>Le Magazine</h5><ul><li><a href="a-propos">À propos</a><a href="corrections">Politique de corrections</a></li><li><a href="equipe">Notre équipe</a></li><li><a href="interviews">Interviews</a></li><li><a href="tribunes">Tribunes</a></li><li><a href="newsletter">Newsletter</a></li><li><a href="contact">Publicité</a></li></ul></div>
-    <div class="ft-col"><h5>Contact</h5><ul><li><a href="contact">Nous contacter</a></li><li><a href="mailto:marketing@neybras-magazine.com">marketing@neybras-magazine.com</a></li><li><a href="contact">Média Kit</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="politique-confidentialite">Confidentialité</a></li></ul></div>
+    <div class="nbr-footer__bottom">
+      <p>© 2026 Neybras Publishing. Tous droits réservés.<br>Capital A, Bureau n° 9 — Bouskoura, Casablanca, Maroc</p>
+      <div class="nbr-footer__legal"><a href="/mentions-legales">Mentions légales</a><a href="/politique-confidentialite">Confidentialité</a><a href="/cookies">Cookies</a></div>
+    </div>
   </div>
-  <div class="ft-btm"><span>© 2026 Neybras Publishing. Tous droits réservés.</span><div class="ft-bl"><a href="mentions-legales">Mentions légales</a><a href="politique-confidentialite">Confidentialité</a><a href="cookies">Cookies</a></div></div>
-</div></footer>
+</footer>
 
 <button id="stt" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
 
