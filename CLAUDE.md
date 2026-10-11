@@ -78,6 +78,17 @@ dédiée, sur demande explicite.
 | Entretien | « Entretien · Rubrique » | Nom · Propos recueillis par la rédaction · X min de lecture | « Lire l'entretien » |
 | Tribune | « Tribune · Rubrique » | Nom · fonction · X min de lecture | « Lire la tribune » |
 | Analyse | « Analyse · Rubrique » | Signature · X min de lecture | « Lire l'analyse » |
+| Décryptage | « Décryptage · Rubrique » | Signature · X min de lecture | « Lire le décryptage » |
+| Actualité | « Actualité · Rubrique » | Signature · X min de lecture | « Lire l'actualité » |
+
+- Décryptage : contenu rédactionnel qui explique un mécanisme, une
+  réforme, un chiffre, une décision ou une évolution réglementaire.
+- Actualité : contenu court, daté et factuel, qui signale une évolution
+  sans produire nécessairement une analyse approfondie.
+- Les cinq types sont distincts : un Décryptage n'est pas un
+  Rectificatif (voir 4.4.1), une Actualité n'est pas une Analyse. Le type
+  se porte dans le surtitre, le badge de la carte et les données
+  structurées.
 
 - Surtitre toujours au format « Type · Rubrique ».
 - La fonction d'un auteur est reprise mot pour mot de l'article validé.
