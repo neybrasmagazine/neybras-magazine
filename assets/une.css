@@ -385,3 +385,4 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 .u-bande__t { margin: 0 0 var(--e-2); font-family: var(--nbr-titre); font-size: var(--t-lg); line-height: var(--lh-titre); color: var(--nbr-nuit); }
 .u-bande__txt { margin: 0; max-width: var(--mesure); font-size: var(--t-sm); line-height: var(--lh-texte); color: var(--nbr-encre); }
 @media (max-width: 760px) { .u-bande__in { flex-direction: column; align-items: flex-start; gap: var(--e-4); } }
+.nl-note a { color: var(--nbr-bleu); text-decoration: underline; text-underline-offset: 3px; }
