@@ -117,12 +117,13 @@
 
 
 /* ---------- 2. À LA UNE ------------------------------------- */
+/* Fond clair : le seul bloc sombre de l'accueil est le Dossier digital (CLAUDE.md, 3 bis). */
 
-.u-une { background: var(--nbr-nuit); color: var(--nbr-blanc); }
+.u-une { background: var(--nbr-blanc); color: var(--nbr-encre); border-top: var(--filet); border-bottom: var(--filet); }
 .u-une__in { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-8); align-items: center; }
-.u-une .u-k { color: var(--nbr-or); display: flex; align-items: center; gap: .75rem; }
-.u-une .u-k::before { content: ""; width: 2rem; height: 1px; background: var(--nbr-or); }
-.u-une__rub { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: var(--e-5) 0 var(--e-4); font-size: .78rem; letter-spacing: .04em; color: rgba(255, 255, 255, .72); }
+.u-une .u-k { color: var(--nbr-or-fonce); display: flex; align-items: center; gap: .75rem; }
+.u-une .u-k::before { content: ""; width: 2rem; height: 1px; background: var(--nbr-or-fonce); }
+.u-une__rub { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: var(--e-5) 0 var(--e-4); font-size: .78rem; letter-spacing: .04em; color: var(--nbr-gris); }
 .u-une h2 {
   font-family: var(--nbr-titre);
   font-weight: var(--poids-noir);
@@ -132,35 +133,35 @@
   margin: 0;
   text-wrap: balance;
 }
-.u-une h2 a { color: var(--nbr-blanc); text-decoration: none; }
-.u-une h2 a:hover { color: var(--nbr-or-clair); }
-.u-une__sig { margin: var(--e-5) 0 0; font-size: .92rem; line-height: 1.55; color: rgba(255, 255, 255, .74); max-width: 62ch; }
-.u-une__sig b { color: var(--nbr-blanc); font-weight: 600; }
-.u-une__chapo { margin: var(--e-4) 0 0; font-size: 1.06rem; line-height: 1.68; color: rgba(255, 255, 255, .88); max-width: 62ch; }
+.u-une h2 a { color: var(--nbr-nuit); text-decoration: none; }
+.u-une h2 a:hover { color: var(--nbr-bleu); }
+.u-une__sig { margin: var(--e-5) 0 0; font-size: .92rem; line-height: 1.55; color: var(--nbr-encre); max-width: 62ch; }
+.u-une__sig b { color: var(--nbr-nuit); font-weight: 600; }
+.u-une__chapo { margin: var(--e-4) 0 0; font-size: 1.06rem; line-height: 1.68; color: var(--nbr-encre); max-width: 62ch; }
 .u-une__q {
   margin: var(--e-6) 0 0;
   padding-top: var(--e-4);
-  border-top: 1px solid rgba(255, 255, 255, .16);
+  border-top: var(--filet);
   font-family: var(--nbr-titre);
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.45;
-  color: var(--nbr-or-clair);
+  color: var(--nbr-bleu);
   max-width: 54ch;
 }
-.u-une__meta { font-size: .76rem; color: rgba(255, 255, 255, .64); }
+.u-une__meta { font-size: .76rem; color: var(--nbr-gris); }
 .u-une__cover { margin: 0; justify-self: end; width: 100%; max-width: 340px; }
 .u-une__cover a { display: block; }
-.u-une__cover img { display: block; width: 100%; height: auto; box-shadow: 0 24px 60px rgba(0, 0, 0, .38); transition: transform var(--transition); }
-.u-une__cover a:hover img { transform: translateY(-3px); }
-.u-une__cover figcaption { margin-top: .8rem; font-size: .74rem; line-height: 1.5; color: rgba(255, 255, 255, .64); }
+.u-une__cover img { display: block; width: 100%; height: auto; border: var(--filet); box-shadow: var(--ombre-carte); transition: border-color var(--transition); }
+.u-une__cover a:hover img { border-color: var(--nbr-bleu-bord); }
+.u-une__cover figcaption { margin-top: .8rem; font-size: .74rem; line-height: 1.5; color: var(--nbr-gris); }
 /* À la Une : tribune publiée en ligne, sous la une du numéro */
-.u-une__web { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-8); align-items: center; margin-top: var(--e-8); padding-top: var(--e-7); border-top: 1px solid rgba(255, 255, 255, .16); }
+.u-une__web { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--e-8); align-items: center; margin-top: var(--e-8); padding-top: var(--e-7); border-top: var(--filet); }
 .u-une__web h3 { font-family: var(--nbr-titre); font-weight: var(--poids-gras); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.2rem); line-height: 1.15; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
-.u-une__web h3 a { color: var(--nbr-blanc); text-decoration: none; }
-.u-une__web h3 a:hover { color: var(--nbr-or-clair); }
+.u-une__web h3 a { color: var(--nbr-nuit); text-decoration: none; }
+.u-une__web h3 a:hover { color: var(--nbr-bleu); }
 .u-une__web-vis { display: block; justify-self: end; width: 100%; max-width: 340px; }
-.u-une__web-vis img { display: block; width: 100%; height: auto; border: 1px solid rgba(255, 255, 255, .16); }
+.u-une__web-vis img { display: block; width: 100%; height: auto; border: var(--filet); }
 
 
 /* ---------- 3. DOSSIER DIGITAL ------------------------------ */
