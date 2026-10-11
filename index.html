@@ -137,8 +137,6 @@ ul{list-style:none}
 .logo-name{font-family:var(--it);font-size:18px;font-weight:700;letter-spacing:.2em;color:var(--blanc);text-transform:uppercase;line-height:1}
 .logo-tag{font-family:var(--cg);font-style:italic;font-size:11px;color:var(--or);letter-spacing:.06em;margin-top:2px}
 .hd-act{display:flex;align-items:center;gap:22px}
-.btn-srch{background:none;border:none;color:rgba(255,255,255,.45);font-size:15px;cursor:pointer;padding:6px;transition:var(--tr)}
-.btn-srch:hover{color:var(--or)}
 .btn-abo{background:var(--or);color:var(--bn);font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 22px;border-radius:var(--r);transition:var(--tr)}
 .btn-abo:hover{background:var(--or2)}
 
@@ -150,15 +148,6 @@ ul{list-style:none}
 .nav-a:hover,.nav-a.on{color:var(--or);border-bottom-color:var(--or)}
 .nav-a.star{color:var(--or)}
 .nav-a.star:hover{color:var(--or2)}
-
-/* Search overlay */
-.s-ov{display:none;position:fixed;inset:0;background:rgba(9,16,35,.96);z-index:9999;align-items:center;justify-content:center}
-.s-ov.on{display:flex}
-.s-box{width:100%;max-width:680px;padding:0 24px}
-.s-box input{width:100%;background:none;border:none;border-bottom:2px solid var(--or);color:var(--blanc);font-size:26px;font-family:var(--cg);padding:16px 0;outline:none}
-.s-box input::placeholder{color:rgba(255,255,255,.25)}
-.s-close{position:absolute;top:28px;right:36px;font-size:30px;color:rgba(255,255,255,.3);cursor:pointer;background:none;border:none}
-.s-close:hover{color:var(--or)}
 
 /* ═══════════════════════════════════════════
    NEWSLETTER SECTION
@@ -206,17 +195,8 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="container">
     <div class="tb-in">
-      <div class="tb-l">
-        <span class="tb-date" hidden><i class="far fa-calendar-alt"></i></span>
-        <span style="color:rgba(255,255,255,.1)">|</span>
-        <span>Maroc · Afrique francophone</span>
-      </div>
-      <div class="tb-r"><div class="tb-lnk">
-          <a href="a-propos">À propos</a>
-          <a href="annonceurs">Annonceurs</a>
-          <a href="contact">Contact</a>
-        </div>
-      </div>
+      <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Maroc · Afrique francophone</span></div>
+      <div class="tb-r"><div class="tb-lnk"><a href="/a-propos">À propos</a><a href="/annonceurs">Annonceurs</a><a href="/contact">Contact</a></div></div>
     </div>
   </div>
 </div>
@@ -227,36 +207,28 @@ ul{list-style:none}
     <div class="hd-in">
       <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le droit et la finance qui éclairent les décisions</div></div></a>
       <div class="hd-act">
-        <button class="btn-srch" id="openS" aria-label="Rechercher"><i class="fas fa-search"></i></button>
-        <a href="newsletter" class="btn-abo">Newsletter</a>
+        <a href="/newsletter" class="btn-abo">Newsletter</a>
       </div>
     </div>
   </div>
 </header>
 
 <!-- ═══ NAV ═══ -->
-<nav class="main-nav">
+<nav class="main-nav" aria-label="Navigation principale">
   <div class="container">
     <div class="nav-in">
   <a href="/" class="nav-a on">À la Une</a>
-  <a href="droit" class="nav-a">Droit</a>
-  <a href="finance" class="nav-a">Finance</a>
-  <a href="afrique" class="nav-a">Afrique</a>
-  <a href="droit-du-sport" class="nav-a star">Sport Business</a>
-  <a href="arbitrage" class="nav-a">Arbitrage</a>
-  <a href="magazine" class="nav-a">Magazine</a>
-  <a href="annonceurs" class="nav-a">Annonceurs</a>
+  <a href="/droit" class="nav-a">Droit</a>
+  <a href="/finance" class="nav-a">Finance</a>
+  <a href="/afrique" class="nav-a">Afrique</a>
+  <a href="/droit-du-sport" class="nav-a star">Sport Business</a>
+  <a href="/arbitrage" class="nav-a">Arbitrage</a>
+  <a href="/magazine" class="nav-a">Magazine</a>
+  <a href="/annonceurs" class="nav-a">Annonceurs</a>
 </div>
   </div>
 </nav>
 
-<!-- ═══ SEARCH OVERLAY ═══ -->
-<div class="s-ov" id="sOv">
-  <div class="s-box">
-    <input type="search" placeholder="Rechercher : droit du sport, arbitrage, fiscalité Maroc…"/>
-    <button class="s-close" id="closeS">×</button>
-  </div>
-</div>
 
 <!-- ══════════════════════════════════════════════
      LA UNE — un seul article vedette (tribune de Me Konaté, Vol. 001).
@@ -482,12 +454,6 @@ ul{list-style:none}
 <button id="stt" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
 
 <script>
-/* Search */
-const sOv=document.getElementById('sOv');
-document.getElementById('openS').onclick=()=>{sOv.classList.add('on');sOv.querySelector('input').focus()};
-document.getElementById('closeS').onclick=()=>sOv.classList.remove('on');
-sOv.onclick=e=>{if(e.target===sOv)sOv.classList.remove('on')};
-document.addEventListener('keydown',e=>{if(e.key==='Escape')sOv.classList.remove('on')});
 
 /* Scroll top */
 const stt=document.getElementById('stt');
