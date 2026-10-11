@@ -301,3 +301,66 @@ Règle valable pour tous les contributeurs, tribune ou entretien :
   secondes à quelques minutes) puis vérifier le site public, pas le local,
   à 375 et 1440 px. En cas d'anomalie en ligne, ne rien corriger sur main :
   signaler et proposer un correctif sur une nouvelle branche.
+
+## 14. Confidentialité dans les fichiers versionnés
+
+- Les messages de commit, les descriptions de pull request et tout autre
+  fichier versionné (y compris ce fichier) ne doivent jamais contenir de
+  détails de vérification éditoriale concernant des personnes : biographies,
+  diplômes, fonctions, alertes ou niveaux de confiance sur une source ou un
+  contributeur. Ces éléments sont publics (dépôt public) et n'ont pas à
+  l'être.
+- Formulation neutre uniquement, qui décrit l'action sans le contenu
+  vérifié : par exemple « Entretien Raja : biographie mise à jour » plutôt
+  que le détail de ce qui a changé dans la biographie.
+- Cette règle s'applique rétroactivement au choix des mots dans toute
+  nouvelle intervention, pas seulement aux nouveaux commits : en cas de
+  doute sur une formulation, rester neutre.
+
+## § 15 — TEXTES SIGNÉS : FIDÉLITÉ ABSOLUE
+
+Champ d'application : tribunes signées par un contributeur, propos
+d'interviewés, toute citation entre guillemets attribuée à une personne.
+Les articles signés « La Rédaction Neybras » n'en relèvent pas, mais toute
+modification de leur corps reste soumise à la validation de la direction
+de la publication.
+
+1. Le corps d'un texte signé ne se modifie jamais : ni reformulation, ni
+   synonyme, ni coupe, ni ajout, ni réordonnancement, ni correction de
+   fond, ni harmonisation de style, même pour corriger une erreur
+   manifeste.
+
+2. Seules modifications autorisées sans validation, et à lister une par
+   une dans le rapport :
+   - normalisation typographique pure : guillemets français, espaces
+     insécables, apostrophes, tirets ;
+   - balisage HTML et mise en page, sans changement de mots ;
+   - ajout de liens vers les textes et décisions que l'auteur cite déjà,
+     sans modifier les mots liés.
+
+3. La titraille d'un texte signé (titre, chapô, intertitres, exergues,
+   surtitre) et sa biographie ne se modifient pas sans une consigne écrite
+   de la direction de la publication indiquant que l'auteur l'a validée.
+
+4. Texte de référence : la version validée par l'auteur, dans
+   C:\Users\PC\neybras-textes-valides\<slug>\. Ce dossier n'est jamais
+   copié dans le dépôt. Si aucun texte de référence n'existe pour un
+   article signé, le signaler et ne rien modifier dans son corps.
+
+5. Contrôle obligatoire avant tout commit touchant un texte signé :
+   comparer mot à mot le texte publié au texte de référence (script lancé
+   hors du dépôt). Tout écart autre qu'une normalisation typographique
+   arrête le commit. Présenter l'écart dans le rapport, sans le corriger.
+
+6. Erreur repérée dans un texte signé (fait, date, référence légale,
+   chiffre) : ne rien corriger. Poser un repère neutre <!-- EDITO-NN -->
+   et décrire le point dans le rapport. La correction n'entre dans le
+   texte que dans la formulation exacte fournie par l'auteur, avec un
+   encadré « Mis à jour le… » si l'article est déjà en ligne.
+
+7. Chaque article signé porte, en tête de son corps, le commentaire :
+   <!-- TEXTE SIGNÉ — ne pas modifier sans validation écrite de l'auteur.
+   Voir CLAUDE.md § 15. -->
+
+8. En cas de doute sur ce qui relève du corps ou de la typographie :
+   s'abstenir et demander.
