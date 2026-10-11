@@ -57,8 +57,6 @@ ul{list-style:none;}
 .logo-name{font-family:var(--it);font-size:16px;font-weight:700;letter-spacing:.2em;color:#fff;text-transform:uppercase;line-height:1;}
 .logo-tag{font-family:var(--cg);font-style:italic;font-size:10.5px;color:rgba(184,150,90,.75);letter-spacing:.05em;margin-top:2px;}
 .hd-act{display:flex;align-items:center;gap:14px;}
-.btn-srch{background:none;border:none;color:rgba(255,255,255,.4);font-size:14px;cursor:pointer;padding:6px;transition:var(--tr);}
-.btn-srch:hover{color:rgba(255,255,255,.85);}
 .btn-abo{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:1px;background:transparent;transition:var(--tr);}
 .btn-abo:hover{border-color:var(--or-lt);color:var(--or-lt);}
 /* nav */
@@ -71,14 +69,6 @@ ul{list-style:none;}
 .nav-a.star{color:rgba(184,150,90,.75);}
 .nav-a.star:hover{color:var(--or-lt);}
 .nav-a.star.on{color:var(--or-lt);border-bottom-color:var(--or-lt);}
-/* search overlay */
-.s-ov{display:none;position:fixed;inset:0;background:rgba(10,48,68,.96);z-index:9999;align-items:center;justify-content:center;}
-.s-ov.on{display:flex;}
-.s-box{width:100%;max-width:640px;padding:0 28px;}
-.s-box input{width:100%;background:none;border:none;border-bottom:1px solid rgba(184,150,90,.45);color:#fff;font-size:24px;font-family:var(--cg);padding:16px 0;outline:none;}
-.s-box input::placeholder{color:rgba(255,255,255,.22);}
-.s-close{position:absolute;top:28px;right:36px;font-size:28px;color:rgba(255,255,255,.25);cursor:pointer;background:none;border:none;}
-.s-close:hover{color:rgba(255,255,255,.65);}
 /* article hero */
 .art-hero{background:var(--blanc);border-bottom:1px solid var(--brd);padding:52px 0 0;}
 .art-hero-inner{max-width:900px;margin:0 auto;padding:0 32px;}
@@ -223,21 +213,8 @@ ul{list-style:none;}
 <div class="top-bar">
   <div class="container">
     <div class="tb-in">
-      <div class="tb-l">
-        <span class="tb-date" hidden></span>
-        <span>·</span>
-        <span>Casablanca</span>
-        <span>·</span>
-        <span>Droit du Sport · Arbitrage · TAS</span>
-      </div>
-      <div class="tb-r">
-        
-        <div class="tb-lnk">
-          <a href="contact">Contact</a>
-          <a href="magazine">Le magazine</a><a href="analyses">Analyses</a><a href="evenements">Événements</a><a href="interviews">Interviews</a>
-          <a href="tribunes">Tribunes</a>
-        </div>
-      </div>
+      <div class="tb-l"><span class="tb-date" hidden></span><span>·</span><span>Maroc · Afrique francophone</span></div>
+      <div class="tb-r"><div class="tb-lnk"><a href="/a-propos">À propos</a><a href="/annonceurs">Annonceurs</a><a href="/contact">Contact</a></div></div>
     </div>
   </div>
 </div>
@@ -248,34 +225,26 @@ ul{list-style:none;}
     <div class="hd-in">
       <a href="/" class="logo-wrap" aria-label="Neybras Magazine — Accueil"><svg class="logo-mark" width="54" height="54" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="c1"><circle cx="50" cy="50" r="43"/></clipPath><pattern id="v1" x="0" y="0" width="5" height="100" patternUnits="userSpaceOnUse"><line x1="2.5" y1="0" x2="2.5" y2="100" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="d1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="6" y2="0" stroke="#B8965A" stroke-width="2"/></pattern><pattern id="h1" x="0" y="0" width="100" height="5" patternUnits="userSpaceOnUse"><line x1="0" y1="2.5" x2="100" y2="2.5" stroke="#B8965A" stroke-width="2"/></pattern></defs><circle cx="50" cy="50" r="43" fill="#0E3D52"/><circle cx="50" cy="50" r="43" fill="none" stroke="#B8965A" stroke-width="2.5"/><g clip-path="url(#c1)"><polygon points="7,5 27,5 27,95 7,95" fill="url(#v1)"/><polygon points="27,5 40,5 73,95 60,95" fill="url(#d1)"/><polygon points="73,5 93,5 93,95 73,95" fill="url(#h1)"/></g></svg><div class="logo-txt"><div class="logo-name">Neybras Magazine</div><div class="logo-tag">Le droit et la finance qui éclairent les décisions</div></div></a>
       <div class="hd-act">
-        <button class="btn-srch" id="openSearch"><i class="fas fa-search"></i></button>
-        <a href="newsletter" class="btn-abo">Newsletter</a>
+        <a href="/newsletter" class="btn-abo">Newsletter</a>
       </div>
     </div>
   </div>
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Navigation principale">
     <div class="container">
       <div class="nav-in">
   <a href="/" class="nav-a">À la Une</a>
-  <a href="droit" class="nav-a">Droit</a>
-  <a href="finance" class="nav-a">Finance</a>
-  <a href="afrique" class="nav-a">Afrique</a>
-  <a href="droit-du-sport" class="nav-a star">Sport Business</a>
-  <a href="arbitrage" class="nav-a">Arbitrage</a>
-  <a href="magazine" class="nav-a">Magazine</a>
-  <a href="annonceurs" class="nav-a">Annonceurs</a>
+  <a href="/droit" class="nav-a">Droit</a>
+  <a href="/finance" class="nav-a">Finance</a>
+  <a href="/afrique" class="nav-a">Afrique</a>
+  <a href="/droit-du-sport" class="nav-a star">Sport Business</a>
+  <a href="/arbitrage" class="nav-a">Arbitrage</a>
+  <a href="/magazine" class="nav-a">Magazine</a>
+  <a href="/annonceurs" class="nav-a">Annonceurs</a>
 </div>
     </div>
   </nav>
 </header>
 
-<!-- Search overlay -->
-<div class="s-ov" id="searchOv">
-  <button class="s-close" id="closeSearch"><i class="fas fa-times"></i></button>
-  <div class="s-box">
-    <input type="text" placeholder="Rechercher un article, un auteur…" id="searchInput"/>
-  </div>
-</div>
 
 <!-- Article Hero -->
 <section class="avis-retrait" style="max-width:720px;margin:64px auto;padding:0 24px;">
@@ -402,17 +371,6 @@ function scrollToSec(id){
   });
 });
 
-// search overlay
-document.getElementById('openSearch').addEventListener('click',()=>{
-  document.getElementById('searchOv').classList.add('on');
-  document.getElementById('searchInput').focus();
-});
-document.getElementById('closeSearch').addEventListener('click',()=>{
-  document.getElementById('searchOv').classList.remove('on');
-});
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')document.getElementById('searchOv').classList.remove('on');
-});
 
 // scroll top
 const st=document.getElementById('scrollTop');

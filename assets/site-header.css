@@ -16,8 +16,6 @@
 .site-header .logo-tag{font-family:'Cormorant Garamond','Georgia',serif;font-style:italic;font-size:11px;color:#B8965A;letter-spacing:.06em;margin-top:3px;}
 
 .site-header .hd-act{display:flex;align-items:center;gap:22px;}
-.site-header .btn-srch{background:none;border:none;color:rgba(255,255,255,.45);font-size:15px;cursor:pointer;padding:6px;transition:color .2s ease;line-height:1;}
-.site-header .btn-srch:hover{color:#ffffff;}
 .site-header .btn-abo{background:#B8965A;color:#0E3D52;font-family:'Inter','Helvetica Neue',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 22px;border-radius:2px;border:none;cursor:pointer;white-space:nowrap;transition:background .2s ease;}
 .site-header .btn-abo:hover{background:#CCA96E;color:#0E3D52;}
 
