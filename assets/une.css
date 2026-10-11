@@ -199,7 +199,9 @@
 
 /* ---------- 4. DERNIÈRES ANALYSES --------------------------- */
 
-.u-ana-sec { padding-top: 0; }
+/* Le bloc des analyses suit désormais la Une (fond nuit) : il garde son espacement haut. Le Dossier digital, clair, le suit : on évite le double espacement. */
+.u-dos { padding-top: 0; }
+.u-mag + .nl-sec { border-top: 1px solid var(--nbr-or-bord); }
 .u-ana { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .u-ana > li { display: flex; flex-direction: column; padding: 0 var(--e-5); border-left: var(--filet); }
 .u-ana > li:first-child { padding-left: 0; border-left: 0; }
@@ -353,7 +355,7 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 
 @media (max-width: 640px) {
   .u-sec { padding: var(--e-7) 0; }
-  .u-ana-sec { padding-top: 0; }
+  .u-dos { padding-top: 0; }
   .u-sig__in { grid-template-columns: 1fr; gap: var(--e-4); }
   .u-sig__ear { text-align: left; border-left: 0; padding-left: 0; }
   .u-dos__grid, .u-rub__grid { grid-template-columns: 1fr; }
@@ -363,3 +365,10 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
   .u-itw h3 { font-size: var(--t-lg); line-height: 1.25; }
   .u-head { flex-direction: column; align-items: flex-start; gap: .5rem; }
 }
+
+/* Bande Partenariats : bande de conversion séparée du flux éditorial. Jetons existants seulement. */
+.u-bande { background: var(--nbr-creme); border-top: var(--filet); border-bottom: var(--filet); padding: var(--e-6) 0; }
+.u-bande__in { display: flex; align-items: center; justify-content: space-between; gap: var(--e-6); }
+.u-bande__t { margin: 0 0 var(--e-2); font-family: var(--nbr-titre); font-size: var(--t-lg); line-height: var(--lh-titre); color: var(--nbr-nuit); }
+.u-bande__txt { margin: 0; max-width: var(--mesure); font-size: var(--t-sm); line-height: var(--lh-texte); color: var(--nbr-encre); }
+@media (max-width: 760px) { .u-bande__in { flex-direction: column; align-items: flex-start; gap: var(--e-4); } }
