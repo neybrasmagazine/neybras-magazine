@@ -148,6 +148,19 @@ dédiée, sur demande explicite.
 - Dans un texte signé, « Mis à jour le » n'entre que dans la formulation
   exacte de l'auteur (voir § 15).
 
+#### 4.4.1 « Rectificatif » et « Mis à jour le »
+
+- « Rectificatif » : réservé à la correction d'une erreur factuelle,
+  juridique, chiffrée ou de calcul dans un contenu déjà publié.
+- « Mis à jour le [date] » : réservé à une actualisation éditoriale, une
+  précision, une actualisation de source ou une reformulation qui ne
+  corrige pas d'erreur.
+- Une révision ou une réécriture importante n'est pas automatiquement un
+  « Rectificatif » : identifier d'abord si elle corrige une erreur ou si
+  elle actualise le contenu.
+- Ne jamais utiliser « Rectificatif » pour une simple mise à jour de
+  forme, de lien ou de métadonnée : elle ne s'affiche pas (voir 4.4).
+
 ---
 
 ## 5. Gabarits de référence
