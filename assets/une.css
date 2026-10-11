@@ -270,6 +270,21 @@ a.u-rub__name:hover { color: var(--nbr-bleu); }
 .u-colo dt { color: rgba(255, 255, 255, .72); }
 .u-colo dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
 
+/* ---------- 4 bis. DOSSIER DIGITAL : seul bloc sombre --------- */
+/* Présentation du numéro et sélection de contenus en ligne. Jetons existants seulement. */
+.u-dd__facts { margin: var(--e-6) 0 0; border-top: 1px solid var(--nbr-bleu-clair); }
+.u-dd__facts > div { display: flex; justify-content: space-between; gap: var(--e-4); padding: .7rem 0; border-bottom: 1px solid var(--nbr-bleu-clair); font-size: var(--t-sm); }
+.u-dd__facts dt { color: var(--nbr-creme-2); }
+.u-dd__facts dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.u-dd__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--nbr-bleu-clair); }
+.u-dd__list li { padding: var(--e-5) 0; border-bottom: 1px solid var(--nbr-bleu-clair); }
+.u-dd__type { display: block; font-size: var(--t-2xs); font-weight: var(--poids-gras); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--nbr-or-clair); }
+.u-dd__list h3 { margin: var(--e-2) 0 0; font-family: var(--nbr-titre); font-size: var(--t-lg); font-weight: var(--poids-gras); line-height: var(--lh-titre); text-wrap: balance; }
+.u-dd__list h3 a { color: var(--nbr-blanc); text-decoration: none; }
+.u-dd__list h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.u-dd__by { margin: var(--e-2) 0 0; font-size: var(--t-xs); color: var(--nbr-creme-2); }
+.u-btn--clair { background: transparent; color: var(--nbr-blanc); border-color: var(--nbr-or-clair); }
+.u-btn--clair:hover { background: var(--nbr-bleu-fonce); color: var(--nbr-blanc); }
 
 /* ---------- 8. LA LIGNE NEYBRAS ----------------------------- */
 
