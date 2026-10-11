@@ -69,6 +69,28 @@ dédiée, sur demande explicite.
 
 ---
 
+## 3 bis. Direction artistique : premium sobre B2B
+
+Le site doit dégager une impression de sérieux, de rigueur, d'exclusivité
+intellectuelle et de fiabilité. Il doit ressembler à un média de référence
+que des directions juridiques, financières, bancaires et institutionnelles
+souhaitent citer, lire et conserver.
+
+Le premium ne doit pas venir d'effets visuels, de dégradés, d'animations,
+de typographies spectaculaires ou d'un design trop éditorial. Il doit venir
+de la clarté, de la maîtrise de l'espace, de la qualité de la hiérarchie,
+de la précision des contenus et de la cohérence de l'ensemble.
+
+Le site doit rester sobre, institutionnel et lisible. Il doit évoquer une
+revue professionnelle de référence, pas un magazine grand public, une
+agence de communication ou une plateforme lifestyle.
+
+La homepage ne doit compter qu'un seul bloc sombre : le Dossier digital /
+Volume 001. Les autres blocs (hero, À la Une, analyses, newsletter et bande
+Partenariats) restent clairs.
+
+---
+
 ## 4. Règles de forme communes à toutes les publications
 
 ### 4.1 Types de publication et libellés
