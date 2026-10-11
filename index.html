@@ -400,22 +400,22 @@ ul{list-style:none}
 /* ═══════════════════════════════════════════
    NEWSLETTER SECTION
 ═══════════════════════════════════════════ */
-.nl-sec{background:var(--bn);padding:78px 0;text-align:center}
-.nl-pre{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--or);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px}
-.nl-pre::before,.nl-pre::after{content:'';width:30px;height:1px;background:rgba(201,168,76,.35)}
-.nl-h{font-family:var(--cg);font-size:clamp(30px,4vw,52px);font-weight:300;color:var(--blanc);line-height:1.2;margin-bottom:12px}
-.nl-h em{color:var(--or);font-style:italic}
-.nl-sub{font-size:14px;color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 32px;line-height:1.75}
+.nl-sec{background:var(--nbr-blanc);border-top:var(--filet);padding:78px 0;text-align:center}
+.nl-pre{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--nbr-or-fonce);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px}
+.nl-pre::before,.nl-pre::after{content:'';width:30px;height:1px;background:var(--nbr-or-bord)}
+.nl-h{font-family:var(--nbr-titre);font-size:clamp(30px,4vw,52px);font-weight:700;color:var(--nbr-nuit);line-height:1.2;margin-bottom:12px}
+.nl-h em{color:var(--nbr-bleu);font-style:italic;font-weight:400}
+.nl-sub{font-size:14px;color:var(--nbr-encre);max-width:480px;margin:0 auto 32px;line-height:1.75}
 .nl-form{display:flex;max-width:500px;margin:0 auto}
-.nl-form input{flex:1;padding:14px 18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-right:none;color:var(--blanc);font-size:13px;outline:none;border-radius:var(--r) 0 0 var(--r)}
-.nl-form input::placeholder{color:rgba(255,255,255,.28)}
-.nl-form input:focus{border-color:rgba(201,168,76,.5)}
-.nl-form button{padding:14px 26px;background:var(--or);color:var(--bn);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;border-radius:0 var(--r) var(--r) 0;transition:var(--tr);white-space:nowrap}
-.nl-form button:hover{background:var(--or2)}
-.nl-note{margin-top:14px;font-size:10px;color:rgba(255,255,255,.2)}
-.nl-preuves{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,.07)}
-.nl-preuve{font-size:11px;color:rgba(255,255,255,.38);display:flex;align-items:center;gap:7px}
-.nl-preuve i{color:var(--or);font-size:13px}
+.nl-form input{flex:1;padding:14px 18px;background:var(--nbr-blanc);border:1px solid var(--nbr-bleu-bord);border-right:none;color:var(--nbr-nuit);font-size:13px;outline:none;border-radius:var(--r) 0 0 var(--r)}
+.nl-form input::placeholder{color:var(--nbr-gris)}
+.nl-form input:focus{border-color:var(--nbr-bleu)}
+.nl-form button{padding:14px 26px;background:var(--nbr-bleu);color:var(--nbr-blanc);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;border-radius:0 var(--r) var(--r) 0;transition:var(--tr);white-space:nowrap}
+.nl-form button:hover{background:var(--nbr-bleu-fonce)}
+.nl-note{margin-top:14px;font-size:10px;color:var(--nbr-gris)}
+.nl-preuves{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:28px;padding-top:28px;border-top:var(--filet)}
+.nl-preuve{font-size:11px;color:var(--nbr-gris);display:flex;align-items:center;gap:7px}
+.nl-preuve i{color:var(--nbr-or-fonce);font-size:13px}
 
 /* ═══════════════════════════════════════════
    ANNONCEURS SECTION
@@ -612,7 +612,7 @@ ul{list-style:none}
   .afeat img{min-height:210px}
   .sidebar{grid-template-columns:1fr;position:static;max-height:none;overflow-y:visible}
   .nl-form{flex-direction:column}
-  .nl-form input{border-right:1px solid rgba(255,255,255,.12);border-radius:var(--r);margin-bottom:8px}
+  .nl-form input{border-right:1px solid var(--nbr-bleu-bord);border-radius:var(--r);margin-bottom:8px}
   .nl-form button{border-radius:var(--r)}
   .t4{grid-template-columns:1fr}
   .ft-main{grid-template-columns:1fr}
@@ -842,6 +842,7 @@ ul{list-style:none}
         <a class="u-btn u-btn--bleu" href="/magazine/septembre-2026#demande">Demander le Volume 001</a>
         <a class="u-btn u-btn--ligne" href="analyses">Lire les analyses</a>
       </div>
+      <p class="u-sig__lien"><a href="#newsletter">S'abonner à la newsletter</a></p>
     </div>
     <p class="u-sig__preuve">Revue trimestrielle · Diffusion institutionnelle contrôlée · Analyses signées par des praticiens</p>
   </div>
@@ -1004,16 +1005,16 @@ ul{list-style:none}
 <!-- ══════════════════════════════════════════════
      SECTION 11 — NEWSLETTER
 ══════════════════════════════════════════════ -->
-<section class="nl-sec" aria-label="Newsletter Neybras Magazine">
+<section class="nl-sec" id="newsletter" aria-label="Newsletter Neybras Magazine">
   <div class="container">
-    <div class="nl-pre reveal">Newsletter Neybras</div>
-    <h2 class="nl-h reveal delay-1">Analyses juridiques et financières<br/><em>chaque lundi matin.</em></h2>
-    <p class="nl-sub reveal delay-2">Chaque lundi matin, recevez une synthèse des analyses juridiques et financières rédigées par nos experts praticiens.</p>
-    <form class="nl-form reveal delay-3" ><input type="email" name="email" placeholder="Votre email professionnel" required/>
+    <div class="nl-pre">Newsletter Neybras</div>
+    <h2 class="nl-h">Analyses juridiques et financières<br/><em>chaque lundi matin.</em></h2>
+    <p class="nl-sub">Chaque lundi matin, recevez une synthèse des analyses juridiques et financières rédigées par nos experts praticiens.</p>
+    <form class="nl-form" ><input type="email" name="email" placeholder="Votre email professionnel" required/>
       <button type="submit">S'abonner</button>
     </form>
-    <p class="nl-note reveal">Analyses pour juristes et dirigeants · Gratuit · Désinscription immédiate</p>
-    <div class="nl-preuves reveal">
+    <p class="nl-note">Analyses pour juristes et dirigeants · Gratuit · Désinscription immédiate</p>
+    <div class="nl-preuves">
       <div class="nl-preuve"><i class="fas fa-shield-alt"></i> Aucun spam</div>
       <div class="nl-preuve"><i class="fas fa-lock"></i> Données protégées</div>
       <div class="nl-preuve"><i class="fas fa-star"></i> Contenu exclusif</div>

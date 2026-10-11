@@ -108,6 +108,9 @@
 .u-sig__sub { margin: var(--e-5) 0 0; max-width: var(--mesure); font-size: var(--t-md); line-height: var(--lh-texte); color: var(--nbr-encre); }
 .u-sig .u-act { margin-top: var(--e-6); }
 .u-sig__preuve { margin: var(--e-8) 0 0; padding-top: var(--e-4); border-top: var(--filet); font-size: var(--t-xs); letter-spacing: .04em; line-height: 1.6; color: var(--nbr-gris); }
+.u-sig__lien { margin: var(--e-4) 0 0; font-size: var(--t-xs); }
+.u-sig__lien a { color: var(--nbr-bleu); text-decoration: underline; text-underline-offset: 3px; }
+.u-sig__lien a:hover { color: var(--nbr-nuit); }
 
 
 /* ---------- 2. À LA UNE ------------------------------------- */
@@ -196,7 +199,6 @@
 
 /* Le bloc des analyses suit désormais la Une (fond nuit) : il garde son espacement haut. Le Dossier digital, clair, le suit : on évite le double espacement. */
 .u-dos { padding-top: 0; }
-.u-mag + .nl-sec { border-top: 1px solid var(--nbr-or-bord); }
 .u-ana { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .u-ana > li { display: flex; flex-direction: column; padding: 0 var(--e-5); border-left: var(--filet); }
 .u-ana > li:first-child { padding-left: 0; border-left: 0; }
