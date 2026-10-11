@@ -130,6 +130,24 @@ dédiée, sur demande explicite.
   /images/ (ex. page /equipe) et le réutiliser si c'est la même photo.
   Ne jamais créer de doublon sans le signaler.
 
+### 4.4 Dates
+
+- Aucune date de publication n'est affichée en face avant : ni sur les
+  cartes, ni en tête d'article, ni dans les listes. La date de publication
+  reste dans le JSON-LD (datePublished), le sitemap et les archives
+  internes.
+- « Mis à jour le [date] » ne s'affiche que si une révision éditoriale
+  réelle a été faite. La date correspond alors à dateModified dans le
+  JSON-LD, et l'objet de la révision est consigné (page /corrections ou
+  note interne). Une correction typographique n'est pas une mise à jour.
+- dateModified ne se modifie jamais sans mise à jour visible.
+- Sur la page du magazine, seule la période de parution est affichée
+  (« Volume 001 · Septembre 2026 »).
+- Les dates factuelles du contenu (textes de loi, décisions,
+  financements) restent dans le corps de l'article.
+- Dans un texte signé, « Mis à jour le » n'entre que dans la formulation
+  exacte de l'auteur (voir § 15).
+
 ---
 
 ## 5. Gabarits de référence
