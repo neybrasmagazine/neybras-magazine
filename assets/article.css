@@ -57,3 +57,17 @@
 a.toc-item{text-decoration:none;color:inherit;}
 .toc-item:focus-visible{outline:2px solid var(--or);outline-offset:2px;}
 .art-text h2[id]{scroll-margin-top:96px;}
+
+/* ---------- Sommaire sur mobile (assets/article-sommaire.js) ---------- */
+.art-som{display:none;}
+@media (max-width:860px){
+  .art-som{display:block;margin:0 0 32px;border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);}
+  .art-som summary{display:flex;justify-content:space-between;align-items:center;padding:14px 0;cursor:pointer;list-style:none;font-family:var(--it);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bn);}
+  .art-som summary::-webkit-details-marker{display:none;}
+  .art-som summary::after{content:'+';font-size:18px;font-weight:400;letter-spacing:0;color:var(--or);}
+  .art-som details[open] summary::after{content:'\2212';}
+  .art-som summary:focus-visible{outline:2px solid var(--or);outline-offset:2px;}
+  .art-som__liste{padding-bottom:6px;}
+  .art-som .toc-t{font-size:15px;line-height:1.4;}
+  .art-som .toc-item{padding:12px 0;}
+}
