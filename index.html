@@ -384,6 +384,70 @@ ul{list-style:none}
   </div>
 </section>
 
+<!-- Contributeurs — bloc MASQUÉ (attribut hidden).
+     Il ne s'affiche que lorsque 6 profils au moins portent data-valide="oui" (voir CLAUDE.md § 4.5).
+     Fonctions reprises mot pour mot des articles signés. Styles : assets/une.css -->
+<section class="u-sec u-contrib" id="contributeurs-accueil" aria-labelledby="contrib-t" data-min="6" hidden>
+  <div class="container">
+    <div class="u-head">
+      <div>
+        <p class="u-k">Contributeurs</p>
+        <h2 class="u-h2" id="contrib-t">Ils signent dans Neybras Magazine</h2>
+      </div>
+      <a class="u-more" href="equipe#contributeurs">Tous les contributeurs →</a>
+    </div>
+    <ul class="u-contrib__liste">
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/mamadou-ismaila-konate-avocat-arbitre.jpg" alt="Me Mamadou Ismaïla Konaté" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="article-tribune-konate-maroc-afrique-droit-circule">Me Mamadou Ismaïla Konaté</a>
+          <p class="u-contrib__f">Avocat à la Cour, inscrit aux barreaux du Mali et de Paris, et arbitre international</p>
+        </div>
+      </li>
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/driss-el-harti-avocat-tanger.jpg" alt="Me Driss El Harti" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="article-arbitrage-clause-grands-projets-maroc">Me Driss El Harti</a>
+          <p class="u-contrib__f">Avocat au Barreau de Tanger, spécialiste en arbitrage international</p>
+        </div>
+      </li>
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/khalid-cherkaoui-semmouni-professeur-droit.jpg" alt="Pr. Khalid Cherkaoui Semmouni" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="article-tribune-marches-publics-resiliation">Pr. Khalid Cherkaoui Semmouni</a>
+          <p class="u-contrib__f">Professeur universitaire de droit public · Head of Legal &amp; HR · Spécialiste des contrats d'affaires</p>
+        </div>
+      </li>
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/amine-lahlou.jpg" alt="Me Amine Lahlou" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="article-tribune-lahlou-societes-sportives-loi-finances-2026">Me Amine Lahlou</a>
+          <p class="u-contrib__f">Avocat au Barreau de Casablanca, droit du sport et arbitrage international</p>
+        </div>
+      </li>
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/youssef-el-amrani-rssi-gouvernance.jpg" alt="Youssef El Amrani" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="entretien-youssef-el-amrani-ia-cabinets-directions-juridiques">Youssef El Amrani</a>
+          <p class="u-contrib__f">Responsable de la sécurité des systèmes d’information (RSSI/CISO), expert en gouvernance, risque et conformité</p>
+        </div>
+      </li>
+      <li data-valide="non">
+        <img class="u-contrib__ph" src="images/youssra-abriti-chargee-cooperation.jpg" alt="Youssra Abriti" width="64" height="64" loading="lazy" decoding="async"/>
+        <div>
+          <a class="u-contrib__n" href="article-tribune-abriti-domaine-public-hydraulique">Youssra Abriti</a>
+          <p class="u-contrib__f">Chargée de Coopération Internationale</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    (function(){var s=document.getElementById('contributeurs-accueil');if(!s)return;
+    var n=s.querySelectorAll('li[data-valide="oui"]').length;
+    if(n>=parseInt(s.getAttribute('data-min'),10))s.hidden=false;})();
+  </script>
+</section>
+
 <!-- ══════════════════════════════════════════════
      SECTION 11 — NEWSLETTER
 ══════════════════════════════════════════════ -->
