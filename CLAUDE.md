@@ -89,6 +89,11 @@ La homepage ne doit compter qu'un seul bloc sombre : le Dossier digital /
 Volume 001. Les autres blocs (hero, À la Une, analyses, newsletter et bande
 Partenariats) restent clairs.
 
+Exception décidée par la direction le 12 octobre 2026 : la barre défilante des titres du
+Volume 001, placée sous la navigation, reprend la palette sombre des cours du jour de
+/finance. C'est un bandeau d'en-tête, pas un bloc de contenu : le Dossier digital reste le
+seul bloc sombre du corps de page.
+
 ---
 
 ## 4. Règles de forme communes à toutes les publications
