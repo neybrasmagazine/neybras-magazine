@@ -52,3 +52,8 @@
 /* ---------- Tableaux : conteneur défilant, atteignable au clavier ---------- */
 .tbl-wrap{overflow-x:auto;margin:32px 0;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;}
 .tbl-wrap:focus-visible{outline:2px solid var(--or);outline-offset:2px;}
+
+/* ---------- Sommaire : éléments devenus de vrais liens (clavier, sans script) ---------- */
+a.toc-item{text-decoration:none;color:inherit;}
+.toc-item:focus-visible{outline:2px solid var(--or);outline-offset:2px;}
+.art-text h2[id]{scroll-margin-top:96px;}
