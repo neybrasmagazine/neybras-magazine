@@ -35,21 +35,22 @@
   .nbr-defil__lot[aria-hidden="true"] { display: none; }
 }
 
-/* ---------- Accueil : bande claire, sobre ---------- */
-.nbr-defil--clair {
-  background: var(--nbr-blanc);
-  border-bottom: 1px solid var(--nbr-filet);
-  padding: 11px 0;
+/* ---------- Accueil : titres du Volume 001, même palette que les cours du jour ---------- */
+.nbr-defil--sombre {
+  background: var(--nbr-nuit);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  padding: 10px 0;
   font-family: var(--nbr-texte);
-  font-size: 12.5px;
+  font-size: 12px;
 }
-.nbr-defil--clair .nbr-defil__lib { color: var(--nbr-or-fonce); }
-.nbr-defil--clair .nbr-defil__lot a { color: var(--nbr-bleu); }
-.nbr-defil--clair .nbr-defil__lot li { padding-right: 40px; position: relative; }
-.nbr-defil--clair .nbr-defil__lot li::after {
-  content: ''; position: absolute; right: 18px; top: 50%;
+.nbr-defil--sombre .nbr-defil__lib { color: var(--nbr-or-clair); }
+.nbr-defil--sombre .nbr-defil__lot a { color: rgba(255, 255, 255, .88); }
+.nbr-defil--sombre .nbr-defil__lot a:focus-visible { outline: 2px solid var(--nbr-or-clair); outline-offset: 3px; }
+.nbr-defil--sombre .nbr-defil__lot li { padding-right: 44px; position: relative; }
+.nbr-defil--sombre .nbr-defil__lot li::after {
+  content: ''; position: absolute; right: 20px; top: 50%;
   width: 3px; height: 3px; margin-top: -1px; border-radius: 50%;
-  background: var(--nbr-or);
+  background: var(--nbr-or-clair);
 }
 
 /* ---------- Finance : cours du jour dans le bandeau sombre ---------- */
