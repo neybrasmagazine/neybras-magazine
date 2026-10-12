@@ -41,6 +41,9 @@
 .tb-date[hidden]{display:none;}
 .tb-date[hidden] + span{display:none;}
 
+/* Date du jour sur toutes les pages : sous 600px, la date seule reste dans le bandeau (la zone éditoriale, secondaire, passait à la ligne et doublait la hauteur du bandeau). */
+@media(max-width:600px){.tb-date:not([hidden]) ~ span{display:none;}}
+
 /* Bandeau supérieur — repli mobile (correction d'un défaut préexistant).
    Le bloc de droite (.tb-r) ne se replie pas : sous environ 490px il
    pousse la page au-delà de la fenêtre et provoque un défilement
