@@ -1,0 +1,50 @@
+/* ============================================================
+   Neybras Magazine — Gabarit d'article (lot 1, octobre 2026)
+   Règles communes aux articles ; chargée avant les styles propres
+   à chaque page, qui peuvent encore les surcharger (écarts à
+   arbitrer, voir le rapport). Aucune couleur, aucune police ajoutée.
+   ============================================================ */
+
+.art-hero{background:var(--blanc);border-bottom:1px solid var(--brd);padding:52px 0 0}
+.art-cat-line{display:inline-block;width:28px;height:1px;background:var(--or)}
+.am-share-wrap{margin-left:auto;display:flex;align-items:center;gap:8px}
+.art-image-wrap{margin:0 -32px 0}
+.art-image-wrap img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.art-wrap{padding:52px 0 72px}
+.art-col{min-width:0}
+.art-text{font-family:var(--cg);font-size:20px;line-height:1.82;color:var(--gris3)}
+.art-text .chapeau{font-size:21px;font-weight:500;color:var(--gris2);line-height:1.68;border-left:2px solid var(--or);padding-left:20px;margin-bottom:36px}
+.art-text h2 span.h2-marker{display:block;width:22px;height:1px;background:var(--or);margin-bottom:14px}
+.art-text h3{font-family:var(--pd);font-size:18px;font-weight:700;color:var(--gris2);margin:36px 0 14px}
+.art-text strong{font-weight:600;color:var(--gris2)}
+.art-text em{font-style:italic}
+.cta-box{margin:44px 0 0;padding:28px 30px;background:var(--bn);color:#fff;border-radius:2px}
+.cta-box h3{font-family:var(--cg);font-size:22px;font-weight:600;color:#fff;margin-bottom:10px}
+.cta-box a{display:inline-block;background:var(--or);color:var(--bn);font-family:var(--it);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 24px;border-radius:2px}
+.cta-box a:hover{background:var(--or-lt)}
+.share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--brd)}
+.art-aside{display:flex;flex-direction:column;gap:28px;position:sticky;top:82px}
+.toc{display:flex;flex-direction:column}
+.toc-item:hover .toc-n,.toc-item.act .toc-n{color:var(--or)}
+.toc-item:hover .toc-t,.toc-item.act .toc-t{color:var(--gris1)}
+.toc-item.act{border-left:2px solid var(--or);padding-left:10px;margin-left:-10px}
+.art-table td:first-child{font-weight:600;color:var(--gris2)}
+.tbl-wrap .art-table{margin:0;min-width:520px}
+.art-paru{font-size:12px;font-style:italic;color:var(--gris4);margin:-24px 0 32px}
+.art-note a{color:var(--or);text-decoration:underline}
+.art-note a:hover{color:var(--bn)}
+.encadre{margin:44px 0 0;padding:26px 30px;background:#f4efe6;border:1px solid #e8eaec}
+.art-text .encadre-titre{font-family:var(--pd);font-size:19px;font-weight:700;color:#0E3D52;line-height:1.3;margin:0 0 14px}
+.art-text .encadre ul{border-top:none;margin-bottom:0}
+.art-text .encadre ul li{font-size:17px;line-height:1.6;border-bottom-color:#e8eaec}
+.art-text .encadre ul li:last-child{border-bottom:none}
+
+/* ---------- Mise en page : colonne de lecture et alignement ---------- */
+.art-hero-inner{max-width:1108px;margin:0 auto;padding:0 32px;}
+.art-meta{max-width:836px;}
+.art-text{max-width:720px;}
+.art-image-wrap{max-width:836px;margin:0;}
+.art-hero-inner .art-image-caption{padding:10px 0;}
+.art-layout{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:72px;align-items:start;max-width:1044px;margin:0 auto;}
+
+@media (max-width:860px){.art-layout{grid-template-columns:1fr;}.art-hero-inner,.art-wrap .container,.container:has(> .art-wrap){padding:0 18px;}.art-image-wrap{max-width:none;margin:0 -18px 0;}.art-hero-inner .art-image-caption{padding:10px 18px;}}
