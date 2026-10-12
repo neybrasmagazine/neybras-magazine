@@ -177,9 +177,9 @@ Partenariats) restent clairs.
 - Sur la page du magazine, seule la période de parution est affichée
   (« Volume 001 · Septembre 2026 »).
 - Exception décidée par la direction le 12 octobre 2026 : la date du jour
-  s'affiche en haut à gauche du bandeau de la page d'accueil (calculée à
-  l'affichage, fuseau Africa/Casablanca). Ce n'est pas une date de
-  publication ; les autres pages restent sans date.
+  s'affiche en haut à gauche du bandeau de toutes les pages (assets/site-date.js,
+  calculée à l'affichage, fuseau Africa/Casablanca). Ce n'est pas une date de
+  publication : les dates de publication restent masquées.
 - Les dates factuelles du contenu (textes de loi, décisions,
   financements) restent dans le corps de l'article.
 - Dans un texte signé, « Mis à jour le » n'entre que dans la formulation
