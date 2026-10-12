@@ -1,0 +1,67 @@
+/* ============================================================
+   Neybras Magazine — Barre défilante
+   Utilisée par l'accueil (titres du Volume 001) et par la page
+   Finance (cours du jour). Défilement lent, pause au survol et
+   au clavier, aucun défilement si le visiteur a demandé de
+   limiter les animations.
+   ============================================================ */
+.nbr-defil { overflow: hidden; }
+.nbr-defil__in { display: flex; align-items: center; gap: 18px; }
+.nbr-defil__lib {
+  flex: none;
+  font-family: var(--nbr-texte);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.nbr-defil__vue { flex: 1; min-width: 0; overflow: hidden; }
+.nbr-defil__piste {
+  display: flex; width: max-content;
+  animation: nbr-defil var(--defil-duree, 70s) linear infinite;
+}
+.nbr-defil:hover .nbr-defil__piste,
+.nbr-defil:focus-within .nbr-defil__piste { animation-play-state: paused; }
+.nbr-defil__lot { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
+.nbr-defil__lot li { flex: none; white-space: nowrap; padding-right: 36px; }
+.nbr-defil__lot li + li::before,
+.nbr-defil__lot li:first-child::before { content: none; }
+.nbr-defil__lot a { text-decoration: none; }
+.nbr-defil__lot a:hover { text-decoration: underline; text-underline-offset: 3px; }
+@keyframes nbr-defil { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nbr-defil__vue { overflow-x: auto; }
+  .nbr-defil__piste { animation: none; }
+  .nbr-defil__lot[aria-hidden="true"] { display: none; }
+}
+
+/* ---------- Accueil : bande claire, sobre ---------- */
+.nbr-defil--clair {
+  background: var(--nbr-blanc);
+  border-bottom: 1px solid var(--nbr-filet);
+  padding: 11px 0;
+  font-family: var(--nbr-texte);
+  font-size: 12.5px;
+}
+.nbr-defil--clair .nbr-defil__lib { color: var(--nbr-or-fonce); }
+.nbr-defil--clair .nbr-defil__lot a { color: var(--nbr-bleu); }
+.nbr-defil--clair .nbr-defil__lot li { padding-right: 40px; position: relative; }
+.nbr-defil--clair .nbr-defil__lot li::after {
+  content: ''; position: absolute; right: 18px; top: 50%;
+  width: 3px; height: 3px; margin-top: -1px; border-radius: 50%;
+  background: var(--nbr-or);
+}
+
+/* ---------- Finance : cours du jour dans le bandeau sombre ---------- */
+.nbr-defil--cours {
+  background: var(--nbr-nuit);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  padding: 10px 0;
+  font-family: var(--nbr-texte);
+  font-size: 11px;
+}
+.nbr-defil--cours .nbr-defil__lib { color: var(--nbr-or-clair); }
+.nbr-defil--cours .nbr-defil__lot li { display: flex; align-items: center; gap: 8px; padding-right: 44px; }
+.nbr-defil--cours .tk-label { color: rgba(255, 255, 255, .55); font-weight: 600; letter-spacing: .05em; }
+.nbr-defil--cours .tk-val { color: rgba(255, 255, 255, .88); font-variant-numeric: tabular-nums; }
+.nbr-defil--cours .tk-src { color: rgba(255, 255, 255, .4); font-size: 10px; }
