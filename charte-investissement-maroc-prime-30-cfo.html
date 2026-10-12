@@ -246,7 +246,6 @@ ul{list-style:none;}
 .formule-e .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 4px;}
 .formule-e .frac>span:first-child{border-bottom:1px solid var(--bn);padding:0 4px;}
 .formule-e .frac>span:last-child{padding:0 4px;}
-.tbl-wrap{overflow-x:auto;margin:32px 0;-webkit-overflow-scrolling:touch;}
 .tbl-wrap .art-table.t2{min-width:0;}
 .art-table thead th{background:var(--bn);color:#fff;}
 .art-table tbody tr:nth-child(even) td{background:#EDF2F4;}
@@ -254,7 +253,7 @@ ul{list-style:none;}
 .art-table td.num,.art-table th.num{text-align:right;white-space:nowrap;}
 .art-text .pull-quote{margin:40px 0;padding:22px 0;border-top:1px solid var(--or);border-bottom:1px solid var(--or);text-align:center;}
 .art-text .pull-quote blockquote{font-family:var(--pd);font-style:italic;font-size:22px;line-height:1.45;color:var(--bn);}
-.avert-court{font-family:var(--it);font-size:13px;font-style:italic;color:#9AA6AC;line-height:1.6;margin:0 0 30px;}
+.avert-court{font-family:var(--it);font-size:15px;font-style:italic;color:#9AA6AC;line-height:1.6;margin:0 0 30px;}
 .question-fin{font-family:var(--pd);font-size:22px;font-weight:700;color:var(--bn);text-align:center;line-height:1.4;margin:44px 0 0;}
 .am-initials{width:32px;height:32px;border-radius:50%;background:var(--bn);color:var(--or);display:inline-flex;align-items:center;justify-content:center;font-family:var(--pd);font-size:12px;font-weight:700;}
 .art-image-typo{width:100%;aspect-ratio:1200/630;object-fit:cover;background:#0E3D52;}
@@ -376,7 +375,7 @@ ul{list-style:none;}
 
       <p>Franchir ce seuil ouvre la porte. Mais cela ne dit encore rien du montant des primes. Avant toute simulation, le CFO a intérêt à documenter une matrice d'éligibilité.</p>
 
-      <div class="tbl-wrap"><table class="art-table t2">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table t2">
         <thead><tr><th>Point de contrôle</th><th>Question à documenter</th></tr></thead>
         <tbody>
           <tr><td>Dispositif applicable</td><td>Principal, TPME, stratégique ou autre dispositif prévu par la Charte</td></tr>
@@ -418,7 +417,7 @@ ul{list-style:none;}
 
       <p>La prime emploi, elle, tombe. Le ratio d'emplois stables (nombre d'emplois créés rapporté à l'investissement en MDH) conditionne le taux : en-dessous d'un ratio de 1, aucune prime emploi n'est due ; entre 1 et 1,5, le taux est de 5 % ; entre 1,5 et 3, de 7 % ; au-delà de 3, de 10 %. Soixante emplois pour 100 MDH donnent un ratio de 0,6 — sous le seuil d'entrée.</p>
 
-      <div class="tbl-wrap"><table class="art-table">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table">
         <thead><tr><th>Prime</th><th>Taux hypothétique</th><th>Statut</th></tr></thead>
         <tbody>
           <tr><td>Emploi</td><td>0 %</td><td>Non applicable : ratio de 0,6, sous le seuil réglementaire (ratio &gt; 1 requis)</td></tr>
@@ -439,7 +438,7 @@ ul{list-style:none;}
 
       <p>La tentation est forte de réduire la dette d'autant. Sur le papier, le montage devient élégant.</p>
 
-      <div class="tbl-wrap"><table class="art-table">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table">
         <thead><tr><th>Structure</th><th>Fonds propres</th><th>Dette</th><th>Prime</th></tr></thead>
         <tbody>
           <tr><td>Sans prime</td><td>30 MDH</td><td>70 MDH</td><td>0 MDH</td></tr>
@@ -469,7 +468,7 @@ ul{list-style:none;}
 
       <p>Une PME investit 15 MDH dans un pôle technologique ou une activité d'outsourcing. Elle hésite entre deux implantations. Les taux ci-dessous sont illustratifs.</p>
 
-      <div class="tbl-wrap"><table class="art-table">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table">
         <thead><tr><th>Prime</th><th class="num">Catégorie B</th><th class="num">Catégorie A</th></tr></thead>
         <tbody>
           <tr><td>Emploi</td><td class="num">10 %</td><td class="num">10 %</td></tr>
@@ -493,7 +492,7 @@ ul{list-style:none;}
 
       <p>Une subvention ne s'assimile automatiquement ni à des fonds propres, ni à une dette. Pour mesurer son effet réel, il faut comparer plusieurs VAN : celle du projet sans aide, celle du projet avec aide, puis la même après coût du relais et après risque de restitution — en tenant compte de l'effet sur la dette nette et les covenants.</p>
 
-      <div class="tbl-wrap"><table class="art-table">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table">
         <thead><tr><th>Hypothèse</th><th>Sans prime</th><th>Avec prime encaissée et dette réduite</th></tr></thead>
         <tbody>
           <tr><td>Fonds propres</td><td>30 MDH</td><td>30 MDH</td></tr>
@@ -520,7 +519,7 @@ ul{list-style:none;}
 
       <p>La restitution ne se devine pas à partir d'une règle générale. Conditions, jalons, délais, contrôles et conséquences d'un manquement se lisent dans les textes applicables et dans la convention d'investissement. Le directeur financier construit donc au minimum trois scénarios.</p>
 
-      <div class="tbl-wrap"><table class="art-table t2">
+      <div class="tbl-wrap" tabindex="0" role="region" aria-label="Tableau défilant"><table class="art-table t2">
         <thead><tr><th>Scénario</th><th>Hypothèse</th></tr></thead>
         <tbody>
           <tr><td>Base</td><td>Projet réalisé, engagements respectés, versement intégral</td></tr>
