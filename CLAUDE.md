@@ -198,6 +198,19 @@ Partenariats) restent clairs.
 - Ne jamais utiliser « Rectificatif » pour une simple mise à jour de
   forme, de lien ou de métadonnée : elle ne s'affiche pas (voir 4.4).
 
+### 4.5 Bloc « Contributeurs » de l'accueil
+
+- Le bloc existe dans index.html (id contributeurs-accueil) mais reste masqué
+  (attribut hidden). Il s'affiche seul lorsque 6 profils au moins portent
+  data-valide="oui" ; tant que ce n'est pas le cas, aucun profil n'est visible.
+- Un profil passe à data-valide="oui" uniquement quand tout est réuni : photo
+  autorisée par la personne, fonction confirmée (reprise mot pour mot de son
+  article signé, § 15), page liée valide, accord écrit du contributeur et
+  validation de la direction de la publication. Le passage se fait par une
+  branche dédiée, avec le justificatif cité dans la demande de fusion.
+- Fonctions et photos reprises des articles signés ; aucune biographie nouvelle
+  n'est écrite pour ce bloc.
+
 ---
 
 ## 5. Gabarits de référence
