@@ -94,15 +94,6 @@ ul{list-style:none;}
 
 /* Bloc « À la Une » : assets/a-la-une-rubrique.css */
 
-/* Ticker financier */
-.fin-ticker{background:rgba(255,255,255,.05);border-top:1px solid rgba(255,255,255,.07);padding:10px 0;overflow:hidden;}
-.ticker-inner{display:flex;gap:32px;align-items:center;font-family:var(--it);font-size:10.5px;}
-.tk-item{display:flex;align-items:center;gap:7px;white-space:nowrap;}
-.tk-label{color:rgba(255,255,255,.4);font-weight:600;letter-spacing:.05em;}
-.tk-val{color:rgba(255,255,255,.75);}
-.tk-up{color:#4caf50;}
-.tk-dn{color:#ef5350;}
-
 /* MAIN */
 .sec-wrap{padding:52px 0 72px;}
 .sec-layout{display:grid;grid-template-columns:1fr 292px;gap:56px;align-items:start;}
@@ -151,7 +142,6 @@ ul{list-style:none;}
 
 /* SIDEBAR */
 .sec-aside{display:flex;flex-direction:column;gap:26px;position:sticky;top:82px;}
-.wg{background:var(--blanc);border:1px solid var(--brd);padding:22px;}
 .wt{font-family:var(--it);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris2);padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--brd);}
 .mr-list{display:flex;flex-direction:column;}
 .mr-item{display:flex;align-items:start;gap:12px;padding:11px 0;border-bottom:1px solid var(--brd2);transition:var(--tr);}
@@ -177,15 +167,6 @@ ul{list-style:none;}
 .theme-tag{font-family:var(--it);font-size:10px;padding:5px 11px;border:1px solid var(--brd);border-radius:1px;color:var(--gris3);transition:var(--tr);letter-spacing:.03em;}
 .theme-tag:hover{border-color:var(--or);color:var(--or);}
 
-/* Indicateurs */
-.ind-list{display:flex;flex-direction:column;gap:0;}
-.ind-item{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--brd2);}
-.ind-item:last-child{border-bottom:none;}
-.ind-name{font-family:var(--it);font-size:11.5px;color:var(--gris2);font-weight:600;}
-.ind-val{font-family:var(--it);font-size:11.5px;color:var(--gris3);}
-.ind-chg{font-family:var(--it);font-size:10.5px;padding:2px 7px;border-radius:2px;}
-.up{color:#2e7d32;background:#e8f5e9;}
-.dn{color:#c62828;background:#ffebee;}
 
 /* NEWSLETTER */
 .nl-sec{background:var(--page);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:64px 0;text-align:center;}
@@ -214,7 +195,7 @@ ul{list-style:none;}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
 <link rel="icon" href="favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/site-footer.css"/><link rel="stylesheet" href="assets/a-la-une-rubrique.css"/><script src="assets/site-date.js" defer></script>
+<meta name="theme-color" content="#0E3D52"/><link rel="stylesheet" href="assets/site-header.css"/><link rel="stylesheet" href="assets/site-footer.css"/><link rel="stylesheet" href="assets/tokens.css"/><link rel="stylesheet" href="assets/a-la-une-rubrique.css"/><link rel="stylesheet" href="assets/defilant.css"/><script src="assets/site-date.js" defer></script><script src="assets/cours-du-jour.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -305,6 +286,14 @@ ul{list-style:none;}
 
 
 <!-- SECTION HERO -->
+<!-- Cours du jour : lus à la source par assets/cours-du-jour.js, jamais écrits ici -->
+<div class="nbr-defil nbr-defil--cours" data-cours role="region" aria-label="Cours du jour" hidden>
+  <div class="container nbr-defil__in">
+    <span class="nbr-defil__lib">Cours du jour</span>
+    <div class="nbr-defil__vue"><div class="nbr-defil__piste"></div></div>
+  </div>
+</div>
+
 <section class="sec-hero">
   <div class="container">
     <div class="sec-header">
@@ -337,19 +326,6 @@ ul{list-style:none;}
       </div>
     </div>
 
-    <!-- Ticker -->
-    <div class="fin-ticker">
-      <div class="container">
-        <div class="ticker-inner">
-          <div class="tk-item"><span class="tk-label">MASI</span><span class="tk-val">13 842</span><span class="tk-up">+0,84 %</span></div>
-          <div class="tk-item"><span class="tk-label">EUR/MAD</span><span class="tk-val">10,92</span><span class="tk-dn">−0,12 %</span></div>
-          <div class="tk-item"><span class="tk-label">USD/MAD</span><span class="tk-val">10,04</span><span class="tk-dn">−0,08 %</span></div>
-          <div class="tk-item"><span class="tk-label">Taux directeur BAM</span><span class="tk-val">2,25 %</span><span class="tk-up">stable</span></div>
-          <div class="tk-item"><span class="tk-label">Brent</span><span class="tk-val">82,4 $</span><span class="tk-up">+1,2 %</span></div>
-          <div class="tk-item"><span class="tk-label">Or</span><span class="tk-val">2 318 $</span><span class="tk-up">+0,6 %</span></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -422,38 +398,6 @@ ul{list-style:none;}
 
       <!-- SIDEBAR -->
       <aside class="sec-aside" aria-label="Contenu complémentaire">
-
-        <div class="wg">
-          <div class="wt">Indicateurs clés</div>
-          <div class="ind-list">
-            <div class="ind-item">
-              <span class="ind-name">MASI</span>
-              <span class="ind-val">13 842</span>
-              <span class="ind-chg up">+0,84 %</span>
-            </div>
-            <div class="ind-item">
-              <span class="ind-name">Taux BAM</span>
-              <span class="ind-val">2,25 %</span>
-              <span class="ind-chg up">Stable</span>
-            </div>
-            <div class="ind-item">
-              <span class="ind-name">EUR/MAD</span>
-              <span class="ind-val">10,92</span>
-              <span class="ind-chg dn">−0,12 %</span>
-            </div>
-            <div class="ind-item">
-              <span class="ind-name">Actifs participatifs</span>
-              <span class="ind-val">8 Mds MAD</span>
-              <span class="ind-chg up">+18 %</span>
-            </div>
-            <div class="ind-item">
-              <span class="ind-name">Sukuk émis 2026</span>
-              <span class="ind-val">3,2 Mds MAD</span>
-              <span class="ind-chg up">+42 %</span>
-            </div>
-          </div>
-        </div>
-
 
         <div class="nl-w-aside">
           <div class="wt">Newsletter Finance</div>

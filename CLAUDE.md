@@ -176,6 +176,10 @@ Partenariats) restent clairs.
 - dateModified ne se modifie jamais sans mise à jour visible.
 - Sur la page du magazine, seule la période de parution est affichée
   (« Volume 001 · Septembre 2026 »).
+- Exception décidée par la direction le 12 octobre 2026 : la date du jour
+  s'affiche en haut à gauche du bandeau de la page d'accueil (calculée à
+  l'affichage, fuseau Africa/Casablanca). Ce n'est pas une date de
+  publication ; les autres pages restent sans date.
 - Les dates factuelles du contenu (textes de loi, décisions,
   financements) restent dans le corps de l'article.
 - Dans un texte signé, « Mis à jour le » n'entre que dans la formulation
