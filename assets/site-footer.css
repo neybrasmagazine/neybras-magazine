@@ -52,3 +52,11 @@
   .nbr-cn__in { flex-direction: column; align-items: flex-start; padding: 22px 20px; gap: 18px; }
   .nbr-cn__a { width: 100%; box-sizing: border-box; }
 }
+
+/* ---- Bouton WhatsApp flottant (exception de couleur : vert de la marque WhatsApp) ---- */
+.nbr-wa { --wa-vert: #25D366; position: fixed; right: 19px; bottom: 19px; z-index: 900; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--wa-vert); color: white; box-shadow: 0 2px 10px rgba(0, 0, 0, .22); text-decoration: none; transition: transform .2s ease; }
+.nbr-wa:hover, .nbr-wa:focus-visible { transform: scale(1.06); color: white; }
+.nbr-wa svg { width: 30px; height: 30px; }
+@media (max-width: 600px) {
+  .nbr-wa { right: 14px; bottom: 14px; }
+}
