@@ -91,24 +91,24 @@
 /* ---------- 1. HERO : bande claire --------------------------- */
 /* Fond clair agrandi : promesse, sous-titre, deux CTA hiérarchisés, preuve de crédibilité. */
 
-.u-sig { background: var(--nbr-papier); border-bottom: var(--filet); padding: var(--e-9) 0 var(--e-6); }
+.u-sig { background: var(--nbr-papier); border-bottom: var(--filet); padding: var(--e-6) 0 var(--e-4); }
 .u-sig__in { max-width: 52rem; }
 .u-sig h1 {
   font-family: var(--nbr-titre);
   font-weight: var(--poids-gras);
-  font-size: var(--t-3xl);
+  font-size: var(--t-2xl);
   line-height: var(--lh-serre);
   letter-spacing: var(--ls-titre);
   color: var(--nbr-nuit);
-  margin: var(--e-3) 0 0;
-  max-width: 22ch;
+  margin: var(--e-2) 0 0;
+  max-width: 30ch;
   text-wrap: balance;
 }
 .u-sig h1 em { font-style: italic; font-weight: var(--poids-normal); color: var(--nbr-bleu); }
-.u-sig__sub { margin: var(--e-5) 0 0; max-width: var(--mesure); font-size: var(--t-md); line-height: var(--lh-texte); color: var(--nbr-encre); }
-.u-sig .u-act { margin-top: var(--e-6); }
-.u-sig__preuve { margin: var(--e-8) 0 0; padding-top: var(--e-4); border-top: var(--filet); font-size: var(--t-xs); letter-spacing: .04em; line-height: 1.6; color: var(--nbr-gris); }
-.u-sig__lien { margin: var(--e-4) 0 0; font-size: var(--t-xs); }
+.u-sig__sub { margin: var(--e-3) 0 0; max-width: var(--mesure); font-size: var(--t-md); line-height: var(--lh-texte); color: var(--nbr-encre); }
+.u-sig .u-act { margin-top: var(--e-5); }
+.u-sig__preuve { margin: var(--e-5) 0 0; padding-top: var(--e-3); border-top: var(--filet); font-size: var(--t-xs); letter-spacing: .04em; line-height: 1.6; color: var(--nbr-gris); }
+.u-sig__lien { margin: var(--e-3) 0 0; font-size: var(--t-xs); }
 .u-sig__lien a { color: var(--nbr-bleu); text-decoration: underline; text-underline-offset: 3px; }
 .u-sig__lien a:hover { color: var(--nbr-nuit); }
 
@@ -264,8 +264,8 @@
 
 @media (max-width: 640px) {
   .u-sec { padding: var(--e-7) 0; }
-  .u-sig { padding: var(--e-7) 0 var(--e-5); }
-  .u-sig__preuve { margin-top: var(--e-6); }
+  .u-sig { padding: var(--e-5) 0 var(--e-4); }
+  .u-sig__preuve { margin-top: var(--e-4); }
   .u-head { flex-direction: column; align-items: flex-start; gap: .5rem; }
 }
 
