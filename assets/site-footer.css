@@ -39,3 +39,16 @@
   .nbr-footer__main { grid-template-columns: 1fr; padding: 40px 0 28px; }
   .nbr-footer__bottom { flex-direction: column; }
 }
+
+/* ---- Encadré « Neybras Corporate Network » (au-dessus du pied de page) ---- */
+.nbr-cn { background: white; padding: 40px 32px; font-family: var(--it), 'Inter', system-ui, sans-serif; }
+.nbr-cn__in { max-width: 1240px; margin: 0 auto; padding: 28px 32px; border: 1px solid var(--or); border-left-width: 4px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nbr-cn__t { margin: 0 0 8px; font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--bn); }
+.nbr-cn__p { margin: 0; max-width: 640px; font-size: 14px; line-height: 1.7; color: var(--bn2); }
+.nbr-cn__a { flex: 0 0 auto; display: inline-block; padding: 13px 24px; background: var(--bn); border: 1px solid var(--bn); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-align: center; color: white; text-decoration: none; transition: background .2s ease; }
+.nbr-cn__a:hover, .nbr-cn__a:focus-visible { background: var(--bn2); color: white; }
+@media (max-width: 760px) {
+  .nbr-cn { padding: 28px 18px; }
+  .nbr-cn__in { flex-direction: column; align-items: flex-start; padding: 22px 20px; gap: 18px; }
+  .nbr-cn__a { width: 100%; box-sizing: border-box; }
+}
