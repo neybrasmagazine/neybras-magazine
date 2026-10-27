@@ -59,11 +59,6 @@
 /* Adresses e-mail : jamais coupees en fin de ligne (le navigateur coupait au trait d union de neybras-magazine.com). */
 a[href^="mailto:"]{white-space:nowrap}
 
-/* Bouton « Corporate Network » : lien WhatsApp, à côté de Newsletter (variante contour, mêmes jetons). */
-.site-header .btn-cn{background:transparent;color:var(--or);font-family:'Inter','Helvetica Neue',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 20px;border-radius:2px;border:1px solid var(--or);white-space:nowrap;transition:background .2s ease,color .2s ease;}
-.site-header .btn-cn:hover,.site-header .btn-cn:focus-visible{background:var(--or);color:var(--bn);}
 @media(max-width:600px){
   .site-header .hd-act{flex-direction:column;align-items:stretch;gap:6px;}
-  .site-header .btn-abo,.site-header .btn-cn{text-align:center;}
-  .site-header .btn-abo,.site-header .btn-cn{padding:8px 10px;letter-spacing:.08em;}
 }
