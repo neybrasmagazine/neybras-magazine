@@ -165,12 +165,20 @@ ul{list-style:none;}
 .mg-numero p{font-family:var(--pd);font-size:17px;font-weight:600;color:var(--bn);line-height:1.35;margin-top:5px;}
 .mg-apres{border:1px dashed var(--or-bd);display:grid;place-content:center;text-align:center;padding:32px;color:var(--gris3);font-size:13px;line-height:1.7;}
 .mg-apres-act{margin-top:22px;}
+.mg-apercu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;}
+.mg-apercu a{display:block;}
+.mg-apercu img{width:100%;height:auto;border:1px solid var(--brd);box-shadow:0 8px 22px rgba(14,61,82,.16);transition:var(--tr);}
+.mg-apercu a:hover img{transform:translateY(-4px);box-shadow:0 14px 32px rgba(14,61,82,.22);}
+.mg-apercu figcaption{font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--or-f);margin-top:12px;}
+.mg-apercu-note{font-size:13px;color:var(--gris3);line-height:1.7;max-width:66ch;margin-bottom:24px;}
+.mg-apercu-act{margin-top:28px;}
 
 @media(max-width:900px){
   .mg-grid,.mg-diff-grid,.mg-formes,.mg-edito{grid-template-columns:1fr;gap:32px;}
   .mg-cover{order:-1;}
   .mg-sujets{grid-template-columns:repeat(2,1fr);}
   .mg-contrib,.mg-numeros{grid-template-columns:repeat(2,1fr);}
+  .mg-apercu{grid-template-columns:repeat(2,minmax(0,1fr));}
   .mg-diff{padding:32px 24px;}
 }
 @media(max-width:600px){
@@ -242,6 +250,21 @@ ul{list-style:none;}
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- Aperçu du Volume 001 -->
+<section class="mg-sec" id="apercu">
+  <div class="container">
+    <div class="mg-sec-title">Aperçu du Volume 001</div>
+    <p class="mg-apercu-note">Quatre pages du numéro de septembre 2026 : la couverture, l'édito, le sommaire et l'ouverture d'une analyse. Les tribunes et les analyses se lisent dans le numéro, adressé nominativement.</p>
+    <div class="mg-apercu">
+      <figure><a href="/images/magazine-vol001-apercu-p01.webp" target="_blank" rel="noopener"><img src="images/magazine-vol001-apercu-p01-sm.webp" alt="Couverture de Neybras Magazine, Vol. 001, septembre 2026 : Me Mamadou Ismaïla Konaté" width="600" height="849" loading="lazy" decoding="async"/></a><figcaption>Couverture</figcaption></figure>
+      <figure><a href="/images/magazine-vol001-apercu-p03.webp" target="_blank" rel="noopener"><img src="images/magazine-vol001-apercu-p03-sm.webp" alt="Page 3 du Vol. 001 : l'édito de Dalal Fahmi, directrice de la publication" width="600" height="849" loading="lazy" decoding="async"/></a><figcaption>Édito · page 3</figcaption></figure>
+      <figure><a href="/images/magazine-vol001-apercu-p05.webp" target="_blank" rel="noopener"><img src="images/magazine-vol001-apercu-p05-sm.webp" alt="Page 5 du Vol. 001 : le sommaire du numéro inaugural" width="600" height="849" loading="lazy" decoding="async"/></a><figcaption>Sommaire · page 5</figcaption></figure>
+      <figure><a href="/images/magazine-vol001-apercu-p08.webp" target="_blank" rel="noopener"><img src="images/magazine-vol001-apercu-p08-sm.webp" alt="Page 8 du Vol. 001 : ouverture de l'analyse « Trente pour cent, mais pas pour tout le monde » sur la charte de l'investissement" width="600" height="849" loading="lazy" decoding="async"/></a><figcaption>Analyse · page 8</figcaption></figure>
+    </div>
+    <p class="mg-apercu-act"><a href="/demande-diffusion" class="mg-btn">Demander la diffusion</a></p>
   </div>
 </section>
 
