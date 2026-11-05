@@ -142,9 +142,6 @@ ul{list-style:none;}
 .mg-diff-q{font-family:var(--cg);font-style:italic;font-size:21px;color:var(--or-lt);margin-top:22px;}
 .mg-diff dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:13.5px;}
 .mg-diff-seul{grid-template-columns:1fr;max-width:76ch;}
-.mg-diff-act{margin-top:26px;}
-.mg-diff .mg-btn-o{border-color:var(--or-lt);color:#fff;}
-.mg-diff .mg-btn-o:hover{border-color:var(--or-lt);color:var(--or-lt);}
 .mg-diff dt{color:rgba(255,255,255,.84);}
 .mg-diff dd{font-variant-numeric:tabular-nums;font-weight:700;}
 
@@ -167,6 +164,7 @@ ul{list-style:none;}
 .mg-numero b{display:block;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--or-f);margin-top:14px;}
 .mg-numero p{font-family:var(--pd);font-size:17px;font-weight:600;color:var(--bn);line-height:1.35;margin-top:5px;}
 .mg-apres{border:1px dashed var(--or-bd);display:grid;place-content:center;text-align:center;padding:32px;color:var(--gris3);font-size:13px;line-height:1.7;}
+.mg-apres-act{margin-top:22px;}
 
 @media(max-width:900px){
   .mg-grid,.mg-diff-grid,.mg-formes,.mg-edito{grid-template-columns:1fr;gap:32px;}
@@ -240,6 +238,7 @@ ul{list-style:none;}
 
       <div class="mg-apres">
         Le prochain numéro est en préparation. Son sommaire est arrêté par la rédaction, numéro par numéro.
+        <p class="mg-apres-act"><a href="/demande-diffusion" class="mg-btn">Demander la diffusion</a></p>
       </div>
 
     </div>
@@ -256,7 +255,6 @@ ul{list-style:none;}
           <h2>Tirage 1 000 exemplaires, un par destinataire</h2>
           <p>La revue n'est ni vendue au numéro, ni diffusée en kiosque, ni accessible par abonnement. Elle est adressée nominativement et gratuitement à une liste institutionnelle qualifiée, dans la limite d'une dotation par destinataire.</p>
           <p class="mg-diff-q">« Aucun ne reçoit la revue par hasard. »</p>
-          <p class="mg-diff-act"><a href="/demande-diffusion" class="mg-btn-o">Demander la diffusion</a></p>
         </div>
         
       </div>
