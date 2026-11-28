@@ -132,6 +132,7 @@
 }
 .u-une h2 a { color: var(--nbr-nuit); text-decoration: none; }
 .u-une h2 a:hover { color: var(--nbr-bleu); }
+.u-une__sub { margin: var(--e-4) 0 0; font-family: var(--nbr-titre); font-style: italic; font-size: 1.35rem; line-height: 1.35; color: var(--nbr-or-fonce); max-width: 40ch; }
 .u-une__sig { margin: var(--e-5) 0 0; font-size: .92rem; line-height: 1.55; color: var(--nbr-encre); max-width: 62ch; }
 .u-une__sig b { color: var(--nbr-nuit); font-weight: 600; }
 .u-une__chapo { margin: var(--e-4) 0 0; font-size: 1.06rem; line-height: 1.68; color: var(--nbr-encre); max-width: 62ch; }
